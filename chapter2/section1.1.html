@@ -1,0 +1,605 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>http协议 · alan89757的分享文档库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="alan89757">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../assets/css/index.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="section1.2.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    每天一个小技巧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/section1.1.html">
+            
+                <a href="../chapter1/section1.1.html">
+            
+                    
+                    github使用技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/section1.2.html">
+            
+                <a href="../chapter1/section1.2.html">
+            
+                    
+                    markdown使用技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="section1.1.html">
+            
+                <a href="section1.1.html">
+            
+                    
+                    http协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="section1.2.html">
+            
+                <a href="section1.2.html">
+            
+                    
+                    浏览器存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/README.md">
+            
+                <span>
+            
+                    
+                    node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/section1.1.md">
+            
+                <span>
+            
+                    
+                    express
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/section1.2.md">
+            
+                <span>
+            
+                    
+                    koa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/section1.3.md">
+            
+                <span>
+            
+                    
+                    eggjs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >http协议</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="http&#x534F;&#x8BAE;">http&#x534F;&#x8BAE;</h1>
+<!-- ## 1.先提几个问题
+### （1）http请求数据格式？
+<img src="./request_header2.png">
+### （2）http与https有什么区别？
+https://mp.weixin.qq.com/s/GICbiyJpINrHZ41u_4zT-A?
+
+### （3）客户端和服务器是如何实现加密传输的？
+证书 + 密钥 -->
+<h3 id="&#x5206;&#x4E3A;&#x4E09;&#x90E8;&#x5206;&#x8BB2;&#x89E3;general&#xFF0C;request-headers-response-headers">&#x5206;&#x4E3A;&#x4E09;&#x90E8;&#x5206;&#x8BB2;&#x89E3;General&#xFF0C;Request Headers, Response Headers</h3>
+<p><img src="request1.png" width="80%"></p>
+<h2 id="1-general">1. General</h2>
+<pre class="language-"><code class="lang-html">// &#x5148;&#x770B;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x6848;&#x4F8B;
+https://marketing.saicmobility.com/newmarketing/#/login
+</code></pre>
+<ul>
+<li><p>Request URL &#x8BF7;&#x6C42;&#x5730;&#x5740;&#xFF0C;
+&#x95EE;&#xFF1A;http/https&#x9ED8;&#x8BA4;&#x8BF7;&#x6C42;&#x7AEF;&#x53E3;&#x591A;&#x5C11;??</p>
+<!-- http://xxx.com:80  https://xxx.com:443 -->
+</li>
+<li><p>Request Method  &#x8BF7;&#x6C42;&#x65B9;&#x6CD5;</p>
+</li>
+<li><p>HTTP&#x6709;&#x54EA;&#x4E9B;Method???</p>
+<!-- ```text
+GET/POST/PUT/PATCH/DELETE/HEAD/OPTIONS等等
+``` -->
+</li>
+<li><p>get&#x4E0E;post&#x5BF9;&#x6BD4;
+<img src="get_request.png" width="80%">
+<img src="post_request.png" width="80%"></p>
+</li>
+<li><p>&#x5E38;&#x89C1;&#x95EE;&#x9898;&#xFF1A;</p>
+<ul>
+<li>GET &#x65B9;&#x6CD5;&#x53C2;&#x6570;&#x5199;&#x6CD5;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#x5417;&#xFF1F;
+&#x4E0D;&#x56FA;&#x5B9A;&#xFF0C;&#x6D41;&#x884C;&#x5199;&#x6CD5;&#xFF1A;<code>http://www.example.com/user/name/chengqm/age/22</code></li>
+<li>POST &#x65B9;&#x6CD5;&#x6BD4; GET &#x65B9;&#x6CD5;&#x5B89;&#x5168;&#xFF1F;<!-- 都不安全，https才是安全传输 --></li>
+<li><p>GET &#x65B9;&#x6CD5;&#x7684;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x662F;&#x600E;&#x4E48;&#x56DE;&#x4E8B;&#xFF1F;&#x8C01;&#x9650;&#x5236;&#x7684;&#xFF1F;</p>
+<!-- 浏览器和服务器限制，防止恶意构造长url攻击 -->
+</li>
+<li><p>get&#x4E0E;post&#x8FD8;&#x6709;&#x54EA;&#x4E9B;&#x5176;&#x4ED6;&#x533A;&#x522B;???</p>
+<!-- <img src="./getAndPost.png"> -->
+</li>
+</ul>
+</li>
+<li><p>Status Code
+&#x72B6;&#x6001;&#x7801;</p>
+<ul>
+<li>&#x5E38;&#x89C1;&#x72B6;&#x6001;&#x7801;&#x6709;&#x54EA;&#x4E9B;???<!-- ```text
+200： OK - 客户端请求成功
+400： Bad Request - 客户端请求有语法错误，不能被服务器所理解
+401： Unauthorized - 请求未经授权，这个状态代码必须和WWW-Authenticate报头域一起使用
+403： Forbidden - 服务器收到请求，但是拒绝提供服务
+404： Not Found - 请求资源不存在，eg：输入了错误的URL
+500： Internal Server Error - 服务器发生不可预期的错误
+503： Server Unavailable - 服务器当前不能处理客户端的请求，一段时间后,可能恢复正常
+``` --></li>
+<li>http&#x72B6;&#x6001;&#x54CD;&#x5E94;&#x7C7B;&#x522B;<pre class="language-"><code class="lang-text">1xx&#xFF1A;&#x6307;&#x793A;&#x4FE1;&#x606F; - &#x8868;&#x793A;&#x8BF7;&#x6C42;&#x5DF2;&#x63A5;&#x6536;&#xFF0C;&#x7EE7;&#x7EED;&#x5904;&#x7406;
+2xx&#xFF1A;&#x6210;&#x529F; - &#x8868;&#x793A;&#x8BF7;&#x6C42;&#x5DF2;&#x88AB;&#x6210;&#x529F;&#x63A5;&#x6536;&#x3001;&#x7406;&#x89E3;&#x3001;&#x63A5;&#x53D7;
+3xx&#xFF1A;&#x91CD;&#x5B9A;&#x5411; - &#x8981;&#x5B8C;&#x6210;&#x8BF7;&#x6C42;&#x5FC5;&#x987B;&#x8FDB;&#x884C;&#x66F4;&#x8FDB;&#x4E00;&#x6B65;&#x7684;&#x64CD;&#x4F5C;
+4xx&#xFF1A;&#x5BA2;&#x6237;&#x7AEF;&#x9519;&#x8BEF; - &#x8BF7;&#x6C42;&#x6709;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;&#x6216;&#x8BF7;&#x6C42;&#x65E0;&#x6CD5;&#x5B9E;&#x73B0;
+5xx&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x9519;&#x8BEF; - &#x670D;&#x52A1;&#x5668;&#x672A;&#x80FD;&#x5B9E;&#x73B0;&#x5408;&#x6CD5;&#x7684;&#x8BF7;&#x6C42;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>Remote Address  &#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;</p>
+</li>
+<li><p>Referrer Policy  &#x63A7;&#x5236;&#x8BF7;&#x6C42;&#x5934;&#x4E2D;referrer&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x76EE;&#x524D;&#x662F;&#x4E00;&#x4E2A;&#x5019;&#x9009;&#x6807;&#x51C6;&#xFF0C;&#x4E0D;&#x8FC7;&#x5DF2;&#x7ECF;&#x6709;&#x90E8;&#x5206;&#x6D4F;&#x89C8;&#x5668;&#x652F;&#x6301;&#x8BE5;&#x6807;&#x51C6;&#x3002; </p>
+</li>
+</ul>
+<p><img src="referrerPolicy.png" width="80%"></p>
+<h2 id="2-request-headers">2. Request Headers</h2>
+<p><img src="request_header1.png" width="80%"></p>
+<pre class="language-"><code class="lang-text">Accept: &#x80FD;&#x6B63;&#x786E;&#x63A5;&#x6536;&#x7684;&#x5A92;&#x4F53;&#x7C7B;&#x578B;&#xFF1A;application/json text/plain
+Accept-Encoding: &#x80FD;&#x6B63;&#x786E;&#x63A5;&#x6536;&#x7684;&#x5B57;&#x7B26;&#x96C6;: unicode-1-1
+Accept-Language:&#x80FD;&#x6B63;&#x786E;&#x63A5;&#x6536;&#x7684;&#x8BED;&#x8A00;&#x5217;&#x8868;&#xFF1A;zh-cn,zh;1=0.9,en,1=0.8
+Connection:&#x6D4F;&#x89C8;&#x5668;&#x60F3;&#x8981;&#x4F18;&#x5148;&#x4F7F;&#x7528;&#x7684;&#x8FDE;&#x63A5;&#x7C7B;&#x578B;&#xFF1A; keep-alive close&#xFF08;&#x5F00;&#x542F;&#x548C;&#x5173;&#x95ED;&#x6301;&#x4E45;&#x8FDE;&#x63A5;&#xFF09;
+Content-Length:request body &#x957F;&#x5EA6;&#xFF08;&#x5373;&#x5B9E;&#x4F53;&#x4E3B;&#x4F53;&#x7684;&#x5927;&#x5C0F;&#xFF09;&#xFF1A;
+Content-Type: &#x5185;&#x5BB9;&#x7684;&#x5A92;&#x4F53;&#x7C7B;&#x578B;&#xFF08;&#x5982;&apos;application/json;charset=UTF-8&apos;&#x5219;&#x4F1A;&#x53D1;&#x9001;&#x9884;&#x68C0;&#x8BF7;&#x6C42;&#xFF09;
+Host:&#x670D;&#x52A1;&#x5668;&#x7684;&#x57DF;&#x540D;&#xFF0C;&#x7528;&#x4E8E;&#x533A;&#x5206;&#x5355;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x591A;&#x4E2A;&#x57DF;&#x540D;&#x7684;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#xFF0C;&#x662F;HTTP/1.1&#x552F;&#x4E00;&#x5FC5;&#x987B;&#x5305;&#x542B;&#x7684;&#x5B57;&#x6BB5;&#x3002;
+Origin: &#x8BF7;&#x6C42;&#x6E90;
+Referer:&#x8BF7;&#x6C42;&#x53D1;&#x8D77;&#x9875;&#x9762;&#x7684;&#x539F;&#x59CB;URI
+User-Agent: &#x5BA2;&#x6237;&#x7AEF;&#x4FE1;&#x606F;
+Authorization&#xFF1A;&#x5BA2;&#x6237;&#x7AEF;&#x8BA4;&#x8BC1;&#x4FE1;&#x606F;&#xFF1A;Bearer dSdSdFFlsfdjasd123&#xFF0C;&#x4E00;&#x822C;&#x5B58;token&#x7528;
+Pragma:&#x5BA2;&#x6237;&#x7AEF;&#x8981;&#x6C42;&#x4E2D;&#x95F4;&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x8FD4;&#x56DE;&#x7F13;&#x5B58;&#x7684;&#x8D44;&#x6E90;
+Cookie&#xFF1A;&#x53D1;&#x9001;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x7684;Cookie&#x4FE1;&#x606F;
+If-Modified-Since&#xFF1A;&#x672C;&#x5730;&#x8D44;&#x6E90;&#x672A;&#x4FEE;&#x6539;&#x8FD4;&#x56DE; 304&#xFF08;&#x6BD4;&#x8F83;&#x65F6;&#x95F4;&#xFF09;
+If-None-Match&#xFF1A;    &#x672C;&#x5730;&#x8D44;&#x6E90;&#x672A;&#x4FEE;&#x6539;&#x8FD4;&#x56DE; 304&#xFF08;&#x6BD4;&#x8F83;&#x6807;&#x8BB0;&#xFF09;
+Cache-Control&#xFF1A;&#x63A7;&#x5236;&#x7F13;&#x5B58;&#x7684;&#x884C;&#x4E3A;&#xFF1A;no-cache&#xFF08;&#x5F3A;&#x5236;&#x5411;&#x670D;&#x52A1;&#x5668;&#x518D;&#x6B21;&#x9A8C;&#x8BC1;&#xFF09;&#x3001;no-store&#xFF08;&#x4E0D;&#x505A;&#x4EFB;&#x4F55;&#x7F13;&#x5B58;&#xFF09;&#x3001;
+max-age=111111&#xFF08;&#x8D44;&#x6E90;&#x53EF;&#x7F13;&#x5B58;&#x6700;&#x5927;&#x65F6;&#x95F4; &#x79D2;&#xFF09;&#x3001;public&#xFF08;&#x5BA2;&#x6237;&#x7AEF;&#x3001;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x90FD;&#x53EF;&#x5229;&#x7528;&#x7F13;&#x5B58;&#xFF09;&#x3001;private&#xFF08;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x53EF;&#x7528;&#x7F13;&#x5B58;&#xFF09;
+</code></pre>
+<ul>
+<li>Accept-Encoding&#x628A;gzip&#x4FEE;&#x6539;&#x4E3A;identity  </li>
+</ul>
+<p><img src="accept_gzip.png" width="45%">|
+<img src="accept_identity.png" width="45%"></p>
+<h2 id="3-response-headers">3. Response Headers</h2>
+<p><img src="response1.png" width="80%"></p>
+<pre class="language-"><code class="lang-text">Access-Control-Allow-Origin: https://*.saicmobility.com,https://*.shcab.cn
+Connection: keep-alive // &#x4F18;&#x5148;&#x4F7F;&#x7528;&#x7684;&#x8FDE;&#x63A5;&#x7C7B;&#x578B;
+Content-Encoding: gzip    // &#x7F16;&#x7801;&#x683C;&#x5F0F;
+Content-Type: text/html   // &#x5A92;&#x4F53;&#x7C7B;&#x578B;
+Date: Tue, 06 Jul 2021 05:00:14 GMT // &#x521B;&#x5EFA;&#x62A5;&#x6587;&#x65F6;&#x95F4;
+ETag: W/&quot;60701602-1b48&quot;   // &#x8D44;&#x6E90;&#x6807;&#x8BC6;
+Last-Modified: Fri, 09 Apr 2021 08:53:22 GMT //&#x6700;&#x540E;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF08;&#x683C;&#x6797;&#x5A01;&#x6CBB;&#x65F6;&#x95F4;&#xFF09;
+Set-Cookie: SERVERID=1ad1b725f19099514ac313a5ec32bff6|1625547614|1625547399;Path=/    // &#x670D;&#x52A1;&#x7AEF;&#x8BBE;&#x7F6E;cookie
+Transfer-Encoding: chunked  // &#x4F20;&#x8F93;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#xFF1A;chunked&#x5206;&#x5757;&#x4F20;&#x8F93;
+Via: cache47.l2cn3036[0,0,200-0,H], cache8.l2cn3036[0,0], cache13.cn2205[0,0,304-0,H], cache16.cn2205[1,0]  
+// &#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x6BCF;&#x7ECF;&#x8FC7;&#x4E00;&#x4E2A;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x5C31;&#x4F1A;&#x6DFB;&#x52A0;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x7528;&#x9017;&#x53F7;&#x5206;&#x5272;
+Server: Tengine  // nginx&#x5347;&#x7EA7;&#x7248;
+</code></pre>
+<ul>
+<li><p>Content-Type&#x628A;text/html&#x4FEE;&#x6539;&#x4E3A;text/javascript</p>
+<p><img src="content-type-modify.png" width="80%"></p>
+</li>
+<li><p>&#x5E38;&#x7528;&#x7684;http&#x7248;&#x672C;<br>&#x5E38;&#x7528;&#x7248;&#x672C;&#xFF1A;HTTP1.0&#x3001;HTTP1.1 &#x3001; HTTP2.0 &#x548C; HTTP3.0</p>
+<ul>
+<li>&#x6D4F;&#x89C8;&#x5668;&#x517C;&#x5BB9;&#x5BF9;&#x6BD4;<br>1.1 HTTP1.0&#xFF0C;HTTP1.1&#x6D4F;&#x89C8;&#x5668;&#x57FA;&#x672C;&#x90FD;&#x652F;&#x6301;</li>
+</ul>
+<p><img src="http1_protocol.png" width="50%"></p>
+<p>  1.2 HTTP 2.0  </p>
+<p><img src="http2_protocol.png" width="80%"></p>
+<p>  1.3 HTTP 3.0  </p>
+<p><img src="http3_protocol.png" width="80%"></p>
+</li>
+</ul>
+<pre class="language-"><code class="lang-text">  &#x4EE5;&#x4E0A;&#x6570;&#x636E;&#x6765;&#x81EA;https://caniuse.com/&#xFF0C;&#x4EC5;&#x4F9B;&#x53C2;&#x8003;
+</code></pre>
+<h2 id="4-&#x5E94;&#x7528;">4. &#x5E94;&#x7528;</h2>
+<h3 id="41-&#x7F13;&#x5B58;">4.1 &#x7F13;&#x5B58;</h3>
+<p><img src="cache4.png" height="810px"></p>
+<ul>
+<li>&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x7F13;&#x5B58;???<!-- 1.冗余的数据传输 2.带宽瓶颈 3.瞬间拥塞 4.距离时延 --></li>
+<li>&#x54EA;&#x4E9B;&#x5185;&#x5BB9;&#x9002;&#x5408;&#x7F13;&#x5B58;???<!-- 考虑缓存的内容：
+css样式文件
+js文件
+logo、图标
+html文件
+可以下载的内容 -->
+</li>
+</ul>
+<p>4.1.1. &#x7F13;&#x5B58;&#x7684;&#x547D;&#x4E2D;&#x548C;&#x672A;&#x547D;&#x4E2D;</p>
+<ul>
+<li><p>&#x7F13;&#x5B58;&#x547D;&#x4E2D;
+<img src="cache_hit.png" width="60%">  </p>
+</li>
+<li><p>&#x7F13;&#x5B58;&#x672A;&#x547D;&#x4E2D;
+<img src="cache_nohit.png" width="60%">
+4.1.2. &#x5F3A;&#x7F13;&#x5B58;</p>
+<pre class="language-"><code class="lang-html">Cache-Control: max-age=30  // &#x6700;&#x5927;&#x4E00;&#x5E74;31536000&#xFF0C; &#x5E38;&#x7528;&#x4E8E;&#x4E0D;&#x4F1A;&#x7ECF;&#x5E38;&#x53D8;&#x5316;&#x7684;&#x6587;&#x672C;&#xFF08;&#x5982;CDN&#xFF09;
+Expires: Tue, 06 Jul 2022 05:49:31 GMT
+Cache-Control: no-cache  // &#x6BCF;&#x6B21;&#x8BF7;&#x6C42;&#x90FD;&#x4F1A;&#x53BB;&#x670D;&#x52A1;&#x5668;&#x786E;&#x8BA4;&#x662F;&#x5426;&#x66F4;&#x65B0;
+Cache-Control: no-store  // &#x4E0D;&#x4F7F;&#x7528;&#x4EFB;&#x4F55;&#x7F13;&#x5B58;
+Cache-Control: max-age=60   // 60s&#x540E;&#x4F1A;&#x53BB;&#x670D;&#x52A1;&#x5668;&#x786E;&#x8BA4;&#x662F;&#x5426;&#x66F4;&#x65B0;
+Cache-Control: must-revalidate // &#x5FC5;&#x987B;&#x53BB;&#x9A8C;&#x8BC1;&#x670D;&#x52A1;&#x5668;&#x9A8C;&#x8BC1;&#xFF0C;&#x9A8C;&#x8BC1;&#x5931;&#x8D25;&#x8FD4;&#x56DE;504
+</code></pre>
+<p>4.1.3. &#x534F;&#x5546;&#x7F13;&#x5B58;</p>
+<pre class="language-"><code class="lang-html">// response Header
+ETag: W/&quot;60701602-1b48&quot;   // &#x8D44;&#x6E90;&#x6807;&#x8BC6;
+Last-Modified: Fri, 09 Apr 2021 08:53:22 GMT //&#x6700;&#x540E;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF08;&#x683C;&#x6797;&#x5A01;&#x6CBB;&#x65F6;&#x95F4;&#xFF09;
+//  request Header
+If-Modified-Since&#xFF1A;Fri, 09 Apr 2021 08:53:22 GMT  // &#x672C;&#x5730;&#x8D44;&#x6E90;&#x672A;&#x4FEE;&#x6539;&#x8FD4;&#x56DE; 304&#xFF08;&#x6BD4;&#x8F83;&#x65F6;&#x95F4;&#xFF09;
+If-None-Match&#xFF1A;    W/&quot;60701602-1b48&quot;   // &#x672C;&#x5730;&#x8D44;&#x6E90;&#x672A;&#x4FEE;&#x6539;&#x8FD4;&#x56DE; 304&#xFF08;&#x6BD4;&#x8F83;&#x6807;&#x8BB0;&#xFF09;
+</code></pre>
+<p><img src="consult_cache.png" width="60%"></p>
+</li>
+</ul>
+<ul>
+<li><p>&#x534F;&#x5546;&#x7F13;&#x5B58;&#x5982;&#x4F55;&#x9A8C;&#x8BC1;&#x5462;&#xFF1F;</p>
+<p><img src="cache3.png" width="80%"></p>
+</li>
+<li><p>&#x534F;&#x5546;&#x7F13;&#x5B58;&#x6D41;&#x7A0B;&#x56FE;</p>
+<p><img src="request_001.png" width="80%"></p>
+</li>
+<li><p>&#x4E0D;&#x8981;&#x5BF9;&#x53D8;&#x5316;&#x7684;&#x8D44;&#x6E90;&#x6DFB;&#x52A0;&#x8F83;&#x77ED;&#x7684;max-age?</p>
+<!-- 文件之间的依赖可能会导致缓存的有效时间不一样 -->
+</li>
+<li><p>&#x4E0D;&#x7ECF;&#x5E38;&#x6539;&#x53D8;&#x7684;&#x6587;&#x4EF6;  </p>
+<ul>
+<li>&#x4E00;&#x822C;&#x8BBE;&#x7F6E;max-age=31536000&#xFF08;&#x4E00;&#x5E74;&#xFF09;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="-">  <img src="dialog001.jpg" height="1000px"></h2>
+<p>  <img src="dialog002.jpg" height="900px"></p>
+<ul>
+<li>&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x53D8;&#x52A8;&#x7684;&#x6587;&#x4EF6;<pre class="language-"><code class="lang-text">Cache-Control: no-cache
+</code></pre>
+<img src="dialog003.jpg" height="1000px"></li>
+</ul>
+<hr>
+<p>  <img src="dialog004.jpg" height="1000px"></p>
+<h2 id="5-&#x52A0;&#x5BC6;&#x4F20;&#x8F93;">5. &#x52A0;&#x5BC6;&#x4F20;&#x8F93;</h2>
+<ul>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x52A0;&#x5BC6;&#x4F20;&#x8F93;&#x7684;&#xFF1F;</li>
+</ul>
+<p>&#x80CC;&#x666F;&#xFF1A;HTTP &#x662F;&#x660E;&#x6587;&#x4F20;&#x8F93;&#xFF0C;&#x4FE1;&#x606F;&#x5728;&#x7F51;&#x7EDC;&#x4E0A;&#x88F8;&#x5954;&#x3002;</p>
+<h4 id="51-https&#x539F;&#x7406;">5.1 https&#x539F;&#x7406;</h4>
+<h5 id="511-plan-a-&#x4F7F;&#x7528;&#x5BF9;&#x79F0;&#x5BC6;&#x94A5;">5.1.1 plan A &#x4F7F;&#x7528;&#x5BF9;&#x79F0;&#x5BC6;&#x94A5;</h5>
+<hr>
+<p><img src="https001.png" width="55%"></p>
+<h5 id="512-plan-b-&#x4F7F;&#x7528;&#x975E;&#x5BF9;&#x79F0;&#x5BC6;&#x94A5;">5.1.2 plan B &#x4F7F;&#x7528;&#x975E;&#x5BF9;&#x79F0;&#x5BC6;&#x94A5;</h5>
+<hr>
+<p><img src="https002.png" width="55%"></p>
+<pre class="language-"><code class="lang-text">RSA&#xFF08;&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#xFF09;&#xFF1A;&#x53CC;&#x65B9;&#x5FC5;&#x987B;&#x534F;&#x5546;&#x4E00;&#x5BF9;&#x5BC6;&#x94A5;&#xFF0C;&#x4E00;&#x4E2A;&#x79C1;&#x94A5;&#x4E00;&#x4E2A;&#x516C;&#x94A5;&#x3002;
+&#x7528;&#x79C1;&#x94A5;&#x52A0;&#x5BC6;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x53EA;&#x6709;&#x5BF9;&#x5E94;&#x7684;&#x516C;&#x94A5;&#x624D;&#x80FD;&#x89E3;&#x5BC6;&#xFF0C;&#x7528;&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#x7684;&#x6570;&#x636E;&#xFF0C; &#x53EA;&#x6709;&#x5BF9;&#x5E94;&#x7684;&#x79C1;&#x94A5;&#x624D;&#x80FD;&#x89E3;&#x5BC6;&#x3002;
+</code></pre>
+<p><img src="https003.png" width="55%"></p>
+<h5 id="513-plan-c-&#x975E;&#x5BF9;&#x79F0;&#x5BC6;&#x94A5;&#x5BF9;&#x79F0;&#x5BC6;&#x94A5;">5.1.3 plan C &#x975E;&#x5BF9;&#x79F0;&#x5BC6;&#x94A5;+&#x5BF9;&#x79F0;&#x5BC6;&#x94A5;</h5>
+<ul>
+<li>&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;</li>
+</ul>
+<pre class="language-"><code class="lang-text">&#x4F7F;&#x7528;&#x5BF9;&#x79F0;&#x5BC6;&#x94A5;&#x7684;&#x597D;&#x5904;&#x662F;&#x901F;&#x5EA6;&#x6BD4;&#x8F83;&#x5FEB;&#xFF0C;&#x4F7F;&#x7528;&#x975E;&#x5BF9;&#x79F0;&#x5BC6;&#x94A5;&#x7684;&#x597D;&#x5904;&#x662F;&#x53EF;&#x4EE5;&#x4F7F;&#x5F97;&#x4F20;&#x8F93;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x80FD;&#x88AB;&#x7834;&#x89E3;&#xFF0C;
+&#x56E0;&#x4E3A;&#x5C31;&#x7B97;&#x4F60;&#x62E6;&#x622A;&#x5230;&#x4E86;&#x6570;&#x636E;&#xFF0C;&#x4F46;&#x662F;&#x6CA1;&#x6709; Bill &#x7684;&#x79C1;&#x94A5;&#xFF0C;&#x4E5F;&#x662F;&#x4E0D;&#x80FD;&#x7834;&#x89E3;&#x5185;&#x5BB9;&#x7684;&#x3002;&#x5C31;&#x6BD4;&#x5982;&#x8BF4;&#x4F60;&#x62A2;&#x4E86;&#x4E00;&#x4E2A;&#x4FDD;&#x9669;&#x67DC;&#xFF0C;
+&#x4F46;&#x662F;&#x6CA1;&#x6709;&#x4FDD;&#x9669;&#x67DC;&#x7684;&#x94A5;&#x5319;&#x4E5F;&#x4E0D;&#x80FD;&#x6253;&#x5F00;&#x4FDD;&#x9669;&#x67DC;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8981;&#x7ED3;&#x5408;&#x4E24;&#x8005;&#x7684;&#x4F18;&#x70B9;&#x3002;&#x4F7F;&#x7528; RSA &#x7684;&#x65B9;&#x6CD5;&#x5C06;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x7684;&#x5BF9;&#x79F0;&#x5BC6;&#x94A5;&#x53D1;&#x9001;&#x8FC7;&#x53BB;&#xFF0C;
+&#x4E4B;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x5BC6;&#x94A5;&#xFF0C;&#x5229;&#x7528;&#x5BF9;&#x79F0;&#x5BC6;&#x94A5;&#x6765;&#x901A;&#x4FE1;&#x4E86;&#x3002;&#x5C31;&#x6BD4;&#x5982;&#x8BF4;&#x6211;&#x5C06;&#x94A5;&#x5319;&#x653E;&#x8FDB;&#x4E86;&#x4FDD;&#x9669;&#x67DC;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x4FDD;&#x9669;&#x67DC;&#x5BC4;&#x7ED9;&#x5BF9;&#x65B9;&#x3002;
+</code></pre>
+<h5 id="514-&#x786E;&#x8BA4;&#x8EAB;&#x4EFD;-&#x2014;&#x2014;-&#x6570;&#x5B57;&#x8BC1;&#x4E66;">5.1.4 &#x786E;&#x8BA4;&#x8EAB;&#x4EFD; &#x2014;&#x2014; &#x6570;&#x5B57;&#x8BC1;&#x4E66;</h5>
+<h6 id="&#x6570;&#x5B57;&#x7B7E;&#x540D;">&#x6570;&#x5B57;&#x7B7E;&#x540D;</h6>
+<p><img src="certificate001.png" width="50%"></p>
+<h6 id="&#x6570;&#x5B57;&#x8BC1;&#x4E66;">&#x6570;&#x5B57;&#x8BC1;&#x4E66;</h6>
+<h2 id=""><img src="certificate002.png" width="50%"></h2>
+<h6 id="&#x5BF9;&#x6BD4;&#x6D88;&#x606F;&#x6458;&#x8981;">&#x5BF9;&#x6BD4;&#x6D88;&#x606F;&#x6458;&#x8981;</h6>
+<p><img src="certificate003.png" width="50%"></p>
+<h6 id="&#x6253;&#x5F00;window&#x7CFB;&#x7EDF;&#x8BC1;&#x4E66;">&#x6253;&#x5F00;window&#x7CFB;&#x7EDF;&#x8BC1;&#x4E66;</h6>
+<pre class="language-"><code class="lang-text"> window&#x952E; + R&#x6253;&#x5F00;cmd&#xFF0C; &#x8F93;&#x5165;certlm.msc&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;
+</code></pre>
+<p><img src="certificate004.png" width="66%"></p>
+<h6 id="&#x8FDC;&#x7A0B;&#x684C;&#x9762;&#x548C;vpn&#x8BC1;&#x4E66;">&#x8FDC;&#x7A0B;&#x684C;&#x9762;&#x548C;VPN&#x8BC1;&#x4E66;</h6>
+<p><strong>&#x53C2;&#x8003;&#x6587;&#x6863;&#x5982;&#x4E0B;&#xFF1A;</strong></p>
+<ul>
+<li><a href="https://juejin.cn/post/6844903598556446733" target="_blank">&#x4F60;&#x5E94;&#x8BE5;&#x77E5;&#x9053;&#x7684;&#x524D;&#x7AEF;&#x2014;&#x2014;&#x7F13;&#x5B58;</a></li>
+<li><a href="https://juejin.cn/post/6844903504046211079" target="_blank">&#x8C08;&#x8C08; HTTPS</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/29750583" target="_blank">HTTP &#x7F13;&#x5B58;&#x673A;&#x5236;&#x4E00;&#x4E8C;&#x4E09;</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 浏览器">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="section1.2.html" class="navigation navigation-next " aria-label="Next page: 浏览器存储">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"http协议","level":"1.3.1","depth":2,"next":{"title":"浏览器存储","level":"1.3.2","depth":2,"path":"chapter2/section1.2.md","ref":"chapter2/section1.2.md","articles":[]},"previous":{"title":"浏览器","level":"1.3","depth":1,"path":"chapter2/README.md","ref":"chapter2/README.md","articles":[{"title":"http协议","level":"1.3.1","depth":2,"path":"chapter2/section1.1.md","ref":"chapter2/section1.1.md","articles":[]},{"title":"浏览器存储","level":"1.3.2","depth":2,"path":"chapter2/section1.2.md","ref":"chapter2/section1.2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["prism","-highlight"],"styles":{"website":"./assets/css/index.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"alan89757","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"alan89757的分享文档库","language":"zh-hans","gitbook":"*","description":"alan89757的所有分享文档库"},"file":{"path":"chapter2/section1.1.md","mtime":"2021-07-17T09:55:15.472Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-17T09:56:39.450Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

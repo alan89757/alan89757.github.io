@@ -1,0 +1,978 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>react-hooks分析 · alan89757的分享文档库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="alan89757">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../assets/css/index.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chapter5/" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    每天一个小技巧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/section1.1.html">
+            
+                <a href="../chapter1/section1.1.html">
+            
+                    
+                    github使用技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/section1.2.html">
+            
+                <a href="../chapter1/section1.2.html">
+            
+                    
+                    markdown使用技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/section1.1.html">
+            
+                <a href="../chapter2/section1.1.html">
+            
+                    
+                    http协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/section1.2.html">
+            
+                <a href="../chapter2/section1.2.html">
+            
+                    
+                    浏览器存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/section1.1.html">
+            
+                <a href="../chapter3/section1.1.html">
+            
+                    
+                    express
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/section1.2.html">
+            
+                <a href="../chapter3/section1.2.html">
+            
+                    
+                    koa
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    react
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="section1.1.html">
+            
+                <a href="section1.1.html">
+            
+                    
+                    react-hooks分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter5/">
+            
+                <a href="../chapter5/">
+            
+                    
+                    vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/section1.1.html">
+            
+                <a href="../chapter5/section1.1.html">
+            
+                    
+                    vue分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter6/">
+            
+                <a href="../chapter6/">
+            
+                    
+                    angular
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter6/section1.1.html">
+            
+                <a href="../chapter6/section1.1.html">
+            
+                    
+                    angular分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter7/">
+            
+                <a href="../chapter7/">
+            
+                    
+                    服务器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../chapter7/section1.1.html">
+            
+                <a href="../chapter7/section1.1.html">
+            
+                    
+                    centos安装nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >react-hooks分析</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="react-hooks">react hooks</h1>
+<p>[TOC]</p>
+<h2 id="1-&#x4EC0;&#x4E48;&#x662F;-hooks">1. &#x4EC0;&#x4E48;&#x662F; Hooks</h2>
+<p>react&#x4E00;&#x76F4;&#x63D0;&#x5021;&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#xFF0C;&#x4F46;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x6CA1;&#x6709;&#x5B9E;&#x4F8B;&#xFF0C;&#x6CA1;&#x6709;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x3002;
+hooks&#x5C31;&#x662F;&#x52A0;&#x4E86;&#x58F0;&#x660E;&#x5468;&#x671F;&#x548C;&#x72B6;&#x6001;&#x7BA1;&#x7406;</p>
+<h2 id="2-hooks&#x89E3;&#x51B3;&#x4E86;&#x54EA;&#x4E9B;&#x95EE;&#x9898;&#xFF1F;">2. hooks&#x89E3;&#x51B3;&#x4E86;&#x54EA;&#x4E9B;&#x95EE;&#x9898;&#xFF1F;</h2>
+<h3 id="21-&#x7C7B;&#x7EC4;&#x4EF6;&#x7684;&#x4E0D;&#x8DB3;">2.1. &#x7C7B;&#x7EC4;&#x4EF6;&#x7684;&#x4E0D;&#x8DB3;</h3>
+<p>&#x72B6;&#x6001;&#x903B;&#x8F91;&#x96BE;&#x590D;&#x7528;
+&#x903B;&#x8F91;&#x8D1F;&#x8D23;&#x96BE;&#x4EE5;&#x7EF4;&#x62A4;
+this &#x6307;&#x5411;&#x95EE;&#x9898;</p>
+<h3 id="22-hooks-&#x4F18;&#x52BF;">2.2 Hooks &#x4F18;&#x52BF;</h3>
+<p>&#x80FD;&#x4F18;&#x5316;&#x7C7B;&#x7EC4;&#x4EF6;&#x7684;&#x4E09;&#x5927;&#x95EE;&#x9898;
+&#x80FD;&#x5728;&#x65E0;&#x9700;&#x4FEE;&#x6539;&#x7EC4;&#x4EF6;&#x7ED3;&#x6784;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x590D;&#x7528;&#x72B6;&#x6001;&#x903B;&#x8F91;&#xFF08;&#x81EA;&#x5B9A;&#x4E49; Hooks &#xFF09;
+&#x80FD;&#x5C06;&#x7EC4;&#x4EF6;&#x4E2D;&#x76F8;&#x4E92;&#x5173;&#x8054;&#x7684;&#x90E8;&#x5206;&#x62C6;&#x5206;&#x6210;&#x66F4;&#x5C0F;&#x7684;&#x51FD;&#x6570;&#xFF08;&#x6BD4;&#x5982;&#x8BBE;&#x7F6E;&#x8BA2;&#x9605;&#x6216;&#x8BF7;&#x6C42;&#x6570;&#x636E;&#xFF09;
+&#x526F;&#x4F5C;&#x7528;&#x7684;&#x5173;&#x6CE8;&#x70B9;&#x5206;&#x79BB;</p>
+<pre class="language-"><code class="lang-text">&#x526F;&#x4F5C;&#x7528;&#x6307;&#x90A3;&#x4E9B;&#x6CA1;&#x6709;&#x53D1;&#x751F;&#x5728;&#x6570;&#x636E;&#x5411;&#x89C6;&#x56FE;&#x8F6C;&#x6362;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x5982; ajax &#x8BF7;&#x6C42;&#x3001;&#x8BBF;&#x95EE;&#x539F;&#x751F;dom &#x5143;&#x7D20;&#x3001;
+&#x672C;&#x5730;&#x6301;&#x4E45;&#x5316;&#x7F13;&#x5B58;&#x3001;&#x7ED1;&#x5B9A;/&#x89E3;&#x7ED1;&#x4E8B;&#x4EF6;&#x3001;&#x6DFB;&#x52A0;&#x8BA2;&#x9605;&#x3001;&#x8BBE;&#x7F6E;&#x5B9A;&#x65F6;&#x5668;&#x3001;&#x8BB0;&#x5F55;&#x65E5;&#x5FD7;&#x7B49;&#x3002;&#x4EE5;&#x5F80;&#x8FD9;&#x4E9B;&#x526F;&#x4F5C;&#x7528;&#x90FD;
+&#x662F;&#x5199;&#x5728;&#x7C7B;&#x7EC4;&#x4EF6;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x3002;&#x800C; useEffect &#x5728;&#x5168;&#x90E8;&#x6E32;&#x67D3;&#x5B8C;&#x6BD5;&#x540E;&#x624D;&#x4F1A;&#x6267;&#x884C;&#xFF0C;useLayoutEffect
+&#x4F1A;&#x5728;&#x6D4F;&#x89C8;&#x5668; layout &#x4E4B;&#x540E;&#xFF0C;painting &#x4E4B;&#x524D;&#x6267;&#x884C;&#x3002;
+</code></pre>
+<h2 id="3-&#x6CE8;&#x518C;&#x4E8B;&#x9879;">3. &#x6CE8;&#x518C;&#x4E8B;&#x9879;</h2>
+<ul>
+<li>&#x53EA;&#x80FD;&#x5728;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x7684;&#x6700;&#x5916;&#x5C42;&#x8C03;&#x7528; Hook&#xFF0C;&#x4E0D;&#x8981;&#x5728;&#x5FAA;&#x73AF;&#x3001;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x6216;&#x8005;&#x5B50;&#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;</li>
+<li>&#x53EA;&#x80FD;&#x5728; React &#x7684;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x4E2D;&#x8C03;&#x7528; Hook&#xFF0C;&#x4E0D;&#x8981;&#x5728;&#x5176;&#x4ED6; JavaScript &#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;</li>
+</ul>
+<h2 id="4-usestate--usememo--usecallback">4. useState &amp;&amp; useMemo &amp;&amp; useCallback</h2>
+<pre class="language-"><code class="lang-jsx"><span class="token comment">// &#x6570;&#x7EC4;&#x89E3;&#x6784;</span>
+<span class="token keyword">const</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> setState<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span>initialState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x6BCF;&#x6B21;setState&#x90FD;&#x4F1A;&#x91CD;&#x65B0;&#x6E32;&#x67D3;dom&#xFF0C;&#x600E;&#x4E48;&#x4F18;&#x5316;?
+<!-- 父组件减少重渲染 --></p>
+<h3 id="41-&#x672A;&#x4F7F;&#x7528;usecallback">4.1 &#x672A;&#x4F7F;&#x7528;useCallback</h3>
+<pre class="language-"><code class="lang-git">git reset --hard 4cd230ddda7808a12da45185a1da3de7282b032f
+</code></pre>
+<h3 id="42-&#x4F7F;&#x7528;usecallback">4.2 &#x4F7F;&#x7528;useCallback</h3>
+<pre class="language-"><code class="lang-git">git reset --hard 3b6163d14324040bb2a6e31884b0c8b414447be6
+</code></pre>
+<h3 id="43-&#x672A;&#x4F7F;&#x7528;usememo">4.3 &#x672A;&#x4F7F;&#x7528;useMemo</h3>
+<pre class="language-"><code class="lang-git">git reset --hard 51d53ff7e6d26b47baedd992af6f8803f48d2f8e
+</code></pre>
+<h3 id="44-&#x4F7F;&#x7528;usememo">4.4 &#x4F7F;&#x7528;useMemo</h3>
+<pre class="language-"><code class="lang-git">git reset --hard 7b7683e6821518a2397471fde9f963dd1253aa41
+</code></pre>
+<h2 id="5-&#x51FD;&#x6570;&#x5F0F;&#x66F4;&#x65B0;">5. &#x51FD;&#x6570;&#x5F0F;&#x66F4;&#x65B0;</h2>
+<pre class="language-"><code class="lang-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">Counter2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">let</span> <span class="token punctuation">[</span>number<span class="token punctuation">,</span>setNumber<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">lazy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+      <span class="token comment">// setNumber(number+1);</span>
+       <span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token parameter">number</span><span class="token operator">=&gt;</span>number<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// &#x6BCF;&#x6B21;&#x90FD;&#x4F1A;&#x53BB;&#x83B7;&#x53D6;&#x4E00;&#x904D;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>number<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token function">setNumber</span><span class="token punctuation">(</span>number<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token operator">+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>lazy<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>lazy<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Counter2<span class="token punctuation">;</span>
+</code></pre>
+<h2 id="6&#x60F0;&#x6027;&#x521D;&#x59CB;&#x5316;-state">6.&#x60F0;&#x6027;&#x521D;&#x59CB;&#x5316; state</h2>
+<p>useState&#x7684;&#x521D;&#x59CB;&#x503C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x8BA1;&#x7B97;&#x8FD4;&#x56DE;&#x521D;&#x59CB;&#x503C;</p>
+<pre class="language-"><code class="lang-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">Counter5</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;Counter5 render&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">getInitState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;getInitState__&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x53EA;&#x521D;&#x59CB;&#x5316;&#x8FDB;&#x6765;&#x4E00;&#x6B21;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>number<span class="token operator">:</span>props<span class="token punctuation">.</span>number <span class="token operator">||</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">let</span> <span class="token punctuation">[</span>counter<span class="token punctuation">,</span>setCounter<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span>getInitState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>counter<span class="token punctuation">.</span>number<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token function">setCounter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>number<span class="token operator">:</span>counter<span class="token punctuation">.</span>number<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token operator">+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token function">setCounter</span><span class="token punctuation">(</span>counter<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>setCounter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Counter5<span class="token punctuation">;</span>
+</code></pre>
+<h2 id="7-&#x6027;&#x80FD;&#x4F18;&#x5316;">7. &#x6027;&#x80FD;&#x4F18;&#x5316;</h2>
+<h3 id="71-objectis&#x6D45;&#x6BD4;&#x8F83;">7.1 Object.is(&#x6D45;&#x6BD4;&#x8F83;)</h3>
+<pre class="language-"><code class="lang-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">Counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>counter<span class="token punctuation">,</span>setCounter<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>name<span class="token operator">:</span><span class="token string">&apos;&#x8BA1;&#x6570;&#x5668;&apos;</span><span class="token punctuation">,</span>number<span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// &#x5982;&#x679C;&#x4F60;&#x4FEE;&#x6539;&#x72B6;&#x6001;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F20;&#x7684;&#x72B6;&#x6001;&#x503C;&#x6CA1;&#x6709;&#x53D8;&#x5316;&#xFF0C;&#x5219;&#x4E0D;&#x91CD;&#x65B0;&#x6E32;&#x67D3;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;render Counter&apos;</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>counter<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token operator">:</span><span class="token punctuation">{</span>counter<span class="token punctuation">.</span>number<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token function">setCounter</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token operator">...</span>counter<span class="token punctuation">,</span>number<span class="token operator">:</span>counter<span class="token punctuation">.</span>number<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token operator">+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token function">setCounter</span><span class="token punctuation">(</span>counter<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token operator">++</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Counter<span class="token punctuation">;</span>
+</code></pre>
+<h3 id="72-&#x51CF;&#x5C11;&#x6E32;&#x67D3;&#x6B21;&#x6570;">7.2 &#x51CF;&#x5C11;&#x6E32;&#x67D3;&#x6B21;&#x6570;</h3>
+<ul>
+<li>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#xFF0C;&#x53EA;&#x8981;&#x7236;&#x7EC4;&#x4EF6;&#x72B6;&#x6001;&#x53D8;&#x4E86;&#xFF08;&#x4E0D;&#x7BA1;&#x5B50;&#x7EC4;&#x4EF6;&#x4F9D;&#x4E0D;&#x4F9D;&#x8D56;&#x8BE5;&#x72B6;&#x6001;&#xFF09;&#xFF0C;&#x5B50;&#x7EC4;&#x4EF6;&#x4E5F;&#x4F1A;&#x91CD;&#x65B0;&#x6E32;&#x67D3; </li>
+<li>&#x4E00;&#x822C;&#x4F18;&#x5316; <ul>
+<li>&#x7C7B;&#x7EC4;&#x4EF6;: pureComponent</li>
+<li>&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#xFF1A;memo&#xFF08;&#x6D45;&#x6BD4;&#x8F83;&#xFF09;</li>
+</ul>
+</li>
+<li><p>useState&#x6BCF;&#x6B21;&#x90FD;&#x4F1A;&#x91CD;&#x65B0;&#x751F;&#x6210;&#x65B0;&#x503C;&#xFF0C;&#x5982;&#x4F55;&#x4FDD;&#x8BC1;&#x5C5E;&#x6027;&#x4E0D;&#x53D8;&#xFF1F;</p>
+<!-- useMemo, useCallback -->
+</li>
+<li><p>&#x66F4;&#x6DF1;&#x5165;&#x7684;&#x4F18;&#x5316;</p>
+<!-- useMemo, useCallback -->
+</li>
+</ul>
+<h3 id="73-usestate-&#x6E90;&#x7801;&#x4E2D;&#x7684;&#x94FE;&#x8868;&#x5B9E;&#x73B0;">7.3 useState &#x6E90;&#x7801;&#x4E2D;&#x7684;&#x94FE;&#x8868;&#x5B9E;&#x73B0;???</h3>
+<pre class="language-"><code class="lang-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">&apos;react-dom&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> firstWorkInProgressHook <span class="token operator">=</span> <span class="token punctuation">{</span>memoizedState<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span> next<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> workInProgressHook<span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token parameter">initState</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> currentHook <span class="token operator">=</span> workInProgressHook<span class="token punctuation">.</span>next <span class="token operator">?</span> workInProgressHook<span class="token punctuation">.</span>next <span class="token operator">:</span> <span class="token punctuation">{</span>memoizedState<span class="token operator">:</span> initState<span class="token punctuation">,</span> next<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">setState</span><span class="token punctuation">(</span><span class="token parameter">newState</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      currentHook<span class="token punctuation">.</span>memoizedState <span class="token operator">=</span> newState<span class="token punctuation">;</span>
+      <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+      <span class="token comment">// &#x8FD9;&#x5C31;&#x662F;&#x4E3A;&#x4EC0;&#x4E48; useState &#x4E66;&#x5199;&#x987A;&#x5E8F;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x539F;&#x56E0;</span>
+        <span class="token comment">// &#x5047;&#x5982;&#x67D0;&#x4E2A; useState &#x6CA1;&#x6709;&#x6267;&#x884C;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x6307;&#x9488;&#x79FB;&#x52A8;&#x51FA;&#x9519;&#xFF0C;&#x6570;&#x636E;&#x5B58;&#x53D6;&#x51FA;&#x9519;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>workInProgressHook<span class="token punctuation">.</span>next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// &#x8FD9;&#x91CC;&#x53EA;&#x6709;&#x7EC4;&#x4EF6;&#x5237;&#x65B0;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x624D;&#x4F1A;&#x8FDB;&#x5165;</span>
+        <span class="token comment">// &#x6839;&#x636E;&#x4E66;&#x5199;&#x987A;&#x5E8F;&#x6765;&#x53D6;&#x5BF9;&#x5E94;&#x7684;&#x503C;</span>
+        <span class="token comment">// console.log(workInProgressHook);</span>
+        workInProgressHook <span class="token operator">=</span> workInProgressHook<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// &#x53EA;&#x6709;&#x5728;&#x7EC4;&#x4EF6;&#x521D;&#x59CB;&#x5316;&#x52A0;&#x8F7D;&#x65F6;&#xFF0C;&#x624D;&#x4F1A;&#x8FDB;&#x5165;</span>
+        <span class="token comment">// &#x6839;&#x636E;&#x4E66;&#x5199;&#x987A;&#x5E8F;&#xFF0C;&#x5B58;&#x50A8;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;</span>
+        <span class="token comment">// &#x5C06; firstWorkInProgressHook &#x53D8;&#x6210;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#x7ED3;&#x6784;</span>
+        workInProgressHook<span class="token punctuation">.</span>next <span class="token operator">=</span> currentHook<span class="token punctuation">;</span>
+        <span class="token comment">// &#x5C06; workInProgressHook &#x6307;&#x5411; {memoizedState: initState, next: null}</span>
+        workInProgressHook <span class="token operator">=</span> currentHook<span class="token punctuation">;</span>
+        <span class="token comment">// console.log(firstWorkInProgressHook);</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>currentHook<span class="token punctuation">.</span>memoizedState<span class="token punctuation">,</span> setState<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">Counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// &#x6BCF;&#x6B21;&#x7EC4;&#x4EF6;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD9;&#x91CC;&#x7684; useState &#x90FD;&#x4F1A;&#x91CD;&#x65B0;&#x6267;&#x884C;</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>name<span class="token punctuation">,</span> setName<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">&apos;&#x8BA1;&#x6570;&#x5668;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>number<span class="token punctuation">,</span> setNumber<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>name<span class="token punctuation">}</span><span class="token operator">:</span><span class="token punctuation">{</span>number<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">&apos;&#x65B0;&#x8BA1;&#x6570;&#x5668;&apos;</span> <span class="token operator">+</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>&#x65B0;&#x8BA1;&#x6570;&#x5668;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setNumber</span><span class="token punctuation">(</span>number <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token operator">+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// &#x6BCF;&#x6B21;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x90FD;&#x5C06; workInProgressHook &#x6307;&#x5411; firstWorkInProgressHook</span>
+    workInProgressHook <span class="token operator">=</span> firstWorkInProgressHook<span class="token punctuation">;</span>
+    ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Counter</span></span><span class="token punctuation">/&gt;</span></span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&apos;root&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="8-usereducer">8. useReducer</h2>
+<pre class="language-"><code class="lang-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useReducer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> initialState <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">reducer</span><span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">switch</span> <span class="token punctuation">(</span>action<span class="token punctuation">.</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token string">&apos;increment&apos;</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>number<span class="token operator">:</span> state<span class="token punctuation">.</span>number <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token string">&apos;decrement&apos;</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>number<span class="token operator">:</span> state<span class="token punctuation">.</span>number <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">default</span><span class="token operator">:</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token parameter">initialState</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>number<span class="token operator">:</span>initialState<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">Counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> dispatch<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useReducer</span><span class="token punctuation">(</span>reducer<span class="token punctuation">,</span> initialState<span class="token punctuation">,</span> init<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span>
+          Count<span class="token operator">:</span> <span class="token punctuation">{</span>state<span class="token punctuation">.</span>number<span class="token punctuation">}</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token operator">:</span> <span class="token string">&apos;increment&apos;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token operator">+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token operator">:</span> <span class="token string">&apos;decrement&apos;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token operator">-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Counter<span class="token punctuation">;</span>
+</code></pre>
+<h2 id="9-usecontext">9. useContext</h2>
+<pre class="language-"><code class="lang-ts">import React, { useReducer, createContext, useContext } from &apos;react&apos;;
+const initialState = {number : 0};
+function reducer(state = initialState, action) {
+  switch (action.type) {
+    case &apos;ADD&apos;:
+      return { number: state.number + 1 };
+    default:
+      break;
+  }
+}
+const CounterContext = createContext(undefined);
+// &#x7B2C;&#x4E00;&#x79CD;&#x83B7;&#x53D6; CounterContext &#x65B9;&#x6CD5;&#xFF1A;&#x4E0D;&#x4F7F;&#x7528; hook
+function SubCounter_one() {
+  return (
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>CounterContext.Consumer</span><span class="token punctuation">&gt;</span></span>
+      {
+        (value: any) =&gt; {
+          return (
+            &lt;&gt;
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>{value.state.number}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+              &lt;button onClick={() =&gt; value.dispatch({ type: &apos;ADD&apos; })}&gt;+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+            &lt;/&gt;
+          )
+        }
+      }
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>CounterContext.Consumer</span><span class="token punctuation">&gt;</span></span>
+  )
+}
+// &#x7B2C;&#x4E8C;&#x79CD;&#x83B7;&#x53D6; CounterContext &#x65B9;&#x6CD5;&#xFF1A;&#x4F7F;&#x7528; hook &#xFF0C;&#x66F4;&#x7B80;&#x6D01;
+function SubCounter() {
+  const { state, dispatch} = useContext(CounterContext);
+  console.log(&quot;state___&quot;, state)
+  return (
+    &lt;&gt;
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>{state.number}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+      &lt;button onClick={() =&gt; dispatch({ type: &apos;ADD&apos; })}&gt;+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    &lt;/&gt;
+  )
+}
+/* class SubCounter extends React.Component {
+    static contextTypes = CounterContext
+    this.context =  {state, dispatch}
+} */
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, initialState, () =&gt; (initialState));
+  return (
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>CounterContext.Provider</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>{state,</span> <span class="token attr-name">dispatch}</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SubCounter</span> <span class="token punctuation">/&gt;</span></span>
+      {/* <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SubCounter_one</span> <span class="token punctuation">/&gt;</span></span> */}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>CounterContext.Provider</span><span class="token punctuation">&gt;</span></span>
+  )
+}
+export default Counter;
+</code></pre>
+<h2 id="10-useeffect">10. useEffect</h2>
+<ul>
+<li>componentDidMount&#x3001;componentDidUpdate &#x548C; componentWillUnmount</li>
+<li>effect&#xFF08;&#x526F;&#x4F5C;&#x7528;&#xFF09;&#xFF1A;&#x6307;&#x90A3;&#x4E9B;&#x6CA1;&#x6709;&#x53D1;&#x751F;&#x5728;&#x6570;&#x636E;&#x5411;&#x89C6;&#x56FE;&#x8F6C;&#x6362;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x5982; ajax &#x8BF7;&#x6C42;&#x3001;&#x8BBF;&#x95EE;&#x539F;&#x751F;dom &#x5143;&#x7D20;&#x3001;&#x672C;&#x5730;&#x6301;&#x4E45;&#x5316;&#x7F13;&#x5B58;&#x3001;&#x7ED1;&#x5B9A;/&#x89E3;&#x7ED1;&#x4E8B;&#x4EF6;&#x3001;&#x6DFB;&#x52A0;&#x8BA2;&#x9605;&#x3001;&#x8BBE;&#x7F6E;&#x5B9A;&#x65F6;&#x5668;&#x3001;&#x8BB0;&#x5F55;&#x65E5;&#x5FD7;&#x7B49;&#x3002;</li>
+<li>&#x526F;&#x4F5C;&#x7528;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x5206;&#x4E24;&#x7C7B;&#xFF1A;&#x9700;&#x8981;&#x6E05;&#x9664;&#x7684;&#x548C;&#x4E0D;&#x9700;&#x8981;&#x6E05;&#x9664;&#x7684;&#x3002;</li>
+</ul>
+<h2 id="101-&#x4FEE;&#x6539;&#x6807;&#x9898;">10.1 &#x4FEE;&#x6539;&#x6807;&#x9898;</h2>
+<h3 id="1011-&#x4F7F;&#x7528;class&#x7EC4;&#x4EF6;">10.1.1 &#x4F7F;&#x7528;class&#x7EC4;&#x4EF6;</h3>
+<ul>
+<li>componentDidMount&#x548C;componentDidUpdate&#x9700;&#x8981;&#x6267;&#x884C;&#x4E24;&#x6B21;<pre class="language-"><code class="lang-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">class</span> <span class="token class-name">Counter</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span><span class="token punctuation">{</span>
+state <span class="token operator">=</span> <span class="token punctuation">{</span>number<span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function-variable function">add</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>number<span class="token operator">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>number<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">changeTitle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">componentDidUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">changeTitle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function-variable function">changeTitle</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&#x4F60;&#x5DF2;&#x7ECF;&#x70B9;&#x51FB;&#x4E86;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>number<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&#x6B21;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>number<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>add<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token operator">+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Counter<span class="token punctuation">;</span>
+</code></pre>
+<h3 id="1012-&#x4F7F;&#x7528;useeffect">10.1.2 &#x4F7F;&#x7528;useEffect</h3>
+<pre class="language-"><code class="lang-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">Counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">const</span> <span class="token punctuation">[</span>number<span class="token punctuation">,</span> setNumber<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  document<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&#x4F60;&#x70B9;&#x51FB;&#x4E86;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>number<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&#x6B21;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">return</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>number<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setNumber</span><span class="token punctuation">(</span>number <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token operator">+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Counter<span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="1013-&#x6E05;&#x9664;&#x526F;&#x4F5C;&#x7528;">10.1.3 &#x6E05;&#x9664;&#x526F;&#x4F5C;&#x7528;</h3>
+<pre class="language-"><code class="lang-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">Counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">let</span> <span class="token punctuation">[</span>number<span class="token punctuation">,</span>setNumber<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> <span class="token punctuation">[</span>text<span class="token punctuation">,</span>setText<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// &#x76F8;&#x5F53;&#x4E8E;componentDidMount &#x548C; componentDidUpdate</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;&#x5F00;&#x542F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5B9A;&#x65F6;&#x5668;&apos;</span><span class="token punctuation">)</span>
+      <span class="token keyword">let</span> $timer <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+          <span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token parameter">number</span><span class="token operator">=&gt;</span>number<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// &#x7EC4;&#x4EF6;&#x5378;&#x8F7D;&#x6E05;&#x9664;&#x5B9A;&#x65F6;&#x5668;</span>
+     <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;destroy effect&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">clearInterval</span><span class="token punctuation">(</span>$timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// &#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x7A7A;&#x6570;&#x7EC4;[]</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>text<span class="token punctuation">}</span></span> <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token function">setText</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>number<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">&gt;</span></span><span class="token operator">+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Counter<span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>&#x63A8;&#x8350;&#x542F;&#x7528; eslint-plugin-react-hooks[1] &#x4E2D;&#x7684; exhaustive-deps &#x89C4;&#x5219;</li>
+</ul>
+<h3 id="1014-&#x4F7F;&#x7528;&#x591A;&#x4E2A;-effect-&#x5B9E;&#x73B0;&#x5173;&#x6CE8;&#x70B9;&#x5206;&#x79BB;">10.1.4 &#x4F7F;&#x7528;&#x591A;&#x4E2A; Effect &#x5B9E;&#x73B0;&#x5173;&#x6CE8;&#x70B9;&#x5206;&#x79BB;</h3>
+<pre class="language-"><code class="lang-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">Counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">let</span> <span class="token punctuation">[</span>number<span class="token punctuation">,</span>setNumber<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> <span class="token punctuation">[</span>text<span class="token punctuation">,</span>setText<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// &#x4FEE;&#x6539;&#x6807;&#x9898;</span>
+    document<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">&quot;&#x6211;&#x662F;&#x65B0;&#x6807;&#x9898;&quot;</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;&#x6807;&#x9898;&#x53D8;&#x5316;&#x4E86;&quot;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;number&#x53D8;&#x5316;&#x4E86;&#xFF1A;&quot;</span><span class="token punctuation">,</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>number<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// number&#x53D8;&#x66F4;&#x540E;&#x6267;&#x884C;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>text<span class="token punctuation">}</span></span> <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token function">setText</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>number<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token function">setNumber</span><span class="token punctuation">(</span>number <span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token operator">+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Counter<span class="token punctuation">;</span>
+</code></pre>
+<h2 id="11-uselayouteffect">11. useLayoutEffect</h2>
+<ul>
+<li>useLayoutEffect &#x4F1A;&#x5728; &#x6D4F;&#x89C8;&#x5668; layout &#x4E4B;&#x540E;&#xFF0C;painting &#x4E4B;&#x524D;&#x6267;&#x884C;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x963B;&#x585E;&#x89C6;&#x56FE;&#x66F4;&#x65B0;</li>
+</ul>
+<pre class="language-"><code class="lang-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">Counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">let</span> <span class="token punctuation">[</span>number<span class="token punctuation">,</span>setNumber<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> <span class="token punctuation">[</span>text<span class="token punctuation">,</span>setText<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// &#x4FEE;&#x6539;&#x6807;&#x9898;</span>
+    document<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">&quot;&#x6211;&#x662F;&#x65B0;&#x6807;&#x9898;&quot;</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;&#x6807;&#x9898;&#x53D8;&#x5316;&#x4E86;&quot;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;number&#x53D8;&#x5316;&#x4E86;&#xFF1A;&quot;</span><span class="token punctuation">,</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>number<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// number&#x53D8;&#x66F4;&#x540E;&#x6267;&#x884C;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>text<span class="token punctuation">}</span></span> <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token function">setText</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>number<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token function">setNumber</span><span class="token punctuation">(</span>number <span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token operator">+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Counter<span class="token punctuation">;</span>
+</code></pre>
+<h2 id="12-useref--useimperativehandle">12. useRef &amp; useImperativeHandle</h2>
+<ul>
+<li>&#x83B7;&#x53D6;&#x7126;&#x70B9;
+```jsx
+import React, { useState, useEffect, useRef } from &apos;react&apos;;</li>
+</ul>
+<p>function Parent() {
+  let [number, setNumber] = useState(0);
+  return (
+    &lt;&gt;
+      <child>
+      <button onclick="{()" ==""> setNumber(number + 1)}&gt;+</button>
+    &lt;/&gt;
+  )
+}
+let input;
+function Child() {
+  const inputRef: any = useRef();
+  console.log(&apos;input===inputRef&apos;, input === inputRef);
+  input = inputRef;
+  function getFocus() {
+    inputRef?.current?.focus();
+  }
+  return (
+    &lt;&gt;
+      <input type="text" ref="{inputRef}">
+      <button onclick="{getFocus}">&#x83B7;&#x5F97;&#x7126;&#x70B9;</button>
+    &lt;/&gt;
+  )
+}
+export default Parent;</child></p>
+<pre class="language-"><code>
+- &#x83B7;&#x53D6;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x7126;&#x70B9;
+```jsx
+import React, { useState, useEffect, useRef } from &apos;react&apos;;
+
+function Child(props, ref) {
+  return (
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>{ref}</span> <span class="token punctuation">/&gt;</span></span>
+  )
+}
+const Child2 = React.forwardRef(Child);
+
+function Parent() {
+  let [number, setNumber] = useState(0);
+  const inputRef: any = useRef();
+  function getFocus() {
+    inputRef.current.value = &apos;focus&apos;;
+    inputRef.current.focus();
+  }
+  return (
+    &lt;&gt;
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Child2</span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>{</span> <span class="token attr-name">inputRef</span> <span class="token attr-name">}</span> <span class="token punctuation">/&gt;</span></span>
+      &lt;button onClick={() =&gt; setNumber(number + 1 )}&gt;+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>{getFocus}</span><span class="token punctuation">&gt;</span></span>&#x83B7;&#x5F97;&#x7126;&#x70B9;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    &lt;/&gt;
+  )
+}
+export default Parent;
+</code></pre><ul>
+<li>&#x81EA;&#x5B9A;&#x4E49;&#x66B4;&#x9732;&#x7ED9;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x5B9E;&#x4F8B;&#x503C;
+```jsx
+import React, { useState, useEffect, createRef, useRef, forwardRef, useImperativeHandle } from &apos;react&apos;;</li>
+</ul>
+<p>function Child(props, parentRef) {
+  let focusRef: any = useRef();
+  let inputRef: any = useRef();
+  useImperativeHandle(parentRef, () =&gt; {
+    return {
+      focusRef,
+      inputRef,
+      name: &apos;&#x8BA1;&#x6570;&#x5668;&apos;,
+      focus() {
+        focusRef.current.focus();
+      },
+      changeText(text) {
+        inputRef.current.value = text;
+      }
+    }
+  });
+  return (
+    &lt;&gt;
+      <input ref="{focusRef}">
+      <input ref="{inputRef}">
+    &lt;/&gt;
+  )
+}
+const ForwardChild = forwardRef(Child);</p>
+<p>function Parent() {
+  const parentRef: any = useRef();//{current:&apos;&apos;}
+  function getFocus() {
+    parentRef.current.focus();
+    parentRef.current.addNumber(666);  // &#x5B50;&#x7EC4;&#x4EF6;&#x672A;&#x5B9A;&#x4E49;&#xFF0C;&#x4EE3;&#x7801;&#x65E0;&#x6548;
+    parentRef.current.changeText(&apos;<script>alert(123)</script>&apos;);
+    console.log(parentRef.current.name);
+  }
+  return (
+    &lt;&gt;
+      <forwardchild ref="{parentRef}">
+      <button onclick="{getFocus}">&#x83B7;&#x5F97;&#x7126;&#x70B9;</button>
+    &lt;/&gt;
+  )
+}
+export default Parent;
+```</forwardchild></p>
+<h2 id="13-&#x81EA;&#x5B9A;&#x4E49;hook">13. &#x81EA;&#x5B9A;&#x4E49;Hook</h2>
+<p><img src="http://www.baidu.com" alt="1"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: react">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../chapter5/" class="navigation navigation-next " aria-label="Next page: vue">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"react-hooks分析","level":"1.5.1","depth":2,"next":{"title":"vue","level":"1.6","depth":1,"path":"chapter5/README.md","ref":"chapter5/README.md","articles":[{"title":"vue分析","level":"1.6.1","depth":2,"path":"chapter5/section1.1.md","ref":"chapter5/section1.1.md","articles":[]}]},"previous":{"title":"react","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[{"title":"react-hooks分析","level":"1.5.1","depth":2,"path":"chapter4/section1.1.md","ref":"chapter4/section1.1.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","livereload"],"styles":{"website":"./assets/css/index.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"alan89757","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"alan89757的分享文档库","language":"zh-hans","gitbook":"*","description":"alan89757的所有分享文档库"},"file":{"path":"chapter4/section1.1.md","mtime":"2021-07-19T03:02:10.077Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-19T06:42:46.741Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

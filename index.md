@@ -6,7 +6,7 @@
 * [vuepress](https://alan89757.github.io/vuepress/)
 * [nuxt](https://alan89757.github.io/nuxt/)
 * [docsify](https://alan89757.github.io/docsify/)
-* [taro-h5](https://alan89757.github.io/docsify/)
+* [taro-h5](https://alan89757.github.io/taro-h5/)
 * [uniapp-h5](https://alan89757.github.io/uniapp-h5/)
 
 

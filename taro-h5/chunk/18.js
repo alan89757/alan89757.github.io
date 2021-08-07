@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[18],{"58":function(n,c,e){"use strict";e.r(c),e.d(c,"taro_block_core",(function(){return u}));var t=e(2),o=e(4),r=e(28),u=function(){function Block(n){Object(t.a)(this,Block),Object(r.g)(this,n)}return Object(o.a)(Block,[{"key":"render","value":function render(){return Object(r.e)(r.a,null)}}]),Block}()}}]);

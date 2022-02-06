@@ -1,7 +1,7 @@
 ## Welcome to alan89757 blog
 
 ### 向导
-* [javascript](https://alan89757.github.io/javascript/)
+* [javascript专题教程](https://alan89757.github.io/javascript/)
 * [gitbook](https://alan89757.github.io/gitbook/)
 * [hexo](https://alan89757.github.io/hexo/)
 

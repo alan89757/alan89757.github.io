@@ -1,0 +1,441 @@
+<!DOCTYPE html><html><head>
+      <title>resume</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\liangrongjun\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.1\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86">&#x4E2A;&#x4EBA;&#x7B80;&#x5386;</h1>
+
+<h2 class="mume-header" id="%E5%9F%BA%E6%9C%AC%E8%B5%84%E6%96%99">&#x57FA;&#x672C;&#x8D44;&#x6599;</h2>
+
+<ul>
+<li>&#x59D3;&#x540D;&#xFF1A;&#x6881;&#x8363;&#x519B;</li>
+<li>&#x624B;&#x673A;&#x53F7;&#xFF1A;17612176307</li>
+<li>Email&#xFF1A;alan89757@163.com</li>
+<li>&#x5FAE;&#x4FE1;&#xFF1A;17612176307</li>
+<li>Github&#xFF1A;<a href="https://github.com/alan89757/">https://github.com/alan89757/</a></li>
+</ul>
+<hr>
+<h2 class="mume-header" id="%E6%8A%80%E8%83%BD%E6%A6%82%E5%86%B5">&#x6280;&#x80FD;&#x6982;&#x51B5;</h2>
+
+<ul>
+<li>&#x719F;&#x7EC3;&#x638C;&#x63E1;react&#x3001;vue&#x3001;angular&#x524D;&#x7AEF;&#x6D41;&#x884C;&#x6846;&#x67B6;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x4E86;&#x89E3;&#x8FC7;vue&#x6E90;&#x7801;&#x5B9E;&#x73B0;</li>
+<li>&#x719F;&#x7EC3;&#x638C;&#x63E1;jquery&#x3001;underscore&#x3001;knockoutjs&#x7B49;&#x5DE5;&#x5177;&#x5E93;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x4E86;&#x89E3;&#x8FC7;jquery/underscore&#x6E90;&#x7801;&#x5B9E;&#x73B0;</li>
+<li>&#x638C;&#x63E1;html5&#xFF0C;es6+&#xFF0C;sass&#x7B49;&#x6280;&#x672F;</li>
+<li>&#x638C;&#x63E1;express&#x3001;koa&#x3001;eggjs&#x7B49;node&#x6846;&#x67B6;&#x4F7F;&#x7528;</li>
+<li>&#x638C;&#x63E1;webpack&#x3001;gulp&#x7B49;&#x5DE5;&#x5177;&#x914D;&#x5408;&#x4F7F;&#x7528;</li>
+<li>&#x719F;&#x7EC3;&#x4F7F;&#x7528;git&#x3001;fiddler&#x3001;charles&#x7B49;&#x8F85;&#x52A9;&#x5DE5;&#x5177;</li>
+<li>&#x4F7F;&#x7528;uniapp&#x5F00;&#x53D1;&#x4E86;h5&#x548C;&#x5C0F;&#x7A0B;&#x5E8F;</li>
+<li>&#x5B9E;&#x73B0;UI&#x81EA;&#x52A8;&#x5316;&#x6D4B;&#x8BD5;</li>
+<li>&#x4E86;&#x89E3;flutter, taro&#x7B49;&#x4F7F;&#x7528;</li>
+<li>&#x4F7F;&#x7528;&#x4F01;&#x4E1A;&#x5FAE;&#x4FE1;&#x5B9E;&#x73B0;&#x4E86;&#x7F8E;&#x9910;&#x70B9;&#x9910;&#xFF08;taro+nodejs&#xFF09;</li>
+<li>&#x4F7F;&#x7528;&#x8FC7;linux&#x3001;php&#x3001;mysql&#x3001;mongodb&#x7B49;&#x540E;&#x7AEF;&#xFF0C;&#x957F;&#x671F;&#x5728;&#x7EF4;&#x62A4;&#x963F;&#x91CC;&#x4E91;&#x7B49;&#x56FD;&#x5185;&#x5916;&#x670D;&#x52A1;&#x5668;</li>
+<li>&#x4F7F;&#x7528;&#x8FC7;ThinkPHP&#x548C;Yii&#x7B49;&#x540E;&#x7AEF;php&#x6846;&#x67B6;</li>
+<li>&#x4E86;&#x89E3;react-native&#x3001;memcache&#x3001;redis&#x3001;python&#x3001;Browserify &#x3001;Grunt&#x3001;Threejs&#x3001;Docker &#x7B49;&#x6280;&#x672F;</li>
+<li>&#x8F85;&#x52A9;&#x5DE5;&#x5177;,teambition</li>
+</ul>
+<hr>
+<h2 class="mume-header" id="%E6%95%99%E8%82%B2%E8%83%8C%E6%99%AF">&#x6559;&#x80B2;&#x80CC;&#x666F;</h2>
+
+<ul>
+<li>2008.9-2012.6&#xFF0C;&#x672C;&#x79D1;&#xFF0C; &#x5409;&#x9996;&#x5927;&#x5B66;&#xFF0C;&#x4FE1;&#x606F;&#x7BA1;&#x7406;&#x4E13;&#x4E1A;</li>
+</ul>
+<hr>
+<h2 class="mume-header" id="%E5%B7%A5%E4%BD%9C%E7%BB%8F%E5%8E%86">&#x5DE5;&#x4F5C;&#x7ECF;&#x5386;</h2>
+
+<h4 class="mume-header" id="%E4%B8%8A%E6%B5%B7%E8%B5%9B%E5%8F%AF%E5%87%BA%E8%A1%8C%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8">&#x4E0A;&#x6D77;&#x8D5B;&#x53EF;&#x51FA;&#x884C;&#x79D1;&#x6280;&#x670D;&#x52A1;&#x6709;&#x9650;&#x516C;&#x53F8;</h4>
+
+<p><strong>&#x4EFB;&#x804C;&#x65F6;&#x95F4;&#xFF1A;2018&#x5E74;10&#x6708; ~ &#x81F3;&#x4ECA;</strong><br>
+<strong>&#x804C;&#x4F4D;&#xFF1A; &#x524D;&#x7AEF;leader</strong><br>
+<strong>&#x6280;&#x672F;&#x6808;&#xFF1A; react + vue</strong></p>
+<h5 class="mume-header" id="mis%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">MIS&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;</h5>
+
+<ul>
+<li>&#x8D1F;&#x8D23;sso&#x767B;&#x9646;&#xFF0C;&#x83DC;&#x5355;&#xFF0C;&#x89D2;&#x8272;&#xFF0C;&#x6743;&#x9650;&#x7B49;&#x6A21;&#x5757;&#x91CD;&#x6784;</li>
+<li>&#x5F00;&#x53D1;&#x671F;&#x95F4;&#x628A;&#x539F;&#x6709;&#x7684;iframe&#x5185;&#x5D4C;&#x9875;&#x9762;&#x6539;&#x9020;&#x6210;&#x4E86;&#x5FAE;&#x670D;&#x52A1;&#xFF0C;&#x4F18;&#x5316;&#x4E86;webpack&#x6253;&#x5305;&#x901F;&#x5EA6;</li>
+</ul>
+<h5 class="mume-header" id="%E4%BC%81%E4%B8%9A%E6%89%93%E8%BD%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">&#x4F01;&#x4E1A;&#x6253;&#x8F66;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;</h5>
+
+<ul>
+<li>&#x8D1F;&#x8D23;&#x6253;&#x8F66;&#x7CFB;&#x7EDF;&#x6846;&#x67B6;&#x642D;&#x5EFA;&#xFF0C;&#x767B;&#x9646;&#x548C;&#x4E0B;&#x5355;&#x7B49;&#x6A21;&#x5757;&#x524D;&#x7AEF;&#x4EFB;&#x52A1;&#xFF0C;&#x62C5;&#x4EFB;&#x6280;&#x672F;owner&#x53C2;&#x4E0E;&#x4E86;&#x4ECE;&#x96F6;&#x5230;&#x4E00;&#x7684;&#x5EFA;&#x8BBE;</li>
+<li>&#x8D1F;&#x8D23;&#x9879;&#x76EE;&#x671F;&#x95F4;&#x540C;&#x65F6;&#x63A8;&#x8FDB;&#x4E86;&#x524D;&#x7AEF;&#x7684;&#x6D41;&#x7A0B;&#x89C4;&#x8303;&#x5316;&#x3001;&#x5DE5;&#x7A0B;&#x5316;&#x3001;&#x6807;&#x51C6;&#x5316;&#x7684;&#x5DE5;&#x4F5C;</li>
+<li>&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x4E2D;&#x6253;&#x901A;&#x4E86;&#x540E;&#x53F0;&#x7CFB;&#x7EDF;&#x548C;H5&#x9875;&#x9762;&#xFF08;ToC&#xFF09;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x4E92;&#x53CA;&#x89C4;&#x8303;</li>
+</ul>
+<h5 class="mume-header" id="%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">&#x8D44;&#x4EA7;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;</h5>
+
+<ul>
+<li>&#x8D1F;&#x8D23;&#x9879;&#x76EE;&#x67B6;&#x6784;&#x8BBE;&#x8BA1;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x62C5;&#x4EFB;&#x6280;&#x672F;owner&#x53C2;&#x4E0E;&#x4E86;&#x4ECE;&#x96F6;&#x5230;&#x4E00;&#x7684;&#x5EFA;&#x8BBE;</li>
+</ul>
+<h5 class="mume-header" id="hybrid-app">Hybrid App</h5>
+
+<ul>
+<li>&#x8D1F;&#x8D23;App&#x548C;&#x5C0F;&#x7A0B;&#x5E8F;&#x5185;&#x7684;&#x4F18;&#x60E0;&#x5238;&#x5957;&#x9910;&#x548C;&#x6D3B;&#x52A8;&#x7B49;H5&#x9875;&#x9762;</li>
+<li>&#x4F18;&#x5316;&#x4E86;jsBridge&#x548C;&#x51CF;&#x5C11;&#x4E86;H5&#x9996;&#x5C4F;&#x6E32;&#x67D3;&#x65F6;&#x957F;</li>
+</ul>
+<h5 class="mume-header" id="%E5%AE%A2%E6%9C%8D%E7%B3%BB%E7%BB%9F">&#x5BA2;&#x670D;&#x7CFB;&#x7EDF;</h5>
+
+<ul>
+<li>&#x4F18;&#x5316;&#x4E86;webpack&#x6784;&#x5EFA;&#x901F;&#x5EA6;&#x548C;&#x51CF;&#x5C11;&#x4E86;&#x6253;&#x5305;&#x4F53;&#x79EF;</li>
+<li>&#x4F18;&#x5316;&#x4E86;IE&#x5185;&#x8BBF;&#x95EE;&#x5361;&#x987F;&#x95EE;&#x9898;</li>
+</ul>
+<h5 class="mume-header" id="%E5%85%B6%E4%BB%96">&#x5176;&#x4ED6;</h5>
+
+<ul>
+<li>&#x7EC4;&#x7EC7;&#x56E2;&#x961F;codeReview&#xFF0C;&#x63A5;&#x5165;sonar</li>
+<li>&#x6BCF;&#x5468;&#x4E94;&#x6280;&#x672F;&#x5206;&#x4EAB;&#xFF0C;&#x666E;&#x53CA;&#x57FA;&#x7840;&#x548C;&#x9879;&#x76EE;&#x6536;&#x83B7;</li>
+<li>H5&#x9875;&#x9762;&#x57CB;&#x70B9;</li>
+<li>gpcl&#x9875;&#x9762;&#x914D;&#x7F6E;</li>
+<li>&#x7EC4;&#x7EC7;&#x516C;&#x53F8;&#x8DD1;&#x6B65;&#x793E;&#x56E2;&#x4E24;&#x5E74;</li>
+</ul>
+<h4 class="mume-header" id="%E8%8B%8F%E5%AE%81%E9%9B%B6%E5%94%AE%E9%9B%86%E5%9B%A2">&#x82CF;&#x5B81;&#x96F6;&#x552E;&#x96C6;&#x56E2;</h4>
+
+<p><strong>&#x4EFB;&#x804C;&#x65F6;&#x95F4;&#xFF1A;2016&#x5E74;6&#x6708; ~ 2018&#x5E74;10&#x6708;</strong><br>
+<strong>&#x804C;&#x4F4D;&#xFF1A; &#x4E2D;&#x7EA7;&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x5E08;</strong><br>
+<strong>&#x6280;&#x672F;&#x6808;&#xFF1A; vue</strong></p>
+<h5 class="mume-header" id="%E8%B5%A2%E5%8D%96%E9%80%9A">&#x8D62;&#x5356;&#x901A;</h5>
+
+<ul>
+<li>&#x62C5;&#x4EFB;&#x9879;&#x76EE;owner&#xFF0C;&#x91CD;&#x6784;&#x7CFB;&#x7EDF;&#xFF0C;&#x5B9E;&#x73B0;&#x524D;&#x540E;&#x7AEF;&#x5206;&#x79BB;</li>
+<li>&#x8D1F;&#x8D23;&#x5E7F;&#x544A;&#x6295;&#x653E;&#xFF0C;&#x521B;&#x610F;&#x914D;&#x7F6E;&#x7B49;&#x524D;&#x7AEF;&#x4EFB;&#x52A1;</li>
+</ul>
+<h5 class="mume-header" id="%E6%98%93%E7%9B%B4%E6%8A%95">&#x6613;&#x76F4;&#x6295;</h5>
+
+<ul>
+<li>&#x62C5;&#x4EFB;&#x9879;&#x76EE;owner&#x53C2;&#x4E0E;&#x4E86;&#x4ECE;&#x96F6;&#x5230;&#x4E00;&#x9879;&#x76EE;&#x5EFA;&#x8BBE;</li>
+<li>&#x8D1F;&#x8D23;&#x6295;&#x653E;&#x7EDF;&#x8BA1;&#xFF0C;&#x516C;&#x5171;&#x7EC4;&#x4EF6;&#x7B49;&#x524D;&#x7AEF;&#x4EFB;&#x52A1;</li>
+</ul>
+<h5 class="mume-header" id="%E5%88%9B%E6%84%8F%E5%B9%BF%E5%91%8Ah5">&#x521B;&#x610F;&#x5E7F;&#x544A;H5</h5>
+
+<ul>
+<li>&#x89E3;&#x51B3;&#x4E86;&#x65E0;&#x6570;&#x5E7F;&#x544A;&#x6295;&#x653E;&#x5230;&#x4E0D;&#x540C;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x517C;&#x5BB9;&#x95EE;&#x9898;</li>
+</ul>
+<h5 class="mume-header" id="%E5%85%B6%E4%BB%96-1">&#x5176;&#x4ED6;</h5>
+
+<ul>
+<li>&#x5A92;&#x4F53;&#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x3001;mediamax&#x7B49;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x65E5;&#x5E38;&#x5F00;&#x53D1;&#x4E0E;&#x8FED;&#x4EE3;</li>
+</ul>
+<h4 class="mume-header" id="%E5%8F%8B%E4%BF%A1%E5%B4%A7%E9%94%8B%E9%9B%86%E5%9B%A2">&#x53CB;&#x4FE1;&#x5D27;&#x950B;&#x96C6;&#x56E2;</h4>
+
+<p><strong>&#x4EFB;&#x804C;&#x65F6;&#x95F4;&#xFF1A;2012&#x5E74;6&#x6708; ~ 2016&#x5E74;5&#x6708;</strong><br>
+<strong>&#x804C;&#x4F4D;&#xFF1A; &#x5168;&#x6808;&#x5DE5;&#x7A0B;&#x5E08;</strong><br>
+<strong>&#x6280;&#x672F;&#x6808;&#xFF1A;php + jquery + jquery-ui</strong></p>
+<h5 class="mume-header" id="%E5%BA%93%E5%AD%98%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">&#x5E93;&#x5B58;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;</h5>
+
+<ul>
+<li>&#x8D1F;&#x8D23;&#x51B7;&#x51BB;&#x98DF;&#x54C1;&#x5206;&#x7C7B;&#x548C;&#x51FA;/&#x5165;&#x5E93;&#x7B49;&#x524D;&#x540E;&#x7AEF;&#x4EFB;&#x52A1;</li>
+</ul>
+<h5 class="mume-header" id="erp%E7%B3%BB%E7%BB%9F">ERP&#x7CFB;&#x7EDF;</h5>
+
+<ul>
+<li>&#x8D1F;&#x8D23;&#x65E5;&#x5E38;&#x9700;&#x6C42;&#x8FED;&#x4EE3;&#x7B49;&#x524D;&#x540E;&#x7AEF;&#x4EFB;&#x52A1;</li>
+</ul>
+<h5 class="mume-header" id="%E5%85%B6%E4%BB%96-2">&#x5176;&#x4ED6;</h5>
+
+<p><a href="http://www.usisen.com/">&#x516C;&#x53F8;&#x5B98;&#x7F51;</a>&#xFF0C;&#x53C2;&#x4E0E;&#x4E86;CRM&#x7CFB;&#x7EDF;&#xFF0C;SEO&#x7AD9;&#x7FA4;&#xFF0C;&#x62A5;&#x8868;&#x7CFB;&#x7EDF;&#x7B49;</p>
+<hr>
+<h3 class="mume-header" id="%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%92%8C%E4%BD%9C%E5%93%81">&#x5F00;&#x6E90;&#x9879;&#x76EE;&#x548C;&#x4F5C;&#x54C1;</h3>
+
+<p><a href="https://alan89757.github.io/gitbook/">https://alan89757.github.io/gitbook/</a></p>
+<h3 class="mume-header" id="%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE">&#x5F00;&#x6E90;&#x9879;&#x76EE;</h3>
+
+<ul>
+<li><a href="https://github.com/alan89757/guide-web">&#x7F51;&#x5740;&#x5BFC;&#x822A;</a>&#xFF1A;&#x5BFC;&#x822A;&#x7A0B;&#x5E8F;&#x5458;&#x5E38;&#x7528;&#x7684;&#x7F51;&#x7AD9;</li>
+<li><a href="https://github.com/alan89757/guide-admin">&#x5BFC;&#x822A;&#x540E;&#x53F0;</a>&#xFF1A;&#x5BFC;&#x822A;&#x540E;&#x53F0;&#x7BA1;&#x7406;</li>
+</ul>
+<h3 class="mume-header" id="%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0">&#x6280;&#x672F;&#x6587;&#x7AE0;</h3>
+
+<ul>
+<li><a href="https://alan89757.github.io/gitbook/chapter2/section1.1.html">&#x4E00;&#x6587;&#x641E;&#x61C2;http&#x534F;&#x8BAE;</a></li>
+<li><a href="https://alan89757.github.io/gitbook/chapter8/section1.1.html">fiddler&#x8FDC;&#x6BD4;&#x4F60;&#x60F3;&#x8C61;&#x7684;&#x5F3A;&#x5927;</a></li>
+<li><a href>JavaScript&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;</a></li>
+</ul>
+<h3 class="mume-header" id="%E6%BC%94%E8%AE%B2">&#x6F14;&#x8BB2;</h3>
+
+<ul>
+<li>2020&#x5E74;8&#x6708;&#x516C;&#x53F8;&#x5185;&#x90E8;&#x5206;&#x4EAB;&#xFF1A;<a href="https://alan89757.github.io/gitbook/chapter2/section1.7.html">&#x4F4E;&#x4EE3;&#x7801;&#x5F00;&#x53D1;</a></li>
+</ul>
+<hr>
+<h2 class="mume-header" id="%E8%87%AA%E6%88%91%E8%AF%84%E4%BB%B7">&#x81EA;&#x6211;&#x8BC4;&#x4EF7;</h2>
+
+<ul>
+<li>&#x6253;&#x6742;&#x7684;&#xFF0C; &#x66FE;&#x7ECF;&#x5199;&#x8FC7;PHP</li>
+<li>&#x522B;&#x4EBA;&#x80FD;&#x505A;&#x5230;&#x7684;&#x6211;&#x76F8;&#x4FE1;&#x81EA;&#x5DF1;&#x4E5F;&#x80FD;&#x505A;&#x5230;</li>
+<li>&#x505A;&#x4E8B;&#x8BA4;&#x771F;&#x8D1F;&#x8D23;&#xFF0C;&#x559C;&#x6B22;&#x601D;&#x8003;&#x95EE;&#x9898;&#xFF0C;&#x5584;&#x4E8E;&#x6C9F;&#x901A;&#x548C;&#x81EA;&#x6211;&#x89C4;&#x5212;&#x3002;</li>
+<li>&#x5E73;&#x65F6;&#x559C;&#x6B22;&#x901B;<a href="https://juejin.cn/">&#x6398;&#x91D1;</a>&#xFF0C;<a href="https://github.com/">github</a>&#xFF0C;<a href="https://stackoverflow.com/">stackoverflow</a>&#x7B49;&#x3002;&#x4E00;&#x76F4;&#x5173;&#x6CE8;&#x524D;&#x6CBF;&#x7684;&#x6280;&#x672F;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;<a href="https://github.com/trending/javascript?since=weekly">Github&#x5468;&#x699C;</a></li>
+<li>&#x70ED;&#x7231;&#x6237;&#x5916;&#x8FD0;&#x52A8;&#xFF0C;&#x95F2;&#x4E0D;&#x4F4F;~</li>
+</ul>
+<hr>
+<h2 class="mume-header" id="%E8%87%B4%E8%B0%A2">&#x81F4;&#x8C22;</h2>
+
+<p>&#x611F;&#x8C22;&#x60A8;&#x82B1;&#x65F6;&#x95F4;&#x9605;&#x8BFB;&#x6211;&#x7684;&#x7B80;&#x5386;&#xFF0C;&#x671F;&#x5F85;&#x80FD;&#x6709;&#x673A;&#x4F1A;&#x548C;&#x60A8;&#x5171;&#x4E8B;&#x3002;</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

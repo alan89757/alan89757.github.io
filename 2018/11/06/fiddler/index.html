@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Fiddler使用详解 | Alan的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="代理已成为开发人员必备技能~
+fiddler抓取https请求
+一. 网页不安全
+`
+// 配置HOST
+172.18.25.15 alan.com
+`
+如果没提示，可修改chrome配置 ...">
+    
+    <link rel="preload" href="/assets/css/0.styles.89986362.css" as="style"><link rel="preload" href="/assets/js/app.306da2db.js" as="script"><link rel="preload" href="/assets/js/12.b7247069.js" as="script"><link rel="preload" href="/assets/js/3.5eafaaf1.js" as="script"><link rel="preload" href="/assets/js/5.043c3f26.js" as="script"><link rel="prefetch" href="/assets/js/10.2f2492af.js"><link rel="prefetch" href="/assets/js/11.96d192e6.js"><link rel="prefetch" href="/assets/js/13.d97a4992.js"><link rel="prefetch" href="/assets/js/14.0ca4b17b.js"><link rel="prefetch" href="/assets/js/15.8eb404a5.js"><link rel="prefetch" href="/assets/js/16.dbe6ee37.js"><link rel="prefetch" href="/assets/js/17.5048b0af.js"><link rel="prefetch" href="/assets/js/18.2a541545.js"><link rel="prefetch" href="/assets/js/19.bb7af9b3.js"><link rel="prefetch" href="/assets/js/20.6ca15c8b.js"><link rel="prefetch" href="/assets/js/4.ea924683.js"><link rel="prefetch" href="/assets/js/6.5811f708.js"><link rel="prefetch" href="/assets/js/7.61216f98.js"><link rel="prefetch" href="/assets/js/8.4efc7dbf.js"><link rel="prefetch" href="/assets/js/9.b13c70c1.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.bd83baaf.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.89986362.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/" class="nav-link home-link">Alan的博客 </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/" class="nav-link">博客</a></li><li class="nav-item"><a href="/tag/" class="nav-link">标签</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/" class="nav-link mobile-home-link">Alan的博客 </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/" class="nav-link">博客</a></li><li class="mobile-nav-item"><a href="/tag/" class="nav-link">标签</a></li> <li class="mobile-nav-item"><!----></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        Fiddler使用详解
+      </h1> <div class="post-meta"><div itemprop="publisher author" itemtype="http://schema.org/Person" itemscope="itemscope" class="post-meta-author"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> <span itemprop="name">Alan</span> <span itemprop="address">   in Shanghai</span></div> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2018-11-06T00:00:00.000Z">
+      Tue Nov 06 2018
+    </time></div> <ul itemprop="keywords" class="post-meta-tags"><li class="post-tag" data-v-42ccfcd5><a href="/tag/fiddler" data-v-42ccfcd5><span data-v-42ccfcd5>fiddler</span></a></li><li class="post-tag" data-v-42ccfcd5><a href="/tag/proxy" data-v-42ccfcd5><span data-v-42ccfcd5>proxy</span></a></li></ul></div></header> <div itemprop="articleBody" class="content__default"><p>代理已成为开发人员必备技能~</p> <h2 id="fiddler抓取https请求"><a href="#fiddler抓取https请求" class="header-anchor">#</a> fiddler抓取https请求</h2> <h3 id="一-网页不安全"><a href="#一-网页不安全" class="header-anchor">#</a> 一. 网页不安全</h3> <img src="/assets/img/53.beb13aeb.png" width="600px"> <div class="language- extra-class"><pre class="language-text"><code>// 配置HOST
+172.18.25.15 alan.com
+</code></pre></div><ul><li>如果没提示，可修改chrome配置，如下
+<img src="/assets/img/54.748f2a51.png" width="600px"> <img src="/assets/img/55.5387f411.png" width="600px"></li></ul> <h3 id="_2-工具简介"><a href="#_2-工具简介" class="header-anchor">#</a> 2. 工具简介</h3> <img src="/assets/img/56.50bb1fae.png" width="600px"> <h4 id="_2-1-工具栏"><a href="#_2-1-工具栏" class="header-anchor">#</a> 2.1 工具栏</h4> <img src="/assets/img/57.1784de5a.png" width="600px"> <ul><li>file   文件  文件和session的导入导出
+<img src="/assets/img/58.f0465e69.png" width="600px"></li></ul> <div class="language- extra-class"><pre class="language-text"><code>.saz  // Session Archive Zip 保存压缩后的http请求
+</code></pre></div><ul><li><p>Edit   编辑
+操作请求或者session</p></li> <li><p>Rules  规则
+隐藏图片请求
+隐藏https请求
+自动设置断点，请求之前拦截bpu，请求之后拦截apu</p></li></ul> <p>https://blog.csdn.net/weixin_37544982/article/details/96896707</p> <p>工具栏
+https://docs.telerik.com/fiddler/knowledge-base/quickexec</p> <ul><li>Tools  工具</li> <li>View   显示</li> <li>Help   帮助</li></ul> <h4 id="_2-2-会话框"><a href="#_2-2-会话框" class="header-anchor">#</a> 2.2 会话框</h4> <p>1.会话框主要查看请求一些基本信息，如# 、result、protocol、host、url、body、 caching、content-type、process
+<img src="/assets/img/59.d2baf23c.png" width="600px"></p> <p>2.会话框列表最左侧
+#号这一栏是代表这个请求大概是什么内容，
+&lt;&gt;这个符号就是我们一般要测试的请求与响应的类型。</p> <p>3.<strong>result</strong>:这里是服务器返回的代码，如</p> <ul><li><strong>200</strong>，请求ok;2xx一般是服务器接受成功了并处理</li> <li><strong>3xx</strong>，重定向相关</li> <li><strong>4xx</strong>, 404最常见的的就是找不到服务器,一般是请求地址有问题</li> <li><strong>5xx</strong>, 这个一般是服务器本身的错误</li></ul> <p>4.protocol：这个是协议类型，如http、https
+5.host：主机地址或域名
+6.url:请求的路径
+7.body：该条请求产生的数据大小
+8.caching：缓存相关
+9.content-type：连接类型
+10.process:客户端类型</p> <h4 id="_2-3-request和response"><a href="#_2-3-request和response" class="header-anchor">#</a> 2.3 Request和Response</h4> <p>1.Request是客户端发出去的数据，Response是服务端返回过来的数据，这两块区域功能差不多</p> <img src="/assets/img/60.8f1fca64.png" width="600px"> <p>2.headers:请求头，这里包含client、cookies、transport等
+3.webfroms：请求参数信息表格展示，更直观。可以直接该区域的参数, <strong>可篡改form表单</strong>
+4.Auth:授权相关，如果显示如下两行，说明不需要授权，可以不用关注（这个目前很少见了）</p> <ul><li>No Proxy-Authorization Header is present.</li> <li>No Authorization Headeris present.</li></ul> <p>5.cookies:查看cookie详情
+6.raw:查看一个完整请求的内容，可以直接复制
+7.json:查看json数据
+8.xml:查看xml文件的信息</p> <h4 id="_2-4-decode解码"><a href="#_2-4-decode解码" class="header-anchor">#</a> 2.4 decode解码</h4> <p>1.如果response的TextView区域出现乱码情况，可以直接点下方黄色区域解码</p> <img src="/assets/img/61.c62685ea.png" width="600px"> <p>2.或者选中上方快捷菜单decode，这样后面的请求都会自动解码了</p> <img src="/assets/img/62.5694f7a8.png" width="600px"> <h3 id="三-接口测试-composer"><a href="#三-接口测试-composer" class="header-anchor">#</a> 三. 接口测试（Composer）</h3> <p>Fiddler最大的优势在于抓包，我们大部分使用的功能也在抓包的功能上，fiddler做接口测试也是非常方便的。
+对应没有接口测试文档的时候，可以直接抓完包后，copy请求参数，修改下就可以了。</p> <h4 id="composer简介"><a href="#composer简介" class="header-anchor">#</a> Composer简介</h4> <div class="language- extra-class"><pre class="language-text"><code>// 案列demo
+https://marketing-dev.xxx.com/mis-h5/couponPackageList
+</code></pre></div><p>点开右侧Composer区域，可以看到如下界面，就是测试接口的界面了</p> <img src="/assets/img/63.fe95be14.png" width="600px"> <ul><li>1.请求方式：点开可以勾选请求协议是get、post等</li> <li>2.url地址栏：输入请求的url地址</li> <li>3.请求头：第三块区域可以输入请求头信息</li> <li>4.请求body：post请求在此区域输入body信息</li> <li>5.执行：Execute按钮点击后就可以执行请求了</li> <li>6.http版本：可以勾选http版本</li> <li>7.请求历史：执行完成后会在右侧History区域生成历史记录</li></ul> <div class="language- extra-class"><pre class="language-text"><code>直接在fiddler里把请求拖拽过去可以了
+主要用途：测试接口请求
+</code></pre></div><h3 id="模拟get请求"><a href="#模拟get请求" class="header-anchor">#</a> 模拟get请求</h3> <p>1.在Composer区域地址栏输入博客首页：https://www.baidu.com/
+2.选择get请求，点Execute执行，请求就可以发送成功啦
+3.请求发送成功后，左边会话框会生成一个会话记录，可以查看抓包详情(双击)
+4.右侧history区域会多一个历史请求记录
+5.会话框选中该记录，查看测试结果：</p> <ul><li>选中该会话，点开Inspectors</li> <li>response区域点开Raw区域</li> <li>Raw查看的是HTML源码的数据</li></ul> <img src="/assets/img/64.c86ec1a2.png" width="600px"> <ul><li>也可以点WebView，查看返回的web页面数据</li></ul> <img src="/assets/img/65.3d09484e.png" width="600px"> <h3 id="模拟post请求"><a href="#模拟post请求" class="header-anchor">#</a> 模拟post请求</h3> <p>1.请求类型勾选post
+2.url地址栏输入对应的请求地址
+3.body区域写登录的json参数，json参数直接copy上一步抓包的数据，如下图红色区域
+<img src="/assets/img/66.06c77837.png" width="600px"></p> <p>4.header请求头区域，可以把前面登录成功后的头部抓包的数据copy过来
+（注意，有些请求如果请求头为空的话，会请求失败的）
+<img src="/assets/img/67.75dbe65e.png" width="600px"></p> <p>5.执行成功后查看测试结果：
+– 执行成功如第三所示的图，显示success=True
+– 执行失败如下图所示，显示
+message=Invalid length for a Base-64 char array or string.
+success=False</p> <h3 id="二-fiddler设置"><a href="#二-fiddler设置" class="header-anchor">#</a> 二. fiddler设置</h3> <p>1.打开菜单栏：Tools&gt;Fiddler Options&gt;HTTPS
+2.勾选Decrypt HTTPS traffic，里面的两个子菜单也一起勾选了</p> <img src="/assets/img/68.666e2d84.png" width="600px"> <h3 id="三-导出证书"><a href="#三-导出证书" class="header-anchor">#</a> 三. 导出证书</h3> <p>1.点右上角Actions按钮
+2.选第二个选项，导出到桌面，此时桌面上会多一个文件：FiddlerRoot.cer,如图。</p> <img src="/assets/img/69.a4eebda4.png" width="600px"> <h3 id="四-导入到浏览器"><a href="#四-导入到浏览器" class="header-anchor">#</a> 四. 导入到浏览器</h3> <p>1.打开右上角浏览器设置》选项》高级》证书》查看证书》证书机构》导入</p> <img src="/assets/img/70.b697fe15.png" width="600px"> <p>2.勾选文件导入</p> <img src="/assets/img/71.e2055123.png" width="600px"> <p>3.打开文件后，会弹出个框，勾选三个选项就完成操作啦。</p> <img src="/assets/img/72.c58ed188.png" width="600px"> <div class="language- extra-class"><pre class="language-text"><code>ps: 不生效重启浏览器
+</code></pre></div><h3 id="五-抓取app请求"><a href="#五-抓取app请求" class="header-anchor">#</a> 五. 抓取app请求</h3> <h5 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h5> <p>fiddler在抓手机app的请求时候，通常也会抓到来自PC的请求，导致会话消息太多，那么如何把来自pc的请求过滤掉，只抓来自APP的请求呢？
+必备环境：
+1.电脑上已装fiddler
+2.手机和电脑在同一局域网</p> <h5 id="设置"><a href="#设置" class="header-anchor">#</a> 设置</h5> <p>1.fiddler&gt;Tools&gt;Fiddler Options&gt;Connections 勾选Allow remote computers to connect。</p> <p>2.记住这里的端口号：8888，后面会用到。</p> <img src="/assets/img/73.377eba39.png" width="600px"> <p><strong>查看电脑IP</strong>
+1.打开cmd，输入：ipconfig,记住这个IPv4地址。</p> <img src="/assets/img/74.5f400e2d.png" width="600px"> <p><strong>设置代理</strong></p> <p>1.手机设置-&gt;WLAN设置-&gt;选择该wifi，点右边的箭头（有的手机是长按弹出选项框）。</p> <img src="/assets/img/75.b9966c67.png" width="600px"> <p><strong>抓APP上的HTTPS请求</strong></p> <p>1.如果app都是http请求，是不需要安装证书，能直接抓到的，如果是https请求，这时候手机就需要下载证书了。</p> <p>2.打开手机浏览器输入：http://10.224.xx.xx:8888 ，这个中间的host地址就是前面查到的本机地址。</p> <p>3.出现如下画面，点箭头所指的位置，点击安装就可以了。</p> <img src="/assets/img/76.2cf8d98c.png" width="600px"> <h4 id="设置过滤"><a href="#设置过滤" class="header-anchor">#</a> 设置过滤</h4> <p>1.手机上设置代理后，这时候fiddler上抓到的是pc和app所有的请求，如果pc上打开网址，会很多，这时候就需要开启过滤功能了。</p> <p>2.打开fiddler&gt;Tools&gt;Fiddler Options&gt;HTTPS&gt;…from remote clients only,勾选这个选项就可以了</p> <div class="language- extra-class"><pre class="language-text"><code>from all processes :抓所有的请求
+from browsers only ：只抓浏览器的请求
+from non-browsers only :只抓非浏览器的请求
+from remote clients only:只抓远程客户端请求
+
+</code></pre></div><img src="/assets/img/77.89000592.png" width="600px"> <h3 id="get请求"><a href="#get请求" class="header-anchor">#</a> get请求</h3> <img src="/assets/img/78.f2008905.png" width="600px"> <h3 id="post请求"><a href="#post请求" class="header-anchor">#</a> post请求</h3> <img src="/assets/img/79.67c188c4.png" width="600px"> <h3 id="如何找出需要的请求"><a href="#如何找出需要的请求" class="header-anchor">#</a> 如何找出需要的请求？</h3> <p>1.打开fiddler后，左边会话框区域刷刷刷的很多请求，那么如何有效的找出自己需要的请求呢？
+2.首先第一步：清屏（cls）,在左下角命令行输入cls，清空屏幕
+（清屏也可以使用快捷键Ctrl+X）</p> <img src="/assets/img/80.637c54d3.png" width="600px"> <p>3.第二步在浏览器输入url地址的时候，记住这个地址，如打开博客首页：http://www.cnblogs.com/yoyoketang/
+在点击登录按钮的时候，不要做多余的操作了，然后查看fiddler会话框，这时候有好几个请求。</p> <p>4.如上图，红色框框这个地方就是host地址，红色圈圈地方就是url的路径（yoyoketang），也就是博客首页的地址了，那这个请求就是博客首页的请求了。</p> <h3 id="比较get和post请求"><a href="#比较get和post请求" class="header-anchor">#</a> 比较get和post请求</h3> <h3 id="如何修改请求"><a href="#如何修改请求" class="header-anchor">#</a> 如何修改请求</h3> <p>bpu</p> <h2 id="产线代码调试"><a href="#产线代码调试" class="header-anchor">#</a> 产线代码调试</h2> <h3 id="方式一-fiddler"><a href="#方式一-fiddler" class="header-anchor">#</a> 方式一：fiddler</h3> <h3 id="方式二"><a href="#方式二" class="header-anchor">#</a> 方式二</h3> <p>SourceMapDevToolPlugin</p> <h4 id="先看效果"><a href="#先看效果" class="header-anchor">#</a> 先看效果</h4> <ul><li>配置前</li></ul> <img src="/assets/img/81.0001a4f2.png"> <ul><li>配置后</li></ul> <img src="/assets/img/82.62a54f48.png"> <h4 id="_1-配置webpack-prod-js"><a href="#_1-配置webpack-prod-js" class="header-anchor">#</a> 1. 配置webpack.prod.js</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// webpack.prod.js</span>
+<span class="token punctuation">{</span>
+  <span class="token literal-property property">devtool</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>SourceMapDevToolPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'sourcemaps/[file].map'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">publicPath</span><span class="token operator">:</span> <span class="token string">'http://fakesourcemap.com/'</span><span class="token punctuation">,</span>  <span class="token comment">// sourcemap请求地址</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="_2-代理劫持-fiddler-charles"><a href="#_2-代理劫持-fiddler-charles" class="header-anchor">#</a> 2. 代理劫持(fiddler/charles)</h4> <div class="language- extra-class"><pre class="language-text"><code>regex:(?inx)^http://fakesourcemap.com/(?&lt;args&gt;.*)$
+-&gt;
+http://localhost:9011/${args}
+</code></pre></div><p>如下图：
+<img src="/assets/img/83.60511ee0.png"></p></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#fiddler抓取https请求" title="fiddler抓取https请求">fiddler抓取https请求</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#一-网页不安全" title="一. 网页不安全">一. 网页不安全</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_2-工具简介" title="2. 工具简介">2. 工具简介</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#三-接口测试-composer" title="三. 接口测试（Composer）">三. 接口测试（Composer）</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#模拟get请求" title="模拟get请求">模拟get请求</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#模拟post请求" title="模拟post请求">模拟post请求</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#二-fiddler设置" title="二. fiddler设置">二. fiddler设置</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#三-导出证书" title="三. 导出证书">三. 导出证书</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#四-导入到浏览器" title="四. 导入到浏览器">四. 导入到浏览器</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#五-抓取app请求" title="五. 抓取app请求">五. 抓取app请求</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#get请求" title="get请求">get请求</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#post请求" title="post请求">post请求</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#如何找出需要的请求" title="如何找出需要的请求？">如何找出需要的请求？</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#比较get和post请求" title="比较get和post请求">比较get和post请求</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#如何修改请求" title="如何修改请求">如何修改请求</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#产线代码调试" title="产线代码调试">产线代码调试</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#方式一-fiddler" title="方式一：fiddler">方式一：fiddler</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#方式二" title="方式二">方式二</a></div></div></div></div> <footer class="footer" data-v-3d9deeb8><div class="footer-left-wrap" data-v-3d9deeb8><ul class="contact" data-v-3d9deeb8></ul></div> <div class="footer-right-wrap" data-v-3d9deeb8><ul class="copyright" data-v-3d9deeb8></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.306da2db.js" defer></script><script src="/assets/js/12.b7247069.js" defer></script><script src="/assets/js/3.5eafaaf1.js" defer></script><script src="/assets/js/5.043c3f26.js" defer></script>
+  </body>
+</html>

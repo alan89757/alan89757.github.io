@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>低代码引擎实战 | Alan的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="基于 Low-Code Engine 快速打造高生产力的低代码研发平台
+
+官网
+&gt; https://lowcode-engine.cn/
+
+&lt;!--
+介绍官网demo
+https://lowcode-engine.cn/demo/index.html
+
+顶部导航栏：
+
+支持PC/平板/手机等多平台
+场景支持
+  (1) 基础fusion  https ...">
+    
+    <link rel="preload" href="/assets/css/0.styles.89986362.css" as="style"><link rel="preload" href="/assets/js/app.47a314f6.js" as="script"><link rel="preload" href="/assets/js/13.9730d12a.js" as="script"><link rel="preload" href="/assets/js/3.c55e49da.js" as="script"><link rel="preload" href="/assets/js/42.09e48a23.js" as="script"><link rel="prefetch" href="/assets/js/10.eec868fe.js"><link rel="prefetch" href="/assets/js/11.2c5d30b8.js"><link rel="prefetch" href="/assets/js/12.6d026069.js"><link rel="prefetch" href="/assets/js/14.2d8a20f6.js"><link rel="prefetch" href="/assets/js/15.53f28293.js"><link rel="prefetch" href="/assets/js/16.eae40dcd.js"><link rel="prefetch" href="/assets/js/17.568a8fbd.js"><link rel="prefetch" href="/assets/js/18.dc1eb2a3.js"><link rel="prefetch" href="/assets/js/19.e5ea385b.js"><link rel="prefetch" href="/assets/js/20.7186bdc9.js"><link rel="prefetch" href="/assets/js/21.08f54324.js"><link rel="prefetch" href="/assets/js/22.d5965b5c.js"><link rel="prefetch" href="/assets/js/23.0dbff512.js"><link rel="prefetch" href="/assets/js/24.1f9c97fe.js"><link rel="prefetch" href="/assets/js/25.f6e416bc.js"><link rel="prefetch" href="/assets/js/26.ae6ef1d0.js"><link rel="prefetch" href="/assets/js/27.4cdd91b1.js"><link rel="prefetch" href="/assets/js/28.c689dfa0.js"><link rel="prefetch" href="/assets/js/29.8703cbea.js"><link rel="prefetch" href="/assets/js/30.62a1dd4c.js"><link rel="prefetch" href="/assets/js/31.eb670a07.js"><link rel="prefetch" href="/assets/js/32.b1b0c60d.js"><link rel="prefetch" href="/assets/js/33.d1fbd6d9.js"><link rel="prefetch" href="/assets/js/34.c2ee7040.js"><link rel="prefetch" href="/assets/js/35.42883b29.js"><link rel="prefetch" href="/assets/js/36.d1f71b6a.js"><link rel="prefetch" href="/assets/js/37.1b9914ce.js"><link rel="prefetch" href="/assets/js/38.fef363db.js"><link rel="prefetch" href="/assets/js/39.b71b6977.js"><link rel="prefetch" href="/assets/js/4.b554c3e3.js"><link rel="prefetch" href="/assets/js/40.043f8a84.js"><link rel="prefetch" href="/assets/js/41.95f08665.js"><link rel="prefetch" href="/assets/js/43.248e0793.js"><link rel="prefetch" href="/assets/js/44.1a19f3c6.js"><link rel="prefetch" href="/assets/js/45.a0b1c97e.js"><link rel="prefetch" href="/assets/js/46.153b41ed.js"><link rel="prefetch" href="/assets/js/47.e2a4a477.js"><link rel="prefetch" href="/assets/js/48.9d7ba308.js"><link rel="prefetch" href="/assets/js/49.3e9c49ed.js"><link rel="prefetch" href="/assets/js/5.98ad11c8.js"><link rel="prefetch" href="/assets/js/6.2adafb0d.js"><link rel="prefetch" href="/assets/js/7.37c6c4c2.js"><link rel="prefetch" href="/assets/js/8.f6ce08a2.js"><link rel="prefetch" href="/assets/js/9.099bb50f.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.17b870f2.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.89986362.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/" class="nav-link home-link">Alan的博客 </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/" class="nav-link">博客</a></li><li class="nav-item"><a href="/tag/" class="nav-link">标签</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/" class="nav-link mobile-home-link">Alan的博客 </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/" class="nav-link">博客</a></li><li class="mobile-nav-item"><a href="/tag/" class="nav-link">标签</a></li> <li class="mobile-nav-item"><!----></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        低代码引擎实战
+      </h1> <div class="post-meta"><div itemprop="publisher author" itemtype="http://schema.org/Person" itemscope="itemscope" class="post-meta-author"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> <span itemprop="name">Alan</span> <span itemprop="address">   in Shanghai</span></div> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2022-07-16T00:00:00.000Z">
+      Sat Jul 16 2022
+    </time></div> <ul itemprop="keywords" class="post-meta-tags"><li class="post-tag" data-v-42ccfcd5><a href="/tag/低代码" data-v-42ccfcd5><span data-v-42ccfcd5>低代码</span></a></li><li class="post-tag" data-v-42ccfcd5><a href="/tag/lowcode" data-v-42ccfcd5><span data-v-42ccfcd5>lowcode</span></a></li><li class="post-tag" data-v-42ccfcd5><a href="/tag/Engine" data-v-42ccfcd5><span data-v-42ccfcd5>Engine</span></a></li></ul></div></header> <div itemprop="articleBody" class="content__default"><p>基于 Low-Code Engine 快速打造高生产力的低代码研发平台</p> <h2 id="官网"><a href="#官网" class="header-anchor">#</a> 官网</h2> <blockquote><p>https://lowcode-engine.cn/</p></blockquote> <h2 id="实践"><a href="#实践" class="header-anchor">#</a> 实践</h2> <h3 id="_1-把低代码部署到服务端"><a href="#_1-把低代码部署到服务端" class="header-anchor">#</a> 1. 把低代码部署到服务端</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 低代码模版</span>
+<span class="token comment">// 1. 复制lowcode-demo的public/index.ejs到服务端</span>
+<span class="token comment">// 2. 以下文件替换为本地文件， 或者通过npm发包的方式，详见下面注释～</span>
+<span class="token comment">// &lt;link href=&quot;./css/&lt;%= scenario %&gt;.css&quot; rel=&quot;stylesheet&quot; /&gt;  - http://localhost:5556/build/css/index.css</span>
+<span class="token comment">// &lt;script type=&quot;text/javascript&quot; src=&quot;./js/&lt;%= scenario %&gt;.js&quot;&gt;&lt;/script&gt;  - http://localhost:5556/build/js/index.js</span>
+
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/lowcode'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'index.ejs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 使用ejs模版引擎</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div> <h3 id="_2-保存schema到服务端"><a href="#_2-保存schema到服务端" class="header-anchor">#</a> 2. 保存schema到服务端</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 客户端</span>
+<span class="token comment">// lowcode-demo/src/universal/utils.ts</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">saveSchema</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> currentPage <span class="token operator">=</span> <span class="token string">'home'</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>location<span class="token punctuation">.</span>search<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    currentPage <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">URLSearchParams</span><span class="token punctuation">(</span>location<span class="token punctuation">.</span>search<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'page'</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token string">'home'</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">const</span> schema <span class="token operator">=</span> project<span class="token punctuation">.</span><span class="token function">exportSchema</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'http://localhost:3000/api/v1/schemas'</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> request2<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">page</span><span class="token operator">:</span> currentPage<span class="token punctuation">,</span> schema<span class="token punctuation">}</span><span class="token punctuation">)</span>
+  Message<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token string">'成功保存'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 服务端</span>
+<span class="token comment">// lowcode-express/index.js</span>
+app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/api/v1/schemas'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> page<span class="token punctuation">,</span> schema <span class="token punctuation">}</span> <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> fs<span class="token punctuation">.</span><span class="token function">writeFileSync</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">./schemas/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>page<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.json</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>schema<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">code</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">data</span><span class="token operator">:</span> response
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h3 id="_3-从服务器获取资产包"><a href="#_3-从服务器获取资产包" class="header-anchor">#</a> 3. 从服务器获取资产包</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 客户端 伪代码</span>
+<span class="token comment">// src/universal/plugin.tsx</span>
+<span class="token operator">-</span> <span class="token keyword">import</span> assets <span class="token keyword">from</span> <span class="token string">'./assets.json'</span>  <span class="token comment">// 删除</span>
+<span class="token operator">...</span><span class="token operator">...</span>
+<span class="token operator">+</span> <span class="token keyword">const</span> assets <span class="token operator">=</span> <span class="token function">getAssets</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 获取资产包 src/universal/utils.ts</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">getAssets</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> request2<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'http://localhost:3000/assets.json'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 服务端</span>
+<span class="token comment">// 3. 获取资产包</span>
+<span class="token comment">// index.js</span>
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/assets.json'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">code</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">data</span><span class="token operator">:</span> assets<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="_4-页面预览"><a href="#_4-页面预览" class="header-anchor">#</a> 4. 页面预览</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 把lowcode-demo/public/preview.html拷贝到服务端</span>
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/preview.html'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">'preview.ejs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 通过模板引擎渲染预览页面</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 客户端</span>
+<span class="token comment">// src/preview.tsx</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token punctuation">{</span> packages <span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getAssets</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 获取资产包信息</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> <span class="token literal-property property">data</span><span class="token operator">:</span> projectSchema <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getCurrentPageSchema</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 获取当前页面schema</span>
+  <span class="token operator">...</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> <span class="token literal-property property">componentsMap</span><span class="token operator">:</span> componentsMapArray<span class="token punctuation">,</span> componentsTree <span class="token punctuation">}</span> <span class="token operator">=</span> projectSchema<span class="token punctuation">;</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 获取资产包</span>
+<span class="token comment">// index.js</span>
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/assets.json'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">code</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">data</span><span class="token operator">:</span> assets<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 获取页面schema</span>
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/get-page-schema'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'req---'</span><span class="token punctuation">,</span> req<span class="token punctuation">.</span>query<span class="token punctuation">)</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> page <span class="token punctuation">}</span> <span class="token operator">=</span> req<span class="token punctuation">.</span>query<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">./schemas/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>page<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.json</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">code</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    data
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="_5-新增面板"><a href="#_5-新增面板" class="header-anchor">#</a> 5. 新增面板</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// src/plugins/nav/index.tsx</span>
+<span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Nav <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@alifd/next'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> Item <span class="token punctuation">}</span> <span class="token operator">=</span> Nav<span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> queryString <span class="token operator">=</span> location<span class="token punctuation">.</span>search <span class="token operator">||</span> <span class="token string">''</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> defaultCurrentPage <span class="token operator">=</span> queryString<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span><span class="token string">'home'</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">'home'</span> <span class="token operator">:</span> <span class="token string">'login'</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">onSelect</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">keys</span> <span class="token operator">:</span> string<span class="token punctuation">[</span><span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token literal-property property">key</span><span class="token operator">:</span> string <span class="token operator">=</span> keys<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    location<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>location<span class="token punctuation">.</span>pathname<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">?page=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>key<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token operator">&lt;</span>Nav type<span class="token operator">=</span><span class="token string">'line'</span> selectedKeys<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span>defaultCurrentPage<span class="token punctuation">]</span><span class="token punctuation">}</span> onSelect<span class="token operator">=</span><span class="token punctuation">{</span>onSelect<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Item key<span class="token operator">=</span><span class="token string">'home'</span> <span class="token operator">&gt;</span>首页<span class="token operator">&lt;</span><span class="token operator">/</span>Item<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Item key<span class="token operator">=</span><span class="token string">'login'</span> <span class="token operator">&gt;</span>登录页<span class="token operator">&lt;</span><span class="token operator">/</span>Item<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>Nav<span class="token operator">&gt;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// src/universal/plugin.tsx</span>
+<span class="token keyword">import</span> navPage <span class="token keyword">from</span> <span class="token string">'src/plugins/nav/index'</span><span class="token punctuation">;</span>
+<span class="token operator">...</span>
+<span class="token comment">// 新增导航</span>
+skeleton<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">index</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">area</span><span class="token operator">:</span> <span class="token string">'leftArea'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'PanelDock'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'navPage'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">content</span><span class="token operator">:</span> navPage<span class="token punctuation">,</span>
+  <span class="token literal-property property">contentProps</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">align</span><span class="token operator">:</span> <span class="token string">'top'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">icon</span><span class="token operator">:</span> <span class="token string">'kaiwenjianjia'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">description</span><span class="token operator">:</span> <span class="token string">'页面导航'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_6-自定义物料"><a href="#_6-自定义物料" class="header-anchor">#</a> 6. 自定义物料</h3> <p>初始化物料仓库
+<code>npm init @alilc/element lowcode-material-example</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// lowcode-material-example/package.json</span>
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;lowcode:build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;build-scripts build --config ./build.lowcode.js&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+# npm run lowcode<span class="token operator">:</span>build
+# npm login  <span class="token comment">// 登陆npm账号，npm源指向官方源</span>
+
+</code></pre></div><p>发布完成后，查看资产包：
+<code>https://unpkg.com/browse/lowcode-material-example@1.1.3/build/lowcode/assets-prod.json</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 服务端</span>
+<span class="token comment">// lowcode-express/schemas/assets.json</span>
+<span class="token comment">// 把lowcode-material-example资产包配置到schemas/assets.json</span>
+<span class="token punctuation">{</span>
+  <span class="token string-property property">&quot;packages&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token operator">...</span>
+    <span class="token comment">// 新增包信息</span>
+    <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;package&quot;</span><span class="token operator">:</span> <span class="token string">&quot;lowcode-material-example&quot;</span><span class="token punctuation">,</span>
+      <span class="token string-property property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.1.3&quot;</span><span class="token punctuation">,</span>
+      <span class="token string-property property">&quot;library&quot;</span><span class="token operator">:</span> <span class="token string">&quot;BizComp&quot;</span><span class="token punctuation">,</span>
+      <span class="token string-property property">&quot;urls&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;https://unpkg.com/lowcode-material-example@1.1.3/build/lowcode/render/default/view.js&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;https://unpkg.com/lowcode-material-example@1.1.3/build/lowcode/render/default/view.css&quot;</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token string-property property">&quot;editUrls&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;https://unpkg.com/lowcode-material-example@1.1.3/build/lowcode/view.js&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;https://unpkg.com/lowcode-material-example@1.1.3/build/lowcode/view.css&quot;</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token string-property property">&quot;advancedUrls&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token string">&quot;https://unpkg.com/lowcode-material-example@1.1.3/build/lowcode/render/default/view.js&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;https://unpkg.com/lowcode-material-example@1.1.3/build/lowcode/render/default/view.css&quot;</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string-property property">&quot;advancedEditUrls&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;components&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token operator">...</span>
+    <span class="token comment">// 新增组件信息</span>
+    <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;exportName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;LowcodeMaterialExampleMeta&quot;</span><span class="token punctuation">,</span>
+      <span class="token string-property property">&quot;npm&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;package&quot;</span><span class="token operator">:</span> <span class="token string">&quot;lowcode-material-example&quot;</span><span class="token punctuation">,</span>
+        <span class="token string-property property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.1.3&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string-property property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://unpkg.com/lowcode-material-example@1.1.3/build/lowcode/meta.js&quot;</span><span class="token punctuation">,</span>
+      <span class="token string-property property">&quot;urls&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://unpkg.com/lowcode-material-example@1.1.3/build/lowcode/meta.js&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string-property property">&quot;advancedUrls&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">&quot;default&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token string">&quot;https://unpkg.com/lowcode-material-example@1.1.3/build/lowcode/meta.js&quot;</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="_7-获取远程数据"><a href="#_7-获取远程数据" class="header-anchor">#</a> 7. 获取远程数据</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 源码面板</span>
+<span class="token keyword">class</span> <span class="token class-name">LowcodeComponent</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">brands</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 品牌可选项</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'http://127.0.0.1:3000/api/brands'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=&gt;</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'data__'</span><span class="token punctuation">,</span> response<span class="token punctuation">)</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token punctuation">{</span> list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token operator">=</span> response<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          <span class="token literal-property property">brands</span><span class="token operator">:</span> list
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">componentWillUnmount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'will unmount'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">testFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'test func'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">onClick</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">isShowDialog</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">closeDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">isShowDialog</span><span class="token operator">:</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#官网" title="官网">官网</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#实践" title="实践">实践</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_1-把低代码部署到服务端" title="1. 把低代码部署到服务端">1. 把低代码部署到服务端</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_2-保存schema到服务端" title="2. 保存schema到服务端">2. 保存schema到服务端</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_3-从服务器获取资产包" title="3. 从服务器获取资产包">3. 从服务器获取资产包</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_4-页面预览" title="4. 页面预览">4. 页面预览</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_5-新增面板" title="5. 新增面板">5. 新增面板</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_6-自定义物料" title="6. 自定义物料">6. 自定义物料</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_7-获取远程数据" title="7. 获取远程数据">7. 获取远程数据</a></div></div></div></div> <footer class="footer" data-v-3d9deeb8><div class="footer-left-wrap" data-v-3d9deeb8><ul class="contact" data-v-3d9deeb8></ul></div> <div class="footer-right-wrap" data-v-3d9deeb8><ul class="copyright" data-v-3d9deeb8></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.47a314f6.js" defer></script><script src="/assets/js/13.9730d12a.js" defer></script><script src="/assets/js/3.c55e49da.js" defer></script><script src="/assets/js/42.09e48a23.js" defer></script>
+  </body>
+</html>

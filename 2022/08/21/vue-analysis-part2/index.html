@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue源码分析(二)：选项合并 | Alan的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="本章节是Vue.js源码分析系列的第一章节，主要介绍文档章节的结构。
+
+选项合并策略
+
+1. Vue引入
+
+1.1 定义原型属性方法
+function Vue(options) {}
+// 定义实例化入口函数
+initMixin(Vue);	 // vm._init
+// 定义与数据相关的实例属性
+stateMixin(Vue); ...">
+    
+    <link rel="preload" href="/assets/css/0.styles.89986362.css" as="style"><link rel="preload" href="/assets/js/app.47a314f6.js" as="script"><link rel="preload" href="/assets/js/13.9730d12a.js" as="script"><link rel="preload" href="/assets/js/3.c55e49da.js" as="script"><link rel="preload" href="/assets/js/45.a0b1c97e.js" as="script"><link rel="prefetch" href="/assets/js/10.eec868fe.js"><link rel="prefetch" href="/assets/js/11.2c5d30b8.js"><link rel="prefetch" href="/assets/js/12.6d026069.js"><link rel="prefetch" href="/assets/js/14.2d8a20f6.js"><link rel="prefetch" href="/assets/js/15.53f28293.js"><link rel="prefetch" href="/assets/js/16.eae40dcd.js"><link rel="prefetch" href="/assets/js/17.568a8fbd.js"><link rel="prefetch" href="/assets/js/18.dc1eb2a3.js"><link rel="prefetch" href="/assets/js/19.e5ea385b.js"><link rel="prefetch" href="/assets/js/20.7186bdc9.js"><link rel="prefetch" href="/assets/js/21.08f54324.js"><link rel="prefetch" href="/assets/js/22.d5965b5c.js"><link rel="prefetch" href="/assets/js/23.0dbff512.js"><link rel="prefetch" href="/assets/js/24.1f9c97fe.js"><link rel="prefetch" href="/assets/js/25.f6e416bc.js"><link rel="prefetch" href="/assets/js/26.ae6ef1d0.js"><link rel="prefetch" href="/assets/js/27.4cdd91b1.js"><link rel="prefetch" href="/assets/js/28.c689dfa0.js"><link rel="prefetch" href="/assets/js/29.8703cbea.js"><link rel="prefetch" href="/assets/js/30.62a1dd4c.js"><link rel="prefetch" href="/assets/js/31.eb670a07.js"><link rel="prefetch" href="/assets/js/32.b1b0c60d.js"><link rel="prefetch" href="/assets/js/33.d1fbd6d9.js"><link rel="prefetch" href="/assets/js/34.c2ee7040.js"><link rel="prefetch" href="/assets/js/35.42883b29.js"><link rel="prefetch" href="/assets/js/36.d1f71b6a.js"><link rel="prefetch" href="/assets/js/37.1b9914ce.js"><link rel="prefetch" href="/assets/js/38.fef363db.js"><link rel="prefetch" href="/assets/js/39.b71b6977.js"><link rel="prefetch" href="/assets/js/4.b554c3e3.js"><link rel="prefetch" href="/assets/js/40.043f8a84.js"><link rel="prefetch" href="/assets/js/41.95f08665.js"><link rel="prefetch" href="/assets/js/42.09e48a23.js"><link rel="prefetch" href="/assets/js/43.248e0793.js"><link rel="prefetch" href="/assets/js/44.1a19f3c6.js"><link rel="prefetch" href="/assets/js/46.153b41ed.js"><link rel="prefetch" href="/assets/js/47.e2a4a477.js"><link rel="prefetch" href="/assets/js/48.9d7ba308.js"><link rel="prefetch" href="/assets/js/49.3e9c49ed.js"><link rel="prefetch" href="/assets/js/5.98ad11c8.js"><link rel="prefetch" href="/assets/js/6.2adafb0d.js"><link rel="prefetch" href="/assets/js/7.37c6c4c2.js"><link rel="prefetch" href="/assets/js/8.f6ce08a2.js"><link rel="prefetch" href="/assets/js/9.099bb50f.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.17b870f2.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.89986362.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/" class="nav-link home-link">Alan的博客 </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/" class="nav-link">博客</a></li><li class="nav-item"><a href="/tag/" class="nav-link">标签</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/" class="nav-link mobile-home-link">Alan的博客 </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/" class="nav-link">博客</a></li><li class="mobile-nav-item"><a href="/tag/" class="nav-link">标签</a></li> <li class="mobile-nav-item"><!----></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        Vue源码分析(二)：选项合并
+      </h1> <div class="post-meta"><div itemprop="publisher author" itemtype="http://schema.org/Person" itemscope="itemscope" class="post-meta-author"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> <span itemprop="name">Alan</span> <span itemprop="address">   in Shanghai</span></div> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2022-08-21T00:00:00.000Z">
+      Sun Aug 21 2022
+    </time></div> <ul itemprop="keywords" class="post-meta-tags"><li class="post-tag" data-v-42ccfcd5><a href="/tag/vue" data-v-42ccfcd5><span data-v-42ccfcd5>vue</span></a></li><li class="post-tag" data-v-42ccfcd5><a href="/tag/源码" data-v-42ccfcd5><span data-v-42ccfcd5>源码</span></a></li></ul></div></header> <div itemprop="articleBody" class="content__default"><p>本章节是Vue.js源码分析系列的第一章节，主要介绍文档章节的结构。</p> <h2 id="选项合并策略"><a href="#选项合并策略" class="header-anchor">#</a> 选项合并策略</h2> <h3 id="_1-vue引入"><a href="#_1-vue引入" class="header-anchor">#</a> 1. Vue引入</h3> <h4 id="_1-1-定义原型属性方法"><a href="#_1-1-定义原型属性方法" class="header-anchor">#</a> 1.1 定义原型属性方法</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Vue</span><span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment">// 定义实例化入口函数</span>
+<span class="token function">initMixin</span><span class="token punctuation">(</span>Vue<span class="token punctuation">)</span><span class="token punctuation">;</span>	 <span class="token comment">// vm._init</span>
+<span class="token comment">// 定义与数据相关的实例属性</span>
+<span class="token function">stateMixin</span><span class="token punctuation">(</span>Vue<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// vm.$data, $props, $set, $delete, $watch</span>
+<span class="token comment">// 定义与事件相关的实例属性</span>
+<span class="token function">eventsMixin</span><span class="token punctuation">(</span>Vue<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// vm.$on, $once, $off, $emit</span>
+<span class="token comment">// 定义与渲染相关的实例属性</span>
+<span class="token comment">// vm._update  vnode渲染到页面</span>
+<span class="token comment">// vm.$forceUpdate 强制渲染页面</span>
+<span class="token comment">// vm.$destroy 销毁页面</span>
+<span class="token function">lifecycleMixin</span><span class="token punctuation">(</span>Vue<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// vm._update, $forceUpdate, $destroy</span>
+<span class="token comment">// 定义与渲染相关的实例属性</span>
+<span class="token comment">// vm.$nextTick 组件及子组件DOM更新完成后执行$nextTick回调函数</span>
+<span class="token comment">// vm._render 生成vnode</span>
+<span class="token function">renderMixin</span><span class="token punctuation">(</span>Vue<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// vm.$nextTick, _render</span>
+<span class="token comment">// ...</span>
+
+</code></pre></div><h4 id="_1-2-定义静态属性方法"><a href="#_1-2-定义静态属性方法" class="header-anchor">#</a> 1.2 定义静态属性方法</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 自定义全局api， Vue函数对象的属性和方法</span>
+<span class="token comment">// Vue.config, util, set, delete, nextTick, options, use, mixin, cid, extend, component, directive, filter</span>
+<span class="token function">initGlobalAPI</span><span class="token punctuation">(</span>Vue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_2-基础使用"><a href="#_2-基础使用" class="header-anchor">#</a> 2. 基础使用</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">el</span><span class="token operator">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">'选项合并'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_3-vue构造器"><a href="#_3-vue构造器" class="header-anchor">#</a> 3. Vue构造器</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Vue</span><span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_init</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-1-vue构造器默认选项"><a href="#_3-1-vue构造器默认选项" class="header-anchor">#</a> 3.1 Vue构造器默认选项</h3> <div class="language-js extra-class"><pre class="language-js"><code>Vue<span class="token punctuation">.</span>options <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">components</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">KeepAlive</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token literal-property property">Transition</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token literal-property property">TransitionGroup</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">directives</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">model</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token literal-property property">inserted</span><span class="token operator">:</span> ƒ<span class="token punctuation">,</span> <span class="token literal-property property">componentUpdated</span><span class="token operator">:</span> ƒ<span class="token punctuation">}</span>
+    <span class="token literal-property property">show</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token literal-property property">bind</span><span class="token operator">:</span> ƒ<span class="token punctuation">,</span> <span class="token literal-property property">update</span><span class="token operator">:</span> ƒ<span class="token punctuation">,</span> <span class="token literal-property property">unbind</span><span class="token operator">:</span> ƒ<span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">filters</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  _base
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-2-可选项规范化"><a href="#_3-2-可选项规范化" class="header-anchor">#</a> 3.2 可选项规范化</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">mergeOptions</span><span class="token punctuation">(</span><span class="token parameter">parent<span class="token punctuation">,</span> child<span class="token punctuation">,</span> vm</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token comment">// 规范化props对象, {props1: { type: 'string' }}</span>
+  <span class="token function">normalizeProps</span><span class="token punctuation">(</span>child<span class="token punctuation">,</span> vm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 规范化注入对象</span>
+  <span class="token comment">// ['age'] =&gt; { age: { from: 'age' }}</span>
+  <span class="token comment">// {age: {default: 20} =&gt; { age: { from: 'age' }}</span>
+  <span class="token function">normalizeInject</span><span class="token punctuation">(</span>child<span class="token punctuation">,</span> vm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 规范化指令对象</span>
+  <span class="token comment">// focus: Function =&gt; focus: { bind: Function, update: Function }</span>
+  <span class="token function">normalizeDirectives</span><span class="token punctuation">(</span>child<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">initMixin</span> <span class="token punctuation">(</span><span class="token parameter">Vue</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">Vue</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">_init</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> vm <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token comment">// 选项合并，将合并后的选项赋值给实例的$options属性</span>
+    vm<span class="token punctuation">.</span>$options <span class="token operator">=</span> <span class="token function">mergeOptions</span><span class="token punctuation">(</span>
+      <span class="token function">resolveConstructorOptions</span><span class="token punctuation">(</span>vm<span class="token punctuation">.</span>constructor<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// 返回Vue构造函数自身的配置项</span>
+      options <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      vm
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-3-可选项合并策略"><a href="#_3-3-可选项合并策略" class="header-anchor">#</a> 3.3 可选项合并策略</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// el选项合并</span>
+strats<span class="token punctuation">.</span>el <span class="token operator">=</span> strats<span class="token punctuation">.</span><span class="token function-variable function">propsData</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">parent<span class="token punctuation">,</span> child<span class="token punctuation">,</span> vm<span class="token punctuation">,</span> key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment">// data选项合并</span>
+strats<span class="token punctuation">.</span><span class="token function-variable function">data</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">parentVal<span class="token punctuation">,</span> childVal<span class="token punctuation">,</span> vm</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment">// watch选项合并</span>
+strats<span class="token punctuation">.</span><span class="token function-variable function">watch</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">parentVal<span class="token punctuation">,</span>childVal<span class="token punctuation">,</span>vm<span class="token punctuation">,</span>key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment">// props，methods, inject, computed选项合并</span>
+strats<span class="token punctuation">.</span>props <span class="token operator">=</span>
+  strats<span class="token punctuation">.</span>methods <span class="token operator">=</span>
+	strats<span class="token punctuation">.</span>inject <span class="token operator">=</span>
+  strats<span class="token punctuation">.</span><span class="token function-variable function">computed</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">parentVal<span class="token punctuation">,</span>childVal<span class="token punctuation">,</span>vm<span class="token punctuation">,</span>key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment">// provide选项合并</span>
+strats<span class="token punctuation">.</span><span class="token function-variable function">provide</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment">// 生命周期钩子函数合并</span>
+<span class="token keyword">var</span> <span class="token constant">LIFECYCLE_HOOKS</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token string">'beforeCreate'</span><span class="token punctuation">,</span>
+  <span class="token string">'created'</span><span class="token punctuation">,</span>
+  <span class="token string">'beforeMount'</span><span class="token punctuation">,</span>
+  <span class="token string">'mounted'</span><span class="token punctuation">,</span>
+  <span class="token string">'beforeUpdate'</span><span class="token punctuation">,</span>
+  <span class="token string">'updated'</span><span class="token punctuation">,</span>
+  <span class="token string">'beforeDestroy'</span><span class="token punctuation">,</span>
+  <span class="token string">'destroyed'</span><span class="token punctuation">,</span>
+  <span class="token string">'activated'</span><span class="token punctuation">,</span>
+  <span class="token string">'deactivated'</span><span class="token punctuation">,</span>
+  <span class="token string">'errorCaptured'</span><span class="token punctuation">,</span>
+  <span class="token string">'serverPrefetch'</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token constant">LIFECYCLE_HOOKS</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">hook</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  strats<span class="token punctuation">[</span>hook<span class="token punctuation">]</span> <span class="token operator">=</span> mergeHook<span class="token punctuation">;</span> <span class="token comment">// 对生命周期钩子选项的合并都执行mergeHook策略</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">mergeOptions</span> <span class="token punctuation">(</span> <span class="token parameter">parent<span class="token punctuation">,</span> child<span class="token punctuation">,</span> vm</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  ···
+  <span class="token keyword">var</span> options <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> key<span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>key <span class="token keyword">in</span> parent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">mergeField</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>key <span class="token keyword">in</span> child<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">hasOwn</span><span class="token punctuation">(</span>parent<span class="token punctuation">,</span> key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">mergeField</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">function</span> <span class="token function">mergeField</span> <span class="token punctuation">(</span><span class="token parameter">key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 如果有自定义选项策略，则使用自定义选项策略，否则选择使用默认策略。</span>
+    <span class="token keyword">var</span> strat <span class="token operator">=</span> strats<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">||</span> defaultStrat<span class="token punctuation">;</span> 
+    options<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">strat</span><span class="token punctuation">(</span>parent<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">,</span> child<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">,</span> vm<span class="token punctuation">,</span> key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> options
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#选项合并策略" title="选项合并策略">选项合并策略</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_1-vue引入" title="1. Vue引入">1. Vue引入</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_2-基础使用" title="2. 基础使用">2. 基础使用</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_3-vue构造器" title="3. Vue构造器">3. Vue构造器</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_3-1-vue构造器默认选项" title="3.1 Vue构造器默认选项">3.1 Vue构造器默认选项</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_3-2-可选项规范化" title="3.2 可选项规范化">3.2 可选项规范化</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_3-3-可选项合并策略" title="3.3 可选项合并策略">3.3 可选项合并策略</a></div></div></div></div> <footer class="footer" data-v-3d9deeb8><div class="footer-left-wrap" data-v-3d9deeb8><ul class="contact" data-v-3d9deeb8></ul></div> <div class="footer-right-wrap" data-v-3d9deeb8><ul class="copyright" data-v-3d9deeb8></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.47a314f6.js" defer></script><script src="/assets/js/13.9730d12a.js" defer></script><script src="/assets/js/3.c55e49da.js" defer></script><script src="/assets/js/45.a0b1c97e.js" defer></script>
+  </body>
+</html>

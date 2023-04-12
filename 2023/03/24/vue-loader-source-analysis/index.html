@@ -3,36 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>vue-loader原理分析 | Alan的博客</title>
+    <title>vue-loader如何解析vue文件 | Alan的博客</title>
     <meta name="generator" content="VuePress 1.9.7">
     
-    <meta name="description" content="本文主要介绍vue-loader原理分析
-
-vue-loader原理分析
+    <meta name="description" content="本文主要介绍如何调试vue-loader，以及分析vue-loader解析vue文件的整个过程
 
 如何调试vue-loader
 1. 使用vue-cli初始化项目
 $ vue create hello-world
-
-// 运行环境
-vue-c ...">
+ ...">
     
-    <link rel="preload" href="/assets/css/0.styles.89986362.css" as="style"><link rel="preload" href="/assets/js/app.17a065d5.js" as="script"><link rel="preload" href="/assets/js/13.dfa639c4.js" as="script"><link rel="preload" href="/assets/js/3.cc50076e.js" as="script"><link rel="preload" href="/assets/js/19.efbb3b9c.js" as="script"><link rel="prefetch" href="/assets/js/10.32b9865d.js"><link rel="prefetch" href="/assets/js/11.9a553ac3.js"><link rel="prefetch" href="/assets/js/12.168b3c96.js"><link rel="prefetch" href="/assets/js/14.52e663a8.js"><link rel="prefetch" href="/assets/js/15.5f783ef3.js"><link rel="prefetch" href="/assets/js/16.7576f9d2.js"><link rel="prefetch" href="/assets/js/17.43eb5390.js"><link rel="prefetch" href="/assets/js/18.4af0c97b.js"><link rel="prefetch" href="/assets/js/20.d33fd6a6.js"><link rel="prefetch" href="/assets/js/21.f7215a74.js"><link rel="prefetch" href="/assets/js/22.5737c2db.js"><link rel="prefetch" href="/assets/js/23.7d46d7b0.js"><link rel="prefetch" href="/assets/js/24.e5eef3dd.js"><link rel="prefetch" href="/assets/js/25.40953362.js"><link rel="prefetch" href="/assets/js/26.f8bed2f5.js"><link rel="prefetch" href="/assets/js/27.4ffff4ac.js"><link rel="prefetch" href="/assets/js/28.af1c6adc.js"><link rel="prefetch" href="/assets/js/29.06a4d4f9.js"><link rel="prefetch" href="/assets/js/30.b3bd9ce9.js"><link rel="prefetch" href="/assets/js/31.9dd76f20.js"><link rel="prefetch" href="/assets/js/32.921e7724.js"><link rel="prefetch" href="/assets/js/33.12aaa7ed.js"><link rel="prefetch" href="/assets/js/34.396cd815.js"><link rel="prefetch" href="/assets/js/35.02ec910f.js"><link rel="prefetch" href="/assets/js/36.b3075e00.js"><link rel="prefetch" href="/assets/js/37.545af8cb.js"><link rel="prefetch" href="/assets/js/38.ce05662d.js"><link rel="prefetch" href="/assets/js/39.55292b7f.js"><link rel="prefetch" href="/assets/js/4.207d7112.js"><link rel="prefetch" href="/assets/js/40.043f8a84.js"><link rel="prefetch" href="/assets/js/41.c7aafeb8.js"><link rel="prefetch" href="/assets/js/42.89cc1975.js"><link rel="prefetch" href="/assets/js/43.a934551c.js"><link rel="prefetch" href="/assets/js/44.c78c0dd6.js"><link rel="prefetch" href="/assets/js/45.c3fa5679.js"><link rel="prefetch" href="/assets/js/46.d0996971.js"><link rel="prefetch" href="/assets/js/47.7d8bddb0.js"><link rel="prefetch" href="/assets/js/48.a742a296.js"><link rel="prefetch" href="/assets/js/49.c03242bd.js"><link rel="prefetch" href="/assets/js/5.f5134626.js"><link rel="prefetch" href="/assets/js/50.4deb0ee1.js"><link rel="prefetch" href="/assets/js/51.4f00a346.js"><link rel="prefetch" href="/assets/js/6.90befd16.js"><link rel="prefetch" href="/assets/js/7.1ca39d72.js"><link rel="prefetch" href="/assets/js/8.f25e7d9b.js"><link rel="prefetch" href="/assets/js/9.c5604d33.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.6dcb9fe5.js">
+    <link rel="preload" href="/assets/css/0.styles.89986362.css" as="style"><link rel="preload" href="/assets/js/app.141e1ed7.js" as="script"><link rel="preload" href="/assets/js/13.171ab5d5.js" as="script"><link rel="preload" href="/assets/js/3.fb683ead.js" as="script"><link rel="preload" href="/assets/js/19.43538f6e.js" as="script"><link rel="prefetch" href="/assets/js/10.62a825af.js"><link rel="prefetch" href="/assets/js/11.7aae2353.js"><link rel="prefetch" href="/assets/js/12.090e3d25.js"><link rel="prefetch" href="/assets/js/14.8a04f612.js"><link rel="prefetch" href="/assets/js/15.9c547c76.js"><link rel="prefetch" href="/assets/js/16.ab6e8607.js"><link rel="prefetch" href="/assets/js/17.11e22c98.js"><link rel="prefetch" href="/assets/js/18.df170e47.js"><link rel="prefetch" href="/assets/js/20.25ff3fd3.js"><link rel="prefetch" href="/assets/js/21.6b07667d.js"><link rel="prefetch" href="/assets/js/22.5737c2db.js"><link rel="prefetch" href="/assets/js/23.207b565c.js"><link rel="prefetch" href="/assets/js/24.100cf70a.js"><link rel="prefetch" href="/assets/js/25.dbfa88eb.js"><link rel="prefetch" href="/assets/js/26.992d5ace.js"><link rel="prefetch" href="/assets/js/27.c900f3a5.js"><link rel="prefetch" href="/assets/js/28.f5a12d94.js"><link rel="prefetch" href="/assets/js/29.113e4819.js"><link rel="prefetch" href="/assets/js/30.c7922161.js"><link rel="prefetch" href="/assets/js/31.9dd76f20.js"><link rel="prefetch" href="/assets/js/32.a4368e94.js"><link rel="prefetch" href="/assets/js/33.e384476f.js"><link rel="prefetch" href="/assets/js/34.0ef3e5c1.js"><link rel="prefetch" href="/assets/js/35.31e82015.js"><link rel="prefetch" href="/assets/js/36.87e98382.js"><link rel="prefetch" href="/assets/js/37.b24242b6.js"><link rel="prefetch" href="/assets/js/38.98b550cd.js"><link rel="prefetch" href="/assets/js/39.7efe185d.js"><link rel="prefetch" href="/assets/js/4.bf0041fa.js"><link rel="prefetch" href="/assets/js/40.e64c1548.js"><link rel="prefetch" href="/assets/js/41.25b59c80.js"><link rel="prefetch" href="/assets/js/42.28727265.js"><link rel="prefetch" href="/assets/js/43.720a8b81.js"><link rel="prefetch" href="/assets/js/44.1a19f3c6.js"><link rel="prefetch" href="/assets/js/45.5c492499.js"><link rel="prefetch" href="/assets/js/46.d0996971.js"><link rel="prefetch" href="/assets/js/47.43afb04d.js"><link rel="prefetch" href="/assets/js/48.bb95e67e.js"><link rel="prefetch" href="/assets/js/49.6178ba0d.js"><link rel="prefetch" href="/assets/js/5.98ad11c8.js"><link rel="prefetch" href="/assets/js/50.c980c88b.js"><link rel="prefetch" href="/assets/js/51.21af6421.js"><link rel="prefetch" href="/assets/js/6.dcd956de.js"><link rel="prefetch" href="/assets/js/7.bf560d3a.js"><link rel="prefetch" href="/assets/js/8.26c46ff2.js"><link rel="prefetch" href="/assets/js/9.f3b3db90.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.17b870f2.js">
     <link rel="stylesheet" href="/assets/css/0.styles.89986362.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/" class="nav-link home-link">Alan的博客 </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/" class="nav-link">博客</a></li><li class="nav-item"><a href="/tag/" class="nav-link">标签</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/" class="nav-link mobile-home-link">Alan的博客 </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/" class="nav-link">博客</a></li><li class="mobile-nav-item"><a href="/tag/" class="nav-link">标签</a></li> <li class="mobile-nav-item"><!----></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
-        vue-loader原理分析
+        vue-loader如何解析vue文件
       </h1> <div class="post-meta"><div itemprop="publisher author" itemtype="http://schema.org/Person" itemscope="itemscope" class="post-meta-author"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> <span itemprop="name">Alan</span> <span itemprop="address">   in Shanghai</span></div> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2023-03-24T00:00:00.000Z">
       Fri Mar 24 2023
-    </time></div> <ul itemprop="keywords" class="post-meta-tags"><li class="post-tag" data-v-42ccfcd5><a href="/tag/webpack" data-v-42ccfcd5><span data-v-42ccfcd5>webpack</span></a></li><li class="post-tag" data-v-42ccfcd5><a href="/tag/vue-loader" data-v-42ccfcd5><span data-v-42ccfcd5>vue-loader</span></a></li><li class="post-tag" data-v-42ccfcd5><a href="/tag/loader" data-v-42ccfcd5><span data-v-42ccfcd5>loader</span></a></li><li class="post-tag" data-v-42ccfcd5><a href="/tag/原理分析" data-v-42ccfcd5><span data-v-42ccfcd5>原理分析</span></a></li></ul></div></header> <div itemprop="articleBody" class="content__default"><p>本文主要介绍vue-loader原理分析</p> <h2 id="vue-loader原理分析"><a href="#vue-loader原理分析" class="header-anchor">#</a> vue-loader原理分析</h2> <h3 id="如何调试vue-loader"><a href="#如何调试vue-loader" class="header-anchor">#</a> 如何调试vue-loader</h3> <h4 id="_1-使用vue-cli初始化项目"><a href="#_1-使用vue-cli初始化项目" class="header-anchor">#</a> 1. 使用vue-cli初始化项目</h4> <div class="language-js extra-class"><pre class="language-js"><code>$ vue create hello<span class="token operator">-</span>world
-</code></pre></div><img src="/assets/img/1.d996322b.png"> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 运行环境</span>
+    </time></div> <ul itemprop="keywords" class="post-meta-tags"><li class="post-tag" data-v-42ccfcd5><a href="/tag/webpack" data-v-42ccfcd5><span data-v-42ccfcd5>webpack</span></a></li><li class="post-tag" data-v-42ccfcd5><a href="/tag/vue-loader" data-v-42ccfcd5><span data-v-42ccfcd5>vue-loader</span></a></li><li class="post-tag" data-v-42ccfcd5><a href="/tag/loader" data-v-42ccfcd5><span data-v-42ccfcd5>loader</span></a></li><li class="post-tag" data-v-42ccfcd5><a href="/tag/流程" data-v-42ccfcd5><span data-v-42ccfcd5>流程</span></a></li></ul></div></header> <div itemprop="articleBody" class="content__default"><p>本文主要介绍如何调试vue-loader，以及分析vue-loader解析vue文件的整个过程</p> <h2 id="如何调试vue-loader"><a href="#如何调试vue-loader" class="header-anchor">#</a> 如何调试vue-loader</h2> <h3 id="_1-使用vue-cli初始化项目"><a href="#_1-使用vue-cli初始化项目" class="header-anchor">#</a> 1. 使用vue-cli初始化项目</h3> <div class="language-js extra-class"><pre class="language-js"><code>$ vue create hello<span class="token operator">-</span>world
+</code></pre></div><img src="/assets/img/157.f5eca096.png" width="400"> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 运行环境</span>
 vue<span class="token operator">-</span>cli<span class="token operator">:</span> @vue<span class="token operator">/</span>cli <span class="token number">4.5</span><span class="token number">.15</span>
 <span class="token literal-property property">vue</span><span class="token operator">:</span> <span class="token number">2.6</span><span class="token number">.11</span>
-</code></pre></div><h4 id="_2-运行调试命令"><a href="#_2-运行调试命令" class="header-anchor">#</a> 2. 运行调试命令</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// chrome调试方式</span>
+</code></pre></div><h3 id="_2-运行调试命令"><a href="#_2-运行调试命令" class="header-anchor">#</a> 2. 运行调试命令</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// chrome调试方式</span>
 $ node <span class="token operator">--</span>inspect<span class="token operator">-</span>brk <span class="token punctuation">.</span><span class="token operator">/</span>node_modules<span class="token operator">/</span><span class="token punctuation">.</span>bin<span class="token operator">/</span>webpack<span class="token operator">-</span>dev<span class="token operator">-</span>server
-</code></pre></div><p>如下图出现红框中绿色按钮，即可调试node
-<img src="/assets/img/2.4012c8a0.png"></p> <h4 id="_3-配置webpack"><a href="#_3-配置webpack" class="header-anchor">#</a> 3. 配置webpack</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// webpack.config.js</span>
+</code></pre></div><p>如下图出现红框中绿色按钮，即可调试node</p> <img src="/assets/img/158.825ebcb3.png" width="400"> <h3 id="_3-配置webpack"><a href="#_3-配置webpack" class="header-anchor">#</a> 3. 配置webpack</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// webpack.config.js</span>
 <span class="token punctuation">{</span>
   <span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
@@ -43,7 +38,7 @@ $ node <span class="token operator">--</span>inspect<span class="token operator"
     <span class="token punctuation">]</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre></div><h4 id="_4-添加debugger"><a href="#_4-添加debugger" class="header-anchor">#</a> 4. 添加debugger</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// vue-loader文件添加debugger</span>
+</code></pre></div><h3 id="_4-添加debugger"><a href="#_4-添加debugger" class="header-anchor">#</a> 4. 添加debugger</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// vue-loader文件添加debugger</span>
 <span class="token comment">// node_modules/_vue-loader@13.7.3@vue-loader/lib/loader.js</span>
 <span class="token punctuation">{</span>
   module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">content</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -53,137 +48,7 @@ $ node <span class="token operator">--</span>inspect<span class="token operator"
     <span class="token keyword">return</span>  output<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre></div><h4 id="vue-loader返回的字符串"><a href="#vue-loader返回的字符串" class="header-anchor">#</a> vue-loader返回的字符串</h4> <p>vue-loader/lib/selector 根据类型(template, script, css)返回标签里内容</p> <ol><li>只有template</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> disposed <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-<span class="token comment">// 定义标准化组件方法</span>
-<span class="token comment">// normalizeComponent</span>
-<span class="token comment">// 返回Vue实例化可选项， 同时配置render, staticRenderFns</span>
-<span class="token comment">/**
- * @return {esModule:esModule,exports:scriptExports,options:options}
- * options包含Vue实例化可选项和render函数
- */</span>
-<span class="token keyword">var</span> normalizeComponent <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;!../node_modules/_vue-loader@13.7.3@vue-loader/lib/component-normalizer&quot;</span><span class="token punctuation">)</span>
-<span class="token comment">/* script */</span>
-<span class="token keyword">var</span> __vue_script__ <span class="token operator">=</span> <span class="token keyword">null</span>
-<span class="token comment">/* template */</span>
-<span class="token comment">// 执行顺序： 从右到左 （import from中!!没有优先级）</span>
-<span class="token comment">// !! 禁止内联loader外的其它loader的执行(内联loader从左到右执行，避免重复执行loader)，最后一个元素是要加载的资源</span>
-<span class="token comment">// lib/selector =&gt; template-compiler/index</span>
-<span class="token comment">// 1. 获取template内容 lib/selector  ps: this.callback同步返回数据</span>
-<span class="token comment">// 2. 生成render函数 template-compiler/index</span>
-<span class="token comment">// 3. __vue_template__ =&gt; {render: Function, staticRenderFns: []}</span>
-<span class="token comment">/**
-* @return {render: Function, staticRenderFns: []}
-*/</span>
-<span class="token keyword">import</span> __vue_template__ <span class="token keyword">from</span> <span class="token string">&quot;!!../node_modules/_vue-loader@13.7.3@vue-loader/lib/template-compiler/index?{}!../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector?type=template&amp;index=0!./App.vue&quot;</span>
-<span class="token comment">/* template functional */</span>
-<span class="token keyword">var</span> __vue_template_functional__ <span class="token operator">=</span> <span class="token boolean">false</span>
-<span class="token comment">/* styles */</span>
-<span class="token keyword">var</span> __vue_styles__ <span class="token operator">=</span> <span class="token keyword">null</span>
-<span class="token comment">/* scopeId */</span>
-<span class="token keyword">var</span> __vue_scopeId__ <span class="token operator">=</span> <span class="token keyword">null</span>
-<span class="token comment">/* moduleIdentifier (server only) */</span>
-<span class="token keyword">var</span> __vue_module_identifier__ <span class="token operator">=</span> <span class="token keyword">null</span>
-<span class="token keyword">var</span> Component <span class="token operator">=</span> <span class="token function">normalizeComponent</span><span class="token punctuation">(</span>
-  __vue_script__<span class="token punctuation">,</span>
-  __vue_template__<span class="token punctuation">,</span>
-  __vue_template_functional__<span class="token punctuation">,</span>
-  __vue_styles__<span class="token punctuation">,</span>
-  __vue_scopeId__<span class="token punctuation">,</span>
-  __vue_module_identifier__
-<span class="token punctuation">)</span>
-Component<span class="token punctuation">.</span>options<span class="token punctuation">.</span>__file <span class="token operator">=</span> <span class="token string">&quot;src/App.vue&quot;</span>
-
-<span class="token keyword">export</span> <span class="token keyword">default</span> Component<span class="token punctuation">.</span>exports
-</code></pre></div><ol start="2"><li>只有script</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> disposed <span class="token operator">=</span> <span class="token boolean">false</span>
-<span class="token keyword">var</span> normalizeComponent <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;!../node_modules/_vue-loader@13.7.3@vue-loader/lib/component-normalizer&quot;</span><span class="token punctuation">)</span>
-<span class="token comment">/* script */</span>
-<span class="token keyword">export</span> <span class="token operator">*</span> <span class="token keyword">from</span> <span class="token string">&quot;!!babel-loader!../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector?type=script&amp;index=0!./App.vue&quot;</span>
-<span class="token comment">// 执行顺序： 从右到左 （import from中!!没有优先级）</span>
-<span class="token comment">// lib/selector =&gt; babel-loader</span>
-<span class="token comment">// 1. 获取script内容 lib/selector</span>
-<span class="token comment">// 2. script标签内容转换为js对象 babel-loader</span>
-<span class="token comment">/**
- * @return {name: '', data: Function} Vue可选项
- */</span>
-<span class="token keyword">import</span> __vue_script__ <span class="token keyword">from</span> <span class="token string">&quot;!!babel-loader!../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector?type=script&amp;index=0!./App.vue&quot;</span>
-<span class="token comment">/* template */</span>
-<span class="token keyword">var</span> __vue_template__ <span class="token operator">=</span> <span class="token keyword">null</span>
-<span class="token comment">/* template functional */</span>
-<span class="token keyword">var</span> __vue_template_functional__ <span class="token operator">=</span> <span class="token boolean">false</span>
-<span class="token comment">/* styles */</span>
-<span class="token keyword">var</span> __vue_styles__ <span class="token operator">=</span> <span class="token keyword">null</span>
-<span class="token comment">/* scopeId */</span>
-<span class="token keyword">var</span> __vue_scopeId__ <span class="token operator">=</span> <span class="token keyword">null</span>
-<span class="token comment">/* moduleIdentifier (server only) */</span>
-<span class="token keyword">var</span> __vue_module_identifier__ <span class="token operator">=</span> <span class="token keyword">null</span>
-<span class="token keyword">var</span> Component <span class="token operator">=</span> <span class="token function">normalizeComponent</span><span class="token punctuation">(</span>
-  __vue_script__<span class="token punctuation">,</span>
-  __vue_template__<span class="token punctuation">,</span>
-  __vue_template_functional__<span class="token punctuation">,</span>
-  __vue_styles__<span class="token punctuation">,</span>
-  __vue_scopeId__<span class="token punctuation">,</span>
-  __vue_module_identifier__
-<span class="token punctuation">)</span>
-Component<span class="token punctuation">.</span>options<span class="token punctuation">.</span>__file <span class="token operator">=</span> <span class="token string">&quot;src/App.vue&quot;</span>
-</code></pre></div><ol start="3"><li>只有style</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">injectStyle</span> <span class="token punctuation">(</span><span class="token parameter">ssrContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token comment">// 执行顺序： 从右到左 （require中!!更高优先级）</span>
-  <span class="token comment">// 1. 把css插入到dom中 vue-style-loader(先生成dom插入函数)，fork来自style-loader</span>
-  <span class="token comment">// 2. 获取style内容 lib/selector</span>
-  <span class="token comment">// 3. 去掉style标签内空格和生成css对象 style-compiler/index</span>
-  <span class="token comment">// 4. 导出css对象 css-loader</span>
-  <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;!!vue-loader/node_modules/vue-style-loader!css-loader?sourceMap!../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index?{\&quot;vue\&quot;:true,\&quot;id\&quot;:\&quot;data-v-7ba5bd90\&quot;,\&quot;scoped\&quot;:false,\&quot;hasInlineConfig\&quot;:false}!../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector?type=styles&amp;index=0!./App.vue&quot;</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">var</span> normalizeComponent <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;!../node_modules/_vue-loader@13.7.3@vue-loader/lib/component-normalizer&quot;</span><span class="token punctuation">)</span>
-<span class="token comment">/* script */</span>
-<span class="token keyword">var</span> __vue_script__ <span class="token operator">=</span> <span class="token keyword">null</span>
-<span class="token comment">/* template */</span>
-<span class="token keyword">var</span> __vue_template__ <span class="token operator">=</span> <span class="token keyword">null</span>
-<span class="token comment">/* template functional */</span>
-<span class="token keyword">var</span> __vue_template_functional__ <span class="token operator">=</span> <span class="token boolean">false</span>
-<span class="token comment">/* styles */</span>
-<span class="token keyword">var</span> __vue_styles__ <span class="token operator">=</span> injectStyle
-<span class="token comment">/* scopeId */</span>
-<span class="token keyword">var</span> __vue_scopeId__ <span class="token operator">=</span> <span class="token keyword">null</span>
-<span class="token comment">/* moduleIdentifier (server only) */</span>
-<span class="token keyword">var</span> __vue_module_identifier__ <span class="token operator">=</span> <span class="token keyword">null</span>
-<span class="token keyword">var</span> Component <span class="token operator">=</span> <span class="token function">normalizeComponent</span><span class="token punctuation">(</span>
-  __vue_script__<span class="token punctuation">,</span>
-  __vue_template__<span class="token punctuation">,</span>
-  __vue_template_functional__<span class="token punctuation">,</span>
-  __vue_styles__<span class="token punctuation">,</span>
-  __vue_scopeId__<span class="token punctuation">,</span>
-  __vue_module_identifier__
-<span class="token punctuation">)</span>
-Component<span class="token punctuation">.</span>options<span class="token punctuation">.</span>__file <span class="token operator">=</span> <span class="token string">&quot;src/App.vue&quot;</span>
-
-<span class="token keyword">export</span> <span class="token keyword">default</span> Component<span class="token punctuation">.</span>exports
-</code></pre></div><p>3.1 vue-style-loader解析后
-新增style标签到DOM中</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// style-loader: Adds some css to the DOM by adding a &lt;style&gt; tag</span>
-
-<span class="token comment">// load the styles</span>
-<span class="token keyword">var</span> content <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;!!../node_modules/_css-loader@0.28.11@css-loader/index.js?sourceMap!../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\&quot;vue\&quot;:true,\&quot;id\&quot;:\&quot;data-v-7ba5bd90\&quot;,\&quot;scoped\&quot;:false,\&quot;hasInlineConfig\&quot;:false}!../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&amp;index=0!./App.vue&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> content <span class="token operator">===</span> <span class="token string">'string'</span><span class="token punctuation">)</span> content <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>module<span class="token punctuation">.</span>id<span class="token punctuation">,</span> content<span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">if</span><span class="token punctuation">(</span>content<span class="token punctuation">.</span>locals<span class="token punctuation">)</span> module<span class="token punctuation">.</span>exports <span class="token operator">=</span> content<span class="token punctuation">.</span>locals<span class="token punctuation">;</span>
-<span class="token comment">// style插入到DOM</span>
-<span class="token keyword">var</span> update <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;!../node_modules/_vue-style-loader@3.1.2@vue-style-loader/lib/addStylesClient.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token string">&quot;41c9429e&quot;</span><span class="token punctuation">,</span> content<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// 热更新</span>
-<span class="token keyword">if</span><span class="token punctuation">(</span>module<span class="token punctuation">.</span>hot<span class="token punctuation">)</span> <span class="token punctuation">{</span>
- <span class="token comment">// When the styles change, update the &lt;style&gt; tags</span>
- <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>content<span class="token punctuation">.</span>locals<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-   module<span class="token punctuation">.</span>hot<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span><span class="token string">&quot;!!../node_modules/_css-loader@0.28.11@css-loader/index.js&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-     <span class="token function">update</span><span class="token punctuation">(</span>newContent<span class="token punctuation">)</span><span class="token punctuation">;</span>
-   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token punctuation">}</span>
- <span class="token comment">// When the module is disposed, remove the &lt;style&gt; tags</span>
- module<span class="token punctuation">.</span>hot<span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre></div><p>3.2 css-loader解析后</p> <div class="language-js extra-class"><pre class="language-js"><code>exports <span class="token operator">=</span> module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;../node_modules/_css-loader@0.28.11@css-loader/lib/css-base.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// imports</span>
-<span class="token comment">// module</span>
-exports<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">[</span>module<span class="token punctuation">.</span>id<span class="token punctuation">,</span> <span class="token string">&quot;\nh1 {\n  color: yellowgreen\n}\n&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string-property property">&quot;version&quot;</span><span class="token operator">:</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token string-property property">&quot;sources&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">&quot;/Users/alanliang/project/vue-analysis/vue-webpack-simple/src/src/App.vue&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string-property property">&quot;names&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string-property property">&quot;mappings&quot;</span><span class="token operator">:</span><span class="token string">&quot;;AAGA;EACA,kBAAA;CACA&quot;</span><span class="token punctuation">,</span><span class="token string-property property">&quot;file&quot;</span><span class="token operator">:</span><span class="token string">&quot;App.vue&quot;</span><span class="token punctuation">,</span><span class="token string-property property">&quot;sourcesContent&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">&quot;\n\n&lt;style lang=\&quot;css\&quot;&gt;\n  h1 {\n    color: yellowgreen\n  }\n&lt;/style&gt;\n&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string-property property">&quot;sourceRoot&quot;</span><span class="token operator">:</span><span class="token string">&quot;&quot;</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">// exports</span>
-</code></pre></div><h4 id="解析过程分析"><a href="#解析过程分析" class="header-anchor">#</a> 解析过程分析</h4> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token comment">&lt;!-- app.vue --&gt;</span>
+</code></pre></div><h2 id="解析过程"><a href="#解析过程" class="header-anchor">#</a> 解析过程</h2> <h3 id="示例"><a href="#示例" class="header-anchor">#</a> 示例</h3> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token comment">&lt;!-- app.vue --&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>app<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>{{ msg }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
@@ -204,7 +69,8 @@ exports<span class="token punctuation">.</span><span class="token function">push
     <span class="token property">color</span><span class="token punctuation">:</span> yellowgreen
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code></pre></div><h5 id="_1-把组件标签解析成对象template-script-css"><a href="#_1-把组件标签解析成对象template-script-css" class="header-anchor">#</a> 1. 把组件标签解析成对象template/script/css</h5> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> compiler <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./vue-template-compiler/index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_1-解析app-vue文件"><a href="#_1-解析app-vue文件" class="header-anchor">#</a> 1. 解析app.vue文件</h3> <p>根据标签，通过<code>vue-template-compiler/index</code>把.vue文件解析成template/script/css三个属性对象， 如下</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 解析vue文件核心代码</span>
+<span class="token keyword">const</span> compiler <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./vue-template-compiler/index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">/**
  * @returns {
     template: {&quot;type&quot;:&quot;template&quot;,&quot;content&quot;:&quot;&quot;,&quot;start&quot;:10,&quot;end&quot;:60,&quot;attrs&quot;:{}},
@@ -216,25 +82,97 @@ module<span class="token punctuation">.</span><span class="token function-variab
   <span class="token keyword">var</span> output <span class="token operator">=</span> compiler<span class="token punctuation">.</span><span class="token function">parseComponent</span><span class="token punctuation">(</span>content<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">pad</span><span class="token operator">:</span> <span class="token string">'line'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token keyword">return</span> output<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre></div> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> disposed <span class="token operator">=</span> <span class="token boolean">false</span>
-<span class="token keyword">function</span> <span class="token function">injectStyle</span> <span class="token punctuation">(</span><span class="token parameter">ssrContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>disposed<span class="token punctuation">)</span> <span class="token keyword">return</span>
-  <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;!!vue-loader/node_modules/vue-style-loader!css-loader?sourceMap!../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index?{}!../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector?type=styles&amp;index=0!./App.vue&quot;</span><span class="token punctuation">)</span>
+</code></pre></div> <h4 id="_1-1-编译template标签内容"><a href="#_1-1-编译template标签内容" class="header-anchor">#</a> 1.1 编译template标签内容</h4> <p>通过<code>template-compiler/index</code>模块生成render函数</p> <p>导出模块变量：<code>__vue_template__</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/* template */</span>
+<span class="token comment">// 执行顺序： 从右到左 （import from中!!没有优先级）</span>
+<span class="token comment">// !! 禁止内联loader外的其它loader的执行(内联loader从左到右执行，避免重复执行loader)，最后一个元素是要加载的资源</span>
+<span class="token comment">// lib/selector =&gt; template-compiler/index</span>
+<span class="token comment">// 1. 获取template内容 lib/selector  ps: this.callback同步返回数据</span>
+<span class="token comment">// 2. 生成render函数 template-compiler/index</span>
+<span class="token comment">// 3. __vue_template__ =&gt; {render: Function, staticRenderFns: []}</span>
+<span class="token comment">/**
+* @return {render: Function, staticRenderFns: []}
+*/</span>
+<span class="token keyword">import</span> __vue_template__ <span class="token keyword">from</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">!!../node_modules/_vue-loader@13.7.3
+@vue-loader/lib/template-compiler/index?{}!../node_modules/_vue-loader@13.7.3
+@vue-loader/lib/selector?type=template&amp;index=0!./App.vue</span><span class="token template-punctuation string">`</span></span>
+</code></pre></div><p>PS: 入参是template模版的内容， 类似vue.js完整版compileToFunctions函数功能， 把模版字符串解析成render函数</p> <h4 id="_1-2-编译script标签内容"><a href="#_1-2-编译script标签内容" class="header-anchor">#</a> 1.2 编译script标签内容</h4> <p><code>编译script标签内容， 这儿可以配置babel, 编译成es5, 默认使用babel-loader</code></p> <p>导出模块变量： <code>__vue_script__</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 执行顺序： 从右到左 （import from中!!没有优先级）</span>
+<span class="token comment">// lib/selector =&gt; babel-loader</span>
+<span class="token comment">// 1. 获取script内容 lib/selector</span>
+<span class="token comment">// 2. script标签内容转换为js对象 babel-loader</span>
+<span class="token comment">/**
+ * @return {name: '', data: Function} Vue可选项
+ */</span>
+<span class="token keyword">import</span> __vue_script__ <span class="token keyword">from</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">!!babel-loader!../node_modules/_vue-loader@13.7.3
+@vue-loader/lib/selector?type=script&amp;index=0!./App.vue</span><span class="token template-punctuation string">`</span></span>
+</code></pre></div><h4 id="_1-3-编译style标签内容"><a href="#_1-3-编译style标签内容" class="header-anchor">#</a> 1.3 编译style标签内容</h4> <p>导出模块变量： <code>__vue_styles__</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">injectStyle</span> <span class="token punctuation">(</span><span class="token parameter">ssrContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 执行顺序： 从右到左 （require中!!更高优先级）</span>
+  <span class="token comment">// 1. 把css插入到dom中 vue-style-loader(先生成dom插入函数)，fork来自style-loader</span>
+  <span class="token comment">// 2. 获取style内容 lib/selector</span>
+  <span class="token comment">// 3. 去掉style标签内空格和生成css对象 style-compiler/index</span>
+  <span class="token comment">// 4. 导出css对象 css-loader</span>
+  <span class="token function">require</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">!!vue-loader/node_modules/vue-style-loader!css-loader?sourceMap
+  !../node_modules/_vue-loader@13.7.3
+  @vue-loader/lib/style-compiler/index?{\&quot;vue\&quot;:true,\&quot;id\&quot;:\&quot;data-v-7ba5bd90\&quot;,\&quot;scoped\&quot;:false,\&quot;hasInlineConfig\&quot;:false}
+  !../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector?type=styles&amp;index=0!./App.vue</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
-<span class="token keyword">var</span> normalizeComponent <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;!../node_modules/_vue-loader@13.7.3@vue-loader/lib/component-normalizer&quot;</span><span class="token punctuation">)</span>
-<span class="token comment">/* script */</span>
-<span class="token keyword">export</span> <span class="token operator">*</span> <span class="token keyword">from</span> <span class="token string">&quot;!!babel-loader!../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector?type=script&amp;index=0!./App.vue&quot;</span>
-<span class="token keyword">import</span> __vue_script__ <span class="token keyword">from</span> <span class="token string">&quot;!!babel-loader!../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector?type=script&amp;index=0!./App.vue&quot;</span>
-<span class="token comment">/* template */</span>
-<span class="token keyword">import</span> __vue_template__ <span class="token keyword">from</span> <span class="token string">&quot;!!../node_modules/_vue-loader@13.7.3@vue-loader/lib/template-compiler/index?{}!../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector?type=template&amp;index=0!./App.vue&quot;</span>
-<span class="token comment">/* template functional */</span>
-<span class="token keyword">var</span> __vue_template_functional__ <span class="token operator">=</span> <span class="token boolean">false</span>
 <span class="token comment">/* styles */</span>
 <span class="token keyword">var</span> __vue_styles__ <span class="token operator">=</span> injectStyle
-<span class="token comment">/* scopeId */</span>
-<span class="token keyword">var</span> __vue_scopeId__ <span class="token operator">=</span> <span class="token keyword">null</span>
-<span class="token comment">/* moduleIdentifier (server only) */</span>
-<span class="token keyword">var</span> __vue_module_identifier__ <span class="token operator">=</span> <span class="token keyword">null</span>
+
+<span class="token comment">// 默认使用以下模块</span>
+style<span class="token operator">-</span>compiler<span class="token operator">/</span>index  <span class="token comment">// 编译style标签内容为css-loader需要的格式</span>
+css<span class="token operator">-</span>loader  <span class="token comment">// 生成css对象， style-loader需要的格式对象</span>
+vue<span class="token operator">-</span>style<span class="token operator">-</span>loader   <span class="token comment">// 类似style-loader，把style插入到DOM中</span>
+</code></pre></div><h3 id="编译完成"><a href="#编译完成" class="header-anchor">#</a> 编译完成</h3> <p>vue文件编译完成后结果如下：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 解析template标签内容</span>
+<span class="token keyword">import</span> __vue_template__ <span class="token keyword">from</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">!!../node_modules/_vue-loader@13.7.3
+@vue-loader/lib/template-compiler/index?{}!../node_modules/_vue-loader@13.7.3
+@vue-loader/lib/selector?type=template&amp;index=0!./App.vue</span><span class="token template-punctuation string">`</span></span>
+
+<span class="token comment">// 解析script标签内容</span>
+<span class="token keyword">import</span> __vue_script__ <span class="token keyword">from</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">!!babel-loader!../node_modules/_vue-loader@13.7.3
+@vue-loader/lib/selector?type=script&amp;index=0!./App.vue</span><span class="token template-punctuation string">`</span></span>
+<span class="token keyword">var</span> __vue_script__ <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> __vue_styles__ <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 解析style标签内容</span>
+<span class="token keyword">function</span> <span class="token function">injectStyle</span> <span class="token punctuation">(</span><span class="token parameter">ssrContext</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 执行顺序： 从右到左 （require中!!更高优先级）</span>
+  <span class="token comment">// 1. 把css插入到dom中 vue-style-loader(先生成dom插入函数)，fork来自style-loader</span>
+  <span class="token comment">// 2. 获取style内容 lib/selector</span>
+  <span class="token comment">// 3. 去掉style标签内空格和生成css对象 style-compiler/index</span>
+  <span class="token comment">// 4. 导出css对象 css-loader</span>
+  <span class="token function">require</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">!!vue-loader/node_modules/vue-style-loader!css-loader?sourceMap
+  !../node_modules/_vue-loader@13.7.3
+  @vue-loader/lib/style-compiler/index?{\&quot;vue\&quot;:true,\&quot;id\&quot;:\&quot;data-v-7ba5bd90\&quot;,\&quot;scoped\&quot;:false,\&quot;hasInlineConfig\&quot;:false}
+  !../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector?type=styles&amp;index=0!./App.vue</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> <span class="token function-variable function">normalizeComponent</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token function">normalizeComponent</span> <span class="token punctuation">(</span>
+  rawScriptExports<span class="token punctuation">,</span> <span class="token comment">// {name: '', data: Function}</span>
+  compiledTemplate<span class="token punctuation">,</span> <span class="token comment">// {render: Function, staticRenderFns: []}</span>
+  functionalTemplate<span class="token punctuation">,</span>
+  injectStyles<span class="token punctuation">,</span>
+  scopeId<span class="token punctuation">,</span>
+  moduleIdentifier
+<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">var</span> esModule <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> scriptExports <span class="token operator">=</span> rawScriptExports <span class="token operator">=</span> rawScriptExports <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token keyword">var</span> options <span class="token operator">=</span> rawScriptExports<span class="token punctuation">;</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>compiledTemplate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    options<span class="token punctuation">.</span>render <span class="token operator">=</span> compiledTemplate<span class="token punctuation">.</span>render<span class="token punctuation">;</span>
+    options<span class="token punctuation">.</span>staticRenderFns <span class="token operator">=</span> compiledTemplate<span class="token punctuation">.</span>staticRenderFns
+    options<span class="token punctuation">.</span>_compiled <span class="token operator">=</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">var</span> hook <span class="token operator">=</span> injectStyles<span class="token punctuation">;</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>hook<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    options<span class="token punctuation">.</span>beforeCreate <span class="token operator">=</span> <span class="token punctuation">[</span>hook<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">esModule</span><span class="token operator">:</span> esModule<span class="token punctuation">,</span>
+    <span class="token literal-property property">exports</span><span class="token operator">:</span> rawScriptExports<span class="token punctuation">,</span>
+    <span class="token literal-property property">options</span><span class="token operator">:</span> options
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
 <span class="token keyword">var</span> Component <span class="token operator">=</span> <span class="token function">normalizeComponent</span><span class="token punctuation">(</span>
   __vue_script__<span class="token punctuation">,</span>
   __vue_template__<span class="token punctuation">,</span>
@@ -245,17 +183,7 @@ module<span class="token punctuation">.</span><span class="token function-variab
 <span class="token punctuation">)</span>
 Component<span class="token punctuation">.</span>options<span class="token punctuation">.</span>__file <span class="token operator">=</span> <span class="token string">&quot;src/App.vue&quot;</span>
 <span class="token keyword">export</span> <span class="token keyword">default</span> Component<span class="token punctuation">.</span>exports
-</code></pre></div><h5 id="_2-根据type类型分发不同的编译器"><a href="#_2-根据type类型分发不同的编译器" class="header-anchor">#</a> 2. 根据type类型分发不同的编译器</h5> <p><code>vue-loader\lib\selector</code>根据类型分发不同的编译器</p> <ul><li>2.1 处理template
-<code>vue-loader\lib\selector?type=template</code></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 编译template模版， 返回render函数</span>
-template<span class="token operator">-</span>compiler<span class="token operator">/</span>index
-</code></pre></div><ul><li>2.2 处理script
-<code>vue-loader\lib\selector?type=script</code></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 编译script标签内容， 这儿可以配置babel, 编译成es5</span>
-babel<span class="token operator">-</span>loader
-</code></pre></div><ul><li>2.3 处理style
-<code>vue-loader\lib\selector?type=styles</code></li></ul> <div class="language-js extra-class"><pre class="language-js"><code>style<span class="token operator">-</span>compiler<span class="token operator">/</span>index  <span class="token comment">// 编译style标签内容为css-loader需要的格式</span>
-css<span class="token operator">-</span>loader  <span class="token comment">// 生成css对象， style-loader需要的格式对象</span>
-vue<span class="token operator">-</span>style<span class="token operator">-</span>loader   <span class="token comment">// 类似style-loader，把style插入到DOM中</span>
-</code></pre></div></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#vue-loader原理分析" title="vue-loader原理分析">vue-loader原理分析</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#如何调试vue-loader" title="如何调试vue-loader">如何调试vue-loader</a></div></div></div></div> <footer class="footer" data-v-3d9deeb8><div class="footer-left-wrap" data-v-3d9deeb8><ul class="contact" data-v-3d9deeb8></ul></div> <div class="footer-right-wrap" data-v-3d9deeb8><ul class="copyright" data-v-3d9deeb8></ul></div></footer></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.17a065d5.js" defer></script><script src="/assets/js/13.dfa639c4.js" defer></script><script src="/assets/js/3.cc50076e.js" defer></script><script src="/assets/js/19.efbb3b9c.js" defer></script>
+</code></pre></div></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#如何调试vue-loader" title="如何调试vue-loader">如何调试vue-loader</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_1-使用vue-cli初始化项目" title="1. 使用vue-cli初始化项目">1. 使用vue-cli初始化项目</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_2-运行调试命令" title="2. 运行调试命令">2. 运行调试命令</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_3-配置webpack" title="3. 配置webpack">3. 配置webpack</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_4-添加debugger" title="4. 添加debugger">4. 添加debugger</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#解析过程" title="解析过程">解析过程</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#示例" title="示例">示例</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#_1-解析app-vue文件" title="1. 解析app.vue文件">1. 解析app.vue文件</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#编译完成" title="编译完成">编译完成</a></div></div></div></div> <footer class="footer" data-v-3d9deeb8><div class="footer-left-wrap" data-v-3d9deeb8><ul class="contact" data-v-3d9deeb8></ul></div> <div class="footer-right-wrap" data-v-3d9deeb8><ul class="copyright" data-v-3d9deeb8></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.141e1ed7.js" defer></script><script src="/assets/js/13.171ab5d5.js" defer></script><script src="/assets/js/3.fb683ead.js" defer></script><script src="/assets/js/19.43538f6e.js" defer></script>
   </body>
 </html>

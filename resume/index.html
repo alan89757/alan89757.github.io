@@ -1,383 +1,273 @@
-<!DOCTYPE html><html><head>
-      <title>resume</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>梁荣军的个人简历</title>
+    
+      <meta name="keywords" content="简历,Hexo">
+    
+    
+      <meta name="description" content="前端一点点杂货铺">
+    
+
+    <!-- import meta -->
+    
       
-      <link rel="stylesheet" href="file:////Users/alanliang/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.6.8/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+        <meta name='theme-color' content='#FFFFFF'>
       
+        <meta name='msapplication-TileColor' content='#1BC3FB'>
       
+        <meta name='msapplication-config' content='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/favicon/browserconfig.xml'>
       
+    
+    <!-- import link -->
+    
       
+        <link rel='shortcut icon' type='image/x-icon' href='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/favicon/favicon.ico'>
       
+        <link rel='icon' type='image/x-icon' sizes='32x32' href='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/favicon/favicon-32x32.png'>
       
+        <link rel='apple-touch-icon' type='image/png' sizes='180x180' href='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/favicon/apple-touch-icon.png'>
       
+        <link rel='mask-icon' color='#1BC3FB' href='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/favicon/safari-pinned-tab.svg'>
       
+        <link rel='manifest' href='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/favicon/site.webmanifest'>
       
-      <style>
-      /**
- * prism.js Github theme based on GitHub's theme.
- * @author Sam Clarke
- */
-code[class*="language-"],
-pre[class*="language-"] {
-  color: #333;
-  background: none;
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.4;
+    
 
-  -moz-tab-size: 8;
-  -o-tab-size: 8;
-  tab-size: 8;
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css">
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5/dist/jquery.fancybox.min.css">
 
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
+    
+    <!-- style.css -->
+    
+      
+<link rel="stylesheet" href="/css/page.css">
 
-/* Code blocks */
-pre[class*="language-"] {
-  padding: .8em;
-  overflow: auto;
-  /* border: 1px solid #ddd; */
-  border-radius: 3px;
-  /* background: #fff; */
-  background: #f5f5f5;
-}
+    
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body class="docs">
+    <div id="mobile-bar">
+      <a class="menu-button fas fa-bars"></a>
+      <h2 class="nav-title">梁荣军的个人简历</h2>
+      
+        <a class="menu-button right fas fa-download" target="_blank" rel="noopener" href="https://github.com/xaoxuu/resume-docs"></a>
+      
+    </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.min.js"></script>
 
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em;
-  white-space: normal;
-  background: #f5f5f5;
-}
+    <script>
+      Vue.config.productionTip = false
+      window.PAGE_TYPE = "resume"
+    </script>
 
-.token.comment,
-.token.blockquote {
-  color: #969896;
-}
-
-.token.cdata {
-  color: #183691;
-}
-
-.token.doctype,
-.token.punctuation,
-.token.variable,
-.token.macro.property {
-  color: #333;
-}
-
-.token.operator,
-.token.important,
-.token.keyword,
-.token.rule,
-.token.builtin {
-  color: #a71d5d;
-}
-
-.token.string,
-.token.url,
-.token.regex,
-.token.attr-value {
-  color: #183691;
-}
-
-.token.property,
-.token.number,
-.token.boolean,
-.token.entity,
-.token.atrule,
-.token.constant,
-.token.symbol,
-.token.command,
-.token.code {
-  color: #0086b3;
-}
-
-.token.tag,
-.token.selector,
-.token.prolog {
-  color: #63a35c;
-}
-
-.token.function,
-.token.namespace,
-.token.pseudo-element,
-.token.class,
-.token.class-name,
-.token.pseudo-class,
-.token.id,
-.token.url-reference .token.variable,
-.token.attr-name {
-  color: #795da3;
-}
-
-.token.entity {
-  cursor: help;
-}
-
-.token.title,
-.token.title .token.punctuation {
-  font-weight: bold;
-  color: #1d3e81;
-}
-
-.token.list {
-  color: #ed6a43;
-}
-
-.token.inserted {
-  background-color: #eaffea;
-  color: #55a532;
-}
-
-.token.deleted {
-  background-color: #ffecec;
-  color: #bd2c00;
-}
-
-.token.bold {
-  font-weight: bold;
-}
-
-.token.italic {
-  font-style: italic;
-}
-
-
-/* JSON */
-.language-json .token.property {
-  color: #183691;
-}
-
-.language-markup .token.tag .token.punctuation {
-  color: #333;
-}
-
-/* CSS */
-code.language-css,
-.language-css .token.function {
-  color: #0086b3;
-}
-
-/* YAML */
-.language-yaml .token.atrule {
-  color: #63a35c;
-}
-
-code.language-yaml {
-  color: #183691;
-}
-
-/* Ruby */
-.language-ruby .token.function {
-  color: #333;
-}
-
-/* Markdown */
-.language-markdown .token.url {
-  color: #795da3;
-}
-
-/* Makefile */
-.language-makefile .token.symbol {
-  color: #795da3;
-}
-
-.language-makefile .token.variable {
-  color: #183691;
-}
-
-.language-makefile .token.builtin {
-  color: #0086b3;
-}
-
-/* Bash */
-.language-bash .token.keyword {
-  color: #0086b3;
-}
-
-/* highlight */
-pre[data-line] {
-  position: relative;
-  padding: 1em 0 1em 3em;
-}
-pre[data-line] .line-highlight-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  display: block;
-  width: 100%;
-}
-
-pre[data-line] .line-highlight {
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: inherit 0;
-  margin-top: 1em;
-  background: hsla(24, 20%, 50%,.08);
-  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
-  pointer-events: none;
-  line-height: inherit;
-  white-space: pre;
-}
-
-pre[data-line] .line-highlight:before, 
-pre[data-line] .line-highlight[data-end]:after {
-  content: attr(data-start);
-  position: absolute;
-  top: .4em;
-  left: .6em;
-  min-width: 1em;
-  padding: 0 .5em;
-  background-color: hsla(24, 20%, 50%,.4);
-  color: hsl(24, 20%, 95%);
-  font: bold 65%/1.5 sans-serif;
-  text-align: center;
-  vertical-align: .3em;
-  border-radius: 999px;
-  text-shadow: none;
-  box-shadow: 0 1px white;
-}
-
-pre[data-line] .line-highlight[data-end]:after {
-  content: attr(data-end);
-  top: auto;
-  bottom: .4em;
-}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
-/* Please visit the URL below for more information: */
-/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
-
-      </style>
-    </head>
-    <body for="html-export">
-      <div class="mume markdown-preview  ">
-      <h2 class="mume-header" id="%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86">&#x4E2A;&#x4EBA;&#x7B80;&#x5386;</h2>
-
-<h3 class="mume-header" id="%E5%9F%BA%E6%9C%AC%E8%B5%84%E6%96%99">&#x57FA;&#x672C;&#x8D44;&#x6599;</h3>
-
-<ul>
-<li>&#x59D3;&#x540D;&#xFF1A;&#x6881;&#x8363;&#x519B;</li>
-<li>&#x624B;&#x673A;&#x53F7;&#xFF1A;17612176307</li>
-<li>Email&#xFF1A;alan89757@163.com</li>
-<li>&#x5FAE;&#x4FE1;&#xFF1A;17612176307</li>
-<li>&#x535A;&#x5BA2;&#xFF1A;<a href="https://alan89757.github.io/">https://alan89757.github.io/</a></li>
-</ul>
-<hr>
-<h3 class="mume-header" id="%E4%B8%AA%E4%BA%BA%E4%BC%98%E5%8A%BF">&#x4E2A;&#x4EBA;&#x4F18;&#x52BF;</h3>
-
-<ul>
-<li>4&#x5E74;+&#x56E2;&#x961F;&#x7BA1;&#x7406;&#x7ECF;&#x9A8C;&#xFF0C;&#x5BF9;&#x524D;&#x7AEF;&#x6027;&#x80FD;&#xFF0C;&#x9879;&#x76EE;&#x6784;&#x5EFA;&#xFF0C;&#x7F51;&#x7AD9;&#x67B6;&#x6784;&#x7B49;&#x65B9;&#x9762;&#x6709;&#x8F83;&#x4E30;&#x5BCC;&#x7684;&#x7ECF;&#x9A8C;</li>
-<li>&#x5173;&#x6CE8;&#x6280;&#x672F;&#x8D8B;&#x52BF;&#xFF0C;&#x501F;&#x52A9; ChatGPT, &#x6587;&#x5FC3;&#x4E00;&#x8A00;&#xFF0C;Bing (&#x6574;&#x5408; ChatGPT )&#x7B49;&#x5DE5;&#x5177;&#x63D0;&#x6548;</li>
-<li>&#x5584;&#x4E8E;&#x603B;&#x7ED3;&#x548C;&#x89C4;&#x5212;&#xFF0C;&#x76EE;&#x524D;&#x6B63;&#x5728;&#x575A;&#x6301;&#x5B66;&#x82F1;&#x8BED;&#xFF08;1&#x5E74;+&#xFF09;&#xFF0C;&#x540C;&#x65F6;&#x6BCF;&#x5468;&#x5199;&#x4E00;&#x7BC7;&#x6280;&#x672F;&#x77E5;&#x8BC6;&#x6587;&#x6863;</li>
-<li>&#x70ED;&#x7231;&#x8FD0;&#x52A8;&#xFF0C;&#x559C;&#x6B22;&#x5F92;&#x6B65;&#x65C5;&#x884C;&#xFF0C; &#x7EC4;&#x7EC7;&#x300C;&#x8DD1;&#x6B65;&#x300D;&#x793E;&#x56E2;&#x4E24;&#x5E74;+</li>
-</ul>
-<hr>
-<h3 class="mume-header" id="%E5%B7%A5%E4%BD%9C%E7%BB%8F%E5%8E%86">&#x5DE5;&#x4F5C;&#x7ECF;&#x5386;</h3>
-
-<h4 class="mume-header" id="%E4%B8%8A%E6%B5%B7%E9%85%B7%E6%96%AF%E5%95%A6%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8">&#x4E0A;&#x6D77;&#x9177;&#x65AF;&#x5566;&#x79D1;&#x6280;&#x6709;&#x9650;&#x516C;&#x53F8;</h4>
-
-<p><strong>&#x4EFB;&#x804C;&#x65F6;&#x95F4;&#xFF1A;2022&#x5E74;4&#x6708; ~ &#x81F3;&#x4ECA;</strong><br>
-<strong>&#x804C;&#x4F4D;&#xFF1A;&#x524D;&#x7AEF;leader</strong><br>
-<strong>&#x6280;&#x672F;&#x6808;&#xFF1A;Vue&#x5168;&#x5BB6;&#x6876; + uni-app + NestJS</strong></p>
-<h5 class="mume-header" id="%E5%B7%A5%E4%BD%9C%E5%86%85%E5%AE%B9">&#x5DE5;&#x4F5C;&#x5185;&#x5BB9;</h5>
-
-<ul>
-<li>&#x5E26;&#x9886;&#x56E2;&#x961F;&#x6309;&#x671F;&#x5B8C;&#x6210;&#x65E5;&#x5E38;&#x9700;&#x6C42;&#x8FED;&#x4EE3;&#xFF0C;&#x79EF;&#x6781;&#x8DDF;&#x8FDB;&#x5F00;&#x53D1;&#x8FDB;&#x5EA6;&#xFF0C;&#x628A;&#x63A7;&#x9879;&#x76EE;&#x98CE;&#x9669;&#xFF0C;&#x534F;&#x8C03;&#x8D44;&#x6E90;</li>
-<li>&#x8D1F;&#x8D23;&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6A21;&#x5757;&#x5F00;&#x53D1;&#xFF0C;&#x6784;&#x5EFA;&#x548C;&#x9996;&#x5C4F;&#x52A0;&#x8F7D;&#x7B49;&#x4F18;&#x5316;</li>
-<li>&#x7EC4;&#x7EC7;&#x8FED;&#x4EE3;&#x56DE;&#x987E;, &#x524D;&#x7AEF;&#x7F3A;&#x9677;&#x5206;&#x6790;&#xFF0C;&#x6BCF;&#x5468;&#x7EC4;&#x7EC7;&#x4E00;&#x6B21;&#x524D;&#x7AEF;&#x56E2;&#x961F;&#x6280;&#x672F;&#x5206;&#x4EAB;</li>
-<li>&#x7EF4;&#x62A4;&#x524D;&#x7AEF;&#x89C4;&#x8303;&#x7B49;&#x76F8;&#x5173;&#x6587;&#x6863;</li>
-<li>&#x65E5;&#x5E38;&#x56E2;&#x961F;&#x7BA1;&#x7406;&#x5DE5;&#x4F5C;</li>
-</ul>
-<h4 class="mume-header" id="%E4%B8%8A%E6%B5%B7%E8%B5%9B%E5%8F%AF%E5%87%BA%E8%A1%8C%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8">&#x4E0A;&#x6D77;&#x8D5B;&#x53EF;&#x51FA;&#x884C;&#x79D1;&#x6280;&#x670D;&#x52A1;&#x6709;&#x9650;&#x516C;&#x53F8;</h4>
-
-<p><strong>&#x4EFB;&#x804C;&#x65F6;&#x95F4;&#xFF1A;2018&#x5E74;10&#x6708; ~ 2022&#x5E74;4&#x6708;</strong><br>
-<strong>&#x804C;&#x4F4D;&#xFF1A; &#x524D;&#x7AEF;leader</strong><br>
-<strong>&#x6280;&#x672F;&#x6808;&#xFF1A; Vue&#x5168;&#x5BB6;&#x6876; + React&#x5168;&#x5BB6;&#x6876;</strong></p>
-<h5 class="mume-header" id="%E5%B7%A5%E4%BD%9C%E5%86%85%E5%AE%B9-1">&#x5DE5;&#x4F5C;&#x5185;&#x5BB9;</h5>
-
-<ul>
-<li>&#x5E26;&#x9886;&#x56E2;&#x961F;&#x6210;&#x5458;&#x6309;&#x671F;&#x5B8C;&#x6210; MIS &#x7CFB;&#x7EDF;&#xFF0C;&#x8425;&#x9500;&#x6D3B;&#x52A8;&#x7B49;&#x65E5;&#x5E38;&#x9700;&#x6C42;&#x8FED;&#x4EE3;&#x5F00;&#x53D1;</li>
-<li>&#x628A;&#x63A7;&#x9879;&#x76EE;&#x98CE;&#x9669;&#xFF0C;&#x7EC4;&#x7EC7;&#x56E2;&#x961F;&#x8FED;&#x4EE3;&#x56DE;&#x987E;&#xFF0C;&#x524D;&#x7AEF;&#x7F3A;&#x9677;&#x5206;&#x6790;</li>
-<li>&#x5B8C;&#x6210;&#x65B0;&#x9879;&#x76EE;&#x67B6;&#x6784;&#x8BBE;&#x8BA1;&#x548C;&#x8001;&#x9879;&#x76EE;&#x6784;&#x5EFA;&#x4F18;&#x5316;&#x7B49;</li>
-<li>&#x65E5;&#x5E38;&#x56E2;&#x961F;&#x7BA1;&#x7406;&#x5DE5;&#x4F5C;</li>
-</ul>
-<h4 class="mume-header" id="%E8%8B%8F%E5%AE%81%E9%9B%B6%E5%94%AE%E9%9B%86%E5%9B%A2">&#x82CF;&#x5B81;&#x96F6;&#x552E;&#x96C6;&#x56E2;</h4>
-
-<p><strong>&#x4EFB;&#x804C;&#x65F6;&#x95F4;&#xFF1A;2016&#x5E74;6&#x6708; ~ 2018&#x5E74;10&#x6708;</strong><br>
-<strong>&#x804C;&#x4F4D;&#xFF1A; &#x4E2D;&#x7EA7;&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x5E08;</strong><br>
-<strong>&#x6280;&#x672F;&#x6808;&#xFF1A; vue&#x5168;&#x5BB6;&#x6876;</strong></p>
-<h5 class="mume-header" id="%E5%B7%A5%E4%BD%9C%E5%86%85%E5%AE%B9-2">&#x5DE5;&#x4F5C;&#x5185;&#x5BB9;</h5>
-
-<ul>
-<li>&#x8D1F;&#x8D23;&#x8D62;&#x5356;&#x901A;&#x3001;&#x6613;&#x76F4;&#x6295;&#x3001;mediamax &#x7B49;&#x7CFB;&#x7EDF;&#x524D;&#x7AEF;&#x5F00;&#x53D1;</li>
-<li>&#x8D1F;&#x8D23;&#x5E7F;&#x544A;&#x6A21;&#x7248;&#x521B;&#x610F;&#xFF0C; &#x516C;&#x5171;&#x7EC4;&#x4EF6;&#x7B49;&#x524D;&#x7AEF;&#x5F00;&#x53D1;</li>
-</ul>
-<h4 class="mume-header" id="%E5%8F%8B%E4%BF%A1%E5%B4%A7%E9%94%8B%E9%9B%86%E5%9B%A2">&#x53CB;&#x4FE1;&#x5D27;&#x950B;&#x96C6;&#x56E2;</h4>
-
-<p><strong>&#x4EFB;&#x804C;&#x65F6;&#x95F4;&#xFF1A;2012&#x5E74;6&#x6708; ~ 2016&#x5E74;5&#x6708;</strong><br>
-<strong>&#x804C;&#x4F4D;&#xFF1A; &#x5168;&#x6808;&#x5DE5;&#x7A0B;&#x5E08;</strong><br>
-<strong>&#x6280;&#x672F;&#x6808;&#xFF1A;php + jquery + jquery-ui</strong></p>
-<h5 class="mume-header" id="%E5%B7%A5%E4%BD%9C%E5%86%85%E5%AE%B9-3">&#x5DE5;&#x4F5C;&#x5185;&#x5BB9;</h5>
-
-<ul>
-<li>&#x8D1F;&#x8D23;&#x51B7;&#x51BB;&#x98DF;&#x54C1;&#x51FA;/&#x5165;&#x5E93;&#x7BA1;&#x7406;&#x7B49;&#x524D;&#x540E;&#x7AEF;&#x5F00;&#x53D1;&#x5DE5;&#x4F5C;</li>
-<li>&#x8D1F;&#x8D23; CMS &#x7CFB;&#x7EDF;&#x8FED;&#x4EE3;&#x7B49;&#x524D;&#x540E;&#x7AEF;&#x5F00;&#x53D1;&#x5DE5;&#x4F5C;</li>
-</ul>
-<hr>
-<h3 class="mume-header" id="%E6%95%99%E8%82%B2%E8%83%8C%E6%99%AF">&#x6559;&#x80B2;&#x80CC;&#x666F;</h3>
-
-<ul>
-<li>2008.9-2012.6&#xFF0C;&#x672C;&#x79D1;&#xFF0C; &#x5409;&#x9996;&#x5927;&#x5B66;&#xFF0C;&#x4FE1;&#x606F;&#x7BA1;&#x7406;&#x4E13;&#x4E1A;</li>
-</ul>
-<hr>
-<h3 class="mume-header" id="%E5%9B%A2%E9%98%9F%E5%86%85%E9%83%A8%E5%88%86%E4%BA%AB">&#x56E2;&#x961F;&#x5185;&#x90E8;&#x5206;&#x4EAB;</h3>
-
-<ul>
-<li><a href="https://alan89757.github.io/2023/01/07/react-hooks/">&#x300A;30&#x5206;&#x949F;&#x6DF1;&#x5165;&#x7406;&#x89E3;react hooks&#x300B;</a></li>
-<li><a href="https://alan89757.github.io/2022/03/12/webpack/">&#x300A;webpack&#x5165;&#x95E8;&#x5230;&#x7CBE;&#x901A;&#x300B;</a></li>
-<li><a href="https://alan89757.github.io/2022/02/12/http-protocols/">&#x300A;&#x4E00;&#x6587;&#x641E;&#x61C2;http&#x534F;&#x8BAE;&#x300B;</a></li>
-<li><a href="https://alan89757.github.io/2022/02/20/install-gitlab/">&#x300A;centos&#x5B89;&#x88C5;gitlab&#x300B;</a></li>
-</ul>
-<hr>
-<h2 class="mume-header" id="%E8%87%AA%E6%88%91%E8%AF%84%E4%BB%B7">&#x81EA;&#x6211;&#x8BC4;&#x4EF7;</h2>
-
-<ul>
-<li>&#x6253;&#x6742;&#x7684;&#xFF0C;&#x5F88;&#x559C;&#x6B22;&#x6298;&#x817E;&#xFF0C;&#x66FE;&#x7ECF;&#x5199;&#x8FC7;PHP</li>
-<li>&#x5E73;&#x65F6;&#x559C;&#x6B22;&#x901B;<a href="https://juejin.cn/">&#x6398;&#x91D1;</a>&#xFF0C;<a href="https://github.com/">github</a>&#xFF0C;<a href="https://stackoverflow.com/">stackoverflow</a>&#x7B49;&#xFF0C;&#x4E00;&#x76F4;&#x5173;&#x6CE8;&#x524D;&#x6CBF;&#x7684;&#x6280;&#x672F;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;<a href="https://github.com/trending/javascript?since=weekly">Github&#x5468;&#x699C;</a></li>
-<li>&#x505A;&#x4E8B;&#x8BA4;&#x771F;&#x8D1F;&#x8D23;&#xFF0C;&#x559C;&#x6B22;&#x601D;&#x8003;&#x95EE;&#x9898;&#xFF0C;&#x5584;&#x4E8E;&#x603B;&#x7ED3;&#x548C;&#x81EA;&#x6211;&#x89C4;&#x5212;</li>
-<li>&#x70ED;&#x7231;&#x751F;&#x6D3B;&#xFF0C;&#x70ED;&#x7231;&#x6237;&#x5916;&#x8FD0;&#x52A8;&#xFF0C;&#x95F2;&#x4E0D;&#x4F4F;</li>
-</ul>
-<hr>
-<h2 class="mume-header" id="%E8%87%B4%E8%B0%A2">&#x81F4;&#x8C22;</h2>
-
-<p>&#x611F;&#x8C22;&#x60A8;&#x82B1;&#x65F6;&#x95F4;&#x9605;&#x8BFB;&#x6211;&#x7684;&#x7B80;&#x5386;&#xFF0C;&#x671F;&#x5F85;&#x80FD;&#x6709;&#x673A;&#x4F1A;&#x548C;&#x60A8;&#x5171;&#x4E8B;&#x3002;</p>
-<script>
-    var nodelist = document.querySelectorAll("a");
-    nodelist.forEach(function(itemDom, index){
-        itemDom.setAttribute("target", "_blank")
-    })
-</script>
-
+    <div id="main" class="fix-sidebar">
+      <div class="sidebar">
+  <div class="sidebar-inner">
+    <header class='header'>
+      <h2>梁荣军</h2>
+      
+      <div class='meta'>
+        
+          <p><a target="_blank" rel="noopener" href='https://alan89757.github.io/'>
+            <i class="fas fa-globe-asia fa-fw"></i>&nbsp;Alan的博客</a></p>
+        
+          <p><a >
+            <i class="fas fa-envelope fa-fw"></i>&nbsp;alan89757@163.com</a></p>
+        
+          <p><a href='tel:17612176307'>
+            <i class="fas fa-phone-alt fa-fw"></i>&nbsp;17612176307</a></p>
+        
       </div>
-      
-      
+    <hr><br>
+    </header>
+    <div class="list">
+      <ul class="menu-root">
+        
+          <li>
+            <a href="/index.html" class="sidebar-link current"></a>
+          </li>
+        
+          <li>
+            <a href="/README.html" class="sidebar-link current"></a>
+          </li>
+        
+          <li>
+            <a href="/zh-cn/index.html" class="sidebar-link current"></a>
+          </li>
+        
+      </ul>
+    </div>
     
+      <div class="footer">
+        <a class="button" target="_blank" rel="noopener" href="https://github.com/xaoxuu/resume-docs"><i class="fas fa-download fa-fw"></i> 下载简历</a>
+      </div>
     
+  </div>
+</div>
+
+<div class="content with-sidebar">
+  <div class='resume-header'>
     
+      <div class='avatar'><img no-lazy class='avatar' src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png'/></div>
     
+    <h1 class='resume-title'>梁荣军的个人简历</h1>
+    <p class='description'>前端一点点杂货铺</p>
     
-    
-    
-    
+  </div>
+  <h2 id="个人优势"><a href="#个人优势" class="headerlink" title=" 个人优势"></a><i class="fas fa-flag"></i> 个人优势</h2><ul>
+<li>熟悉主流web前端架构（VUE、React）并能熟练应用，对vue2.x,vue-router3.x实现原理有较深入研究</li>
+<li>熟练掌握移动端h5、小程序等内容的开发技能，熟悉pc 、移动端主流浏览器和webview环境开发</li>
+<li>4年+团队管理经验，对前端编译，构建工具，前端性能优化等方面有较丰富的经验</li>
+<li>有Node、PHP等其他语言开发经验优先，具备全栈开发能力</li>
+<li>具有良好的沟通能力、团队合作精神和抗压能力、对技术有强烈的进取心，优秀的分析问题和解决问题的能力</li>
+</ul>
+<h2 id="工作经历"><a href="#工作经历" class="headerlink" title=" 工作经历"></a><i class="fas fa-user-tie"></i> 工作经历</h2><h4 id="2022年5月-至今：上海酷斯啦科技有限公司-｜-前端Leader"><a href="#2022年5月-至今：上海酷斯啦科技有限公司-｜-前端Leader" class="headerlink" title="2022年5月 ~ 至今：上海酷斯啦科技有限公司 ｜ 前端Leader"></a>2022年5月 ~ 至今：上海酷斯啦科技有限公司 ｜ 前端Leader</h4><p><strong>技术栈：</strong> Vue3 + Vue Router + Vuex + Antd Vue + uni-app + uView + NestJS + Prisma + Mysql + TypeScript</p>
+<p><strong>工作内容：</strong></p>
+<ul>
+<li>带领团队完成日常需求迭代，积极跟进开发进度，把控项目风险，协调资源</li>
+<li>负责车辆维保，录单， 录单报价等核心业务模块开发</li>
+<li>负责项目构建和首屏资源加载等优化</li>
+<li>组织迭代回顾，分析前端缺陷</li>
+<li>更新前端规范，前端技术，前端项目等文档</li>
+<li>为复杂场景提供解决方案，组织技术分享（每周）等团队管理与支持</li>
+</ul>
+<p><strong>工作成绩：</strong></p>
+<ul>
+<li>需求迭代提测平均延期率低于2%，上线延期率0</li>
+<li>星威养车 PC  端首屏（18+）资源减少36%，</li>
+<li>微信小程序上传方式更新为自动上传</li>
+<li>更新 UI  规范，Git  提交规范，code review  规范 等文档</li>
+</ul>
+<h4 id="2018年9月-2022年4月：上汽集团「赛可出行」"><a href="#2018年9月-2022年4月：上汽集团「赛可出行」" class="headerlink" title="2018年9月 ~ 2022年4月：上汽集团「赛可出行」"></a>2018年9月 ~ 2022年4月：上汽集团「赛可出行」</h4><p><strong>技术栈：</strong>Vue.js + Vue Router + Vuex、Element-ui、React + React Router + Redux + Typescript + Antd + Sass + Express + uni-app + Taro</p>
+<p><strong>工作内容：</strong></p>
+<ul>
+<li>带领团队成员按期完成 MIS  系统，打车活动等日常需求迭代开发</li>
+<li>跟进开发进度，把控项目风险，协调开发资源</li>
+<li>组织团队迭代回顾，前端缺陷分析</li>
+<li>负责新项目架构设计和老项目构建优化等</li>
+<li>协助团队成员完成对复杂业务场景，与 App,Server  交互设计等日常管理与支持工作</li>
+</ul>
+<p><strong>工作成绩：</strong></p>
+<ul>
+<li>需求迭代提测平均延期率低于1%，上线延期率0</li>
+<li>优惠券页面减少40%的首屏加载资源</li>
+<li>每周五组织团队分享和 CodeReview（2年+）</li>
+</ul>
+<h2 id="精选项目"><a href="#精选项目" class="headerlink" title=" 精选项目"></a><i class="fas fa-award"></i> 精选项目</h2>
+<btns rounded>
+<a target="_blank" rel="noopener" href='https://apps.apple.com/cn/app/heart-mate-pro-hrm-utility/id1463348922?ls=1'>
+  <img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/heartmate/icon.png'>
+  星威养车
+</a>
+</btns><br>
+
+
+
+<h3 id="星威养车"><a href="#星威养车" class="headerlink" title="星威养车"></a>星威养车</h3><h4 id="2022-x2F-05-2023-x2F-03：于上海酷斯啦科技有限公司开发，团队项目，维护至今"><a href="#2022-x2F-05-2023-x2F-03：于上海酷斯啦科技有限公司开发，团队项目，维护至今" class="headerlink" title="2022&#x2F;05 ~ 2023&#x2F;03：于上海酷斯啦科技有限公司开发，团队项目，维护至今"></a>2022&#x2F;05 ~ 2023&#x2F;03：于上海酷斯啦科技有限公司开发，团队项目，维护至今</h4><p><strong>项目描述：</strong></p>
+<p>该项目是对货运卡车数字化管理， 通过记录卡车的行驶里程， 以养代修。PC端维护车辆管理，车辆维保单管理等功能，小程序端给服务站提供录单，录单报价等功能。目标：做卡车的私人医生。</p>
+<p><strong>项目业绩：</strong></p>
+<ul>
+<li>接入纭毅等车队，为其提供车辆维保服务</li>
+<li>根据里程生成维保计划，到期前提醒车队预约保养，提高车辆使用寿命</li>
+<li>完善服务站录单，报价，审核等一系列系统流程</li>
+</ul>
+<h3 id="企业打车管理系统"><a href="#企业打车管理系统" class="headerlink" title="企业打车管理系统"></a>企业打车管理系统</h3><h4 id="2020-x2F-07-2022-x2F-03：于上汽集团「赛可出行」开发，团队项目，维护至今"><a href="#2020-x2F-07-2022-x2F-03：于上汽集团「赛可出行」开发，团队项目，维护至今" class="headerlink" title="2020&#x2F;07 ~ 2022&#x2F;03：于上汽集团「赛可出行」开发，团队项目，维护至今"></a>2020&#x2F;07 ~ 2022&#x2F;03：于上汽集团「赛可出行」开发，团队项目，维护至今</h4><p><strong>项目描述：</strong></p>
+<p>该项目属于 ToB  项目， 跟飞凡等企业合作， 为企业员工上下班或者日常出行，接机等提供打车服务。为企业用户和个人用户提供了立即打车，预约打车，订单查询等功能。</p>
+<p><strong>项目业绩：</strong></p>
+<ul>
+<li>通过和飞凡等公司合作，2020年日均15w单</li>
+<li>为用户提供预约车辆接机服务，企业&#x2F;个人订单查询，生成月对账单</li>
+</ul>
+<h3 id="打车活动（混合式开发）"><a href="#打车活动（混合式开发）" class="headerlink" title="打车活动（混合式开发）"></a>打车活动（混合式开发）</h3><h4 id="2019-x2F-01-2021-x2F-01：于上汽集团「赛可出行」开发，团队项目，维护至今"><a href="#2019-x2F-01-2021-x2F-01：于上汽集团「赛可出行」开发，团队项目，维护至今" class="headerlink" title="2019&#x2F;01 ~ 2021&#x2F;01：于上汽集团「赛可出行」开发，团队项目，维护至今"></a>2019&#x2F;01 ~ 2021&#x2F;01：于上汽集团「赛可出行」开发，团队项目，维护至今</h4><p><strong>项目描述：</strong></p>
+<p>该项目为H5活动页，在内嵌在 App  内或者在浏览器打开，通过打车送优惠券的活动，吸引用户注册打车，为 App  端导流。在 App 内通过 JsBridge 交互，提供了购买优惠券，行程分享等功能。</p>
+<p><strong>项目业绩：</strong></p>
+<ul>
+<li>活动引流新注册用户平均1w+人&#x2F;次（活动时间：一周）</li>
+<li>支持 App  内和浏览器购买优惠券等多渠道购买功能</li>
+</ul>
+<h3 id="易直投系统"><a href="#易直投系统" class="headerlink" title="易直投系统"></a>易直投系统</h3><h4 id="2017-x2F-02-2018-x2F-06：于上海酷斯啦科技有限公司开发"><a href="#2017-x2F-02-2018-x2F-06：于上海酷斯啦科技有限公司开发" class="headerlink" title="2017&#x2F;02 ~ 2018&#x2F;06：于上海酷斯啦科技有限公司开发"></a>2017&#x2F;02 ~ 2018&#x2F;06：于上海酷斯啦科技有限公司开发</h4><p><strong>项目描述：</strong></p>
+<p>该项目是对接今日头条的广告位，配置广告投放计划，策略，创意等功能。</p>
+<p><strong>项目业绩：</strong></p>
+<p>今日头条广告位引流15%+， 转化率5%+</p>
+<h3 id="赢卖通系统"><a href="#赢卖通系统" class="headerlink" title="赢卖通系统"></a>赢卖通系统</h3><h4 id="2016-x2F-06-2017-x2F-12：于上海酷斯啦科技有限公司开发"><a href="#2016-x2F-06-2017-x2F-12：于上海酷斯啦科技有限公司开发" class="headerlink" title="2016&#x2F;06 ~ 2017&#x2F;12：于上海酷斯啦科技有限公司开发"></a>2016&#x2F;06 ~ 2017&#x2F;12：于上海酷斯啦科技有限公司开发</h4><p><strong>项目描述：</strong></p>
+<p>该项目是为苏宁内部广告位提供管理投放功能， 提供了投放计划，策略，创意等功能模块配置，同时承接第三方广告投放，比如： 广告联盟等</p>
+<p><strong>项目业绩：</strong></p>
+<p>支持其它企业对苏宁广告位的投放<br>支持用户自定义投放计划，策略，创意等</p>
+<h2 id="开源贡献"><a href="#开源贡献" class="headerlink" title=" 开源贡献"></a><i class="fab fa-github"></i> 开源贡献</h2><h3 id="Alan博客"><a href="#Alan博客" class="headerlink" title="Alan博客"></a>Alan博客</h3><h4 id="2019-至今，总结技术文档"><a href="#2019-至今，总结技术文档" class="headerlink" title="2019 ~ 至今，总结技术文档"></a>2019 ~ 至今，总结技术文档</h4><ul>
+<li>完全自由的模块化、易于定制化设计</li>
+<li>移动端优化<!-- - 源码：https://alan89757.github.io/ --></li>
+<li>官网：<a target="_blank" rel="noopener" href="https://alan89757.github.io/">https://alan89757.github.io/</a></li>
+</ul>
+<h3 id="个人经历文档"><a href="#个人经历文档" class="headerlink" title="个人经历文档"></a>个人经历文档</h3><h4 id="2019-x2F-08-至今，记录下自己的人生"><a href="#2019-x2F-08-至今，记录下自己的人生" class="headerlink" title="2019&#x2F;08 ~ 至今，记录下自己的人生"></a>2019&#x2F;08 ~ 至今，记录下自己的人生</h4><ul>
+<li>使用vuepress编写</li>
+</ul>
+<fancybox>
+<!-- <img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot01.png'> -->
+</fancybox>
+
+<h2 id="与我联系"><a href="#与我联系" class="headerlink" title=" 与我联系"></a><i class="fas fa-phone-alt"></i> 与我联系</h2><p>目前状态为：在职，两周内可到岗</p>
+<p><i class="fas fa-envelope fa-fw"></i> <a href="mailto:&#x61;&#108;&#97;&#110;&#56;&#x39;&#55;&#x35;&#55;&#x40;&#x31;&#x36;&#x33;&#46;&#x63;&#111;&#109;">&#x61;&#108;&#97;&#110;&#56;&#x39;&#55;&#x35;&#55;&#x40;&#x31;&#x36;&#x33;&#46;&#x63;&#111;&#109;</a><br><i class="fas fa-phone-alt fa-fw"></i> 17612176307</p>
+<h2 id="教育背景"><a href="#教育背景" class="headerlink" title=" 教育背景"></a><i class="fas fa-user-graduate"></i> 教育背景</h2><p><strong>吉首大学 信息管理与信息系统学院  信管专业 2012年毕业</strong></p>
+
   
-    </body></html>
+</div>
+
+    </div>
+    
+      
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/hexo-theme-resume@1.0.0/source/js/smooth-scroll.min.js"></script>
+
+    
+
+    
+      <footer id="footer">
+        <p><p><a href="/">Copyright © 2017-2020 XXX</a></p>
+</p>
+      </footer>
+    
+
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+    
+      
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/hexo-theme-resume@1.0.0/source/js/common.js"></script>
+
+    
+    
+      
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/hexo-theme-resume@1.0.0/source/js/css.escape.js"></script>
+
+    
+
+    
+      <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5/dist/jquery.fancybox.min.js"></script>
+      <script>
+        let LAZY_LOAD_IMAGE = "[object Object]";
+        $("body").find("fancybox").find("img").each(function () {
+            var element = document.createElement("a");
+            $(element).attr("data-fancybox", "gallery");
+            $(element).attr("href", $(this).attr("src"));
+             if (LAZY_LOAD_IMAGE) {
+               $(element).attr("href", $(this).attr("data-original"));
+             }
+            $(this).wrap(element);
+        });
+      </script>
+    
+
+  </body>
+</html>

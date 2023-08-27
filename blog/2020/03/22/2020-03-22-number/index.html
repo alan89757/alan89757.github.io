@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>
+    javascript基础系列之Number | Alan的学习曲线
+  </title>
+  <meta name="description" content="">
+  
+  <meta name="keywords" content="
+  number
+  ">
+  
+  <meta name="author" content="Alan">
+
+  <meta http-equiv="Cache-Control" content="no-transform"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="theme-color" content="#1e2327">
+  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
+  <link rel="stylesheet" href="/blog/css/main.css">
+  <!-- <link rel="stylesheet"
+        href="/blog/css/font-awesome.min.css"> -->
+  
+
+  
+
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="http://localhost:4000/js/moment.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script> -->
+  <script src="/blog/js/vue.min.js"></script>
+  <script src="/blog/js/moment.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body id="replica-app">
+
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <div class="container clearfix">
+      <a href="/blog/" class="navbar-logo"><i class="fa fa-github"></i></a>
+
+      <div class="navbar-search float-left desktop-only">
+        <div class="navbar-search-form">
+          <label for="gsc-i-id1">站内搜索</label>
+          <div id="google-search">
+            <gcse:search></gcse:search>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav float-left">
+        
+        <li><a href="/blog/archives">Archives</a></li>
+        
+        
+        <li><a href="/blog/categories">Categories</a></li>
+        
+        
+        <li><a href="/blog/tags">Tags</a></li>
+        
+        
+        <!-- <li class="desktop-only"><a href="/blog/atom.xml" target="_blank">RSS</a></li> -->
+        
+      </ul>
+
+      <ul class="navbar-nav user-nav float-right desktop-only">
+        <li class="user-nav-notification">
+          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li class="user-nav-logo">
+          <a><img src="/blog/images/baracktocat.png"> <i class="fa fa-caret-down"></i></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+  <header class="header-wrapper desktop-only">
+  <div class="container header-site-detail">
+    <ul class="header-toolbar">
+      <li class="clearfix">
+        <a href="/blog/archives" class="header-toolbar-left"><i
+                  class="fa fa-file-text"></i> Posts </a>
+        <a href="/blog/archives"
+           class="header-toolbar-right"> 43 </a>
+      </li>
+      <li>
+        <a href="/blog/tags" class="header-toolbar-left"><i
+                  class="fa fa-tags"></i> Tags </a>
+        <a href="/blog/tags"
+           class="header-toolbar-right"> 50 </a>
+      </li>
+      <li>
+        <a href="/blog/categories" class="header-toolbar-left"><i
+                  class="fa fa-folder-open"></i> Categories </a>
+        <a href="/blog/categories"
+           class="header-toolbar-right"> 18 </a>
+      </li>
+    </ul>
+    <h2 class="header-title">
+      <i class="fa fa-book text-muted"></i>
+      <a href="/blog/">Alan的学习曲线</a>
+      
+      
+    </h2>
+  </div>
+
+  <!-- <div class="container">
+    <div class="header-tab-wrapper clearfix">
+      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
+      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
+      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
+      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
+      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
+    </div>
+  </div> -->
+</header>
+
+
+<div class="post-container container">
+  <h3>
+    <i class="fa fa-user-o"></i>
+    Alan
+
+    <span class="post-date float-right" title="{{moment(1584806400000).format('MMM DD, YYYY, h:mm:ss A')}}">
+      
+          <i class="fa fa-pencil-square-o"></i>
+      
+      {{moment(1584806400000).fromNow()}}
+    </span>
+  </h3>
+
+  <article class="post-content">
+    <h1>javascript基础系列之Number</h1>
+    <p>javascript基础系列之Number</p>
+<span id="more"></span>
+
+<h3 id="构造函数Number"><a href="#构造函数Number" class="headerlink" title="构造函数Number"></a>构造函数Number</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 构造函数Number</span></span><br><span class="line"><span class="keyword">const</span> a = <span class="keyword">new</span> <span class="title class_">Number</span>(<span class="string">&#x27;123&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a <span class="keyword">instanceof</span> <span class="title class_">Number</span>);  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="静态属性"><a href="#静态属性" class="headerlink" title="静态属性"></a>静态属性</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Number.EPSILON   1 与Number可表示的大于 1 的最小的浮点数之间的差值</span></span><br><span class="line"><span class="keyword">const</span> x = <span class="number">0.2</span>;</span><br><span class="line"><span class="keyword">const</span> y = <span class="number">0.3</span>;</span><br><span class="line"><span class="keyword">const</span> z = <span class="number">0.1</span>;</span><br><span class="line"><span class="keyword">const</span> equal = (<span class="title class_">Math</span>.<span class="title function_">abs</span>(x - y + z) &lt; <span class="title class_">Number</span>.<span class="property">EPSILON</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(equal);  <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Number.MAX_SAFE_INTEGER 最大安全整数(2^53-1)</span></span><br><span class="line"><span class="comment">// Number.MIN_SAFE_INTEGER 最小安全整数-(2^53-1)</span></span><br><span class="line"><span class="comment">// Number.MAX_VALUE 能表示的最大数值</span></span><br><span class="line"><span class="comment">// Number.MIN_VALUE 能表示的最小的正值</span></span><br><span class="line"><span class="comment">// Number.POSITIVE_INFINITY 正无穷大</span></span><br><span class="line"><span class="comment">// Number.NEGATIVE_INFINITY 负无穷大</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Number</span>.<span class="property">MAX_SAFE_INTEGER</span>);  <span class="comment">// 9007199254740991</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Number</span>.<span class="property">MIN_SAFE_INTEGER</span>); <span class="comment">// -9007199254740991</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Number</span>.<span class="property">MAX_VALUE</span>);    <span class="comment">// 1.79E+308</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Number</span>.<span class="property">MIN_VALUE</span>);  <span class="comment">// 5e-324</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Number</span>.<span class="property">POSITIVE_INFINITY</span>);  <span class="comment">// Infinity</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Number</span>.<span class="property">NEGATIVE_INFINITY</span>);  <span class="comment">// -Infinity</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 静态方法</span></span><br><span class="line"><span class="comment">// Number.isNaN 判断值是否是NaN</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Number</span>.<span class="built_in">isNaN</span>(<span class="title class_">NaN</span>));   <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Number.isFinite 传入的参数是否是有穷数</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Number</span>.<span class="built_in">isFinite</span>(<span class="number">1</span>/<span class="number">0</span>));  <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Number.isInteger 判断参数是否为整数</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Number</span>.<span class="title function_">isInteger</span>(<span class="number">10</span>/<span class="number">2</span>)); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Number.isSafeInteger 判断参数是否是安全整数 -(2^53 - 1)到 2^53 - 1 </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Number</span>.<span class="title function_">isSafeInteger</span>(<span class="title class_">Math</span>.<span class="title function_">pow</span>(<span class="number">2</span>, <span class="number">53</span>)));</span><br><span class="line"></span><br><span class="line"><span class="comment">// Number.parseFloat 把一个字符串解析成浮点数, 和全局的parseFloat相同</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Number</span>.<span class="built_in">parseFloat</span>(<span class="string">&quot;12.3a b&quot;</span>));  <span class="comment">// 12.3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Number.parseInt 把一个字符串解析成整数数, 和全局的parseInt相同</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Number</span>.<span class="built_in">parseInt</span>(<span class="string">&quot;12.3a b&quot;</span>));  <span class="comment">// 12</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="实例方法"><a href="#实例方法" class="headerlink" title="实例方法"></a>实例方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Number.prototyp.toExponential 以指数表示法返回该数值字符串表示形式</span></span><br><span class="line"><span class="keyword">const</span> val = <span class="number">123.456</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(val.<span class="title function_">toExponential</span>());  <span class="comment">// 1.23456e+2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Number.prototyp.toFixed 使用定点表示法来格式化一个数值</span></span><br><span class="line"><span class="keyword">const</span> num = <span class="number">123.456</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num.<span class="title function_">toFixed</span>(<span class="number">2</span>));  <span class="comment">// 123.46, 保留两位小数，小数点后第3位四舍五入</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// Number.prototyp.toPrecision(precision) 以指定的精度返回该数值对象的字符串表示, precision表示有效数个数</span></span><br><span class="line"><span class="keyword">const</span> num1 = <span class="number">123.456</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num1.<span class="title function_">toPrecision</span>(<span class="number">4</span>));  <span class="comment">// 123.5</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num1.<span class="title function_">toPrecision</span>(<span class="number">2</span>));  <span class="comment">// 1.2e+2 也可能以指数表示法</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Number.prototype.toLocaleString 转换成特定语言的字符串表示</span></span><br><span class="line"><span class="comment">// Number.prototype.toString(radix) 字符串表示形式, radix转换基数</span></span><br><span class="line"><span class="keyword">const</span> num2 = <span class="number">123456.789</span>;</span><br><span class="line"><span class="keyword">const</span> num3 = <span class="number">6</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num2.<span class="title function_">toLocaleString</span>());   <span class="comment">// 123,456.789</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num2.<span class="title function_">toLocaleString</span>(<span class="string">&quot;zh-Hans-CN-u-nu-hanidec&quot;</span>));  <span class="comment">// 一二三,四五六.七八九</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num3.<span class="title function_">toString</span>(<span class="number">2</span>));   <span class="comment">// 110</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Number.prototype.valueOf 返回Number对象包装的原始值</span></span><br><span class="line"><span class="keyword">const</span> numObj = <span class="keyword">new</span> <span class="title class_">Number</span>(<span class="number">10</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> numObj);  <span class="comment">// object</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(numObj.<span class="title function_">valueOf</span>());    <span class="comment">// 10, 原始值</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<h5 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h5><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></p>
+
+  </article>
+</div>
+
+
+    
+
+
+
+
+</div>
+
+<div class="footer-wrapper container">
+  <footer class="footer clearfix">
+    <div class="clearfix">
+    <a href="https://alan89757.github.io" class="footer-logo">
+      <i class="fa fa-github"></i>
+    </a>
+    <ul class="footer-social-link">
+      <li>© 2023 Alan</li>
+      <li><a href="https://alan89757.github.io">Home</a></li>
+      
+      <li><a target="_blank" rel="noopener" href="https://github.com/alan89757">Github</a></li>
+      
+    </ul>
+    <!-- <div class="footer-theme-info">
+      Theme <a target="_blank" rel="noopener" href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
+      by <a target="_blank" rel="noopener" href="//github.com/sabrinaluo">Alan</a> ❤ Powered by Hexo
+    </div> -->
+    </div>
+    
+  </footer>
+</div>
+
+
+<script>
+  (function() {
+    var cx = 'true';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+
+
+<script src="/blog/js/main.js"></script>
+
+</body>
+</html>

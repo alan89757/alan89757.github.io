@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>
+    带你了解es6对象新增扩展 | Alan的学习曲线
+  </title>
+  <meta name="description" content="">
+  
+  <meta name="keywords" content="
+  es6
+  ">
+  
+  <meta name="author" content="Alan">
+
+  <meta http-equiv="Cache-Control" content="no-transform"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="theme-color" content="#1e2327">
+  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
+  <link rel="stylesheet" href="/blog/css/main.css">
+  <!-- <link rel="stylesheet"
+        href="/blog/css/font-awesome.min.css"> -->
+  
+
+  
+
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="http://localhost:4000/js/moment.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script> -->
+  <script src="/blog/js/vue.min.js"></script>
+  <script src="/blog/js/moment.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body id="replica-app">
+
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <div class="container clearfix">
+      <a href="/blog/" class="navbar-logo"><i class="fa fa-github"></i></a>
+
+      <div class="navbar-search float-left desktop-only">
+        <div class="navbar-search-form">
+          <label for="gsc-i-id1">站内搜索</label>
+          <div id="google-search">
+            <gcse:search></gcse:search>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav float-left">
+        
+        <li><a href="/blog/archives">Archives</a></li>
+        
+        
+        <li><a href="/blog/categories">Categories</a></li>
+        
+        
+        <li><a href="/blog/tags">Tags</a></li>
+        
+        
+        <!-- <li class="desktop-only"><a href="/blog/atom.xml" target="_blank">RSS</a></li> -->
+        
+      </ul>
+
+      <ul class="navbar-nav user-nav float-right desktop-only">
+        <li class="user-nav-notification">
+          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li class="user-nav-logo">
+          <a><img src="/blog/images/baracktocat.png"> <i class="fa fa-caret-down"></i></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+  <header class="header-wrapper desktop-only">
+  <div class="container header-site-detail">
+    <ul class="header-toolbar">
+      <li class="clearfix">
+        <a href="/blog/archives" class="header-toolbar-left"><i
+                  class="fa fa-file-text"></i> Posts </a>
+        <a href="/blog/archives"
+           class="header-toolbar-right"> 43 </a>
+      </li>
+      <li>
+        <a href="/blog/tags" class="header-toolbar-left"><i
+                  class="fa fa-tags"></i> Tags </a>
+        <a href="/blog/tags"
+           class="header-toolbar-right"> 50 </a>
+      </li>
+      <li>
+        <a href="/blog/categories" class="header-toolbar-left"><i
+                  class="fa fa-folder-open"></i> Categories </a>
+        <a href="/blog/categories"
+           class="header-toolbar-right"> 18 </a>
+      </li>
+    </ul>
+    <h2 class="header-title">
+      <i class="fa fa-book text-muted"></i>
+      <a href="/blog/">Alan的学习曲线</a>
+      
+      
+    </h2>
+  </div>
+
+  <!-- <div class="container">
+    <div class="header-tab-wrapper clearfix">
+      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
+      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
+      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
+      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
+      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
+    </div>
+  </div> -->
+</header>
+
+
+<div class="post-container container">
+  <h3>
+    <i class="fa fa-user-o"></i>
+    Alan
+
+    <span class="post-date float-right" title="{{moment(1639497600000).format('MMM DD, YYYY, h:mm:ss A')}}">
+      
+          <i class="fa fa-pencil-square-o"></i>
+      
+      {{moment(1639497600000).fromNow()}}
+    </span>
+  </h3>
+
+  <article class="post-content">
+    <h1>带你了解es6对象新增扩展</h1>
+    <p>es6对象新增扩展～</p>
+<span id="more"></span>
+
+<h3 id="属性简写"><a href="#属性简写" class="headerlink" title="属性简写"></a>属性简写</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> b = &#123; a &#125;; <span class="comment">// 属性简写</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(b); <span class="comment">// &#123;a: 1&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="方法简写"><a href="#方法简写" class="headerlink" title="方法简写"></a>方法简写</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj1 = &#123;</span><br><span class="line">	<span class="attr">method</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">		<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;function正常写法&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> obj2 = &#123;</span><br><span class="line">	<span class="title function_">method</span>(<span class="params"></span>) &#123;</span><br><span class="line">		<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;function简写&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="函数返回值简写"><a href="#函数返回值简写" class="headerlink" title="函数返回值简写"></a>函数返回值简写</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">getPoint</span>(<span class="params"></span>) &#123;</span><br><span class="line">	<span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line">	<span class="keyword">var</span> y = <span class="number">20</span>;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">		x,</span><br><span class="line">		y</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">getPoint</span>()); <span class="comment">// &#123;x: 10, y: 20&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="简写对象方法不能作为构造函数"><a href="#简写对象方法不能作为构造函数" class="headerlink" title="简写对象方法不能作为构造函数"></a>简写对象方法不能作为构造函数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj3 = &#123;</span><br><span class="line">	<span class="title function_">fn</span>(<span class="params"></span>)&#123;</span><br><span class="line">		<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;obj3&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// new obj3.fn(); // Uncaught TypeError: obj3.fn is not a constructor，简写不能作为构造函数</span></span><br></pre></td></tr></table></figure>
+<h3 id="定义对象时，属性名和方法可以使用表达式"><a href="#定义对象时，属性名和方法可以使用表达式" class="headerlink" title="定义对象时，属性名和方法可以使用表达式"></a>定义对象时，属性名和方法可以使用表达式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">	[<span class="string">&#x27;h&#x27;</span> + <span class="string">&#x27;ello&#x27;</span>]() &#123; <span class="comment">// 方法名可以是表达式</span></span><br><span class="line">		<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello&#x27;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> a1 = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> b1 = <span class="string">&quot;world&quot;</span>;</span><br><span class="line">obj[a1 + b1] = <span class="string">&quot;apple&quot;</span>;  <span class="comment">// 属性名可以是表达式</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj);  <span class="comment">// &#123;helloworld: &quot;apple&quot;, hello: f()&#123;&#125;&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="属性表达式与简洁写法不能同时使用"><a href="#属性表达式与简洁写法不能同时使用" class="headerlink" title="属性表达式与简洁写法不能同时使用"></a>属性表达式与简洁写法不能同时使用</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a2 = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line"><span class="comment">// const a3 = &#123;[a2]&#125; // 编译失败 Uncaught SyntaxError: Unexpected token &#x27;[&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> key = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">	[key]: <span class="string">&quot;world&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj); <span class="comment">// &#123;[object Object]: &#x27;world&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="super指向当前对象的原型对象"><a href="#super指向当前对象的原型对象" class="headerlink" title="super指向当前对象的原型对象"></a>super指向当前对象的原型对象</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> proto = &#123;</span><br><span class="line">	<span class="attr">a</span>: <span class="string">&quot;hello&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">	<span class="attr">a</span>: <span class="string">&quot;world&quot;</span>,</span><br><span class="line">	<span class="title function_">find</span>(<span class="params"></span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="variable language_">super</span>.<span class="property">a</span>;   <span class="comment">// super指向当前对象的原型对象</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">setPrototypeOf</span>(obj, proto);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj.<span class="title function_">find</span>());  <span class="comment">// hello</span></span><br></pre></td></tr></table></figure>
+<h3 id="扩展运算符应用-解构赋值（浅拷贝）"><a href="#扩展运算符应用-解构赋值（浅拷贝）" class="headerlink" title="扩展运算符应用 解构赋值（浅拷贝）"></a>扩展运算符应用 解构赋值（浅拷贝）</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// let &#123;x, y, ...z&#125; = &#123;x: 1, y: 2, a: 3, b: 4&#125;;</span></span><br><span class="line"><span class="comment">// console.log(x,y,z);   // 1 2 &#123;a: 3, b: 4&#125;</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">	<span class="attr">a</span>: &#123;</span><br><span class="line">		<span class="attr">b</span>: <span class="number">1</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> &#123; ...x &#125; = obj;</span><br><span class="line">obj.<span class="property">a</span>.<span class="property">b</span> = <span class="number">2</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(x);  <span class="comment">// &#123;a: &#123; b: 2 &#125;&#125;, 浅复制（等同于Object.assign），引用类型指向的同一个地址</span></span><br></pre></td></tr></table></figure>
+<h3 id="（对象）属性遍历"><a href="#（对象）属性遍历" class="headerlink" title="（对象）属性遍历"></a>（对象）属性遍历</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// for...in 循环遍历对象自身和继承的可枚举属性</span></span><br><span class="line"><span class="keyword">var</span> proto = &#123;</span><br><span class="line">	<span class="attr">a</span>: <span class="number">1</span>,</span><br><span class="line">	<span class="attr">b</span>: <span class="number">2</span>,</span><br><span class="line">	[<span class="title class_">Symbol</span>(<span class="string">&quot;a&quot;</span>)]: <span class="string">&quot;hello&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">	<span class="attr">a</span>: <span class="number">3</span>,</span><br><span class="line">	<span class="attr">c</span>: <span class="number">4</span>,</span><br><span class="line">	[<span class="title class_">Symbol</span>(<span class="string">&quot;b&quot;</span>)]: <span class="string">&quot;world&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 设置是否可枚举属性</span></span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(obj, <span class="string">&quot;d&quot;</span>, &#123;</span><br><span class="line">	<span class="attr">value</span>: <span class="string">&quot;apple&quot;</span>,</span><br><span class="line">	<span class="attr">enumerable</span>: <span class="literal">false</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">setPrototypeOf</span>(obj, proto); <span class="comment">// 设置obj的原型对象proto</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">getPrototypeOf</span>(obj)); <span class="comment">//获取obj的原型对象proto</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(obj[key]);  <span class="comment">// 3 4 2</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">keys</span>(obj));  <span class="comment">// [&#x27;a&#x27;, &#x27;c&#x27;] 包括对象自身所有可枚举属性的键名，不包含继承的和Symbol属性</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">getOwnPropertyNames</span>(obj));  <span class="comment">// [&#x27;a&#x27;, &#x27;c&#x27;, &#x27;d&#x27;] 包括对象自身所有属性（也包括不可枚举属性）的键名，不包含Symbol属性</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">getOwnPropertySymbols</span>(obj));  <span class="comment">// [Symbol(b)] 包含对象自身的所有Symbol属性的键名</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Reflect</span>.<span class="title function_">ownKeys</span>(obj)); <span class="comment">// [&#x27;a&#x27;, &#x27;c&#x27;, &#x27;d&#x27;, Symbol(b)]  包含对象自身的所有属性的键名，不包含继承的，类似Object.getOwnPropertyNames + Symbol的并集</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">getOwnPropertyDescriptor</span>(obj));</span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//   &quot;a&quot;: &#123;</span></span><br><span class="line"><span class="comment">//     &quot;value&quot;: 3,</span></span><br><span class="line"><span class="comment">//     &quot;writable&quot;: true,</span></span><br><span class="line"><span class="comment">//     &quot;enumerable&quot;: true,</span></span><br><span class="line"><span class="comment">//     &quot;configurable&quot;: true</span></span><br><span class="line"><span class="comment">//   &#125;,</span></span><br><span class="line"><span class="comment">//   &quot;d&quot;: &#123;</span></span><br><span class="line"><span class="comment">//     &quot;value&quot;: &quot;apple&quot;,</span></span><br><span class="line"><span class="comment">//     &quot;writable&quot;: false,</span></span><br><span class="line"><span class="comment">//     &quot;enumerable&quot;: false,</span></span><br><span class="line"><span class="comment">//     &quot;configurable&quot;: false</span></span><br><span class="line"><span class="comment">//   &#125;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="对象新增的方法"><a href="#对象新增的方法" class="headerlink" title="对象新增的方法"></a>对象新增的方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Object.is  判断两个值是否相等，类似全等===，区别在于+0和-0，和NaN对比</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(+<span class="number">0</span> === -<span class="number">0</span>);   <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">is</span>(+<span class="number">0</span>, -<span class="number">0</span>));   <span class="comment">// false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">NaN</span> === <span class="title class_">NaN</span>);  <span class="comment">// false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">is</span>(<span class="title class_">NaN</span>, <span class="title class_">NaN</span>)); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Object.assign(target, source1,source2,...) 合并对象(浅拷贝)</span></span><br><span class="line"><span class="keyword">const</span> target = &#123;<span class="attr">a</span>: <span class="number">1</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> source = &#123;<span class="attr">b</span>: <span class="number">2</span>&#125;;</span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">assign</span>(target, source);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(target);  <span class="comment">// &#123;a: 1, b: 2&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="返回自身所有可遍历属性的键名-键值-键值对的数组"><a href="#返回自身所有可遍历属性的键名-键值-键值对的数组" class="headerlink" title="返回自身所有可遍历属性的键名&#x2F;键值&#x2F;键值对的数组"></a>返回自身所有可遍历属性的键名&#x2F;键值&#x2F;键值对的数组</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">	<span class="attr">a</span>: <span class="number">1</span>,</span><br><span class="line">	<span class="attr">b</span>: <span class="number">2</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">keys</span>(obj));  <span class="comment">// [&#x27;a&#x27;,&#x27;b&#x27;] 返回自身所有可遍历属性的键名的数组</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">values</span>(obj));  <span class="comment">// [1,2] 返回自身所有可遍历属性的键对应值的数组</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">entries</span>(obj)); <span class="comment">// [[&#x27;a&#x27;, 1], [&#x27;b&#x27;, 2]] 返回自身所有可遍历属性的键值对的数组</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr = [[<span class="string">&#x27;a&#x27;</span>, <span class="number">1</span>], [<span class="string">&#x27;b&#x27;</span>, <span class="number">2</span>]];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">fromEntries</span>(arr)); <span class="comment">// &#123;a: 1, b: 2&#125; 将键值对数组转换为对象</span></span><br></pre></td></tr></table></figure>
+
+
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object">JavaScript Object</a></p>
+
+  </article>
+</div>
+
+
+    
+
+
+
+
+</div>
+
+<div class="footer-wrapper container">
+  <footer class="footer clearfix">
+    <div class="clearfix">
+    <a href="https://alan89757.github.io" class="footer-logo">
+      <i class="fa fa-github"></i>
+    </a>
+    <ul class="footer-social-link">
+      <li>© 2023 Alan</li>
+      <li><a href="https://alan89757.github.io">Home</a></li>
+      
+      <li><a target="_blank" rel="noopener" href="https://github.com/alan89757">Github</a></li>
+      
+    </ul>
+    <!-- <div class="footer-theme-info">
+      Theme <a target="_blank" rel="noopener" href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
+      by <a target="_blank" rel="noopener" href="//github.com/sabrinaluo">Alan</a> ❤ Powered by Hexo
+    </div> -->
+    </div>
+    
+  </footer>
+</div>
+
+
+<script>
+  (function() {
+    var cx = 'true';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+
+
+<script src="/blog/js/main.js"></script>
+
+</body>
+</html>

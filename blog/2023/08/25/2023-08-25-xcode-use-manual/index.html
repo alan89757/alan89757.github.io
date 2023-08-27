@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>
+    Xcode在IOS开发过程中的常用功能 | Alan的学习曲线
+  </title>
+  <meta name="description" content="">
+  
+  <meta name="keywords" content="
+  xcode
+  ">
+  
+  <meta name="author" content="Alan">
+
+  <meta http-equiv="Cache-Control" content="no-transform"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="theme-color" content="#1e2327">
+  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
+  <link rel="stylesheet" href="/blog/css/main.css">
+  <!-- <link rel="stylesheet"
+        href="/blog/css/font-awesome.min.css"> -->
+  
+
+  
+
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="http://localhost:4000/js/moment.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script> -->
+  <script src="/blog/js/vue.min.js"></script>
+  <script src="/blog/js/moment.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body id="replica-app">
+
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <div class="container clearfix">
+      <a href="/blog/" class="navbar-logo"><i class="fa fa-github"></i></a>
+
+      <div class="navbar-search float-left desktop-only">
+        <div class="navbar-search-form">
+          <label for="gsc-i-id1">站内搜索</label>
+          <div id="google-search">
+            <gcse:search></gcse:search>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav float-left">
+        
+        <li><a href="/blog/archives">Archives</a></li>
+        
+        
+        <li><a href="/blog/categories">Categories</a></li>
+        
+        
+        <li><a href="/blog/tags">Tags</a></li>
+        
+        
+        <!-- <li class="desktop-only"><a href="/blog/atom.xml" target="_blank">RSS</a></li> -->
+        
+      </ul>
+
+      <ul class="navbar-nav user-nav float-right desktop-only">
+        <li class="user-nav-notification">
+          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li class="user-nav-logo">
+          <a><img src="/blog/images/baracktocat.png"> <i class="fa fa-caret-down"></i></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+  <header class="header-wrapper desktop-only">
+  <div class="container header-site-detail">
+    <ul class="header-toolbar">
+      <li class="clearfix">
+        <a href="/blog/archives" class="header-toolbar-left"><i
+                  class="fa fa-file-text"></i> Posts </a>
+        <a href="/blog/archives"
+           class="header-toolbar-right"> 43 </a>
+      </li>
+      <li>
+        <a href="/blog/tags" class="header-toolbar-left"><i
+                  class="fa fa-tags"></i> Tags </a>
+        <a href="/blog/tags"
+           class="header-toolbar-right"> 50 </a>
+      </li>
+      <li>
+        <a href="/blog/categories" class="header-toolbar-left"><i
+                  class="fa fa-folder-open"></i> Categories </a>
+        <a href="/blog/categories"
+           class="header-toolbar-right"> 18 </a>
+      </li>
+    </ul>
+    <h2 class="header-title">
+      <i class="fa fa-book text-muted"></i>
+      <a href="/blog/">Alan的学习曲线</a>
+      
+      
+    </h2>
+  </div>
+
+  <!-- <div class="container">
+    <div class="header-tab-wrapper clearfix">
+      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
+      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
+      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
+      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
+      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
+    </div>
+  </div> -->
+</header>
+
+
+<div class="post-container container">
+  <h3>
+    <i class="fa fa-user-o"></i>
+    Alan
+
+    <span class="post-date float-right" title="{{moment(1692892800000).format('MMM DD, YYYY, h:mm:ss A')}}">
+      
+          <i class="fa fa-pencil-square-o"></i>
+      
+      {{moment(1692892800000).fromNow()}}
+    </span>
+  </h3>
+
+  <article class="post-content">
+    <h1>Xcode在IOS开发过程中的常用功能</h1>
+    <p>苹果应用开发，需要使用Xcode构建和预发布，本文主要介绍下在这个过程中Xcode常用的功能，这里更像是一个笔记。</p>
+<h2 id="Settings-Xcode-Settings"><a href="#Settings-Xcode-Settings" class="headerlink" title="Settings(Xcode-&gt; Settings)"></a>Settings(Xcode-&gt; Settings)</h2><p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/1.png" alt="图片"></p>
+<h2 id="Accounts-Xcode-Settings-Accounts"><a href="#Accounts-Xcode-Settings-Accounts" class="headerlink" title="Accounts(Xcode-&gt; Settings-&gt; Accounts)"></a>Accounts(Xcode-&gt; Settings-&gt; Accounts)</h2><p>配置苹果开发者账号。<code>PS: 如果没开发者账号，需要先开通苹果开发者账号</code></p>
+<p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/2.png" alt="图片"></p>
+<!-- [苹果开发者后台](https://developer.apple.com/account/) -->
+
+
+<h2 id="Platforms-Xcode-Settings-Platforms"><a href="#Platforms-Xcode-Settings-Platforms" class="headerlink" title="Platforms(Xcode-&gt; Settings-&gt; Platforms)"></a>Platforms(Xcode-&gt; Settings-&gt; Platforms)</h2><p>添加模拟器</p>
+<p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/3.png" alt="图片"></p>
+<h2 id="Archives-Xcode-Product-Archives"><a href="#Archives-Xcode-Product-Archives" class="headerlink" title="Archives(Xcode-&gt; Product-&gt; Archives)"></a>Archives(Xcode-&gt; Product-&gt; Archives)</h2><p>归档<br><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/4.png" alt="图片"></p>
+<h2 id="Organizer-window-Organizer"><a href="#Organizer-window-Organizer" class="headerlink" title="Organizer(window-&gt; Organizer)"></a>Organizer(window-&gt; Organizer)</h2><p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/5.png" alt="图片"></p>
+<h2 id="Distribute-App-Organizer-Distribute-App"><a href="#Distribute-App-Organizer-Distribute-App" class="headerlink" title="Distribute App(Organizer-&gt; Distribute App)"></a>Distribute App(Organizer-&gt; Distribute App)</h2><p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/6.png" alt="图片"></p>
+<h3 id="1-Ad-Hoc"><a href="#1-Ad-Hoc" class="headerlink" title="1. Ad Hoc"></a>1. Ad Hoc</h3><p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/7.png" alt="图片"></p>
+<h3 id="2-Ad-Hoc-Distribution-options"><a href="#2-Ad-Hoc-Distribution-options" class="headerlink" title="2.Ad Hoc Distribution options"></a>2.Ad Hoc Distribution options</h3><p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/8.png" alt="图片"></p>
+<h3 id="3-Re-Sign"><a href="#3-Re-Sign" class="headerlink" title="3. Re-Sign"></a>3. Re-Sign</h3><p>自动管理签名<br><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/9.png" alt="图片"></p>
+<h3 id="4-Sign-OpenSSL"><a href="#4-Sign-OpenSSL" class="headerlink" title="4. Sign OpenSSL"></a>4. Sign OpenSSL</h3><p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/10.png" alt="图片"></p>
+<h3 id="5-导出ipa文件"><a href="#5-导出ipa文件" class="headerlink" title="5. 导出ipa文件"></a>5. 导出ipa文件</h3><p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/11.png" alt="图片"></p>
+<h2 id="完成打包-ipa"><a href="#完成打包-ipa" class="headerlink" title="完成打包(ipa)"></a>完成打包(ipa)</h2><p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/12.png" alt="图片"></p>
+<h2 id="TODO-苹果开发者配置"><a href="#TODO-苹果开发者配置" class="headerlink" title="TODO: 苹果开发者配置"></a>TODO: 苹果开发者配置</h2><h3 id="1-先购买苹果开发者服务"><a href="#1-先购买苹果开发者服务" class="headerlink" title="1. 先购买苹果开发者服务"></a>1. 先购买苹果开发者服务</h3><p>Apple Developer（购买苹果开发者）<br>TestFlight: 测试ios<br>App Store Connect: 发布苹果App</p>
+<p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/13.png" alt="图片"></p>
+<h3 id="2-登录苹果开发者后台"><a href="#2-登录苹果开发者后台" class="headerlink" title="2. 登录苹果开发者后台"></a>2. 登录<a target="_blank" rel="noopener" href="https://developer.apple.com/account">苹果开发者后台</a></h3><p>App Store Connect主要关注两个配置项目【App】和【用户和访问权限】</p>
+<h4 id="2-1-配置【App】"><a href="#2-1-配置【App】" class="headerlink" title="2.1 配置【App】"></a>2.1 配置<a target="_blank" rel="noopener" href="https://appstoreconnect.apple.com/apps">【App】</a></h4><p>这里会展示苹果账户下所有的app</p>
+<p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/15.png" alt="图片"></p>
+<h5 id="App详情"><a href="#App详情" class="headerlink" title="App详情"></a>App详情</h5><p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/14.png" alt="图片"></p>
+<p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/16.png" alt="图片"></p>
+<p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/17.png" alt="图片"></p>
+<p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/18.png" alt="图片"></p>
+<h4 id="2-2-用户与访问"><a href="#2-2-用户与访问" class="headerlink" title="2.2 用户与访问"></a>2.2 用户与访问</h4><p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/17.png" alt="图片"></p>
+<p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/18.png" alt="图片"></p>
+<h4 id="2-3-证书、标识符和描述文件"><a href="#2-3-证书、标识符和描述文件" class="headerlink" title="2.3 证书、标识符和描述文件"></a>2.3 证书、标识符和描述文件</h4><p><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/19.png" alt="图片"><br><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/20.png" alt="图片"><br><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/21.png" alt="图片"><br><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/22.png" alt="图片"><br><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/23.png" alt="图片"><br><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/24.png" alt="图片"><br><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/25.png" alt="图片"><br><img src="/blog/2023/08/25/2023-08-25-xcode-use-manual/26.png" alt="图片"></p>
+
+  </article>
+</div>
+
+
+    
+
+
+
+
+</div>
+
+<div class="footer-wrapper container">
+  <footer class="footer clearfix">
+    <div class="clearfix">
+    <a href="https://alan89757.github.io" class="footer-logo">
+      <i class="fa fa-github"></i>
+    </a>
+    <ul class="footer-social-link">
+      <li>© 2023 Alan</li>
+      <li><a href="https://alan89757.github.io">Home</a></li>
+      
+      <li><a target="_blank" rel="noopener" href="https://github.com/alan89757">Github</a></li>
+      
+    </ul>
+    <!-- <div class="footer-theme-info">
+      Theme <a target="_blank" rel="noopener" href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
+      by <a target="_blank" rel="noopener" href="//github.com/sabrinaluo">Alan</a> ❤ Powered by Hexo
+    </div> -->
+    </div>
+    
+  </footer>
+</div>
+
+
+<script>
+  (function() {
+    var cx = 'true';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+
+
+<script src="/blog/js/main.js"></script>
+
+</body>
+</html>

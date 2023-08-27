@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>
+    Fiddler使用教程 | Alan的学习曲线
+  </title>
+  <meta name="description" content="">
+  
+  <meta name="keywords" content="
+  fiddler,proxy
+  ">
+  
+  <meta name="author" content="Alan">
+
+  <meta http-equiv="Cache-Control" content="no-transform"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="theme-color" content="#1e2327">
+  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
+  <link rel="stylesheet" href="/blog/css/main.css">
+  <!-- <link rel="stylesheet"
+        href="/blog/css/font-awesome.min.css"> -->
+  
+
+  
+
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="http://localhost:4000/js/moment.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script> -->
+  <script src="/blog/js/vue.min.js"></script>
+  <script src="/blog/js/moment.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body id="replica-app">
+
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <div class="container clearfix">
+      <a href="/blog/" class="navbar-logo"><i class="fa fa-github"></i></a>
+
+      <div class="navbar-search float-left desktop-only">
+        <div class="navbar-search-form">
+          <label for="gsc-i-id1">站内搜索</label>
+          <div id="google-search">
+            <gcse:search></gcse:search>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav float-left">
+        
+        <li><a href="/blog/archives">Archives</a></li>
+        
+        
+        <li><a href="/blog/categories">Categories</a></li>
+        
+        
+        <li><a href="/blog/tags">Tags</a></li>
+        
+        
+        <!-- <li class="desktop-only"><a href="/blog/atom.xml" target="_blank">RSS</a></li> -->
+        
+      </ul>
+
+      <ul class="navbar-nav user-nav float-right desktop-only">
+        <li class="user-nav-notification">
+          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li class="user-nav-logo">
+          <a><img src="/blog/images/baracktocat.png"> <i class="fa fa-caret-down"></i></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+  <header class="header-wrapper desktop-only">
+  <div class="container header-site-detail">
+    <ul class="header-toolbar">
+      <li class="clearfix">
+        <a href="/blog/archives" class="header-toolbar-left"><i
+                  class="fa fa-file-text"></i> Posts </a>
+        <a href="/blog/archives"
+           class="header-toolbar-right"> 43 </a>
+      </li>
+      <li>
+        <a href="/blog/tags" class="header-toolbar-left"><i
+                  class="fa fa-tags"></i> Tags </a>
+        <a href="/blog/tags"
+           class="header-toolbar-right"> 50 </a>
+      </li>
+      <li>
+        <a href="/blog/categories" class="header-toolbar-left"><i
+                  class="fa fa-folder-open"></i> Categories </a>
+        <a href="/blog/categories"
+           class="header-toolbar-right"> 18 </a>
+      </li>
+    </ul>
+    <h2 class="header-title">
+      <i class="fa fa-book text-muted"></i>
+      <a href="/blog/">Alan的学习曲线</a>
+      
+      
+    </h2>
+  </div>
+
+  <!-- <div class="container">
+    <div class="header-tab-wrapper clearfix">
+      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
+      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
+      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
+      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
+      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
+    </div>
+  </div> -->
+</header>
+
+
+<div class="post-container container">
+  <h3>
+    <i class="fa fa-user-o"></i>
+    Alan
+
+    <span class="post-date float-right" title="{{moment(1542038400000).format('MMM DD, YYYY, h:mm:ss A')}}">
+      
+          <i class="fa fa-pencil-square-o"></i>
+      
+      {{moment(1542038400000).fromNow()}}
+    </span>
+  </h3>
+
+  <article class="post-content">
+    <h1>Fiddler使用教程</h1>
+    <span id="more"></span>
+
+<h2 id="工具简介"><a href="#工具简介" class="headerlink" title="工具简介"></a>工具简介</h2><!-- <img src="../.vuepress/public/images/84.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/84.png" alt="图片"></p>
+<h3 id="菜单栏"><a href="#菜单栏" class="headerlink" title="菜单栏"></a>菜单栏</h3><!-- <img src="../.vuepress/public/images/85.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/85.png" alt="图片"></p>
+<h4 id="File"><a href="#File" class="headerlink" title="File"></a>File</h4><ul>
+<li><p>Capture Traffic  <em>捕获流量</em></p>
+</li>
+<li><p>New Viewer   <em>打开新的fiddler窗口</em></p>
+</li>
+<li><p>Load Archive 加载saz文件   <em>注解： Session Archive Zip 保存压缩后的http请求</em></p>
+</li>
+<li><p>Recent Archive <em>打开最近的saz文件</em></p>
+</li>
+<li><p>Save  <em>保存session，如下图：</em></p>
+<!-- <img src="../.vuepress/public/images/86.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/86.png" alt="图片"></p>
+</li>
+<li><p>Import session <em>导入session</em></p>
+</li>
+<li><p>Export session <em>导出session</em></p>
+</li>
+<li><p>Exit  <em>退出</em></p>
+</li>
+</ul>
+<h4 id="Edit"><a href="#Edit" class="headerlink" title="Edit"></a>Edit</h4><ul>
+<li>Copy  <em>复制会话信息</em></li>
+<li>Remove  <em>删除会话信息</em></li>
+<li>Select All  <em>全选</em></li>
+<li>Paste as Sessions  <em>黏贴会话信息</em></li>
+<li>Mark  <em>标记会话</em></li>
+<li>Find Sessions  <em>查找会话</em></li>
+</ul>
+<h4 id="Rules"><a href="#Rules" class="headerlink" title="Rules"></a>Rules</h4><ul>
+<li>Hide Image Requests <em>隐藏图片请求</em></li>
+<li>Hide CONNECTs  <em>隐藏https请求</em></li>
+<li>Automatic Breakpoints  <em>自动设置断点</em><br>请求之前拦截 <!-- <img src="../.vuepress/public/images/87.png"> -->
+<img src="/blog/2018/11/13/2018-11-13-fiddler-course/87.png" alt="图片"></li>
+</ul>
+<p>请求之后拦截</p>
+<!-- <img src="../.vuepress/public/images/88.png"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/88.png" alt="图片"></p>
+<p>常用场景：断点调式的demo， 修改form表单请求</p>
+<ul>
+<li>Customize Rules   <em>自定义规则</em></li>
+</ul>
+<!-- <img src="../.vuepress/public/images/89.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/89.png" alt="图片"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m_SimulateModem  // 修改上传下载速度， 每上传/下载1KB 要delay多久 </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>Require Proxy Authentication  <em>密码代理验证</em></p>
+</li>
+<li><p>Apply GZIP Encoding  <em>采用GZIP编码</em></p>
+</li>
+<li><p>Remove All Encodings  <em>删除全部编码</em></p>
+</li>
+<li><p>Hide 304s  <em>隐藏304会话</em></p>
+</li>
+<li><p>Request Janpanese Content  <em>要求日语内容</em></p>
+</li>
+<li><p>Automatically Authentication  <em>自动认证</em></p>
+</li>
+<li><p>User-Agents  <em>用户代理</em><br><strong>两个方法</strong><br>方法1：点击rules → Customize Rules → 查找“OnBeforeRequest” → 添加代码（代码如下）<br>方法2：直接点击 fiddlerScript→ 查找“OnBeforeRequest” → 添加代码（代码如下）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//根据host判断</span><br><span class="line">if(oSession.host==&quot;www.baidu.com&quot;)&#123;</span><br><span class="line">  oSession.RequestHeaders.Remove(&quot;User-Agent&quot;);</span><br><span class="line">  oSession.RequestHeaders.Add(&quot;User-Agent&quot;,&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) 	AppleWebKit/602.4.6 (KHTML, like Gecko) Mobile/14D27 	baiduboxapp/0_01.5.2.8_enohpi_4331_057/1.2.01_1C2%258enohPi//	1&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>Performance  <em>性能</em></p>
+<!-- <img src="../.vuepress/public/images/90.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/90.png" alt="图片"></p>
+<ul>
+<li>Simulate Modern Speeds  <em>调制解调器速度(低速)</em></li>
+<li>Disable Caching  <em>禁止缓存</em></li>
+<li>Cache Always Fresh <em>刷新缓存</em></li>
+</ul>
+</li>
+</ul>
+<h4 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h4><!-- <img src="../.vuepress/public/images/91.png"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/91.png" alt="图片"></p>
+<ul>
+<li><p>options <em>配置捕获https请求</em></p>
+<ul>
+<li>步骤一</li>
+</ul>
+</li>
+</ul>
+<!-- <img src="../.vuepress/public/images/92.png"> -->
+<p> <img src="/blog/2018/11/13/2018-11-13-fiddler-course/92.png" alt="图片"></p>
+<ul>
+<li><p>步骤二</p>
+<!-- <img src="../.vuepress/public/images/93.png"> -->
+<p><img src="/blog/60.png" alt="图片"></p>
+</li>
+<li><p>步骤三</p>
+<!-- <img src="../.vuepress/public/images/94.png"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/94.png" alt="图片"></p>
+</li>
+<li><p>步骤四</p>
+<!-- <img src="../.vuepress/public/images/95.png"> -->
+<p><img src="/blog/60.png" alt="图片"></p>
+</li>
+<li><p>步骤五</p>
+<!-- <img src="../.vuepress/public/images/96.png"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/96.png" alt="图片"></p>
+</li>
+<li><p>步骤六</p>
+<!-- <img src="../.vuepress/public/images/97.png"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/97.png" alt="图片"></p>
+</li>
+<li><p>WinINET Options  <em>WinINET选项</em></p>
+</li>
+<li><p>Clear WinINET Cache  <em>清除WinINET缓存</em></p>
+</li>
+<li><p>Clear WinINET Cookies  <em>清除WinINET的Cookies</em></p>
+</li>
+<li><p>TextWizard  <em>文字编码解码</em></p>
+</li>
+<li><p>Compare Sessions  <em>比较会话</em></p>
+</li>
+<li><p>New Session Clipboard  <em>新会话写字板</em></p>
+</li>
+<li><p>HOSTS  <em>hosts配置</em></p>
+</li>
+<li><p>Reset Script  <em>重置脚本</em></p>
+</li>
+<li><p>Sandbox  <em>沙箱</em></p>
+</li>
+<li><p>View IE Cache  <em>查看IE缓存</em></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.etzzy.com/4329.html">win8 loopback exemptions</a></p>
+</li>
+</ul>
+<h4 id="View"><a href="#View" class="headerlink" title="View"></a>View</h4><!-- <img src="../.vuepress/public/images/98.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/98.png" alt="图片"></p>
+<h4 id="Help-帮助"><a href="#Help-帮助" class="headerlink" title="Help 帮助"></a>Help 帮助</h4><h3 id="快捷方式"><a href="#快捷方式" class="headerlink" title="快捷方式"></a>快捷方式</h3><!-- <img src="../.vuepress/public/images/99.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/99.png" alt="图片"></p>
+<ul>
+<li>Winconfig  <em>捕获应用请求</em></li>
+<li><em>给session增加注释</em></li>
+<li>Replay  <em>再次请求一次该操作</em></li>
+<li><em>按条件删除session</em></li>
+<li>Go  <em>断点往前走</em></li>
+<li>Stream  <em>流的方式运行</em><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">【steam】模式切换：fiddler有两种模式：</span><br><span class="line">1、流模式：可实时把服务器数据返回给客户端；</span><br><span class="line">2、缓冲模式：http请求所有的数据都准备好之后</span><br><span class="line">才把数据返回给客户端；一般默认情况下时缓冲模式，点击【stream】之后变成了流模式。</span><br></pre></td></tr></table></figure></li>
+<li>Decode <em>解压请求</em></li>
+<li><em>显示多少条会话</em></li>
+<li>Any Process <em>任何进程</em></li>
+<li>Find <em>会话搜索</em></li>
+<li>Save <em>保存会话</em></li>
+<li><em>屏幕快照，倒计时5s</em></li>
+<li><em>计算请求时间</em></li>
+<li><em>浏览器打开当前请求</em></li>
+<li><em>清除缓存</em></li>
+<li>textWizard <em>输入的内容进行编码和解码</em></li>
+<li>Tearoff <em>可将右侧的工具栏进行分离</em></li>
+</ul>
+<h3 id="会话列表"><a href="#会话列表" class="headerlink" title="会话列表"></a>会话列表</h3><!-- <img src="../.vuepress/public/images/100.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/100.png" alt="图片"></p>
+<p>1.会话框主要查看请求一些基本信息，如# 、result、protocol、host、url、body、 caching、content-type、process</p>
+<!-- <img src="../.vuepress/public/images/101.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/101.png" alt="图片"></p>
+<p>2.会话框列表最左侧<br>#号这一栏是代表这个请求大概是什么内容，<br>&lt;&gt;这个符号就是我们一般要测试的请求与响应的类型。</p>
+<p>3.<strong>result</strong>:这里是服务器返回的代码，如</p>
+<ul>
+<li><strong>200</strong>，请求ok;2xx一般是服务器接受成功了并处理</li>
+<li><strong>3xx</strong>，重定向相关</li>
+<li><strong>4xx</strong>, 404最常见的的就是找不到服务器,一般是请求地址有问题</li>
+<li><strong>5xx</strong>, 这个一般是服务器本身的错误</li>
+</ul>
+<p>4.protocol：这个是协议类型，如http、https<br>5.host：主机地址或域名<br>6.url:请求的路径<br>7.body：该条请求产生的数据大小<br>8.caching：缓存相关<br>9.content-type：连接类型<br>10.process:客户端类型</p>
+<h3 id="2-4-工具栏"><a href="#2-4-工具栏" class="headerlink" title="2.4 工具栏"></a>2.4 工具栏</h3><!-- <img src="../.vuepress/public/images/102.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/102.png" alt="图片"></p>
+<h4 id="接口测试（Composer）"><a href="#接口测试（Composer）" class="headerlink" title="接口测试（Composer）"></a>接口测试（Composer）</h4><p>Fiddler最大的优势在于抓包，我们大部分使用的功能也在抓包的功能上，fiddler做接口测试也是非常方便的。<br>对应没有接口测试文档的时候，可以直接抓完包后，copy请求参数，修改下就可以了。</p>
+<h4 id="Composer简介"><a href="#Composer简介" class="headerlink" title="Composer简介"></a>Composer简介</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 案列demo</span><br><span class="line">https://marketing-dev.saicmobility.com/mis-h5/couponPackageList</span><br></pre></td></tr></table></figure>
+<p>点开右侧Composer区域，可以看到如下界面，就是测试接口的界面了</p>
+<!-- <img src="../.vuepress/public/images/103.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/103.png" alt="图片"></p>
+<ul>
+<li>1.请求方式：点开可以勾选请求协议是get、post等</li>
+<li>2.url地址栏：输入请求的url地址</li>
+<li>3.请求头：第三块区域可以输入请求头信息</li>
+<li>4.请求body：post请求在此区域输入body信息</li>
+<li>5.执行：Execute按钮点击后就可以执行请求了</li>
+<li>6.http版本：可以勾选http版本</li>
+<li>7.请求历史：执行完成后会在右侧History区域生成历史记录</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">直接在fiddler里把请求拖拽过去可以了</span><br><span class="line">主要用途：测试接口请求</span><br></pre></td></tr></table></figure>
+
+<h4 id="模拟get请求"><a href="#模拟get请求" class="headerlink" title="模拟get请求"></a>模拟get请求</h4><p>1.在Composer区域地址栏输入博客首页：<a target="_blank" rel="noopener" href="https://www.baidu.com/">https://www.baidu.com/</a><br>2.选择get请求，点Execute执行，请求就可以发送成功啦<br>3.请求发送成功后，左边会话框会生成一个会话记录，可以查看抓包详情(双击)<br>4.右侧history区域会多一个历史请求记录<br>5.会话框选中该记录，查看测试结果：</p>
+<ul>
+<li>选中该会话，点开Inspectors</li>
+<li>response区域点开Raw区域</li>
+<li>Raw查看的是HTML源码的数据</li>
+</ul>
+<!-- <img src="../.vuepress/public/images/104.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/104.png" alt="图片"></p>
+<ul>
+<li>也可以点WebView，查看返回的web页面数据</li>
+</ul>
+<!-- <img src="../.vuepress/public/images/105.png" width="600px"> -->
+
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/105.png" alt="图片"></p>
+<h4 id="模拟post请求"><a href="#模拟post请求" class="headerlink" title="模拟post请求"></a>模拟post请求</h4><p>1.请求类型勾选post<br>2.url地址栏输入对应的请求地址<br>3.body区域写登录的json参数，json参数直接copy上一步抓包的数据，如下图红色区域</p>
+<!-- <img src="../.vuepress/public/images/106.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/106.png" alt="图片"></p>
+<p>4.header请求头区域，可以把前面登录成功后的头部抓包的数据copy过来<br>（注意，有些请求如果请求头为空的话，会请求失败的）</p>
+<!-- <img src="../.vuepress/public/images/107.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/107.png" alt="图片"></p>
+<p>5.执行成功后查看测试结果：<br>– 执行成功如第三所示的图，显示success&#x3D;True<br>– 执行失败如下图所示，显示<br>message&#x3D;Invalid length for a Base-64 char array or string.<br>success&#x3D;False</p>
+<h3 id="request请求信息"><a href="#request请求信息" class="headerlink" title="request请求信息"></a>request请求信息</h3><!-- <img src="../.vuepress/public/images/108.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/108.png" alt="图片"></p>
+<p>1.Request是客户端发出去的数据</p>
+<!-- <img src="../.vuepress/public/images/109.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/109.png" alt="图片"></p>
+<p>2.headers:请求头，这里包含client、cookies、transport等<br>3.webfroms：请求参数信息表格展示，更直观。可以直接该区域的参数, <strong>可篡改form表单</strong><br>4.Auth:授权相关，如果显示如下两行，说明不需要授权，可以不用关注（这个目前很少见了）</p>
+<ul>
+<li>No Proxy-Authorization Header is present.</li>
+<li>No Authorization Headeris present.</li>
+</ul>
+<p>5.cookies:查看cookie详情<br>6.raw:查看一个完整请求的内容，可以直接复制<br>7.json:查看json数据<br>8.xml:查看xml文件的信息</p>
+<h3 id="decode解码"><a href="#decode解码" class="headerlink" title="decode解码"></a>decode解码</h3><p>1.如果response的TextView区域出现乱码情况，可以直接点下方黄色区域解码</p>
+<!-- <img src="../.vuepress/public/images/110.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/110.png" alt="图片"></p>
+<p>2.或者选中上方快捷菜单decode，这样后面的请求都会自动解码了</p>
+<!-- <img src="../.vuepress/public/images/111.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/111.png" alt="图片"></p>
+<h3 id="reponse返回信息"><a href="#reponse返回信息" class="headerlink" title="reponse返回信息"></a>reponse返回信息</h3><!-- <img src="../.vuepress/public/images/112.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/112.png" alt="图片"></p>
+<p><strong>Response是服务端返回过来的数据，request信息差不多</strong></p>
+<h3 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h3><!-- <img src="../.vuepress/public/images/113.png" width="600px"> -->
+<p><img src="/blog/2018/11/13/2018-11-13-fiddler-course/113.png" alt="图片"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bpu //请求前断点</span><br><span class="line">cls // 清除</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://docs.telerik.com/fiddler/knowledge-base/quickexec">【fiddler命令行文档】</a></p>
+<h3 id="其他推荐"><a href="#其他推荐" class="headerlink" title="其他推荐"></a>其他推荐</h3><p><a target="_blank" rel="noopener" href="http://jira.saicmobility.com:8090/display/CMS/pbMock">pbMock</a><br><a target="_blank" rel="noopener" href="http://mockjs.com/">mockjs</a></p>
+
+  </article>
+</div>
+
+
+    
+
+
+
+
+</div>
+
+<div class="footer-wrapper container">
+  <footer class="footer clearfix">
+    <div class="clearfix">
+    <a href="https://alan89757.github.io" class="footer-logo">
+      <i class="fa fa-github"></i>
+    </a>
+    <ul class="footer-social-link">
+      <li>© 2023 Alan</li>
+      <li><a href="https://alan89757.github.io">Home</a></li>
+      
+      <li><a target="_blank" rel="noopener" href="https://github.com/alan89757">Github</a></li>
+      
+    </ul>
+    <!-- <div class="footer-theme-info">
+      Theme <a target="_blank" rel="noopener" href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
+      by <a target="_blank" rel="noopener" href="//github.com/sabrinaluo">Alan</a> ❤ Powered by Hexo
+    </div> -->
+    </div>
+    
+  </footer>
+</div>
+
+
+<script>
+  (function() {
+    var cx = 'true';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+
+
+<script src="/blog/js/main.js"></script>
+
+</body>
+</html>

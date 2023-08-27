@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>
+    centos安装gitlab | Alan的学习曲线
+  </title>
+  <meta name="description" content="">
+  
+  <meta name="keywords" content="
+  gitlab
+  ">
+  
+  <meta name="author" content="Alan">
+
+  <meta http-equiv="Cache-Control" content="no-transform"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="theme-color" content="#1e2327">
+  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
+  <link rel="stylesheet" href="/blog/css/main.css">
+  <!-- <link rel="stylesheet"
+        href="/blog/css/font-awesome.min.css"> -->
+  
+
+  
+
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="http://localhost:4000/js/moment.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script> -->
+  <script src="/blog/js/vue.min.js"></script>
+  <script src="/blog/js/moment.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body id="replica-app">
+
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <div class="container clearfix">
+      <a href="/blog/" class="navbar-logo"><i class="fa fa-github"></i></a>
+
+      <div class="navbar-search float-left desktop-only">
+        <div class="navbar-search-form">
+          <label for="gsc-i-id1">站内搜索</label>
+          <div id="google-search">
+            <gcse:search></gcse:search>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav float-left">
+        
+        <li><a href="/blog/archives">Archives</a></li>
+        
+        
+        <li><a href="/blog/categories">Categories</a></li>
+        
+        
+        <li><a href="/blog/tags">Tags</a></li>
+        
+        
+        <!-- <li class="desktop-only"><a href="/blog/atom.xml" target="_blank">RSS</a></li> -->
+        
+      </ul>
+
+      <ul class="navbar-nav user-nav float-right desktop-only">
+        <li class="user-nav-notification">
+          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li class="user-nav-logo">
+          <a><img src="/blog/images/baracktocat.png"> <i class="fa fa-caret-down"></i></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+  <header class="header-wrapper desktop-only">
+  <div class="container header-site-detail">
+    <ul class="header-toolbar">
+      <li class="clearfix">
+        <a href="/blog/archives" class="header-toolbar-left"><i
+                  class="fa fa-file-text"></i> Posts </a>
+        <a href="/blog/archives"
+           class="header-toolbar-right"> 43 </a>
+      </li>
+      <li>
+        <a href="/blog/tags" class="header-toolbar-left"><i
+                  class="fa fa-tags"></i> Tags </a>
+        <a href="/blog/tags"
+           class="header-toolbar-right"> 50 </a>
+      </li>
+      <li>
+        <a href="/blog/categories" class="header-toolbar-left"><i
+                  class="fa fa-folder-open"></i> Categories </a>
+        <a href="/blog/categories"
+           class="header-toolbar-right"> 18 </a>
+      </li>
+    </ul>
+    <h2 class="header-title">
+      <i class="fa fa-book text-muted"></i>
+      <a href="/blog/">Alan的学习曲线</a>
+      
+      
+    </h2>
+  </div>
+
+  <!-- <div class="container">
+    <div class="header-tab-wrapper clearfix">
+      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
+      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
+      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
+      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
+      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
+    </div>
+  </div> -->
+</header>
+
+
+<div class="post-container container">
+  <h3>
+    <i class="fa fa-user-o"></i>
+    Alan
+
+    <span class="post-date float-right" title="{{moment(1645286400000).format('MMM DD, YYYY, h:mm:ss A')}}">
+      
+          <i class="fa fa-pencil-square-o"></i>
+      
+      {{moment(1645286400000).fromNow()}}
+    </span>
+  </h3>
+
+  <article class="post-content">
+    <h1>centos安装gitlab</h1>
+    <p>如何在本地安装自己的gitlab?</p>
+<span id="more"></span>
+
+<h3 id="一、先安装依赖"><a href="#一、先安装依赖" class="headerlink" title="一、先安装依赖"></a>一、先安装依赖</h3><p>ssh，防火墙,postfix(用于邮件通知) ，wget</p>
+<h4 id="1-安装ssh和python"><a href="#1-安装ssh和python" class="headerlink" title="1. 安装ssh和python"></a>1. 安装ssh和python</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y curl policycoreutils-python openssh-server</span><br></pre></td></tr></table></figure>
+<!-- <img src="../.vuepress/public/images/38.png"> -->
+<p><img src="/blog/2022/02/20/2022-02-20-install-gitlab/38.png" alt="图片"></p>
+<h6 id="出现如下命令说明安装成功"><a href="#出现如下命令说明安装成功" class="headerlink" title="出现如下命令说明安装成功"></a>出现如下命令说明安装成功</h6><!-- <img src="../.vuepress/public/images/39.png"> -->
+<p><img src="/blog/2022/02/20/2022-02-20-install-gitlab/39.png" alt="图片"></p>
+<h4 id="2-将SSH服务设置成开机自启动"><a href="#2-将SSH服务设置成开机自启动" class="headerlink" title="2. 将SSH服务设置成开机自启动"></a>2. 将SSH服务设置成开机自启动</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable sshd</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-启动SSH服务"><a href="#3-启动SSH服务" class="headerlink" title="3. 启动SSH服务"></a>3. 启动SSH服务</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start sshd</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-安装防火墙"><a href="#4-安装防火墙" class="headerlink" title="4. 安装防火墙"></a>4. 安装防火墙</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install firewalld systemd -y</span><br></pre></td></tr></table></figure>
+<h6 id="出现如下命令说明安装成功-1"><a href="#出现如下命令说明安装成功-1" class="headerlink" title="出现如下命令说明安装成功"></a>出现如下命令说明安装成功</h6><!-- <img src="../.vuepress/public/images/40.png"> -->
+<p><img src="/blog/2022/02/20/2022-02-20-install-gitlab/40.png" alt="图片"></p>
+<h4 id="5-开启防火墙"><a href="#5-开启防火墙" class="headerlink" title="5. 开启防火墙"></a>5. 开启防火墙</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service firewalld  start</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-添加http服务到firewalld-pemmanent表示永久生效，若不加–permanent系统下次启动后就会失效"><a href="#6-添加http服务到firewalld-pemmanent表示永久生效，若不加–permanent系统下次启动后就会失效" class="headerlink" title="6. 添加http服务到firewalld,pemmanent表示永久生效，若不加–permanent系统下次启动后就会失效"></a>6. 添加http服务到firewalld,pemmanent表示永久生效，若不加–permanent系统下次启动后就会失效</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --permanent --add-service=http</span><br></pre></td></tr></table></figure>
+<h4 id="7-重启防火墙"><a href="#7-重启防火墙" class="headerlink" title="7. 重启防火墙"></a>7. 重启防火墙</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl reload firewalld</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-安装Postfix以发送通知邮件"><a href="#8-安装Postfix以发送通知邮件" class="headerlink" title="8. 安装Postfix以发送通知邮件"></a>8. 安装Postfix以发送通知邮件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install postfix</span><br></pre></td></tr></table></figure>
+
+<!-- <img src="../.vuepress/public/images/41.png"> -->
+<p><img src="/blog/2022/02/20/2022-02-20-install-gitlab/41.png" alt="图片"></p>
+<h4 id="9-将postfix服务设置成开机自启动"><a href="#9-将postfix服务设置成开机自启动" class="headerlink" title="9. 将postfix服务设置成开机自启动"></a>9. 将postfix服务设置成开机自启动</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable postfix</span><br></pre></td></tr></table></figure>
+
+<h4 id="10-启动postfix"><a href="#10-启动postfix" class="headerlink" title="10. 启动postfix"></a>10. 启动postfix</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start postfix</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在安装Postfix期间，可能会出现配置屏幕。选择“Internet Site”并按enter键。使用您的服务器的外部DNS以“mail name”并按enter。如果出现额外的屏幕，继续按enter键接受默认值。</li>
+</ul>
+<h4 id="11-wget-用于从外网上下载插件"><a href="#11-wget-用于从外网上下载插件" class="headerlink" title="11. wget 用于从外网上下载插件"></a>11. wget 用于从外网上下载插件</h4><!-- <img src="../.vuepress/public/images/42.png"> -->
+<p><img src="/blog/2022/02/20/2022-02-20-install-gitlab/42.png" alt="图片"></p>
+<ul>
+<li>若wget未安装则进行安装，安装命令：yum -y install wget<!-- <img src="../.vuepress/public/images/43.png"> -->
+<img src="/blog/2022/02/20/2022-02-20-install-gitlab/43.png" alt="图片"></li>
+</ul>
+<h4 id="12-安装vim编辑器"><a href="#12-安装vim编辑器" class="headerlink" title="12. 安装vim编辑器"></a>12. 安装vim编辑器</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install vim -y</span><br></pre></td></tr></table></figure>
+
+<h3 id="二、添加GitLab镜像源并安装gitlab服务器"><a href="#二、添加GitLab镜像源并安装gitlab服务器" class="headerlink" title="二、添加GitLab镜像源并安装gitlab服务器"></a>二、添加GitLab镜像源并安装gitlab服务器</h3><h4 id="1-添加gitlab镜像"><a href="#1-添加gitlab镜像" class="headerlink" title="1. 添加gitlab镜像"></a>1. 添加gitlab镜像</h4><ul>
+<li><p>gitlab版本管理网址<br><a target="_blank" rel="noopener" href="https://packages.gitlab.com/gitlab">https://packages.gitlab.com/gitlab</a></p>
+</li>
+<li><p>添加最新版镜像</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7/gitlab-ce-14.1.1-ce.0.el7.x86_64.rpm</span><br></pre></td></tr></table></figure>
+<!-- <img src="../.vuepress/public/images/44.png"> -->
+<p><img src="/blog/2022/02/20/2022-02-20-install-gitlab/44.png" alt="图片"></p>
+</li>
+</ul>
+<h4 id="2-安装gitlab"><a href="#2-安装gitlab" class="headerlink" title="2. 安装gitlab"></a>2. 安装gitlab</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -i gitlab-ce-10.0.0-ce.0.el7.x86_64.rpm</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装过程需要些时间，如果出现下图，则说明安装成功。<!-- <img src="../.vuepress/public/images/45.png"> -->
+<img src="/blog/2022/02/20/2022-02-20-install-gitlab/45.png" alt="图片"></li>
+</ul>
+<h4 id="3-修改gitlab配置文件指定服务器ip和自定义端口"><a href="#3-修改gitlab配置文件指定服务器ip和自定义端口" class="headerlink" title="3. 修改gitlab配置文件指定服务器ip和自定义端口"></a>3. 修改gitlab配置文件指定服务器ip和自定义端口</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim  /etc/gitlab/gitlab.rb</span><br></pre></td></tr></table></figure>
+<!-- <img src="../.vuepress/public/images/46.png"> -->
+<p><img src="/blog/2022/02/20/2022-02-20-install-gitlab/46.png" alt="图片"></p>
+<ul>
+<li>ps:注意这里设置的端口不能被占用，默认是8080端口，如果8080已经使用，请自定义其它端口，并在防火墙设置开放相对应得端口</li>
+</ul>
+<p>firewalld开启端口（以80端口为例）</p>
+<ul>
+<li><p>添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=80/tcp --permanent    //（--permanent永久生效，没有此参数重启后失效）</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重新载入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone= public --query-port=80/tcp</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="4-重置并启动GitLab"><a href="#4-重置并启动GitLab" class="headerlink" title="4. 重置并启动GitLab"></a>4. 重置并启动GitLab</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">gitlab-ctl stop     //停止应用</span><br><span class="line"></span><br><span class="line">gitlab-ctl start    //启动应用</span><br><span class="line"></span><br><span class="line">gitlab-ctl reconfigure  //重新启动服务</span><br><span class="line"></span><br><span class="line">gitlab-ctl restart  //重新启动gitlab</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>提示  “ok: run:”表示启动成功<!-- <img src="../.vuepress/public/images/47.png"> -->
+<img src="/blog/2022/02/20/2022-02-20-install-gitlab/47.png" alt="图片"></li>
+</ul>
+<h4 id="6-访问-GitLab页面"><a href="#6-访问-GitLab页面" class="headerlink" title="6. 访问 GitLab页面"></a>6. 访问 GitLab页面</h4><p>初始账户: root<br>密码: 在&#x2F;etc&#x2F;gitlab&#x2F;initial_root_password中</p>
+<!-- <img src="../.vuepress/public/images/48.png"> -->
+<p><img src="/blog/2022/02/20/2022-02-20-install-gitlab/48.png" alt="图片"></p>
+<h4 id="7-重置gitlab密码"><a href="#7-重置gitlab密码" class="headerlink" title="7. 重置gitlab密码"></a>7. 重置gitlab密码</h4><!-- <img src="../.vuepress/public/images/49.png"> -->
+<p><img src="/blog/2022/02/20/2022-02-20-install-gitlab/49.png" alt="图片"><br>官网地址： <a target="_blank" rel="noopener" href="https://docs.gitlab.com/ee/security/reset_user_password.html">https://docs.gitlab.com/ee/security/reset_user_password.html</a></p>
+<h4 id="8-虚拟机和主机共享文件夹"><a href="#8-虚拟机和主机共享文件夹" class="headerlink" title="8. 虚拟机和主机共享文件夹"></a>8. 虚拟机和主机共享文件夹</h4><h6 id="设置共享："><a href="#设置共享：" class="headerlink" title="设置共享："></a>设置共享：</h6><!-- <img src="../.vuepress/public/images/50.png"> -->
+<p><img src="/blog/2022/02/20/2022-02-20-install-gitlab/50.png" alt="图片"></p>
+<h6 id="选择共享文件夹"><a href="#选择共享文件夹" class="headerlink" title="选择共享文件夹"></a>选择共享文件夹</h6><!-- <img src="../.vuepress/public/images/51.png"> -->
+<p><img src="/blog/2022/02/20/2022-02-20-install-gitlab/51.png" alt="图片"></p>
+<h5 id="文件已挂在到-mnt-hgfs"><a href="#文件已挂在到-mnt-hgfs" class="headerlink" title="文件已挂在到&#x2F;mnt&#x2F;hgfs"></a>文件已挂在到&#x2F;mnt&#x2F;hgfs</h5><!-- <img src="../.vuepress/public/images/52.png"> -->
+<p><img src="/blog/2022/02/20/2022-02-20-install-gitlab/52.png" alt="图片"></p>
+<h5 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h5><p>当你重启服务之后直接访问会有出现502的情况，可以查看端口是否被占用，或者是服务还在启动过程过一会再访问。</p>
+<p>参考文档：<a target="_blank" rel="noopener" href="https://blog.csdn.net/feng98ren/article/details/80509607">https://blog.csdn.net/feng98ren/article/details/80509607</a></p>
+
+  </article>
+</div>
+
+
+    
+
+
+
+
+</div>
+
+<div class="footer-wrapper container">
+  <footer class="footer clearfix">
+    <div class="clearfix">
+    <a href="https://alan89757.github.io" class="footer-logo">
+      <i class="fa fa-github"></i>
+    </a>
+    <ul class="footer-social-link">
+      <li>© 2023 Alan</li>
+      <li><a href="https://alan89757.github.io">Home</a></li>
+      
+      <li><a target="_blank" rel="noopener" href="https://github.com/alan89757">Github</a></li>
+      
+    </ul>
+    <!-- <div class="footer-theme-info">
+      Theme <a target="_blank" rel="noopener" href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
+      by <a target="_blank" rel="noopener" href="//github.com/sabrinaluo">Alan</a> ❤ Powered by Hexo
+    </div> -->
+    </div>
+    
+  </footer>
+</div>
+
+
+<script>
+  (function() {
+    var cx = 'true';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+
+
+<script src="/blog/js/main.js"></script>
+
+</body>
+</html>

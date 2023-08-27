@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>
+    Github如何精准的找到自己想要的 | Alan的学习曲线
+  </title>
+  <meta name="description" content="">
+  
+  <meta name="keywords" content="
+  github
+  ">
+  
+  <meta name="author" content="Alan">
+
+  <meta http-equiv="Cache-Control" content="no-transform"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="theme-color" content="#1e2327">
+  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
+  <link rel="stylesheet" href="/css/main.css">
+  <!-- <link rel="stylesheet"
+        href="/css/font-awesome.min.css"> -->
+  
+
+  
+
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="http://localhost:4000/js/moment.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script> -->
+  <script src="/js/vue.min.js"></script>
+  <script src="/js/moment.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body id="replica-app">
+
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <div class="container clearfix">
+      <a href="/" class="navbar-logo"><i class="fa fa-github"></i></a>
+
+      <div class="navbar-search float-left desktop-only">
+        <div class="navbar-search-form">
+          <label for="gsc-i-id1">站内搜索</label>
+          <div id="google-search">
+            <gcse:search></gcse:search>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav float-left">
+        
+        <li><a href="/archives">Archives</a></li>
+        
+        
+        <li><a href="/categories">Categories</a></li>
+        
+        
+        <li><a href="/tags">Tags</a></li>
+        
+        
+        <!-- <li class="desktop-only"><a href="/atom.xml" target="_blank">RSS</a></li> -->
+        
+      </ul>
+
+      <ul class="navbar-nav user-nav float-right desktop-only">
+        <li class="user-nav-notification">
+          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li class="user-nav-logo">
+          <a><img src="/images/baracktocat.png"> <i class="fa fa-caret-down"></i></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+  <header class="header-wrapper desktop-only">
+  <div class="container header-site-detail">
+    <ul class="header-toolbar">
+      <li class="clearfix">
+        <a href="/archives" class="header-toolbar-left"><i
+                  class="fa fa-file-text"></i> Posts </a>
+        <a href="/archives"
+           class="header-toolbar-right"> 43 </a>
+      </li>
+      <li>
+        <a href="/tags" class="header-toolbar-left"><i
+                  class="fa fa-tags"></i> Tags </a>
+        <a href="/tags"
+           class="header-toolbar-right"> 50 </a>
+      </li>
+      <li>
+        <a href="/categories" class="header-toolbar-left"><i
+                  class="fa fa-folder-open"></i> Categories </a>
+        <a href="/categories"
+           class="header-toolbar-right"> 18 </a>
+      </li>
+    </ul>
+    <h2 class="header-title">
+      <i class="fa fa-book text-muted"></i>
+      <a href="/">Alan的学习曲线</a>
+      
+      
+    </h2>
+  </div>
+
+  <!-- <div class="container">
+    <div class="header-tab-wrapper clearfix">
+      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
+      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
+      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
+      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
+      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
+    </div>
+  </div> -->
+</header>
+
+
+<div class="post-container container">
+  <h3>
+    <i class="fa fa-user-o"></i>
+    Alan
+
+    <span class="post-date float-right" title="{{moment(1538323200000).format('MMM DD, YYYY, h:mm:ss A')}}">
+      
+          <i class="fa fa-pencil-square-o"></i>
+      
+      {{moment(1538323200000).fromNow()}}
+    </span>
+  </h3>
+
+  <article class="post-content">
+    <h1>Github如何精准的找到自己想要的</h1>
+    <span id="more"></span>
+
+<p>github以前就是上传代码，写写readme，如何才能发挥出github最大的作用，类似百度搜索一样，精准的查到自己想到的内容呢？</p>
+<h2 id="1-1-普通的搜索"><a href="#1-1-普通的搜索" class="headerlink" title="1.1 普通的搜索"></a>1.1 普通的搜索</h2><ul>
+<li>直接搜索技术栈相关的项目  </li>
+<li>一般主要用到三个功能，查询&#x2F;选语言&#x2F;排序</li>
+</ul>
+<!-- <img src="../.vuepress/public/images/1.png"> -->
+<p><img src="/2018/10/01/2018-10-01-how-to-use-github/1.png" alt="图片"></p>
+<h2 id="1-2-github搜索功能仅仅如此？"><a href="#1-2-github搜索功能仅仅如此？" class="headerlink" title="1.2 github搜索功能仅仅如此？"></a>1.2 github搜索功能仅仅如此？</h2><ul>
+<li>查询vue且star大于1000的仓库<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 写法一</span></span><br><span class="line">vue <span class="attr">stars</span>:&gt;<span class="number">1000</span> <span class="attr">language</span>:javascript</span><br><span class="line"><span class="comment">// 写法二</span></span><br><span class="line">vue <span class="attr">stars</span>:<span class="number">1000.</span>.*</span><br><span class="line"><span class="comment">// 查询范围</span></span><br><span class="line">vue <span class="attr">stars</span>:<span class="number">1000.</span><span class="number">.10000</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<!-- <img src="../.vuepress/public/images/2.png"> -->
+<p><img src="/2018/10/01/2018-10-01-how-to-use-github/2.png" alt="图片"></p>
+<ul>
+<li><p>查询vue且topics大于20的仓库</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue <span class="attr">topics</span>:&gt;=<span class="number">20</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过日期查询</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// &gt;=*YYYY*-*MM*-*DD*</span></span><br><span class="line">vue <span class="attr">created</span>:&gt;=<span class="number">2021</span>-<span class="number">06</span>-<span class="number">18</span>  <span class="comment">// 2021-06-18创建的项目</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用用户名的查询</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Evan You</span></span><br><span class="line"><span class="attr">author</span>:yyx990803</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<!-- <img src="../.vuepress/public/images/3.png"> -->
+<p><img src="/2018/10/01/2018-10-01-how-to-use-github/3.png" alt="图片"></p>
+<h2 id="2-1-高级的搜索"><a href="#2-1-高级的搜索" class="headerlink" title="2.1 高级的搜索"></a>2.1 高级的搜索</h2><p>按仓库名称、说明或自述文件内容搜索</p>
+<ul>
+<li><p>仓库名称，说明，自述内容含有vue的仓库</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue-next <span class="attr">in</span>:name,description,readme  </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>匹配指定用户的blog仓库??</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">repo</span>:alan89757/blog</span><br></pre></td></tr></table></figure></li>
+<li><p>在用户或组织的仓库内搜索</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">user</span>:yyx990803 <span class="attr">forks</span>:&gt;=<span class="number">100</span>  </span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">org</span>:github </span><br></pre></td></tr></table></figure></li>
+<li><p>按关注者数量搜索</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue <span class="attr">followers</span>:&gt;=<span class="number">10000</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>按forks数量搜索</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue <span class="attr">forks</span>:<span class="number">10000</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>按主题搜索</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">topic</span>:koa</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>按许可搜索</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">license</span>:<span class="variable constant_">MIT</span> <span class="title class_">License</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+
+  </article>
+</div>
+
+
+    
+
+
+
+
+</div>
+
+<div class="footer-wrapper container">
+  <footer class="footer clearfix">
+    <div class="clearfix">
+    <a href="https://alan89757.github.io" class="footer-logo">
+      <i class="fa fa-github"></i>
+    </a>
+    <ul class="footer-social-link">
+      <li>© 2023 Alan</li>
+      <li><a href="https://alan89757.github.io">Home</a></li>
+      
+      <li><a target="_blank" rel="noopener" href="https://github.com/alan89757">Github</a></li>
+      
+    </ul>
+    <!-- <div class="footer-theme-info">
+      Theme <a target="_blank" rel="noopener" href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
+      by <a target="_blank" rel="noopener" href="//github.com/sabrinaluo">Alan</a> ❤ Powered by Hexo
+    </div> -->
+    </div>
+    
+  </footer>
+</div>
+
+
+<script>
+  (function() {
+    var cx = 'true';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+
+
+<script src="/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>
+    nodejs系列教程（二） | Alan的学习曲线
+  </title>
+  <meta name="description" content="">
+  
+  <meta name="keywords" content="
+  node
+  ">
+  
+  <meta name="author" content="Alan">
+
+  <meta http-equiv="Cache-Control" content="no-transform"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="theme-color" content="#1e2327">
+  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
+  <link rel="stylesheet" href="/css/main.css">
+  <!-- <link rel="stylesheet"
+        href="/css/font-awesome.min.css"> -->
+  
+
+  
+
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="http://localhost:4000/js/moment.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script> -->
+  <script src="/js/vue.min.js"></script>
+  <script src="/js/moment.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body id="replica-app">
+
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <div class="container clearfix">
+      <a href="/" class="navbar-logo"><i class="fa fa-github"></i></a>
+
+      <div class="navbar-search float-left desktop-only">
+        <div class="navbar-search-form">
+          <label for="gsc-i-id1">站内搜索</label>
+          <div id="google-search">
+            <gcse:search></gcse:search>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav float-left">
+        
+        <li><a href="/archives">Archives</a></li>
+        
+        
+        <li><a href="/categories">Categories</a></li>
+        
+        
+        <li><a href="/tags">Tags</a></li>
+        
+        
+        <!-- <li class="desktop-only"><a href="/atom.xml" target="_blank">RSS</a></li> -->
+        
+      </ul>
+
+      <ul class="navbar-nav user-nav float-right desktop-only">
+        <li class="user-nav-notification">
+          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li class="user-nav-logo">
+          <a><img src="/images/baracktocat.png"> <i class="fa fa-caret-down"></i></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+  <header class="header-wrapper desktop-only">
+  <div class="container header-site-detail">
+    <ul class="header-toolbar">
+      <li class="clearfix">
+        <a href="/archives" class="header-toolbar-left"><i
+                  class="fa fa-file-text"></i> Posts </a>
+        <a href="/archives"
+           class="header-toolbar-right"> 43 </a>
+      </li>
+      <li>
+        <a href="/tags" class="header-toolbar-left"><i
+                  class="fa fa-tags"></i> Tags </a>
+        <a href="/tags"
+           class="header-toolbar-right"> 50 </a>
+      </li>
+      <li>
+        <a href="/categories" class="header-toolbar-left"><i
+                  class="fa fa-folder-open"></i> Categories </a>
+        <a href="/categories"
+           class="header-toolbar-right"> 18 </a>
+      </li>
+    </ul>
+    <h2 class="header-title">
+      <i class="fa fa-book text-muted"></i>
+      <a href="/">Alan的学习曲线</a>
+      
+      
+    </h2>
+  </div>
+
+  <!-- <div class="container">
+    <div class="header-tab-wrapper clearfix">
+      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
+      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
+      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
+      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
+      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
+    </div>
+  </div> -->
+</header>
+
+
+<div class="post-container container">
+  <h3>
+    <i class="fa fa-user-o"></i>
+    Alan
+
+    <span class="post-date float-right" title="{{moment(1656777600000).format('MMM DD, YYYY, h:mm:ss A')}}">
+      
+          <i class="fa fa-pencil-square-o"></i>
+      
+      {{moment(1656777600000).fromNow()}}
+    </span>
+  </h3>
+
+  <article class="post-content">
+    <h1>nodejs系列教程（二）</h1>
+    <p>nodejs教程，适合有一定nodejs基础的小伙伴</p>
+<span id="more"></span>
+<h2 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h2><p>官网：<a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a><br>版本：<a target="_blank" rel="noopener" href="https://github.com/nodejs/release">https://github.com/nodejs/release</a><br>适配：<a target="_blank" rel="noopener" href="https://kangax.github.io/compat-table/es6/">https://kangax.github.io/compat-table/es6/</a></p>
+<h2 id="JavaScript时间线"><a href="#JavaScript时间线" class="headerlink" title="JavaScript时间线"></a>JavaScript时间线</h2><blockquote>
+<p>1995年JavaScript诞生，作者：Brendan Eich</p>
+</blockquote>
+<blockquote>
+<p>1997年发布ECMAScript1.0版本</p>
+</blockquote>
+<blockquote>
+<p>1998年6月发布ECMAScript2.0版本</p>
+</blockquote>
+<blockquote>
+<p>1999年微软推出ActiveX，实现XMLHttpRequest</p>
+</blockquote>
+<blockquote>
+<p>1999年12月发布ECMAScript3.0版本</p>
+</blockquote>
+<blockquote>
+<p>2005年2月，ajax问世(Asynchronous Javascript And XML)</p>
+</blockquote>
+<blockquote>
+<p>2006年1月，jQuery发布</p>
+</blockquote>
+<blockquote>
+<p>2008年chrome浏览器问世(V8引擎)</p>
+</blockquote>
+<blockquote>
+<p>2009年6月30日，Nodejs 0.1.0版本发布（Ryan Dahi）</p>
+</blockquote>
+<blockquote>
+<p>2009年12月发布ECMAScript5.0版本</p>
+</blockquote>
+<blockquote>
+<p>2010年npm问世</p>
+</blockquote>
+<blockquote>
+<p>2010年1月3日，express问世</p>
+</blockquote>
+<blockquote>
+<p>2015年6月17日，发布ECMAScript6.0版本</p>
+</blockquote>
+<blockquote>
+<p>2015年8月22日，koa问世</p>
+</blockquote>
+<blockquote>
+<p>2016年9月,eggjs问世</p>
+</blockquote>
+<h2 id="趋势图"><a href="#趋势图" class="headerlink" title="趋势图"></a>趋势图</h2><!-- <img src="../.vuepress/public/images/136.png" width="500px"> -->
+<p><img src="/2022/07/03/2022-07-10-nodejs-series-chapter2/136.png" alt="图片"></p>
+<!-- <img src="../.vuepress/public/images/137.png" width="500px"> -->
+<p><img src="/2022/07/03/2022-07-10-nodejs-series-chapter2/137.png" alt="图片"></p>
+<p>来源：<a target="_blank" rel="noopener" href="http://www.modulecounts.com/">modulecounts</a></p>
+<h2 id="nodejs单线程"><a href="#nodejs单线程" class="headerlink" title="nodejs单线程"></a>nodejs单线程</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="title function_">alert</span>(<span class="string">&#x27;hello world&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="nodejs中处理多个请求"><a href="#nodejs中处理多个请求" class="headerlink" title="nodejs中处理多个请求"></a>nodejs中处理多个请求</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> cors = <span class="built_in">require</span>(<span class="string">&#x27;cors&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">express</span>();</span><br><span class="line">app.<span class="title function_">use</span>(<span class="title function_">cors</span>());</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">get</span>(<span class="string">&#x27;/a&#x27;</span>, <span class="keyword">async</span> <span class="keyword">function</span>(<span class="params">req, res</span>)&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(req.<span class="property">params</span>)</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>)=&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="title function_">resolve</span>(<span class="string">&#x27;ok&#x27;</span>)</span><br><span class="line">    &#125;, <span class="number">30000</span>);</span><br><span class="line">  &#125;).<span class="title function_">then</span>(<span class="function">(<span class="params">data</span>)=&gt;</span> &#123;</span><br><span class="line">    res.<span class="title function_">send</span>(<span class="string">&#x27;hello a&#x27;</span>);</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">get</span>(<span class="string">&#x27;/b&#x27;</span>, <span class="keyword">function</span>(<span class="params">req, res</span>)&#123;</span><br><span class="line">  res.<span class="title function_">send</span>(<span class="string">&#x27;hello b&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">listen</span>(<span class="number">8000</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Server is up&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 执行结果</span></span><br><span class="line"><span class="comment">// 1. 先返回</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="nodejs支持esm"><a href="#nodejs支持esm" class="headerlink" title="nodejs支持esm"></a>nodejs支持esm</h2><h2 id="浏览器中事件循环"><a href="#浏览器中事件循环" class="headerlink" title="浏览器中事件循环"></a>浏览器中事件循环</h2><p>浏览器是多线程的</p>
+<h2 id="nodejs事件循环"><a href="#nodejs事件循环" class="headerlink" title="nodejs事件循环"></a>nodejs事件循环</h2><p>nodejs采用V8作为js的解析引擎，I&#x2F;O处理使用libuv</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="express"><a href="#express" class="headerlink" title="express"></a>express</h2><h2 id="grunt"><a href="#grunt" class="headerlink" title="grunt"></a>grunt</h2><h4 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h4><h3 id="node事件循环6个阶段"><a href="#node事件循环6个阶段" class="headerlink" title="node事件循环6个阶段"></a>node事件循环6个阶段</h3><p>每个阶段都有一个队列（存储回调函数）</p>
+<p>Node.js 是单进程单线程应用程序，但是因为 V8 引擎提供的异步执行回调接口，通过这些接口可以处理大量的并发，所以性能非常高。<br>Node.js 几乎每一个 API 都是支持回调函数的。<br>Node.js 基本上所有的事件机制都是用设计模式中观察者模式实现。<br>Node.js 单线程类似进入一个while(true)的事件循环，直到没有事件观察者退出，每个异步事件都生成一个事件观察者，如果有事件发生就调用该回调函数.</p>
+<p>timers 主要执行setTimeout, setInterval的回调。  [timer1Callback1, timer1Callback2, timer1Callback3]</p>
+<p>I&#x2F;O callbacks  </p>
+<p>idle, prepare</p>
+<p>poll </p>
+<p>check  &#x2F;&#x2F; 直接执行setImmdiate的回调</p>
+<p>close callbacks</p>
+<p>有接口请求过来-&gt;因为javascript是单线程，所以开始利用V8引擎提供的异步执行回调接口，先进入poll阶段-&gt; </p>
+<p>分析node中webServer执行过程</p>
+<ol>
+<li>有ajax请求1发到web服务器</li>
+<li>因为javascript是单线程，V8接收到请求后，立即关闭然后去处理该请求，然后去服务下一个web请求<br>  处理请求：<br>  2.1 开始进入poll阶段，poll队列是空的，所以会一直轮询，看是否有setImmediate回调需要执行，如果有就直接进入check阶段执行setImmediate回调，没有就等待回调加入poll队列中<br>  2.2 有没有close callbacks回调（主要是socket.io长连接，很耗服务器资源）<br>  2.3 timers队列中有没有需要执行的回调（已到期）<br>  2.4 pedding阶段是否有需要执行的回调<br>  2.5 idle prepare（闲置阶段），一轮事件循环执行完成，进入闲置阶段<br>  2.6 重新进入poll阶段，开始新一轮的轮询</li>
+</ol>
+
+  </article>
+</div>
+
+
+    
+
+
+
+
+</div>
+
+<div class="footer-wrapper container">
+  <footer class="footer clearfix">
+    <div class="clearfix">
+    <a href="https://alan89757.github.io" class="footer-logo">
+      <i class="fa fa-github"></i>
+    </a>
+    <ul class="footer-social-link">
+      <li>© 2023 Alan</li>
+      <li><a href="https://alan89757.github.io">Home</a></li>
+      
+      <li><a target="_blank" rel="noopener" href="https://github.com/alan89757">Github</a></li>
+      
+    </ul>
+    <!-- <div class="footer-theme-info">
+      Theme <a target="_blank" rel="noopener" href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
+      by <a target="_blank" rel="noopener" href="//github.com/sabrinaluo">Alan</a> ❤ Powered by Hexo
+    </div> -->
+    </div>
+    
+  </footer>
+</div>
+
+
+<script>
+  (function() {
+    var cx = 'true';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+
+
+<script src="/js/main.js"></script>
+
+</body>
+</html>

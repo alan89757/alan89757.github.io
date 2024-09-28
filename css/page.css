@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "Courier";
-  src: url("https://alan89757.github.io/assets/fonts/Courier.dfont");
-  font-weight: 300;
-}
 .gutter pre {
   color: rgba(0,0,0,0.4);
 }

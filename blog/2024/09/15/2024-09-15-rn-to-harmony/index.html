@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>
+    React Native项目如何编译成鸿蒙应用 | Alan的个人学习曲线
+  </title>
+  <meta name="description" content="">
+  
+  <meta name="keywords" content="
+  react-native,鸿蒙
+  ">
+  
+  <meta name="author" content="Alan">
+
+  <meta http-equiv="Cache-Control" content="no-transform"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="theme-color" content="#1e2327">
+  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
+  <link rel="stylesheet" href="/blog/css/main.css">
+  <!-- <link rel="stylesheet"
+        href="/blog/css/font-awesome.min.css"> -->
+  
+
+  
+
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="http://localhost:4000/js/moment.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script> -->
+  <script src="/blog/js/vue.min.js"></script>
+  <script src="/blog/js/moment.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body id="replica-app">
+
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <div class="container clearfix">
+      <a href="/blog/" class="navbar-logo"><i class="fa fa-github"></i></a>
+
+      <div class="navbar-search float-left desktop-only">
+        <div class="navbar-search-form">
+          <label for="gsc-i-id1">站内搜索</label>
+          <div id="google-search">
+            <gcse:search></gcse:search>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav float-left">
+        
+        <li><a href="/blog/archives">Archives</a></li>
+        
+        
+        <li><a href="/blog/categories">Categories</a></li>
+        
+        
+        <li><a href="/blog/tags">Tags</a></li>
+        
+        
+        <!-- <li class="desktop-only"><a href="/blog/atom.xml" target="_blank">RSS</a></li> -->
+        
+      </ul>
+
+      <ul class="navbar-nav user-nav float-right desktop-only">
+        <li class="user-nav-notification">
+          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li class="user-nav-logo">
+          <a><img src="/blog/images/baracktocat.png"> <i class="fa fa-caret-down"></i></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+  <header class="header-wrapper desktop-only">
+  <div class="container header-site-detail">
+    <ul class="header-toolbar">
+      <li class="clearfix">
+        <a href="/blog/archives" class="header-toolbar-left"><i
+                  class="fa fa-file-text"></i> Posts </a>
+        <a href="/blog/archives"
+           class="header-toolbar-right"> 52 </a>
+      </li>
+      <li>
+        <a href="/blog/tags" class="header-toolbar-left"><i
+                  class="fa fa-tags"></i> Tags </a>
+        <a href="/blog/tags"
+           class="header-toolbar-right"> 60 </a>
+      </li>
+      <li>
+        <a href="/blog/categories" class="header-toolbar-left"><i
+                  class="fa fa-folder-open"></i> Categories </a>
+        <a href="/blog/categories"
+           class="header-toolbar-right"> 22 </a>
+      </li>
+    </ul>
+    <h2 class="header-title">
+      <i class="fa fa-book text-muted"></i>
+      <a href="/blog/">Alan的个人学习曲线</a>
+      
+      
+    </h2>
+  </div>
+
+  <!-- <div class="container">
+    <div class="header-tab-wrapper clearfix">
+      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
+      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
+      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
+      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
+      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
+    </div>
+  </div> -->
+</header>
+
+
+<div class="post-container container">
+  <h3>
+    <i class="fa fa-user-o"></i>
+    Alan
+
+    <span class="post-date float-right" title="{{moment(1726329600000).format('MMM DD, YYYY, h:mm:ss A')}}">
+      
+          <i class="fa fa-pencil-square-o"></i>
+      
+      {{moment(1726329600000).fromNow()}}
+    </span>
+  </h3>
+
+  <article class="post-content">
+    <h1>React Native项目如何编译成鸿蒙应用</h1>
+    
+      <p>本文以@react-native-community&#x2F;datetimepicker 作为示例，详细介绍具体步骤。<br>RN 鸿蒙支持文档：<a target="_blank" rel="noopener" href="https://gitee.com/react-native-oh-library/usage-docs/tree/master/zh-cn">https://gitee.com/react-native-oh-library/usage-docs/tree/master/zh-cn</a></p>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ol>
+<li>安装 DevEco Studio <a target="_blank" rel="noopener" href="https://developer.huawei.com/consumer/cn/download/">点击下载</a><!-- TODO: 补充下怎么下载SDK --></li>
+<li>下载 HarmonyOS SDK</li>
+<li>下载 node.js (v18.14.0+)</li>
+<li>配置 HDC 环境变量(配置到 window 系统变量中)</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">HDC_SERVER_PORT = 7035</span><br><span class="line">RNOH_C_API_ARCH = 1</span><br></pre></td></tr></table></figure>
+
+<h2 id="示例工程"><a href="#示例工程" class="headerlink" title="示例工程"></a>示例工程</h2><h3 id="（1）创建一个-react-native-工程"><a href="#（1）创建一个-react-native-工程" class="headerlink" title="（1）创建一个 react-native 工程"></a>（1）创建一个 react-native 工程</h3><p><code> npx react-native@0.72.5 init AwesomeProject --version 0.72.5</code></p>
+<h3 id="（2）安装react-native-harmony"><a href="#（2）安装react-native-harmony" class="headerlink" title="（2）安装react-native-harmony"></a>（2）安装react-native-harmony</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="comment"># rnoh-react-native-harmony-0.72.29.tgz是转换鸿蒙的核心包一定要有，不然后面的步骤都不能进行, 已存到百度网盘</span></span><br><span class="line">  <span class="string">&quot;react-native-harmony&quot;</span>: <span class="string">&quot;file:../react-native-harmony/rnoh-react-native-harmony-0.72.29.tgz&quot;</span>,</span><br><span class="line">  <span class="comment"># 安装react-native-harmony之后，才能识别codegen-harmony</span></span><br><span class="line">  <span class="string">&quot;codegen&quot;</span>: <span class="string">&quot;react-native codegen-harmony --cpp-output-path ./entry/src/main/cpp/generated </span></span><br><span class="line"><span class="string">   --rnoh-module-path ./entry/oh_modules/@rnoh/react-native-openharmony&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>PS: 配置好后，执行下npm install, 要装下react-native-harmony包</code></p>
+<h3 id="（3）替换工程文件"><a href="#（3）替换工程文件" class="headerlink" title="（3）替换工程文件"></a>（3）替换工程文件</h3><p>AwesomeProjectReplace.zip已存放百度网盘，主要是metro.config.js和package.json文件</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">-------------------package.json------------------</span><br><span class="line"><span class="comment">// 安装@react-native-community/cli和@react-native/codegen这两个依赖</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;@react-native-oh/react-native-harmony&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.72.38&quot;</span><span class="punctuation">,</span> <span class="comment">// PS: 这个包很重要，是react-native的鸿蒙包</span></span><br><span class="line"></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;overrides&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;@react-native-community/cli&quot;</span><span class="punctuation">:</span> <span class="string">&quot;11.3.6&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@react-native/codegen&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.74.0&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;resolutions&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;@react-native-community/cli&quot;</span><span class="punctuation">:</span> <span class="string">&quot;11.3.6&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">----------------------metro.<span class="property">config</span>.<span class="property">js</span>-----------------------------</span><br><span class="line"><span class="keyword">const</span> &#123;mergeConfig, getDefaultConfig&#125; = <span class="built_in">require</span>(<span class="string">&#x27;@react-native/metro-config&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> &#123;createHarmonyMetroConfig&#125; = <span class="built_in">require</span>(<span class="string">&#x27;react-native-harmony/metro.config&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@type</span> &#123;<span class="type">import(&quot;metro-config&quot;).ConfigT</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">  <span class="attr">transformer</span>: &#123;</span><br><span class="line">    <span class="attr">getTransformOptions</span>: <span class="keyword">async</span> () =&gt; (&#123;</span><br><span class="line">      <span class="attr">transform</span>: &#123;</span><br><span class="line">        <span class="attr">experimentalImportSupport</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">inlineRequires</span>: <span class="literal">true</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;),</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="title function_">mergeConfig</span>(<span class="title function_">getDefaultConfig</span>(__dirname), <span class="title function_">createHarmonyMetroConfig</span>(&#123;</span><br><span class="line">  <span class="attr">reactNativeHarmonyPackageName</span>: <span class="string">&#x27;react-native-harmony&#x27;</span>,</span><br><span class="line">&#125;), config);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="（4）安装-react-native-community-datetimepicker"><a href="#（4）安装-react-native-community-datetimepicker" class="headerlink" title="（4）安装@react-native-community&#x2F;datetimepicker"></a>（4）安装@react-native-community&#x2F;datetimepicker</h3><p><a target="_blank" rel="noopener" href="https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-community-datetimepicker.md">参考安装文档: @react-native-community&#x2F;datetimepicker</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.下载 react-native-oh-tpl-datetimepicker-7.6.2-0.1.1.tgz</span><br><span class="line"></span><br><span class="line">2.安装@react-native-oh-tpl/datetimepicker鸿蒙包, 如下：</span><br><span class="line"></span><br><span class="line">$ npm install @react-native-oh-tpl/datetimepicker@file:library/</span><br><span class="line">react-native-oh-tpl-datetimepicker-7.6.2-0.1.1.tgz  // ps: 安装rn对于的鸿蒙包， 下载tgz放在library目录下</span><br></pre></td></tr></table></figure>
+
+<p><img src="/blog/2024/09/15/2024-09-15-rn-to-harmony/1.png" alt="图片"></p>
+<h3 id="（5）把-react-native-oh-tpl-datetimepicker-鸿蒙包（-har）复制到鸿蒙项目"><a href="#（5）把-react-native-oh-tpl-datetimepicker-鸿蒙包（-har）复制到鸿蒙项目" class="headerlink" title="（5）把@react-native-oh-tpl&#x2F;datetimepicker 鸿蒙包（.har）复制到鸿蒙项目"></a>（5）把@react-native-oh-tpl&#x2F;datetimepicker 鸿蒙包（.har）复制到鸿蒙项目</h3><p><img src="/blog/2024/09/15/2024-09-15-rn-to-harmony/5.png" alt="图片"></p>
+<h3 id="（6）使用-codegen-生成鸿蒙代码-并复制到鸿蒙项目"><a href="#（6）使用-codegen-生成鸿蒙代码-并复制到鸿蒙项目" class="headerlink" title="（6）使用 codegen 生成鸿蒙代码, 并复制到鸿蒙项目"></a>（6）使用 codegen 生成鸿蒙代码, 并复制到鸿蒙项目</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// &lt;!-- package.json --&gt;</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;script&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;build&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node build.js&quot;</span><span class="punctuation">,</span>  <span class="comment">// 自定义脚本</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;@react-native-oh-tpl/datetimepicker&quot;</span><span class="punctuation">:</span> <span class="string">&quot;file:library/react-native-oh-tpl-datetimepicker-7.6.2-0.1.1.tgz&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// &lt;!-- build.js --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> &#123; exec &#125; = <span class="built_in">require</span>(<span class="string">&quot;child_process&quot;</span>);</span><br><span class="line"><span class="comment">// 定义要执行的脚本列表</span></span><br><span class="line"><span class="keyword">const</span> scripts = [</span><br><span class="line">  <span class="comment">// 1. codegen生成鸿蒙CPP文件</span></span><br><span class="line">  <span class="string">`react-native codegen-harmony --cpp-output-path ./entry/src/main/cpp/generated</span></span><br><span class="line"><span class="string">   --rnoh-module-path ./entry/oh_modules/@rnoh/react-native-openharmony`</span>,</span><br><span class="line">  <span class="comment">// 2. 生成rn业务bundle文件</span></span><br><span class="line">  <span class="string">&quot;react-native bundle-harmony --dev&quot;</span>,</span><br><span class="line">  <span class="comment">// 3. 把第1步和第2步生成的文件放到鸿蒙项目中</span></span><br><span class="line">  <span class="string">&quot;node copy-to-harmony.js&quot;</span>,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">runScript</span>(<span class="params">index</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (index &gt;= scripts.<span class="property">length</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;所有脚本已执行完毕&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> script = scripts[index];</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`正在执行 <span class="subst">$&#123;script&#125;</span>...`</span>);</span><br><span class="line">  <span class="title function_">exec</span>(script, <span class="function">(<span class="params">error, stdout, stderr</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (error) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">`执行 <span class="subst">$&#123;script&#125;</span> 时出错:`</span>, error);</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (stderr) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&quot;标准错误:&quot;</span>, stderr);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 执行下一个脚本</span></span><br><span class="line">    <span class="title function_">runScript</span>(index + <span class="number">1</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 开始执行脚本</span></span><br><span class="line"><span class="title function_">runScript</span>(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// &lt;!-- copy-to-harmony.js --&gt;</span></span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">copyDir</span>(<span class="params">src, dest</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (!fs.<span class="title function_">existsSync</span>(dest)) &#123;</span><br><span class="line">    fs.<span class="title function_">mkdirSync</span>(dest, &#123; <span class="attr">recursive</span>: <span class="literal">true</span> &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> items = fs.<span class="title function_">readdirSync</span>(src);</span><br><span class="line">  items.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> srcPath = path.<span class="title function_">join</span>(src, item);</span><br><span class="line">    <span class="keyword">const</span> destPath = path.<span class="title function_">join</span>(dest, item);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (fs.<span class="title function_">lstatSync</span>(srcPath).<span class="title function_">isDirectory</span>()) &#123;</span><br><span class="line">      <span class="title function_">copyDir</span>(srcPath, destPath); <span class="comment">// 递归复制文件夹</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      fs.<span class="title function_">copyFileSync</span>(srcPath, destPath); <span class="comment">// 复制文件</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 鸿蒙module</span></span><br><span class="line"><span class="keyword">const</span> sourceDir1 =</span><br><span class="line">  <span class="string">&quot;./entry/oh_modules/@rnoh/react-native-openharmony/generated&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> destinationDir1 =</span><br><span class="line">  <span class="string">&quot;../ztk-app-harmony/entry/oh_modules/@rnoh/react-native-openharmony/generated&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// cpp文件</span></span><br><span class="line"><span class="keyword">const</span> sourceDir2 = <span class="string">&quot;./entry/src/main/cpp/generated&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> destinationDir2 = <span class="string">&quot;../ztk-app-harmony/entry/src/main/cpp/generated&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// bundle文件</span></span><br><span class="line"><span class="keyword">const</span> sourceDir3 = <span class="string">&quot;./harmony/entry/src/main/resources/rawfile&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> destinationDir3 = <span class="string">&quot;../ztk-app-harmony/entry/src/main/resources/rawfile&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="title function_">copyDir</span>(sourceDir1, destinationDir1);</span><br><span class="line"><span class="title function_">copyDir</span>(sourceDir2, destinationDir2);</span><br><span class="line"><span class="title function_">copyDir</span>(sourceDir3, destinationDir3);</span><br></pre></td></tr></table></figure>
+
+<p><img src="/blog/2024/09/15/2024-09-15-rn-to-harmony/2.png" alt="图片"></p>
+<p><img src="/blog/2024/09/15/2024-09-15-rn-to-harmony/3.png" alt="图片"></p>
+<p><img src="/blog/2024/09/15/2024-09-15-rn-to-harmony/4.png" alt="图片"></p>
+<h3 id="7-新建鸿蒙项目"><a href="#7-新建鸿蒙项目" class="headerlink" title="(7) 新建鸿蒙项目"></a>(7) 新建鸿蒙项目</h3><p>这里不再赘述，点击<a target="_blank" rel="noopener" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/ide-hello-world-V5">参考文档</a></p>
+<h3 id="8-安装鸿蒙包依赖"><a href="#8-安装鸿蒙包依赖" class="headerlink" title="(8) 安装鸿蒙包依赖"></a>(8) 安装鸿蒙包依赖</h3><p>进入 entry 目录执行<code>ohpm install</code></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// &lt;!-- entry/oh-package.json5 --&gt;</span></span><br><span class="line"><span class="comment">// @rnoh/react-native-openharmony 鸿蒙支持RN核心包</span></span><br><span class="line"><span class="comment">// @react-native-oh-tpl/datetimepicker 第三方鸿蒙demo</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="comment">// 要用开发包（137M），不要用release包.</span></span><br><span class="line">    <span class="attr">&quot;@rnoh/react-native-openharmony&quot;</span><span class="punctuation">:</span> <span class="string">&quot;file:../libs/react_native_openharmony-5.0.0.500.har&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@react-native-oh-tpl/datetimepicker&quot;</span><span class="punctuation">:</span> <span class="string">&quot;file:../library/datetimepicker.har&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="（7）模拟器运行效果"><a href="#（7）模拟器运行效果" class="headerlink" title="（7）模拟器运行效果"></a>（7）模拟器运行效果</h4><p><img src="/blog/2024/09/15/2024-09-15-rn-to-harmony/6.png" alt="图片"></p>
+<h2 id="鸿蒙打包-发布"><a href="#鸿蒙打包-发布" class="headerlink" title="鸿蒙打包&amp;发布"></a>鸿蒙打包&amp;发布</h2><!-- #### 流程图 -->
+
+<!-- ![图片](8.png) -->
+
+<p><img src="/blog/2024/09/15/2024-09-15-rn-to-harmony/17.png" alt="图片"></p>
+<h3 id="（1）生成密钥和证书请求文件"><a href="#（1）生成密钥和证书请求文件" class="headerlink" title="（1）生成密钥和证书请求文件"></a>（1）生成密钥和证书请求文件</h3><p>选择“Build &gt; Generate Key and CSR”，填好表单内容就行了。<span style="color:red"> (ps: 把所有的文件放在一个文件夹中)</span></p>
+<p><img src="/blog/2024/09/15/2024-09-15-rn-to-harmony/7.png" alt="图片"></p>
+<h3 id="（2）申请发布证书并下载（csr和证书绑定）"><a href="#（2）申请发布证书并下载（csr和证书绑定）" class="headerlink" title="（2）申请发布证书并下载（csr和证书绑定）"></a>（2）申请发布证书并下载（csr和证书绑定）</h3><p><img src="/blog/2024/09/15/2024-09-15-rn-to-harmony/9.png" alt="图片"><br><img src="/blog/2024/09/15/2024-09-15-rn-to-harmony/10.png" alt="图片"></p>
+<h3 id="（3）申请发布Profile并下载-profile把证书和app包名绑定"><a href="#（3）申请发布Profile并下载-profile把证书和app包名绑定" class="headerlink" title="（3）申请发布Profile并下载(profile把证书和app包名绑定)"></a>（3）申请发布Profile并下载(profile把证书和app包名绑定)</h3><!-- profile 是绑定证书的 -->
+
+<p><img src="/blog/2024/09/15/2024-09-15-rn-to-harmony/11.png" alt="图片"></p>
+<p><img src="/blog/2024/09/15/2024-09-15-rn-to-harmony/14.png" alt="图片"></p>
+<h3 id="（4）配置签名信息"><a href="#（4）配置签名信息" class="headerlink" title="（4）配置签名信息"></a>（4）配置签名信息</h3><p><img src="/blog/2024/09/15/2024-09-15-rn-to-harmony/12.png" alt="图片"></p>
+<h3 id="5-配置文件如下"><a href="#5-配置文件如下" class="headerlink" title="(5) 配置文件如下"></a>(5) 配置文件如下</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// build-profile.json5， 新增products, signingConfigs, modules.targets配置</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;app&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;signingConfigs&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span> <span class="comment">// 两种签名配置</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;default&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;HarmonyOS&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;material&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;certpath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:/a-certificate/xxx_debug.cer&quot;</span><span class="punctuation">,</span>  <span class="comment">// 调试证书</span></span><br><span class="line">          <span class="attr">&quot;storeFile&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:/a-certificate/xxx.p12&quot;</span><span class="punctuation">,</span> <span class="comment">// store密码</span></span><br><span class="line">          <span class="attr">&quot;storePassword&quot;</span><span class="punctuation">:</span> <span class="string">&quot;xxxxxx&quot;</span><span class="punctuation">,</span>  <span class="comment">// store密码，生成时要记住</span></span><br><span class="line">          <span class="attr">&quot;keyPassword&quot;</span><span class="punctuation">:</span> <span class="string">&quot;xxxxxx&quot;</span><span class="punctuation">,</span> <span class="comment">// store密码 </span></span><br><span class="line">          <span class="attr">&quot;keyAlias&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ztk&quot;</span><span class="punctuation">,</span>  <span class="comment">// CSR别名，生成时要记住</span></span><br><span class="line">          <span class="attr">&quot;profile&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:/a-certificate/xxx.p7b&quot;</span><span class="punctuation">,</span>  <span class="comment">// 证书cer绑定app包名，建两个分别指向debug和release证书</span></span><br><span class="line">          <span class="attr">&quot;signAlg&quot;</span><span class="punctuation">:</span> <span class="string">&quot;SHA256withECDSA&quot;</span><span class="punctuation">,</span>  <span class="comment">// 固定写死</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;sgztk&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;HarmonyOS&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;material&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;certpath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:/a-certificate/xxx_sgztk.cer&quot;</span><span class="punctuation">,</span>  <span class="comment">// 发布证书, RN直接用发布证书</span></span><br><span class="line">          <span class="attr">&quot;storeFile&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:/a-certificate/xxx.p12&quot;</span><span class="punctuation">,</span> <span class="comment">// store密码</span></span><br><span class="line">          <span class="attr">&quot;storePassword&quot;</span><span class="punctuation">:</span> <span class="string">&quot;xxxxxx&quot;</span><span class="punctuation">,</span>  <span class="comment">// store密码，生成时要记住</span></span><br><span class="line">          <span class="attr">&quot;keyPassword&quot;</span><span class="punctuation">:</span> <span class="string">&quot;xxxxxx&quot;</span><span class="punctuation">,</span> <span class="comment">// store密码 </span></span><br><span class="line">          <span class="attr">&quot;keyAlias&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ztk&quot;</span><span class="punctuation">,</span>  <span class="comment">// CSR别名，生成时要记住</span></span><br><span class="line">          <span class="attr">&quot;profile&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:/a-certificate/xxx_sgztk.p7b&quot;</span><span class="punctuation">,</span>  <span class="comment">// 证书cer绑定app包名，建两个分别指向debug和release证书</span></span><br><span class="line">          <span class="attr">&quot;signAlg&quot;</span><span class="punctuation">:</span> <span class="string">&quot;SHA256withECDSA&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;products&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span> <span class="comment">// 配置多product产物，有时需要重设storefile的密码才能生效</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;default&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;signingConfig&quot;</span><span class="punctuation">:</span> <span class="string">&quot;default&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;compatibleSdkVersion&quot;</span><span class="punctuation">:</span> <span class="string">&quot;5.0.0(12)&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;runtimeOS&quot;</span><span class="punctuation">:</span> <span class="string">&quot;HarmonyOS&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">       <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="comment">// 构建时，指向的product产品名称 </span></span><br><span class="line">        <span class="comment">// hvigorw --mode project -p product=sgztk -p buildMode=debug assembleApp</span></span><br><span class="line">        <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;sgztk&quot;</span><span class="punctuation">,</span>  </span><br><span class="line">        <span class="attr">&quot;signingConfig&quot;</span><span class="punctuation">:</span> <span class="string">&quot;sgztk&quot;</span><span class="punctuation">,</span>  <span class="comment">// 指向signingConfigs下的配置项</span></span><br><span class="line">        <span class="attr">&quot;compatibleSdkVersion&quot;</span><span class="punctuation">:</span> <span class="string">&quot;5.0.0(12)&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;bundleName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;net.wangxiao.sgztk&quot;</span><span class="punctuation">,</span> <span class="comment">// 重写app.json5的bundleName</span></span><br><span class="line">        <span class="attr">&quot;runtimeOS&quot;</span><span class="punctuation">:</span> <span class="string">&quot;HarmonyOS&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;bundleType&quot;</span><span class="punctuation">:</span> <span class="string">&quot;app&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;icon&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$media:app_icon&quot;</span><span class="punctuation">,</span>  <span class="comment">// 配置应用自己的icon</span></span><br><span class="line">        <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$string:app_name&quot;</span><span class="punctuation">,</span> <span class="comment">// 配置应用自己的名称</span></span><br><span class="line">        <span class="attr">&quot;output&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;artifactName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;sgztk-1.0.0&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;vendor&quot;</span><span class="punctuation">:</span> <span class="string">&quot;customizedProductVendorName&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;modules&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;entry&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;srcPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;./entry&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;targets&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;sgztk&quot;</span><span class="punctuation">,</span> </span><br><span class="line">          <span class="attr">&quot;applyToProducts&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;sgztk&quot;</span><span class="punctuation">]</span>  <span class="comment">// 指向哪个product产物</span></span><br><span class="line">        <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;default&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;applyToProducts&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;default&quot;</span><span class="punctuation">]</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">      <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// entry/build-profile.json5</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="comment">// ......， 此处省略部分代码</span></span><br><span class="line">  <span class="attr">&quot;targets&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;sgztk&quot;</span> <span class="comment">// 新增</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="（6）编译打包（App-Hap）"><a href="#（6）编译打包（App-Hap）" class="headerlink" title="（6）编译打包（App + Hap）"></a>（6）编译打包（App + Hap）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建hap</span></span><br><span class="line">$ hvigorw --mode module -p product=default -p buildMode=debug assembleHap</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装hap包到本地真机：</span></span><br><span class="line">hdc install D:\xxx\entry\build\default\outputs\default\entry-default-signed.hap</span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建APP，可配置项在build-profile.json5中products和buildModeSet</span></span><br><span class="line">$ hvigorw --mode project -p product=sgztk -p buildMode=release assembleApp</span><br></pre></td></tr></table></figure>
+
+<p><img src="/blog/2024/09/15/2024-09-15-rn-to-harmony/13.png" alt="图片"></p>
+<h2 id="知识扩展或补充RN兼容缺陷"><a href="#知识扩展或补充RN兼容缺陷" class="headerlink" title="知识扩展或补充RN兼容缺陷"></a>知识扩展或补充RN兼容缺陷</h2><h3 id="1-react-native-Flatlist"><a href="#1-react-native-Flatlist" class="headerlink" title="1. react-native Flatlist"></a>1. react-native Flatlist</h3><p><code>node_modules\react-native\Libraries\Lists\FlatList.js</code></p>
+<p><img src="/blog/2024/09/15/2024-09-15-rn-to-harmony/16.png" alt="图片"></p>
+<h3 id="2-填写-App-特征信息-备案"><a href="#2-填写-App-特征信息-备案" class="headerlink" title="2. 填写 App 特征信息(备案)"></a>2. 填写 App 特征信息(备案)</h3><p><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/icp-filing/basic-icp-service/user-guide/fill-in-app-feature-information">https://help.aliyun.com/zh/icp-filing/basic-icp-service/user-guide/fill-in-app-feature-information</a></p>
+<h3 id="3-签名文件-p12-csr，-cer，-p7b-的区别"><a href="#3-签名文件-p12-csr，-cer，-p7b-的区别" class="headerlink" title="3. 签名文件.p12, .csr，.cer，.p7b 的区别"></a>3. 签名文件.p12, .csr，.cer，.p7b 的区别</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// .p12（store file）-私钥</span></span><br><span class="line"><span class="comment">// .csr(公钥)</span></span><br><span class="line"><span class="comment">// .cer(证书文件) -csr 公钥，签名证书文件</span></span><br><span class="line"><span class="comment">// .p7b(profile) -包名和证书绑定</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-1-deveco-studio-build-generate-key"><a href="#3-1-deveco-studio-build-generate-key" class="headerlink" title="3.1 deveco studio -&gt; build -&gt; generate key"></a>3.1 deveco studio -&gt; build -&gt; generate key</h4><p><code>ps: 生成p12和csr密钥对</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">新建 storefile（.p12）文件时，并没有直接生成.p12 文件，说明 storefile 和和 crs 文件是同时生成的，</span><br><span class="line">所以可以理解成 storefile 是密钥， csr 文件是公钥</span><br><span class="line">结论：storefile(.p12), 是私钥， .csr, 是公钥 （公私钥-密钥对）</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2-在鸿蒙后台-新增证书"><a href="#3-2-在鸿蒙后台-新增证书" class="headerlink" title="3.2 在鸿蒙后台-新增证书"></a>3.2 在鸿蒙后台-新增证书</h4><p><code>ps: CSR对证书签名，生成cer</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deveco studio生成的.CSR（理解：用公钥签名）， 对证书(.cer)文件加密. </span><br></pre></td></tr></table></figure>
+<p><img src="/blog/2024/09/15/2024-09-15-rn-to-harmony/10.png" alt="图片"></p>
+<h4 id="3-3-在鸿蒙后台-新增profile"><a href="#3-3-在鸿蒙后台-新增profile" class="headerlink" title="3.3 在鸿蒙后台-新增profile"></a>3.3 在鸿蒙后台-新增profile</h4><p><code>ps: App包名和证书绑定</code></p>
+<p><img src="/blog/2024/09/15/2024-09-15-rn-to-harmony/18.png" alt="profile"></p>
+<p><img src="/blog/2024/09/15/2024-09-15-rn-to-harmony/19.png" alt="profile"></p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a target="_blank" rel="noopener" href="https://zh.uniapp.dcloud.io/tutorial/harmony/dev-v1.html">uni-app 编译支持鸿蒙</a><br><a target="_blank" rel="noopener" href="https://developer.huawei.com/consumer/cn/doc/best-practices-V5/bpta-multi-target-V5#section13944162214508">如何为不同的 product 产物配置签名信息？</a><br><a target="_blank" rel="noopener" href="https://developer.huawei.com/consumer/cn/doc/app/agc-lowcode-package-formal-0000001598742385">打包正式版本</a><br><a target="_blank" rel="noopener" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/ide-customized-multi-targets-and-products-guides-V5#section680552311459">鸿蒙配置 APP 多目标构建产物</a></p>
+<p>PS：nvue 编译到鸿蒙后非原生渲染，而是与 web 一样渲染，所以调用原生服务需要使用 uts 调用鸿蒙原生 API。</p>
+
+    
+  </article>
+</div>
+
+
+    
+
+
+
+
+</div>
+
+<div class="footer-wrapper container">
+  <footer class="footer clearfix">
+    <div class="clearfix">
+    <a href="https://alan89757.github.io" class="footer-logo">
+      <i class="fa fa-github"></i>
+    </a>
+    <ul class="footer-social-link">
+      <li>© 2023 Alan</li>
+      <li><a href="https://alan89757.github.io">Home</a></li>
+      
+      <li><a target="_blank" rel="noopener" href="https://github.com/alan89757">Github</a></li>
+      
+    </ul>
+    <!-- <div class="footer-theme-info">
+      Theme <a target="_blank" rel="noopener" href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
+      by <a target="_blank" rel="noopener" href="//github.com/sabrinaluo">Alan</a> ❤ Powered by Hexo
+    </div> -->
+    </div>
+    
+  </footer>
+</div>
+
+
+<script>
+  (function() {
+    var cx = 'true';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+
+
+<script src="/blog/js/main.js"></script>
+
+</body>
+</html>

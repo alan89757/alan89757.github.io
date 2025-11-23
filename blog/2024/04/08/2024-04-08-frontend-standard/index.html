@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>
+    前端规范之命名 | Alan的个人学习曲线
+  </title>
+  <meta name="description" content="">
+  
+  <meta name="keywords" content="
+  规范,命名
+  ">
+  
+  <meta name="author" content="Alan">
+
+  <meta http-equiv="Cache-Control" content="no-transform"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="theme-color" content="#1e2327">
+  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
+  <link rel="stylesheet" href="/blog/css/main.css">
+  <!-- <link rel="stylesheet"
+        href="/blog/css/font-awesome.min.css"> -->
+  
+
+  
+
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="http://localhost:4000/js/moment.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script> -->
+  <script src="/blog/js/vue.min.js"></script>
+  <script src="/blog/js/moment.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body id="replica-app">
+
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <div class="container clearfix">
+      <a href="/blog/" class="navbar-logo"><i class="fa fa-github"></i></a>
+
+      <div class="navbar-search float-left desktop-only">
+        <div class="navbar-search-form">
+          <label for="gsc-i-id1">站内搜索</label>
+          <div id="google-search">
+            <gcse:search></gcse:search>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav float-left">
+        
+        <li><a href="/blog/archives">Archives</a></li>
+        
+        
+        <li><a href="/blog/categories">Categories</a></li>
+        
+        
+        <li><a href="/blog/tags">Tags</a></li>
+        
+        
+        <!-- <li class="desktop-only"><a href="/blog/atom.xml" target="_blank">RSS</a></li> -->
+        
+      </ul>
+
+      <ul class="navbar-nav user-nav float-right desktop-only">
+        <li class="user-nav-notification">
+          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li class="user-nav-logo">
+          <a><img src="/blog/images/baracktocat.png"> <i class="fa fa-caret-down"></i></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+  <header class="header-wrapper desktop-only">
+  <div class="container header-site-detail">
+    <ul class="header-toolbar">
+      <li class="clearfix">
+        <a href="/blog/archives" class="header-toolbar-left"><i
+                  class="fa fa-file-text"></i> Posts </a>
+        <a href="/blog/archives"
+           class="header-toolbar-right"> 52 </a>
+      </li>
+      <li>
+        <a href="/blog/tags" class="header-toolbar-left"><i
+                  class="fa fa-tags"></i> Tags </a>
+        <a href="/blog/tags"
+           class="header-toolbar-right"> 60 </a>
+      </li>
+      <li>
+        <a href="/blog/categories" class="header-toolbar-left"><i
+                  class="fa fa-folder-open"></i> Categories </a>
+        <a href="/blog/categories"
+           class="header-toolbar-right"> 22 </a>
+      </li>
+    </ul>
+    <h2 class="header-title">
+      <i class="fa fa-book text-muted"></i>
+      <a href="/blog/">Alan的个人学习曲线</a>
+      
+      
+    </h2>
+  </div>
+
+  <!-- <div class="container">
+    <div class="header-tab-wrapper clearfix">
+      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
+      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
+      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
+      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
+      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
+    </div>
+  </div> -->
+</header>
+
+
+<div class="post-container container">
+  <h3>
+    <i class="fa fa-user-o"></i>
+    Alan
+
+    <span class="post-date float-right" title="{{moment(1712505600000).format('MMM DD, YYYY, h:mm:ss A')}}">
+      
+          <i class="fa fa-pencil-square-o"></i>
+      
+      {{moment(1712505600000).fromNow()}}
+    </span>
+  </h3>
+
+  <article class="post-content">
+    <h1>前端规范之命名</h1>
+    
+      <h3 id="普通命名采用小驼峰式命名"><a href="#普通命名采用小驼峰式命名" class="headerlink" title="普通命名采用小驼峰式命名"></a>普通命名采用小驼峰式命名</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> userName = <span class="string">&#x27;Jerrry&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="复数的时候需要加-s"><a href="#复数的时候需要加-s" class="headerlink" title="复数的时候需要加 s"></a>复数的时候需要加 s</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> userNames = [<span class="string">&#x27;Jerrry&#x27;</span>, <span class="string">&#x27;Tom&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="每个常量都需命名，且名称全大写"><a href="#每个常量都需命名，且名称全大写" class="headerlink" title="每个常量都需命名，且名称全大写"></a>每个常量都需命名，且名称全大写</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="variable constant_">COL_NUM</span> = <span class="number">10</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="命名语义化"><a href="#命名语义化" class="headerlink" title="命名语义化"></a>命名语义化</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">const</span> userDetails = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// not good</span></span><br><span class="line"><span class="keyword">const</span> item = &#123;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="函数命名，采用加上动词前缀"><a href="#函数命名，采用加上动词前缀" class="headerlink" title="函数命名，采用加上动词前缀"></a>函数命名，采用加上动词前缀</h3><ul>
+<li>can 判断是否可执行某个动作</li>
+<li>has 判断是否含有某个值</li>
+<li>is 判断是否为某个值</li>
+<li>get 获取某个值</li>
+<li>set 设置某个值</li>
+</ul>
+<h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><h3 id="自定义组件名使用大驼峰"><a href="#自定义组件名使用大驼峰" class="headerlink" title="自定义组件名使用大驼峰"></a>自定义组件名使用大驼峰</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如：<span class="title class_">LeftBar</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="props尽量定义详细"><a href="#props尽量定义详细" class="headerlink" title="props尽量定义详细"></a>props尽量定义详细</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="attr">props</span>: &#123;</span><br><span class="line">  <span class="attr">status</span>: <span class="title class_">String</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// not good</span></span><br><span class="line"><span class="attr">props</span>: [<span class="string">&#x27;status&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="v-for-遍历必须添加-key（避免使用index作为key）"><a href="#v-for-遍历必须添加-key（避免使用index作为key）" class="headerlink" title="v-for 遍历必须添加 key（避免使用index作为key）"></a>v-for 遍历必须添加 key（避免使用index作为key）</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- good --&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">&quot;todo in todos&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;todo.id&quot;</span>&gt;</span>&#123;&#123; todo.text &#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;!-- not good --&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">&quot;todo in todos&quot;</span>&gt;</span>&#123;&#123; todo.text &#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="组件内样式设置作用域或添加顶级作用域"><a href="#组件内样式设置作用域或添加顶级作用域" class="headerlink" title="组件内样式设置作用域或添加顶级作用域"></a>组件内样式设置作用域或添加顶级作用域</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* good  */</span></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">.<span class="property">button</span>-close &#123;</span><br><span class="line">  background-<span class="attr">color</span>: #ccc;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span></span><br><span class="line"><span class="language-css"><span class="language-xml"><span class="selector-class">.homepage</span> &#123;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">    <span class="selector-class">.btn-close</span> &#123;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">        <span class="attribute">background-color</span>: <span class="number">#ccc</span>;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">    &#125;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">&#125;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* not good  */</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span></span><br><span class="line"><span class="language-css"><span class="language-xml"><span class="selector-class">.btn-close</span> &#123;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">  <span class="attribute">background-color</span>: <span class="number">#ccc</span>;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">&#125;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="代码片段"><a href="#代码片段" class="headerlink" title="代码片段"></a>代码片段</h2><h3 id="用字面量赋值"><a href="#用字面量赋值" class="headerlink" title="用字面量赋值"></a>用字面量赋值</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">const</span> userNames = [<span class="string">&#x27;Jerrry&#x27;</span>, <span class="string">&#x27;Tom&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// not good</span></span><br><span class="line"><span class="keyword">const</span> userNames = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="string">&#x27;Jerrry&#x27;</span>, <span class="string">&#x27;Tom&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="用扩展运算符做浅拷贝"><a href="#用扩展运算符做浅拷贝" class="headerlink" title="用扩展运算符做浅拷贝"></a>用扩展运算符做浅拷贝</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">const</span> userNames = [<span class="string">&#x27;Jerrry&#x27;</span>, <span class="string">&#x27;Tom&#x27;</span>]</span><br><span class="line"><span class="keyword">const</span> copyUserNames = [...userNames]</span><br><span class="line"></span><br><span class="line"><span class="comment">// not good</span></span><br><span class="line"><span class="keyword">const</span> userNames = [<span class="string">&#x27;Jerrry&#x27;</span>, <span class="string">&#x27;Tom&#x27;</span>]</span><br><span class="line"><span class="keyword">const</span> copyUserNames = []</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, len = userNames.<span class="property">length</span>; i &lt; len; i++) &#123;</span><br><span class="line">  copyUserNames[i] = userNames[i]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">const</span> sources = &#123;<span class="attr">name</span>: <span class="string">&#x27;Jerry&#x27;</span>, <span class="attr">age</span>: <span class="number">18</span>&#125;</span><br><span class="line"><span class="keyword">const</span> target = &#123;...sources, <span class="attr">sex</span>: <span class="string">&#x27;男&#x27;</span>&#125; <span class="comment">// 若sources中有sex字段，则会自动覆盖sources中的sex</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// not good</span></span><br><span class="line"><span class="keyword">const</span> sources = &#123;<span class="attr">name</span>: <span class="string">&#x27;Jerry&#x27;</span>, <span class="attr">age</span>: <span class="number">18</span>&#125;</span><br><span class="line"><span class="keyword">const</span> target = <span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;&#125;, sources, &#123; <span class="attr">sex</span>: <span class="string">&#x27;男&#x27;</span> &#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="使用解构赋值"><a href="#使用解构赋值" class="headerlink" title="使用解构赋值"></a>使用解构赋值</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">const</span> userNames = [<span class="string">&#x27;Jerrry&#x27;</span>, <span class="string">&#x27;Tom&#x27;</span>]</span><br><span class="line"><span class="keyword">const</span> [firstName, secondName] = userNames</span><br><span class="line"></span><br><span class="line"><span class="comment">// not good</span></span><br><span class="line"><span class="keyword">const</span> userNames = [<span class="string">&#x27;Jerrry&#x27;</span>, <span class="string">&#x27;Tom&#x27;</span>]</span><br><span class="line"><span class="keyword">const</span> firstName = userNames[<span class="number">0</span>]</span><br><span class="line"><span class="keyword">const</span> secondName = userNames[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">const</span> person = &#123;<span class="attr">name</span>: <span class="string">&#x27;Jerry&#x27;</span>, <span class="attr">age</span>: <span class="number">18</span>&#125;</span><br><span class="line"><span class="keyword">const</span> &#123;name, age&#125; = person</span><br><span class="line"><span class="comment">// 使用别名</span></span><br><span class="line"><span class="keyword">const</span> &#123;<span class="attr">name</span>: userName, <span class="attr">age</span>: userAge&#125; = person</span><br><span class="line"></span><br><span class="line"><span class="comment">// not good</span></span><br><span class="line"><span class="keyword">const</span> person = &#123;<span class="attr">name</span>: <span class="string">&#x27;Jerry&#x27;</span>, <span class="attr">age</span>: <span class="number">18</span>&#125;</span><br><span class="line"><span class="keyword">const</span> name = person.<span class="property">name</span></span><br><span class="line"><span class="keyword">const</span> age = person.<span class="property">age</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="对象使用属性缩写"><a href="#对象使用属性缩写" class="headerlink" title="对象使用属性缩写"></a>对象使用属性缩写</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">const</span> name = <span class="string">&#x27;Jerry&#x27;</span></span><br><span class="line"><span class="keyword">const</span> age = <span class="number">18</span></span><br><span class="line"><span class="keyword">const</span> person = &#123;name, age, <span class="attr">sex</span>:<span class="string">&#x27;男&#x27;</span>&#125; <span class="comment">// 属性缩写放置在前面</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// not good</span></span><br><span class="line"><span class="keyword">const</span> name = <span class="string">&#x27;Jerry&#x27;</span></span><br><span class="line"><span class="keyword">const</span> age = <span class="number">18</span></span><br><span class="line"><span class="keyword">const</span> person = &#123;<span class="attr">name</span>: name, <span class="attr">age</span>: age&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="函数参数使用默认值"><a href="#函数参数使用默认值" class="headerlink" title="函数参数使用默认值"></a>函数参数使用默认值</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">createPerson</span>(<span class="params">name = <span class="string">&#x27;Jack&#x27;</span></span>) &#123;</span><br><span class="line">   ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// not good</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">createPerson</span>(<span class="params">name</span>) &#123;</span><br><span class="line">  name = name || <span class="string">&#x27;Jack&#x27;</span></span><br><span class="line">   ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="函数参数超过两个时使用对象结构"><a href="#函数参数超过两个时使用对象结构" class="headerlink" title="函数参数超过两个时使用对象结构"></a>函数参数超过两个时使用对象结构</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">createDialog</span>(<span class="params">&#123;title, body, buttonText, cancelText&#125;</span>) &#123;</span><br><span class="line">   ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">createDialog</span>(&#123;</span><br><span class="line">  <span class="attr">title</span>: <span class="string">&#x27;确认弹窗&#x27;</span>,</span><br><span class="line">  <span class="attr">body</span>: <span class="string">&#x27;是否确认删除？&#x27;</span>,</span><br><span class="line">  <span class="attr">buttonText</span>: <span class="string">&#x27;确认&#x27;</span>,</span><br><span class="line">  <span class="attr">cancelText</span>: <span class="string">&#x27;取消&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// not good</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">createDialog</span>(<span class="params">title, body, buttonText, cancelText</span>) &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="for循环，数组的长度，使用一个变量来接收"><a href="#for循环，数组的长度，使用一个变量来接收" class="headerlink" title="for循环，数组的长度，使用一个变量来接收"></a>for循环，数组的长度，使用一个变量来接收</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// good</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; len = arr.<span class="property">length</span>; i &lt; len; i++)&#123;</span><br><span class="line">        ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// not good</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++)&#123;</span><br><span class="line">        ...</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 该方式的缺点在于当循环次数较多时，循环条件i &lt; arr.length会多次arr.length造成性能损耗</span></span><br></pre></td></tr></table></figure>
+
+
+    
+  </article>
+</div>
+
+
+    
+
+
+
+
+</div>
+
+<div class="footer-wrapper container">
+  <footer class="footer clearfix">
+    <div class="clearfix">
+    <a href="https://alan89757.github.io" class="footer-logo">
+      <i class="fa fa-github"></i>
+    </a>
+    <ul class="footer-social-link">
+      <li>© 2023 Alan</li>
+      <li><a href="https://alan89757.github.io">Home</a></li>
+      
+      <li><a target="_blank" rel="noopener" href="https://github.com/alan89757">Github</a></li>
+      
+    </ul>
+    <!-- <div class="footer-theme-info">
+      Theme <a target="_blank" rel="noopener" href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
+      by <a target="_blank" rel="noopener" href="//github.com/sabrinaluo">Alan</a> ❤ Powered by Hexo
+    </div> -->
+    </div>
+    
+  </footer>
+</div>
+
+
+<script>
+  (function() {
+    var cx = 'true';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+
+
+<script src="/blog/js/main.js"></script>
+
+</body>
+</html>

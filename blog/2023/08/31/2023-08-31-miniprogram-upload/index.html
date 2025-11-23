@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>
+    (微信/抖音/百度)小程序自动上传 | Alan的个人学习曲线
+  </title>
+  <meta name="description" content="">
+  
+  <meta name="keywords" content="
+  wechat
+  ">
+  
+  <meta name="author" content="Alan">
+
+  <meta http-equiv="Cache-Control" content="no-transform"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="theme-color" content="#1e2327">
+  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
+  <link rel="stylesheet" href="/blog/css/main.css">
+  <!-- <link rel="stylesheet"
+        href="/blog/css/font-awesome.min.css"> -->
+  
+
+  
+
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="http://localhost:4000/js/moment.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script> -->
+  <script src="/blog/js/vue.min.js"></script>
+  <script src="/blog/js/moment.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body id="replica-app">
+
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <div class="container clearfix">
+      <a href="/blog/" class="navbar-logo"><i class="fa fa-github"></i></a>
+
+      <div class="navbar-search float-left desktop-only">
+        <div class="navbar-search-form">
+          <label for="gsc-i-id1">站内搜索</label>
+          <div id="google-search">
+            <gcse:search></gcse:search>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav float-left">
+        
+        <li><a href="/blog/archives">Archives</a></li>
+        
+        
+        <li><a href="/blog/categories">Categories</a></li>
+        
+        
+        <li><a href="/blog/tags">Tags</a></li>
+        
+        
+        <!-- <li class="desktop-only"><a href="/blog/atom.xml" target="_blank">RSS</a></li> -->
+        
+      </ul>
+
+      <ul class="navbar-nav user-nav float-right desktop-only">
+        <li class="user-nav-notification">
+          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li class="user-nav-logo">
+          <a><img src="/blog/images/baracktocat.png"> <i class="fa fa-caret-down"></i></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+  <header class="header-wrapper desktop-only">
+  <div class="container header-site-detail">
+    <ul class="header-toolbar">
+      <li class="clearfix">
+        <a href="/blog/archives" class="header-toolbar-left"><i
+                  class="fa fa-file-text"></i> Posts </a>
+        <a href="/blog/archives"
+           class="header-toolbar-right"> 52 </a>
+      </li>
+      <li>
+        <a href="/blog/tags" class="header-toolbar-left"><i
+                  class="fa fa-tags"></i> Tags </a>
+        <a href="/blog/tags"
+           class="header-toolbar-right"> 60 </a>
+      </li>
+      <li>
+        <a href="/blog/categories" class="header-toolbar-left"><i
+                  class="fa fa-folder-open"></i> Categories </a>
+        <a href="/blog/categories"
+           class="header-toolbar-right"> 22 </a>
+      </li>
+    </ul>
+    <h2 class="header-title">
+      <i class="fa fa-book text-muted"></i>
+      <a href="/blog/">Alan的个人学习曲线</a>
+      
+      
+    </h2>
+  </div>
+
+  <!-- <div class="container">
+    <div class="header-tab-wrapper clearfix">
+      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
+      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
+      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
+      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
+      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
+    </div>
+  </div> -->
+</header>
+
+
+<div class="post-container container">
+  <h3>
+    <i class="fa fa-user-o"></i>
+    Alan
+
+    <span class="post-date float-right" title="{{moment(1693411200000).format('MMM DD, YYYY, h:mm:ss A')}}">
+      
+          <i class="fa fa-pencil-square-o"></i>
+      
+      {{moment(1693411200000).fromNow()}}
+    </span>
+  </h3>
+
+  <article class="post-content">
+    <h1>(微信/抖音/百度)小程序自动上传</h1>
+    
+      <p>应用场景：微信小程序上传体验版&#x2F;生成开发版就离不开微信开发者工具，最开始是依赖于人手动上传按钮，后面微信开发了命令行上传接口。</p>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>miniprogram-ci 是从微信开发者工具中抽离的关于小程序&#x2F;小游戏项目代码的编译模块。<br>开发者可不打开小程序开发者工具，独立使用 miniprogram-ci 进行小程序代码的上传、预览等操作。</p>
+<p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/ci.html">CI官网地址</a></p>
+<h2 id="微信小程序"><a href="#微信小程序" class="headerlink" title="微信小程序"></a>微信小程序</h2><h3 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// package.json</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;upload:mp-weixin&quot;</span>: <span class="string">&quot;cross-env version=1.2.11 desc=课程页详情优化 node ./upload/ztb.upload.js&quot;</span>,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置上传文件"><a href="#配置上传文件" class="headerlink" title="配置上传文件"></a>配置上传文件</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mp-weixin.upload.js</span></span><br><span class="line"><span class="comment">/*eslint no-undef: &quot;error&quot;*/</span></span><br><span class="line"><span class="comment">/*eslint-env node*/</span></span><br><span class="line"><span class="keyword">const</span> miniprogramCI = <span class="built_in">require</span>(<span class="string">&#x27;miniprogram-ci&#x27;</span>);</span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">bootstrap</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> cwd = process.<span class="title function_">cwd</span>();</span><br><span class="line">  <span class="keyword">const</span> miniprogramProject = <span class="keyword">new</span> miniprogramCI.<span class="title class_">Project</span>(&#123;</span><br><span class="line">    <span class="attr">appid</span>: <span class="string">&#x27;xxxxxx&#x27;</span>,  <span class="comment">// 微信小程序ID</span></span><br><span class="line">    <span class="attr">type</span>: <span class="string">&#x27;miniProgram&#x27;</span>,</span><br><span class="line">    <span class="attr">projectPath</span>: <span class="string">`<span class="subst">$&#123;cwd&#125;</span>/dist/build/mp-weixin`</span>,</span><br><span class="line">    <span class="comment">// 开发者管理-&gt;开发设置-&gt;小程序代码上传密钥	(不记得了就重新生成)</span></span><br><span class="line">    <span class="attr">privateKeyPath</span>: <span class="string">`<span class="subst">$&#123;cwd&#125;</span>/upload/privatekeys/private.xxxxxx.key`</span>,</span><br><span class="line">    <span class="attr">ignores</span>: [<span class="string">&#x27;node_modules/**/*&#x27;</span>],</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">const</span> uploadResult = <span class="keyword">await</span> miniprogramCI.<span class="title function_">upload</span>(&#123;</span><br><span class="line">    <span class="attr">project</span>: miniprogramProject,</span><br><span class="line">    <span class="attr">version</span>: process.<span class="property">env</span>.<span class="property">npm_package_version</span> ?? <span class="string">&#x27;1.0.0&#x27;</span>,</span><br><span class="line">    <span class="attr">desc</span>: process.<span class="property">env</span>.<span class="property">npm_package_description</span> ?? <span class="string">&#x27;xxx&#x27;</span>,</span><br><span class="line">    <span class="attr">setting</span>: &#123;</span><br><span class="line">      <span class="attr">es6</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">es7</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// onProgressUpdate: console.log</span></span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(uploadResult);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">bootstrap</span>();</span><br></pre></td></tr></table></figure>
+
+<p><img src="/blog/2023/08/31/2023-08-31-miniprogram-upload/1.png" alt="图片"></p>
+<h2 id="抖音小程序"><a href="#抖音小程序" class="headerlink" title="抖音小程序"></a>抖音小程序</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; spawnSync &#125; = <span class="built_in">require</span>(<span class="string">&#x27;child_process&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置小程序项目路径</span></span><br><span class="line"><span class="keyword">const</span> projectPath = path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;path/to/your/project&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置命令参数</span></span><br><span class="line"><span class="keyword">const</span> command = <span class="string">&#x27;cli&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> args = [</span><br><span class="line">  <span class="string">&#x27;upload&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;--project&#x27;</span>,</span><br><span class="line">  projectPath,</span><br><span class="line">  <span class="string">&#x27;--upload-files&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;**&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;--open&#x27;</span>,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 执行命令</span></span><br><span class="line"><span class="keyword">const</span> result = <span class="title function_">spawnSync</span>(command, args);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (result.<span class="property">status</span> === <span class="number">0</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;代码上传成功&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;代码上传失败&#x27;</span>);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">error</span>(result.<span class="property">stderr</span>.<span class="title function_">toString</span>());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="百度小程序"><a href="#百度小程序" class="headerlink" title="百度小程序"></a>百度小程序</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mp-baidu.upload.js</span></span><br><span class="line"><span class="keyword">const</span> &#123; spawnSync &#125; = <span class="built_in">require</span>(<span class="string">&#x27;child_process&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置小程序项目路径</span></span><br><span class="line"><span class="keyword">const</span> projectPath = path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;path/to/your/project&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置命令参数</span></span><br><span class="line"><span class="keyword">const</span> command = <span class="string">&#x27;cli&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> args = [</span><br><span class="line">  <span class="string">&#x27;upload&#x27;</span>,</span><br><span class="line">  projectPath,</span><br><span class="line">  <span class="string">&#x27;--upload-info&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;&#123;&quot;app_id&quot;: &quot;your_appid&quot;, &quot;type&quot;: 0&#125;&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;--auto&#x27;</span>,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 执行命令</span></span><br><span class="line"><span class="keyword">const</span> result = <span class="title function_">spawnSync</span>(command, args);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (result.<span class="property">status</span> === <span class="number">0</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;代码上传成功&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;代码上传失败&#x27;</span>);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">error</span>(result.<span class="property">stderr</span>.<span class="title function_">toString</span>());</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="uni-app实现分身"><a href="#uni-app实现分身" class="headerlink" title="uni-app实现分身"></a>uni-app实现分身</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ----- package.json ----------- </span></span><br><span class="line"><span class="comment">// 自定义构建后输出目录，uni-app不支持修改vue.config.js的outputDir选项</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">     <span class="string">&quot;build:mp-weixin&quot;</span>: <span class="string">&quot;cross-env UNI_OUTPUT_DIR=dist/custom-directory NODE_ENV=production UNI_PLATFORM=mp-weixin vue-cli-service uni-build&quot;</span>,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vue.config.js</span></span><br><span class="line"><span class="comment">// 读取 manifest.json ，修改后重新写入</span></span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> manifestPath = <span class="string">&#x27;./src/manifest.json&#x27;</span></span><br><span class="line"><span class="keyword">let</span> <span class="title class_">Manifest</span> = fs.<span class="title function_">readFileSync</span>(manifestPath, &#123; <span class="attr">encoding</span>: <span class="string">&#x27;utf-8&#x27;</span> &#125;)</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">replaceManifest</span>(<span class="params">path, value</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> arr = path.<span class="title function_">split</span>(<span class="string">&#x27;.&#x27;</span>)</span><br><span class="line">  <span class="keyword">const</span> len = arr.<span class="property">length</span></span><br><span class="line">  <span class="keyword">const</span> lastItem = arr[len - <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> i = <span class="number">0</span></span><br><span class="line">  <span class="keyword">let</span> <span class="title class_">ManifestArr</span> = <span class="title class_">Manifest</span>.<span class="title function_">split</span>(<span class="regexp">/\n/</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> index = <span class="number">0</span>; index &lt; <span class="title class_">ManifestArr</span>.<span class="property">length</span>; index++) &#123;</span><br><span class="line">    <span class="keyword">const</span> item = <span class="title class_">ManifestArr</span>[index]</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">new</span> <span class="title class_">RegExp</span>(<span class="string">`&quot;<span class="subst">$&#123;arr[i]&#125;</span>&quot;`</span>).<span class="title function_">test</span>(item)) ++i;</span><br><span class="line">    <span class="keyword">if</span> (i === len) &#123;</span><br><span class="line">      <span class="keyword">const</span> hasComma = <span class="regexp">/,/</span>.<span class="title function_">test</span>(item)</span><br><span class="line">      <span class="title class_">ManifestArr</span>[index] = item.<span class="title function_">replace</span>(<span class="keyword">new</span> <span class="title class_">RegExp</span>(<span class="string">`&quot;<span class="subst">$&#123;lastItem&#125;</span>&quot;[\\s\\S]*:[\\s\\S]*`</span>), <span class="string">`&quot;<span class="subst">$&#123;lastItem&#125;</span>&quot;: <span class="subst">$&#123;value&#125;</span><span class="subst">$&#123;hasComma ? <span class="string">&#x27;,&#x27;</span> : <span class="string">&#x27;&#x27;</span>&#125;</span>`</span>)</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title class_">Manifest</span> = <span class="title class_">ManifestArr</span>.<span class="title function_">join</span>(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 使用</span></span><br><span class="line"><span class="title function_">replaceManifest</span>(<span class="string">&#x27;app-plus.usingComponents&#x27;</span>, <span class="literal">false</span>)</span><br><span class="line"><span class="title function_">replaceManifest</span>(<span class="string">&#x27;app-plus.splashscreen.alwaysShowBeforeRender&#x27;</span>, <span class="literal">false</span>)</span><br><span class="line"><span class="title function_">replaceManifest</span>(<span class="string">&#x27;mp-baidu.usingComponents&#x27;</span>, <span class="literal">false</span>)</span><br><span class="line">fs.<span class="title function_">writeFileSync</span>(manifestPath, <span class="title class_">Manifest</span>, &#123;</span><br><span class="line">  <span class="string">&quot;flag&quot;</span>: <span class="string">&quot;w&quot;</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">	<span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+    
+  </article>
+</div>
+
+
+    
+
+
+
+
+</div>
+
+<div class="footer-wrapper container">
+  <footer class="footer clearfix">
+    <div class="clearfix">
+    <a href="https://alan89757.github.io" class="footer-logo">
+      <i class="fa fa-github"></i>
+    </a>
+    <ul class="footer-social-link">
+      <li>© 2023 Alan</li>
+      <li><a href="https://alan89757.github.io">Home</a></li>
+      
+      <li><a target="_blank" rel="noopener" href="https://github.com/alan89757">Github</a></li>
+      
+    </ul>
+    <!-- <div class="footer-theme-info">
+      Theme <a target="_blank" rel="noopener" href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
+      by <a target="_blank" rel="noopener" href="//github.com/sabrinaluo">Alan</a> ❤ Powered by Hexo
+    </div> -->
+    </div>
+    
+  </footer>
+</div>
+
+
+<script>
+  (function() {
+    var cx = 'true';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+
+
+<script src="/blog/js/main.js"></script>
+
+</body>
+</html>

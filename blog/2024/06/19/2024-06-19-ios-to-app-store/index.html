@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>
+    React Native上架APP Store | Alan的个人学习曲线
+  </title>
+  <meta name="description" content="">
+  
+  <meta name="keywords" content="
+  ios,app store
+  ">
+  
+  <meta name="author" content="Alan">
+
+  <meta http-equiv="Cache-Control" content="no-transform"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="theme-color" content="#1e2327">
+  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
+  <link rel="stylesheet" href="/blog/css/main.css">
+  <!-- <link rel="stylesheet"
+        href="/blog/css/font-awesome.min.css"> -->
+  
+
+  
+
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="http://localhost:4000/js/moment.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script> -->
+  <script src="/blog/js/vue.min.js"></script>
+  <script src="/blog/js/moment.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body id="replica-app">
+
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <div class="container clearfix">
+      <a href="/blog/" class="navbar-logo"><i class="fa fa-github"></i></a>
+
+      <div class="navbar-search float-left desktop-only">
+        <div class="navbar-search-form">
+          <label for="gsc-i-id1">站内搜索</label>
+          <div id="google-search">
+            <gcse:search></gcse:search>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav float-left">
+        
+        <li><a href="/blog/archives">Archives</a></li>
+        
+        
+        <li><a href="/blog/categories">Categories</a></li>
+        
+        
+        <li><a href="/blog/tags">Tags</a></li>
+        
+        
+        <!-- <li class="desktop-only"><a href="/blog/atom.xml" target="_blank">RSS</a></li> -->
+        
+      </ul>
+
+      <ul class="navbar-nav user-nav float-right desktop-only">
+        <li class="user-nav-notification">
+          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li class="user-nav-logo">
+          <a><img src="/blog/images/baracktocat.png"> <i class="fa fa-caret-down"></i></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+  <header class="header-wrapper desktop-only">
+  <div class="container header-site-detail">
+    <ul class="header-toolbar">
+      <li class="clearfix">
+        <a href="/blog/archives" class="header-toolbar-left"><i
+                  class="fa fa-file-text"></i> Posts </a>
+        <a href="/blog/archives"
+           class="header-toolbar-right"> 52 </a>
+      </li>
+      <li>
+        <a href="/blog/tags" class="header-toolbar-left"><i
+                  class="fa fa-tags"></i> Tags </a>
+        <a href="/blog/tags"
+           class="header-toolbar-right"> 60 </a>
+      </li>
+      <li>
+        <a href="/blog/categories" class="header-toolbar-left"><i
+                  class="fa fa-folder-open"></i> Categories </a>
+        <a href="/blog/categories"
+           class="header-toolbar-right"> 22 </a>
+      </li>
+    </ul>
+    <h2 class="header-title">
+      <i class="fa fa-book text-muted"></i>
+      <a href="/blog/">Alan的个人学习曲线</a>
+      
+      
+    </h2>
+  </div>
+
+  <!-- <div class="container">
+    <div class="header-tab-wrapper clearfix">
+      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
+      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
+      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
+      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
+      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
+    </div>
+  </div> -->
+</header>
+
+
+<div class="post-container container">
+  <h3>
+    <i class="fa fa-user-o"></i>
+    Alan
+
+    <span class="post-date float-right" title="{{moment(1718726400000).format('MMM DD, YYYY, h:mm:ss A')}}">
+      
+          <i class="fa fa-pencil-square-o"></i>
+      
+      {{moment(1718726400000).fromNow()}}
+    </span>
+  </h3>
+
+  <article class="post-content">
+    <h1>React Native上架APP Store</h1>
+    
+      <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>macOS 14.15.7</p>
+<p>React Native 0.66.5</p>
+<p>Xcode Version 14.5</p>
+<p>vscode 1.89.1</p>
+<h2 id="苹果开发者配置"><a href="#苹果开发者配置" class="headerlink" title="苹果开发者配置"></a>苹果开发者配置</h2><p><a target="_blank" rel="noopener" href="https://developer.apple.com/account">developer.apple.com</a> 点击“Account”栏目<br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/1.webp" alt="图片"></p>
+<p>如果该App需要多人协作开发，请进入People进入人员编辑。注意负责上架AppStore的人员需要有管理级别的权限</p>
+<p>然后点击 Certificates, Identifiers &amp; Profiles 图标</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/2.webp" alt="图片"></p>
+<h3 id="Certificates-证书"><a href="#Certificates-证书" class="headerlink" title="Certificates: 证书"></a>Certificates: 证书</h3><p>Certificates作用是为Mac电脑提供开发能力，具有Certificates的Mac电脑能够真机调试、打包、上架APP到app store。<br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/3.webp" alt="图片"></p>
+<h4 id="Certificates有两种环境：开发-Development-环境和生产-Distribution-环境。-Certificates还有两种类型：Software-和-Services。"><a href="#Certificates有两种环境：开发-Development-环境和生产-Distribution-环境。-Certificates还有两种类型：Software-和-Services。" class="headerlink" title="Certificates有两种环境：开发(Development)环境和生产(Distribution)环境。 Certificates还有两种类型：Software 和 Services。"></a>Certificates有两种环境：开发(Development)环境和生产(Distribution)环境。 Certificates还有两种类型：Software 和 Services。</h4><p>可以理解为：<br>(1).开发环境(Development)：直接用Xcode调试debug就属于开发环境，在模拟器上debug是不需要Certificates的。但是在真机上调试运行就需要Certificates开发证书，发布到APP Store 需要 Certificates 生产证书。</p>
+<p>(2).生产环境(Distribution)：上架app store，打包生成ipa包等都属于生产环境。只要是通过Archive生成都都是属于生产环境。</p>
+<p>(3). Software: 使mac具有相应的开发和发布能力，一台Mac只需要建立一套即可。</p>
+<p>(4). Services: Apple提供的额外服务，最常见的就是消息推送服务，会针对不同的App建立不同的Services Certificates，毕竟每个app需要的Services不同。</p>
+<p><em>针对Software部分需要注意：</em></p>
+<ol>
+<li>Certificates是对Mac电脑有效的，是根据Mac的CSR请求证书创建的，而不是对app，所以Certificates的开发(Development)证书和发布(Distribution)证书是有数量限制的。超过数量就不能再创建了，除非删除已有的证书。</li>
+<li>只要你这个Mac电脑拥有了Certificates证书，就能用申请Certificates的账号在这个Mac上开发多个app而不需要再重新申请Certificates。所以正确操作是，对一个Mac电脑，只需要申请一套Certificates就好了，在创建第二个第三app时不需要再去创建一套Certificates。</li>
+<li>Services的证书是需要另外创建的，而且没有数量限制，但是还是建议只用一台Mac创建就好，他人合作导出.p12文件给对方Mac安装即可。</li>
+<li>Software和Services都是和Mac绑定的：<br>  Certificates是和Mac绑定的，不能直接copy给其他Mac使用，但是Certificates可以导出.p12给其他Mac电脑用的，导出的.p12同样具有测试打包和发布的能力。如果多人协同开发，第二个Mac也是不需要再去申请一套Certificates的。用他人Mac电脑上Certificates导出的.p12文件安装上即可。</li>
+</ol>
+<h3 id="Certificates：证书"><a href="#Certificates：证书" class="headerlink" title="Certificates：证书"></a>Certificates：证书</h3><h4 id="1-通过Mac钥匙串管理工具生成CSR请求文件，用于申请Certificates，与Certificates绑定"><a href="#1-通过Mac钥匙串管理工具生成CSR请求文件，用于申请Certificates，与Certificates绑定" class="headerlink" title="(1) 通过Mac钥匙串管理工具生成CSR请求文件，用于申请Certificates，与Certificates绑定"></a>(1) 通过Mac钥匙串管理工具生成CSR请求文件，用于申请Certificates，与Certificates绑定</h4><p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/4.webp" alt="图片"><br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/5.webp" alt="图片"></p>
+<p>这里需要注意，不要选中证书列表中的某个证书，否则菜单就不是这个。</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/6.webp" alt="图片"><br>邮箱地址填一个，选择存储到磁盘，会正常一个.certSigningRequest文件，重命名一下，便于识别。</p>
+<h4 id="2-申请开发Development证书"><a href="#2-申请开发Development证书" class="headerlink" title="(2) 申请开发Development证书"></a>(2) 申请开发Development证书</h4><p>先创建software部分，再创建推送证书部分。<br>选择iOS Development ，创建iOS Development 开发证书。Xcode11以上可以创建Apple Development 证书.</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/7.webp" alt="图片"><br>continue 下一步</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/8.webp" alt="图片"></p>
+<p>选择刚刚的证书文件，</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/9.webp" alt="图片"><br>下载下来，名称是 development.cer, 如果是选择了iOS App Development 证书则名称是 ios_development.cer,最好改一下名称，方便识别。<br>然后双击按钮，打开钥匙串管理工具，在我的证书 就能看到安装了，需要注意的是现实的名称 不是文件名，是你开发者账号的个人team名称，里面的秘钥名称就是你刚刚填写的名称</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/9_2.webp" alt="图片"><br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/10.webp" alt="图片"></p>
+<h4 id="3-申请iOS-Distribution-App-Store-and-Ad-Hoc-生产证书"><a href="#3-申请iOS-Distribution-App-Store-and-Ad-Hoc-生产证书" class="headerlink" title="(3) 申请iOS Distribution (App Store and Ad Hoc)生产证书"></a>(3) 申请iOS Distribution (App Store and Ad Hoc)生产证书</h4><p>方法与上面一样，只是选择的时候选iOS Distribution (App Store and Ad Hoc)类型</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/11.webp" alt="图片"></p>
+<p>然后上传CSR文件，Register，Download， 该名称。</p>
+<h4 id="4-推送证书申请"><a href="#4-推送证书申请" class="headerlink" title="(4) 推送证书申请"></a>(4) 推送证书申请</h4><p>推送证书的申请与第二部分是一样的，只是中间会让选择证书绑定的App id。(这里需要先创建Identifiers，查看步骤2.Identifiers：App 身份证)<br>同样，需要申请Development和Distribution两种环境。</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/12.webp" alt="图片"><br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/13.webp" alt="图片"></p>
+<p>选择Mac钥匙串工具导出的.certSigningRequest文件，与这台Mac绑定。</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/14.webp" alt="图片"></p>
+<h3 id="Identifiers-App-id"><a href="#Identifiers-App-id" class="headerlink" title="Identifiers App id"></a>Identifiers App id</h3><p>iOS每个APP都有自己唯一的身份证（Identifiers）。app的身份证就在这里申请，也就是app的唯一标识。<br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/15.webp" alt="图片"><br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/16.webp" alt="图片"><br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/17.webp" alt="图片"><br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/18.webp" alt="图片"><br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/19.webp" alt="图片"><br>填写app描述，和Bundle ID<br>关于Bundle ID：十分重要的东西，可以理解为app的身份证号码。所有app都是唯一的。为了避免重复和辨识，一般都采用反域名的格式+app名称。<br>如图所示。这里一经申请变无法更改，在每个项目建立时就应该事先定义好app的Bundle ID。Bundle ID除了这里申请app需要用到以外，在申请第三方服务：如微信登陆、友盟推送、google服务等等都需要使用到Bundle ID与你的app绑定。所以，Bundle ID非常重要。<br>一般，我们会采用Explicit（明确的）Bundle ID标识，而不会采用Wildcard（通配符）来定义Bundle ID。<br>如果采用了，会导致推送这部分是没用的。<br>然后Register，回到 identifiers列表页可以看到刚刚创建的。</p>
+<h3 id="Devices-设备列表"><a href="#Devices-设备列表" class="headerlink" title="Devices:设备列表"></a>Devices:设备列表</h3><p>app的每个设备都有唯一的udid。将udid加入到Devices列表后，这些设备具有debug测试和ad hoc安装能力。<br>反正，需要测试的iPhone，iPad都需要加入到这个列表里面。<br>Devices设备列表是针对开发者账号，所以也只需要添加一次。<br>如何查看设备的udid。有很多方法</p>
+<h4 id="3-1-Xcode查看（开发者查看自己的）"><a href="#3-1-Xcode查看（开发者查看自己的）" class="headerlink" title="3.1. Xcode查看（开发者查看自己的）"></a>3.1. Xcode查看（开发者查看自己的）</h4><p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/20.webp" alt="图片"><br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/21.webp" alt="图片"></p>
+<h4 id="3-2-用蒲公英-www-pgyer-com-tools-udid"><a href="#3-2-用蒲公英-www-pgyer-com-tools-udid" class="headerlink" title="3.2.用蒲公英 www.pgyer.com/tools/udid"></a>3.2.用蒲公英 <a target="_blank" rel="noopener" href="http://www.pgyer.com/tools/udid">www.pgyer.com/tools/udid</a></h4><p>添加设备列表<br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/22.webp" alt="图片"><br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/23.webp" alt="图片"></p>
+<h3 id="Profiles-描述文件"><a href="#Profiles-描述文件" class="headerlink" title="Profiles:描述文件"></a>Profiles:描述文件</h3><p>描述文件Profiles将team、Identifiers、Certificates、Devices等信息联系起来。<br>Profiles同样分为两种环境：开发(Development)环境和发布(Distribution)环境，不同的环境需建立不同的描述文件Profiles。<br>描述文件是这对app绑定的，所以每个APP都会建立相应的一套描述文件。但是描述文件可copy给其他Mac使用，但是对于的Mac需要安装相应的Certificates导出的.p12文件。</p>
+<p>创建描述文件</p>
+<p>将上面创建的所有信息联系起来，供xcode使用。<br>同样分别创建Development和Distribution两种环境的描述文件</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/24.webp" alt="图片"><br>选择App ID</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/25.webp" alt="图片"></p>
+<p>选择对应的 certificates证书，开发对应开发，生产对应生产，注意是当前项目的证书，不要选择其他项目的证书。</p>
+<p>开发环境和Ad Hoc需要选择需要测试的Devices设备，选中的Devices才具有测试和安装能力。全选即可。</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/26.webp" alt="图片"><br>然后下载，重命名。描述文件不需要安装</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/27.webp" alt="图片"><br>至此所有准备的证书和描述文件都创建完毕。</p>
+<h3 id="5-Xcode配置"><a href="#5-Xcode配置" class="headerlink" title="5. Xcode配置"></a>5. Xcode配置</h3><p>(1).登录Xcode开发者账号，这一步容易忘记，特别是新的苹果账号，当然也可以到里面选择证书再配置 </p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/28.webp" alt="图片"><br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/29.webp" alt="图片"><br>(2).配置证书及签名<br>首先需要取消Automatically manage signing。否则是XCode自动管理证书，会自动创建证书和bundle id等。这样会不利于证书管理。我这里就采坑了，导致自动安装了其他的证书，导致生产证书# Xcode Signing certificate is invalid when build on ext device 只好到钥匙串中删除，刚刚自动按钮的证书，退出Xcode,重新打开就可以了。<br>配置profile描述文件，需要为debug和release两种环境分别配置描述文件。选择3.6章节里创建的对应的描述文件，debug对应development， release对应Distribution。</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/30.webp" alt="图片"><br>provisonint Profile 文件选择，开发对应着开发，生产对应着生产。</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/31.webp" alt="图片"></p>
+<p>此处可能会有个小坑，与钥匙串安装的cer 不对应，Buuld Settings 重新选择一下就可以了</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/32.webp" alt="图片"><br>调试 一个是模拟器调试 一个真机调试(数据线连上苹果手机)</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/33.webp" alt="图片"></p>
+<h3 id="App-Connect-注册APP"><a href="#App-Connect-注册APP" class="headerlink" title="App Connect 注册APP"></a>App Connect 注册APP</h3><p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/34.webp" alt="图片"><br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/35.webp" alt="图片"><br>套装ID 就是申请的indentifiers，选择</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/36.webp" alt="图片"><br>填写App资料，需要注意几点：<br>APP图标时,图标中不能包含alpha通道或者透明度；LanchImage的图片格式只能是png格式，jpg格式Xcode无法加载成功；填写联系人的时候，需要加区号，比如中国 需要+86；App预览与截屏图片，需要6.5英寸和5.5英寸就行，UI设计图的时候：5.5英寸 1242 × 2208 ； 6.5英寸 1242 × 2688</p>
+<h3 id="多人协作开发证书管理"><a href="#多人协作开发证书管理" class="headerlink" title="多人协作开发证书管理"></a>多人协作开发证书管理</h3><p>(1).多台Mac运行相同iOS项目。<br>是与生成csr的mac电脑绑定的，其他的Mac 电脑无法安装，这样其他的Mac电脑就无法真机测试打包这个iOS项目了。<br>但是，我们可以在钥匙串中导出.p12文件给其他的Mac安装，安装后这台Mac也具有同样打包测试发布能了。<br>开发需要导入developer证书，发布需要导出Distribution证书。<br>选择对应的证书，导出</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/37.webp" alt="图片"></p>
+<p>最好重新命名方便识别。<br>.p12文件其实就加密的.cer证书。可以copy给其他Mac安装。<br>第二台Mac安装.p12后，进行第四章的XCode配置后即可具有开发、测试、发布iOS的能力<br>(2).多人多台Mac开发相同ios项目<br>如果不方便把开发者账号和密码给其他人用，需要把对应开发人员加入到 开发者成员中。</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/38.webp" alt="图片"><br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/39.webp" alt="图片"><br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/40.webp" alt="图片"><br>随后新用户会收到一封邀请邮件，同意后即会加入开发者计划中。新用户登陆苹果开发者中心，会看到自己加入的team</p>
+<p>新用户用刚刚导出p12文件在Xcode上配置就可以协同开发ios项目。</p>
+<h3 id="APP打包上架"><a href="#APP打包上架" class="headerlink" title="APP打包上架"></a>APP打包上架</h3><p>(1)打包并上传IPA包 首先确保证书正确、profile描述文件正确。<br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/41.webp" alt="图片"></p>
+<p>需要注意的是build构建号 每次都是唯一的，version为版本号，多个版本号可以属于同一个version，<br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/42.webp" alt="图片"></p>
+<p>flutter项目可以顺便 改pubspec.yaml文件 version字段 如：1.0.0+1，对应ios的版本更改</p>
+<p>设备选择：<br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/43.webp" alt="图片"></p>
+<p>flutter项目需要注意：需要执行 flutter build ios –release –no-codesign，需要注意的是是在flutter外层目录路径下执行，而不是ios目录路径，(我习惯在vscode中跑命令)<br>Product -&gt; Archive：</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/44.webp" alt="图片"><br>直接Distribute App （如果不放心可以先Validate App）</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/45.webp" alt="图片"></p>
+<p>进入Select a method of distribution（打包方式选择）界面：<br>App Store：App Store上架包用<br>Ad hoc：发布测试包用,如蒲公英发布<br>Enterprise：企业包用<br>Development：开发包用<br>根据自己的证书和描述文件选择，在这里选择App Store，点击Next</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/46.webp" alt="图片"></p>
+<p>Select a destination : 选择是直接上传还是导出，直接上传就可以<br>Select certificate and iOS App Store profile: 之前创建的描述文件<br>然后等待上传<br>上传成功之后，需要进入 App Store Connect, 看到</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/47.webp" alt="图片"></p>
+<p>看到刚刚提交的版本，然后点击App Store ,如果第一次发版，直接在 “构建版本” 选择对应的版本文件，如果是已经上架成功，需要更新版本</p>
+<p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/48.webp" alt="图片"></p>
+<p>填写完整的信息，提交审核。</p>
+<h3 id="TestFlight添加测试人员"><a href="#TestFlight添加测试人员" class="headerlink" title="TestFlight添加测试人员"></a>TestFlight添加测试人员</h3><p><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/51.jpg" alt="图片"><br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/52.jpg" alt="图片"><br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/53.jpg" alt="图片"></p>
+<h3 id="上架签名"><a href="#上架签名" class="headerlink" title="上架签名"></a>上架签名</h3><p>参考文档：<a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/icp-filing/basic-icp-service/user-guide/fill-in-app-feature-information">填写App特征信息</a><br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/54.png" alt="图片"><br><img src="/blog/2024/06/19/2024-06-19-ios-to-app-store/55.png" alt="图片"></p>
+<h4 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h4><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7063065083408023565">最新上架App Store 全流程</a><br><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/icp-filing/basic-icp-service/user-guide/fill-in-app-feature-information">填写App特征信息</a></p>
+
+    
+  </article>
+</div>
+
+
+    
+
+
+
+
+</div>
+
+<div class="footer-wrapper container">
+  <footer class="footer clearfix">
+    <div class="clearfix">
+    <a href="https://alan89757.github.io" class="footer-logo">
+      <i class="fa fa-github"></i>
+    </a>
+    <ul class="footer-social-link">
+      <li>© 2023 Alan</li>
+      <li><a href="https://alan89757.github.io">Home</a></li>
+      
+      <li><a target="_blank" rel="noopener" href="https://github.com/alan89757">Github</a></li>
+      
+    </ul>
+    <!-- <div class="footer-theme-info">
+      Theme <a target="_blank" rel="noopener" href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
+      by <a target="_blank" rel="noopener" href="//github.com/sabrinaluo">Alan</a> ❤ Powered by Hexo
+    </div> -->
+    </div>
+    
+  </footer>
+</div>
+
+
+<script>
+  (function() {
+    var cx = 'true';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+
+
+<script src="/blog/js/main.js"></script>
+
+</body>
+</html>

@@ -8,7 +8,7 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>
-    javascript基础系列之Reflect | Alan的学习曲线
+    javascript基础系列之Reflect | Alan的个人学习曲线
   </title>
   <meta name="description" content="">
   
@@ -94,24 +94,24 @@
         <a href="/blog/archives" class="header-toolbar-left"><i
                   class="fa fa-file-text"></i> Posts </a>
         <a href="/blog/archives"
-           class="header-toolbar-right"> 43 </a>
+           class="header-toolbar-right"> 52 </a>
       </li>
       <li>
         <a href="/blog/tags" class="header-toolbar-left"><i
                   class="fa fa-tags"></i> Tags </a>
         <a href="/blog/tags"
-           class="header-toolbar-right"> 50 </a>
+           class="header-toolbar-right"> 60 </a>
       </li>
       <li>
         <a href="/blog/categories" class="header-toolbar-left"><i
                   class="fa fa-folder-open"></i> Categories </a>
         <a href="/blog/categories"
-           class="header-toolbar-right"> 18 </a>
+           class="header-toolbar-right"> 22 </a>
       </li>
     </ul>
     <h2 class="header-title">
       <i class="fa fa-book text-muted"></i>
-      <a href="/blog/">Alan的学习曲线</a>
+      <a href="/blog/">Alan的个人学习曲线</a>
       
       
     </h2>
@@ -144,7 +144,8 @@
 
   <article class="post-content">
     <h1>javascript基础系列之Reflect</h1>
-    <p>Reflect 提供了拦截Javascript操作的方法，只有静态属性和方法。为了逐步替换掉js引擎提供的全局操作符，如delete, in等操作符</p>
+    
+      <p>Reflect 提供了拦截Javascript操作的方法，只有静态属性和方法。为了逐步替换掉js引擎提供的全局操作符，如delete, in等操作符</p>
 <span id="more"></span>
 
 <h3 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h3><h4 id="Reflect-apply"><a href="#Reflect-apply" class="headerlink" title="Reflect.apply"></a>Reflect.apply</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Reflect.apply(target, thisArgument, argumentsList)  target表示目标函数，thisArgument表示执行上下文，argumentsList表示给目前函数的参数列表</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Reflect</span>.<span class="title function_">apply</span>(<span class="string">&quot;&quot;</span>.<span class="property">indexOf</span>, <span class="string">&quot;hello world&quot;</span>, [<span class="string">&#x27;e&#x27;</span>]));  <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
@@ -169,6 +170,7 @@
 
 <h5 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h5><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect">Reflect</a></p>
 
+    
   </article>
 </div>
 

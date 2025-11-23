@@ -8,7 +8,7 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>
-    浏览器缓存策略 | Alan的学习曲线
+    浏览器缓存策略 | Alan的个人学习曲线
   </title>
   <meta name="description" content="">
   
@@ -94,24 +94,24 @@
         <a href="/blog/archives" class="header-toolbar-left"><i
                   class="fa fa-file-text"></i> Posts </a>
         <a href="/blog/archives"
-           class="header-toolbar-right"> 43 </a>
+           class="header-toolbar-right"> 52 </a>
       </li>
       <li>
         <a href="/blog/tags" class="header-toolbar-left"><i
                   class="fa fa-tags"></i> Tags </a>
         <a href="/blog/tags"
-           class="header-toolbar-right"> 50 </a>
+           class="header-toolbar-right"> 60 </a>
       </li>
       <li>
         <a href="/blog/categories" class="header-toolbar-left"><i
                   class="fa fa-folder-open"></i> Categories </a>
         <a href="/blog/categories"
-           class="header-toolbar-right"> 18 </a>
+           class="header-toolbar-right"> 22 </a>
       </li>
     </ul>
     <h2 class="header-title">
       <i class="fa fa-book text-muted"></i>
-      <a href="/blog/">Alan的学习曲线</a>
+      <a href="/blog/">Alan的个人学习曲线</a>
       
       
     </h2>
@@ -144,7 +144,8 @@
 
   <article class="post-content">
     <h1>浏览器缓存策略</h1>
-    <p>浏览器缓存策略</p>
+    
+      <p>浏览器缓存策略</p>
 <span id="more"></span>
 <h2 id="为什么需要浏览器缓存"><a href="#为什么需要浏览器缓存" class="headerlink" title="为什么需要浏览器缓存"></a>为什么需要浏览器缓存</h2><ol>
 <li>客户端(浏览器)和服务器通过http协议建立连接需要消耗时间</li>
@@ -167,6 +168,7 @@
 <h4 id="是否使用浏览器缓存数据-1"><a href="#是否使用浏览器缓存数据-1" class="headerlink" title="是否使用浏览器缓存数据"></a>是否使用浏览器缓存数据</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="title class_">Etag</span> / <span class="title class_">If</span>-<span class="title class_">None</span>-<span class="title class_">Match</span>  <span class="comment">// Etag是否更新, 每次文件更新都会产生一个唯一hash值</span></span><br><span class="line"><span class="number">2.</span> <span class="title class_">Last</span>-<span class="title class_">Modified</span> / <span class="title class_">If</span>-<span class="title class_">Modified</span>-<span class="title class_">Since</span>  <span class="comment">// 文件上次更新日期</span></span><br></pre></td></tr></table></figure>
 <p>Etag的优先级大于Last-Modified</p>
 
+    
   </article>
 </div>
 

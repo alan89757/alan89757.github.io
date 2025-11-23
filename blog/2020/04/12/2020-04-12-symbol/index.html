@@ -8,7 +8,7 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>
-    javascript基础系列之Symbol | Alan的学习曲线
+    javascript基础系列之Symbol | Alan的个人学习曲线
   </title>
   <meta name="description" content="">
   
@@ -94,24 +94,24 @@
         <a href="/blog/archives" class="header-toolbar-left"><i
                   class="fa fa-file-text"></i> Posts </a>
         <a href="/blog/archives"
-           class="header-toolbar-right"> 43 </a>
+           class="header-toolbar-right"> 52 </a>
       </li>
       <li>
         <a href="/blog/tags" class="header-toolbar-left"><i
                   class="fa fa-tags"></i> Tags </a>
         <a href="/blog/tags"
-           class="header-toolbar-right"> 50 </a>
+           class="header-toolbar-right"> 60 </a>
       </li>
       <li>
         <a href="/blog/categories" class="header-toolbar-left"><i
                   class="fa fa-folder-open"></i> Categories </a>
         <a href="/blog/categories"
-           class="header-toolbar-right"> 18 </a>
+           class="header-toolbar-right"> 22 </a>
       </li>
     </ul>
     <h2 class="header-title">
       <i class="fa fa-book text-muted"></i>
-      <a href="/blog/">Alan的学习曲线</a>
+      <a href="/blog/">Alan的个人学习曲线</a>
       
       
     </h2>
@@ -144,7 +144,8 @@
 
   <article class="post-content">
     <h1>javascript基础系列之Symbol</h1>
-    <p>javscript基础系列之symbol</p>
+    
+      <p>javscript基础系列之symbol</p>
 <span id="more"></span>
 
 <h3 id="常见用法"><a href="#常见用法" class="headerlink" title="常见用法"></a>常见用法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sym = <span class="title class_">Symbol</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> sym);  <span class="comment">// symbol</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(sym.<span class="title function_">toString</span>()); <span class="comment">// Symbol(hello)</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(sym == <span class="number">2</span>);    <span class="comment">// false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Symbol</span>(<span class="string">&#x27;world&#x27;</span>) === <span class="title class_">Symbol</span>(<span class="string">&quot;world&quot;</span>)); <span class="comment">// false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> <span class="title class_">Symbol</span>() === <span class="string">&quot;symbol&quot;</span>); <span class="comment">//typeof类型判断</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> <span class="title class_">Symbol</span>(<span class="string">&quot;hello&quot;</span>) === <span class="string">&quot;symbol&quot;</span>);     <span class="comment">//typeof类型判断</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> <span class="title class_">Symbol</span>.<span class="property">iterator</span> === <span class="string">&quot;symbol&quot;</span>);     <span class="comment">//typeof类型判断</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;[<span class="title class_">Symbol</span>(<span class="string">&quot;world&quot;</span>)]: <span class="string">&quot;world&quot;</span>&#125;))  <span class="comment">// JSON.stringify会自动过滤Symbol键值对</span></span><br></pre></td></tr></table></figure>
@@ -186,6 +187,7 @@
 
 <h5 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h5><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></p>
 
+    
   </article>
 </div>
 

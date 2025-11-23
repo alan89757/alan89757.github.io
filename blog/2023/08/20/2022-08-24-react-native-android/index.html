@@ -8,12 +8,12 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>
-    react-native构建android调试包报错 | Alan的学习曲线
+    react-native构建android调试包报错 | Alan的个人学习曲线
   </title>
   <meta name="description" content="">
   
   <meta name="keywords" content="
-  react,react-native,app
+  react,app,react-native
   ">
   
   <meta name="author" content="Alan">
@@ -94,24 +94,24 @@
         <a href="/blog/archives" class="header-toolbar-left"><i
                   class="fa fa-file-text"></i> Posts </a>
         <a href="/blog/archives"
-           class="header-toolbar-right"> 43 </a>
+           class="header-toolbar-right"> 52 </a>
       </li>
       <li>
         <a href="/blog/tags" class="header-toolbar-left"><i
                   class="fa fa-tags"></i> Tags </a>
         <a href="/blog/tags"
-           class="header-toolbar-right"> 50 </a>
+           class="header-toolbar-right"> 60 </a>
       </li>
       <li>
         <a href="/blog/categories" class="header-toolbar-left"><i
                   class="fa fa-folder-open"></i> Categories </a>
         <a href="/blog/categories"
-           class="header-toolbar-right"> 18 </a>
+           class="header-toolbar-right"> 22 </a>
       </li>
     </ul>
     <h2 class="header-title">
       <i class="fa fa-book text-muted"></i>
-      <a href="/blog/">Alan的学习曲线</a>
+      <a href="/blog/">Alan的个人学习曲线</a>
       
       
     </h2>
@@ -144,7 +144,8 @@
 
   <article class="post-content">
     <h1>react-native构建android调试包报错</h1>
-    <p>app-debug.apk包安装到vivo x21手机报错<code>/data/app/vmdl382318695.tmp/base.apk using APK Signature Scheme v2: SHA-256 digest of contents did not verify</code></p>
+    
+      <p>app-debug.apk包安装到vivo x21手机报错<code>/data/app/vmdl382318695.tmp/base.apk using APK Signature Scheme v2: SHA-256 digest of contents did not verify</code></p>
 <h4 id="背景：自己买了个vivo-x21准备给自己做app开发的调试机器"><a href="#背景：自己买了个vivo-x21准备给自己做app开发的调试机器" class="headerlink" title="背景：自己买了个vivo x21准备给自己做app开发的调试机器"></a>背景：自己买了个vivo x21准备给自己做app开发的调试机器</h4><h4 id="问题：启用开发者选项和打开use调试后，每次构建都会报错"><a href="#问题：启用开发者选项和打开use调试后，每次构建都会报错" class="headerlink" title="问题：启用开发者选项和打开use调试后，每次构建都会报错"></a>问题：启用开发者选项和打开use调试后，每次构建都会报错</h4><h4 id="具体报错如下："><a href="#具体报错如下：" class="headerlink" title="具体报错如下："></a>具体报错如下：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">java.util.concurrent.ExecutionException: </span><br><span class="line">com.android.builder.testing.api.DeviceException: </span><br><span class="line">com.android.ddmlib.InstallException: </span><br><span class="line">INSTALL_PARSE_FAILED_NO_CERTIFICATES: Failed to collect certificates from </span><br><span class="line">/data/app/vmdl382318695.tmp/base.apk using APK Signature Scheme v2: SHA-256 digest of contents did not verify</span><br></pre></td></tr></table></figure>
 
 <p>在网上查了很多资料，都没有好的解决方案只能一个一个试, 后面发现解决办法很简单</p>
@@ -171,6 +172,7 @@
 
 <p>To get values, use below command</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 获取配置</span><br><span class="line">adb shell settings get global verifier_verify_adb_installs</span><br></pre></td></tr></table></figure>
+    
   </article>
 </div>
 

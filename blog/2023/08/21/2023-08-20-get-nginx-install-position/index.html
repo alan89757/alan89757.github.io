@@ -8,7 +8,7 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>
-    如何在docker中查找nginx服务的安装路径 | Alan的学习曲线
+    如何在docker中查找nginx服务的安装路径 | Alan的个人学习曲线
   </title>
   <meta name="description" content="">
   
@@ -94,24 +94,24 @@
         <a href="/blog/archives" class="header-toolbar-left"><i
                   class="fa fa-file-text"></i> Posts </a>
         <a href="/blog/archives"
-           class="header-toolbar-right"> 43 </a>
+           class="header-toolbar-right"> 52 </a>
       </li>
       <li>
         <a href="/blog/tags" class="header-toolbar-left"><i
                   class="fa fa-tags"></i> Tags </a>
         <a href="/blog/tags"
-           class="header-toolbar-right"> 50 </a>
+           class="header-toolbar-right"> 60 </a>
       </li>
       <li>
         <a href="/blog/categories" class="header-toolbar-left"><i
                   class="fa fa-folder-open"></i> Categories </a>
         <a href="/blog/categories"
-           class="header-toolbar-right"> 18 </a>
+           class="header-toolbar-right"> 22 </a>
       </li>
     </ul>
     <h2 class="header-title">
       <i class="fa fa-book text-muted"></i>
-      <a href="/blog/">Alan的学习曲线</a>
+      <a href="/blog/">Alan的个人学习曲线</a>
       
       
     </h2>
@@ -144,7 +144,8 @@
 
   <article class="post-content">
     <h1>如何在docker中查找nginx服务的安装路径</h1>
-    <p>有时候想重启nginx或者修改nginx配置，但是不知道被安装到了哪里</p>
+    
+      <p>有时候想重启nginx或者修改nginx配置，但是不知道被安装到了哪里</p>
 <h3 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h3><p><code>docker pull nginx</code></p>
 <h3 id="查看本地nginx的镜像Id"><a href="#查看本地nginx的镜像Id" class="headerlink" title="查看本地nginx的镜像Id"></a>查看本地nginx的镜像Id</h3><p><code>docker images nginx</code></p>
 <h3 id="创建nginx镜像"><a href="#创建nginx镜像" class="headerlink" title="创建nginx镜像"></a>创建nginx镜像</h3><p><code>docker run -d --name mynginx -p 80:80 nginx</code></p>
@@ -163,6 +164,7 @@
 
 <p>参考文档:<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/lamedunk/article/details/124758107">阿里云docker安装nginx</a></p>
 
+    
   </article>
 </div>
 

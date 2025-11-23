@@ -8,7 +8,7 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>
-    苹果开发与发布入门教程 | Alan的学习曲线
+    苹果应用开发流程与发布 | Alan的个人学习曲线
   </title>
   <meta name="description" content="">
   
@@ -94,24 +94,24 @@
         <a href="/blog/archives" class="header-toolbar-left"><i
                   class="fa fa-file-text"></i> Posts </a>
         <a href="/blog/archives"
-           class="header-toolbar-right"> 43 </a>
+           class="header-toolbar-right"> 52 </a>
       </li>
       <li>
         <a href="/blog/tags" class="header-toolbar-left"><i
                   class="fa fa-tags"></i> Tags </a>
         <a href="/blog/tags"
-           class="header-toolbar-right"> 50 </a>
+           class="header-toolbar-right"> 60 </a>
       </li>
       <li>
         <a href="/blog/categories" class="header-toolbar-left"><i
                   class="fa fa-folder-open"></i> Categories </a>
         <a href="/blog/categories"
-           class="header-toolbar-right"> 18 </a>
+           class="header-toolbar-right"> 22 </a>
       </li>
     </ul>
     <h2 class="header-title">
       <i class="fa fa-book text-muted"></i>
-      <a href="/blog/">Alan的学习曲线</a>
+      <a href="/blog/">Alan的个人学习曲线</a>
       
       
     </h2>
@@ -143,16 +143,38 @@
   </h3>
 
   <article class="post-content">
-    <h1>苹果开发与发布入门教程</h1>
-    <p>本文适合小白阅读，以react-native开发苹果应用为例，详细介绍了ios的开发与发布流程，包括目录结构和问题排查</p>
-<h2 id="开发者模式"><a href="#开发者模式" class="headerlink" title="开发者模式"></a>开发者模式</h2><p>如何搭建开发环境和项目的初始化这里不再赘述，可以参考<a target="_blank" rel="noopener" href="https://www.reactnative.cn/docs/environment-setup">react-native官网</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 运行命令</span></span><br><span class="line">$ react-native run-ios</span><br><span class="line">$ react-native start</span><br></pre></td></tr></table></figure>
+    <h1>苹果应用开发流程与发布</h1>
+    
+      <p>本文适合小白阅读，以react-native开发苹果应用为例，详细介绍了苹果应用（ios）开发与发布流程</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ol>
+<li>一台MAC电脑和一台苹果手机（非必须，可以用手机模拟器）</li>
+<li>购买苹果开发者服务（Apple Developer），成为苹果开发者（个人&#x2F;企业）</li>
+<li>初始化初始化react-native项目，可以参考<a target="_blank" rel="noopener" href="https://www.reactnative.cn/docs/environment-setup">react-native官网</a></li>
+</ol>
+<h2 id="pod安装模块"><a href="#pod安装模块" class="headerlink" title="pod安装模块"></a>pod安装模块</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pod模块</span></span><br><span class="line">$ <span class="built_in">cd</span> ios</span><br><span class="line">$ pod install  <span class="comment"># react-native转换成IOS原生. 注意：node_modules模块更新，都需要重新执行下这个命令</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="1-使用xcode打开ios项目"><a href="#1-使用xcode打开ios项目" class="headerlink" title="1. 使用xcode打开ios项目"></a>1. 使用xcode打开ios项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入项目根目录下的ios文件夹, 然后通过xcode打开</span></span><br><span class="line">$ <span class="built_in">cd</span> ios</span><br></pre></td></tr></table></figure>
+<h2 id="xcode打开ios项目"><a href="#xcode打开ios项目" class="headerlink" title="xcode打开ios项目"></a>xcode打开ios项目</h2><p>参考文章：<a href="/blog/2023/08/25/2023-08-25-xcode-use-manual/">Xcode在IOS开发过程中的常用功能</a></p>
+<h2 id="构建"><a href="#构建" class="headerlink" title="构建"></a>构建</h2><p>products-&gt;build</p>
+<h2 id="Achives"><a href="#Achives" class="headerlink" title="Achives"></a>Achives</h2><p>windows -&gt; Organizer</p>
+<h2 id="Distribute-App"><a href="#Distribute-App" class="headerlink" title="Distribute App"></a>Distribute App</h2><p>windows-&gt; Organizer-&gt; Distribute App</p>
+<h3 id="App-Store-Connect"><a href="#App-Store-Connect" class="headerlink" title="App Store Connect"></a>App Store Connect</h3><p>App Store Connect是把包上传到<a target="_blank" rel="noopener" href="https://appstoreconnect.apple.com/apps/1641205310/appstore/ios/version/inflight">app store</a>中, 在苹果开发者后台可以看到上传的ios包，然后就可以填写app包信息（比如：app简介，app内截图等）提交审核等待了。第一次审核大概5天左右，后面版本迭代的审核可能就1-3天。</p>
+<h3 id="提交审核"><a href="#提交审核" class="headerlink" title="提交审核"></a>提交审核</h3><p>打开<a target="_blank" rel="noopener" href="https://appstoreconnect.apple.com/apps/1641205310/appstore/ios/version/inflight">app store</a>，填写app基本信息后，就可以提交审核。</p>
+<!-- ![图片](7.png) -->
 
+<h2 id="测试流程"><a href="#测试流程" class="headerlink" title="测试流程"></a>测试流程</h2><p>下载TestFlight</p>
+<h2 id="app-developer"><a href="#app-developer" class="headerlink" title="app developer"></a>app developer</h2><p><img src="/blog/2023/08/24/2023-08-24-apple-develop-and-release/13.png" alt="图片"></p>
+<h3 id="2-登录苹果开发者后台"><a href="#2-登录苹果开发者后台" class="headerlink" title="2. 登录苹果开发者后台"></a>2. 登录<a target="_blank" rel="noopener" href="https://developer.apple.com/account">苹果开发者后台</a></h3><p>App Store Connect主要关注两个配置项目【App】和【用户和访问权限】</p>
+<h4 id="2-1-配置【App】"><a href="#2-1-配置【App】" class="headerlink" title="2.1 配置【App】"></a>2.1 配置<a target="_blank" rel="noopener" href="https://appstoreconnect.apple.com/apps">【App】</a></h4><p>这里会展示苹果账户下所有的app</p>
+<p><img src="/blog/2023/08/24/2023-08-24-apple-develop-and-release/15.png" alt="图片"></p>
+<h5 id="App详情"><a href="#App详情" class="headerlink" title="App详情"></a>App详情</h5><p><img src="/blog/2023/08/24/2023-08-24-apple-develop-and-release/14.png" alt="图片"></p>
+<p><img src="/blog/2023/08/24/2023-08-24-apple-develop-and-release/16.png" alt="图片"></p>
+<p><img src="/blog/2023/08/24/2023-08-24-apple-develop-and-release/17.png" alt="图片"></p>
+<p><img src="/blog/2023/08/24/2023-08-24-apple-develop-and-release/18.png" alt="图片"></p>
+<h4 id="2-2-用户与访问"><a href="#2-2-用户与访问" class="headerlink" title="2.2 用户与访问"></a>2.2 用户与访问</h4><p><img src="/blog/2023/08/24/2023-08-24-apple-develop-and-release/17.png" alt="图片"></p>
+<p><img src="/blog/2023/08/24/2023-08-24-apple-develop-and-release/18.png" alt="图片"></p>
+<h4 id="2-3-证书、标识符和描述文件"><a href="#2-3-证书、标识符和描述文件" class="headerlink" title="2.3 证书、标识符和描述文件"></a>2.3 证书、标识符和描述文件</h4><p><img src="/blog/2023/08/24/2023-08-24-apple-develop-and-release/19.png" alt="图片"><br><img src="/blog/2023/08/24/2023-08-24-apple-develop-and-release/20.png" alt="图片"><br><img src="/blog/2023/08/24/2023-08-24-apple-develop-and-release/21.png" alt="图片"><br><img src="/blog/2023/08/24/2023-08-24-apple-develop-and-release/22.png" alt="图片"><br><img src="/blog/2023/08/24/2023-08-24-apple-develop-and-release/23.png" alt="图片"><br><img src="/blog/2023/08/24/2023-08-24-apple-develop-and-release/24.png" alt="图片"><br><img src="/blog/2023/08/24/2023-08-24-apple-develop-and-release/25.png" alt="图片"><br><img src="/blog/2023/08/24/2023-08-24-apple-develop-and-release/26.png" alt="图片"></p>
 
-<h3 id="2-xcode常用的功能"><a href="#2-xcode常用的功能" class="headerlink" title="2. xcode常用的功能"></a>2. xcode常用的功能</h3><p>参考文章：<a href="/2023/08/25/2023-08-25-xcode-use-manual/">Xcode在IOS开发过程中的常用功能</a></p>
-
+    
   </article>
 </div>
 

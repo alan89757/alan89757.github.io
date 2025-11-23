@@ -8,7 +8,7 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>
-    Alan的学习曲线
+    Alan的个人学习曲线
   </title>
   <meta name="description" content="">
   
@@ -173,21 +173,21 @@
       <a href="/blog/archives" class="title-container">
         <img src="/blog/svg/book.svg" alt="" style="width: 16px; height: 16px;" >
         <span class="title">Archives</span>
-        <span class="counter">43</span></a
+        <span class="counter">52</span></a
       >
     </li>
     <li class="">
       <a href="/blog/categories" class="title-container">
         <img src="/blog/svg/folder-open.svg" alt="" style="width: 16px; height: 16px;" >
         <span class="title">Categories</span>
-        <span class="counter">18</span></a
+        <span class="counter">22</span></a
       >
     </li>
     <li class="">
       <a href="/blog/tags" class="title-container">
         <img src="/blog/svg/tags.svg" alt="" style="width: 16px; height: 16px;" >
         <span class="title">Tags</span>
-        <span class="counter">50</span></a
+        <span class="counter">60</span></a
       >
     </li>
   </ul>
@@ -196,6 +196,56 @@
 
     <div class="body-secondary">
       <ul class="archive-list">
+        
+        <li class="archive-list-item">
+          <h2><a href="/blog/2023/09/09/2023-09-09-es6-course/">ECMAScript 6 入门</a></h2>
+          <p>
+             本文简要介绍 ECMAScript 6 新引入的部分语法特性，作为入门教程的精髓。 
+   let和const       1   2        let  a =  1 ;    const  b =  1 ;       
+
+   变量的解构赋值       1   2   3   4   ...
+          </p>
+          <ul class="tag-list clearfix">
+            
+            <li class="tag-list-item"><a href="/blog/tags/es6/">es6</a></li>
+            
+          </ul>
+          <div class="post-info">
+            <img src="/blog/svg/folder-open.svg" alt="" style="margin-right: 4px; width: 16px; height: 16px;" >
+            <span>
+              
+              <a class="category-link" href="/blog/categories/es6/"><i class="fa fa-folder-open"></i> es6</a>
+              
+            </span>
+            <img src="/blog/svg/tags.svg" alt="" style="margin-right: 4px; width: 16px; height: 16px;" >
+            <span><i class="fa fa-tag"></i> 1 </span>
+            <span>Published {{moment(1694188800000).fromNow()}}</span>
+          </div>
+        </li>
+        
+        <li class="archive-list-item">
+          <h2><a href="/blog/2023/08/31/2023-08-31-miniprogram-upload/">(微信/抖音/百度)小程序自动上传</a></h2>
+          <p>
+             应用场景：微信小程序上传体验版&amp;#x2F;生成开发版就离不开微信开发者工具，最开始是依赖于人手动上传按钮，后面微信开发了命令行上传接口。 
+   概述  miniprogram-ci 是从微信开发者工具中抽离的关于小程序&amp;#x2F;小游戏项目代码的编译模块。 开发者可不打开小程序开发者工具，独立使...
+          </p>
+          <ul class="tag-list clearfix">
+            
+            <li class="tag-list-item"><a href="/blog/tags/wechat/">wechat</a></li>
+            
+          </ul>
+          <div class="post-info">
+            <img src="/blog/svg/folder-open.svg" alt="" style="margin-right: 4px; width: 16px; height: 16px;" >
+            <span>
+              
+              <a class="category-link" href="/blog/categories/wechat/"><i class="fa fa-folder-open"></i> wechat</a>
+              
+            </span>
+            <img src="/blog/svg/tags.svg" alt="" style="margin-right: 4px; width: 16px; height: 16px;" >
+            <span><i class="fa fa-tag"></i> 1 </span>
+            <span>Published {{moment(1693411200000).fromNow()}}</span>
+          </div>
+        </li>
         
         <li class="archive-list-item">
           <h2><a href="/blog/2023/08/26/2023-08-26-android-proxy-app/">Fiddler拦截安卓App内https请求</a></h2>
@@ -250,11 +300,13 @@
         </li>
         
         <li class="archive-list-item">
-          <h2><a href="/blog/2023/08/24/2023-08-24-apple-develop-and-release/">苹果开发与发布入门教程</a></h2>
+          <h2><a href="/blog/2023/08/24/2023-08-24-apple-develop-and-release/">苹果应用开发流程与发布</a></h2>
           <p>
-             本文适合小白阅读，以react-native开发苹果应用为例，详细介绍了ios的开发与发布流程，包括目录结构和问题排查 
-   开发者模式  如何搭建开发环境和项目的初始化这里不再赘述，可以参考 react-native官网  
-      1   2   3        # 运行命令    $...
+             本文适合小白阅读，以react-native开发苹果应用为例，详细介绍了苹果应用（ios）开发与发布流程 
+   准备工作  
+ 一台MAC电脑和一台苹果手机（非必须，可以用手机模拟器） 
+ 购买苹果开发者服务（Apple Developer），成为苹果开发者（个人&amp;#x2F;企业） 
+ 初始化初...
           </p>
           <ul class="tag-list clearfix">
             
@@ -335,34 +387,6 @@
         </li>
         
         <li class="archive-list-item">
-          <h2><a href="/blog/2023/08/21/2023-08-20-get-nginx-install-position/">如何在docker中查找nginx服务的安装路径</a></h2>
-          <p>
-             有时候想重启nginx或者修改nginx配置，但是不知道被安装到了哪里 
-   安装nginx   docker pull nginx  
-   查看本地nginx的镜像Id   docker images nginx  
-   创建nginx镜像   docker run -d --name m...
-          </p>
-          <ul class="tag-list clearfix">
-            
-            <li class="tag-list-item"><a href="/blog/tags/docker/">docker</a></li>
-            
-            <li class="tag-list-item"><a href="/blog/tags/nginx/">nginx</a></li>
-            
-          </ul>
-          <div class="post-info">
-            <img src="/blog/svg/folder-open.svg" alt="" style="margin-right: 4px; width: 16px; height: 16px;" >
-            <span>
-              
-              <a class="category-link" href="/blog/categories/nginx/"><i class="fa fa-folder-open"></i> nginx</a>
-              
-            </span>
-            <img src="/blog/svg/tags.svg" alt="" style="margin-right: 4px; width: 16px; height: 16px;" >
-            <span><i class="fa fa-tag"></i> 2 </span>
-            <span>Published {{moment(1692547200000).fromNow()}}</span>
-          </div>
-        </li>
-        
-        <li class="archive-list-item">
           <h2><a href="/blog/2023/08/21/2023-08-12-capture-app-by-ios/">如何抓取苹果手机app内的https请求</a></h2>
           <p>
              介绍charles或者fiddler抓取https请求 
@@ -395,6 +419,34 @@
         </li>
         
         <li class="archive-list-item">
+          <h2><a href="/blog/2023/08/21/2023-08-20-get-nginx-install-position/">如何在docker中查找nginx服务的安装路径</a></h2>
+          <p>
+             有时候想重启nginx或者修改nginx配置，但是不知道被安装到了哪里 
+   安装nginx   docker pull nginx  
+   查看本地nginx的镜像Id   docker images nginx  
+   创建nginx镜像   docker run -d --name m...
+          </p>
+          <ul class="tag-list clearfix">
+            
+            <li class="tag-list-item"><a href="/blog/tags/docker/">docker</a></li>
+            
+            <li class="tag-list-item"><a href="/blog/tags/nginx/">nginx</a></li>
+            
+          </ul>
+          <div class="post-info">
+            <img src="/blog/svg/folder-open.svg" alt="" style="margin-right: 4px; width: 16px; height: 16px;" >
+            <span>
+              
+              <a class="category-link" href="/blog/categories/nginx/"><i class="fa fa-folder-open"></i> nginx</a>
+              
+            </span>
+            <img src="/blog/svg/tags.svg" alt="" style="margin-right: 4px; width: 16px; height: 16px;" >
+            <span><i class="fa fa-tag"></i> 2 </span>
+            <span>Published {{moment(1692547200000).fromNow()}}</span>
+          </div>
+        </li>
+        
+        <li class="archive-list-item">
           <h2><a href="/blog/2023/08/20/2022-08-24-react-native-android/">react-native构建android调试包报错</a></h2>
           <p>
              app-debug.apk包安装到vivo x21手机报错 /data/app/vmdl382318695.tmp/base.apk using APK Signature Scheme v2: SHA-256 digest of contents did not verify  
@@ -404,9 +456,9 @@
             
             <li class="tag-list-item"><a href="/blog/tags/react/">react</a></li>
             
-            <li class="tag-list-item"><a href="/blog/tags/react-native/">react-native</a></li>
-            
             <li class="tag-list-item"><a href="/blog/tags/app/">app</a></li>
+            
+            <li class="tag-list-item"><a href="/blog/tags/react-native/">react-native</a></li>
             
           </ul>
           <div class="post-info">

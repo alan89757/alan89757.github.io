@@ -90,7 +90,7 @@ pre .xml .cdata {
   opacity: 0.5;
 }
 body {
-  font-family: Courier, Menlo, Monaco, "Helvetica Neue", Arial, sans-serif;
+  font-family: emoji;
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

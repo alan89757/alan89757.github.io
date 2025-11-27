@@ -4,7 +4,7 @@
 }
 
 @font-face {
-    font-family: 'Courier';
+    font-family: 'emoji';
     font-style: normal;
     font-weight: 400;
     src: url(https://resource.wangxiao.net/github/assets/fonts/Courier.dfont) format('dfont');
@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    font-family: Courier, Menlo, Monaco, "Helvetica Neue", Arial, sans-serif, cursive !important;
+    font-family: emoji;
     color: #24394e;
     -webkit-font-smoothing: antialiased;
     line-height: 1.6em;

@@ -102,69 +102,80 @@
     <p class='description'></p>
     
   </div>
-  <h2 id="准题宝APP-重构与迭代"><a href="#准题宝APP-重构与迭代" class="headerlink" title="准题宝APP 重构与迭代"></a>准题宝APP 重构与迭代</h2><p><strong>项目周期：</strong> 2023.05 – 至今<br><strong>技术栈：</strong> React-Native + Java + Kotlin<br><strong>角色：</strong> 前端负责人（带领 3 名 RN 前端开发 + 2 名原生开发）<br><strong>背景：</strong> </p>
+  <h2 id="「重构」准题宝APP"><a href="#「重构」准题宝APP" class="headerlink" title="「重构」准题宝APP"></a>「重构」准题宝APP</h2><p><strong>项目周期：</strong> 2024.05 – 2025.03<br><strong>技术栈：</strong> React-Native + Java + Kotlin + Swift<br><strong>角色：</strong> 前端负责人（带领 3 名 RN 前端开发 + 2 名原生开发）<br><strong>背景：</strong> </p>
 <ul>
 <li>原有老平台APP为 Android 原生和 IOS 原生开发，存在性能问题且无法满足新业务需求</li>
-<li>新功能开发周期长</li>
-<li>新业务需要支持鸿蒙应用</li>
+<li>新功能原生开发周期长</li>
+<li>业务需求需要支持鸿蒙应用</li>
 </ul>
 <p><strong>核心职责与成果：</strong></p>
 <ul>
-<li>主导技术选型，确定 “RN 0.72.5 + TypeScript + React Navigation 6” 技术栈，适配编译鸿蒙应用</li>
-<li>原生模块集成，主导 RN 与原生模块桥接开发，完成 5 个核心原生能力集成（视频播放、极光推送、友盟、相册 &#x2F; 相机权限、第三方登录等）暴露给RN侧调用</li>
-<li>工程化搭建：基于 Metro 优化构建流程，集成 ESLint + Prettier 代码规范、实现 “代码提交 → Jekins打包 → 测试环境发布” 全流程自动化</li>
-<li>拆分任务与进度管控，采用敏捷开发（1-2 周迭代），每周组织技术评审会，确保项目按时交付率 100%</li>
-<li>优化卡顿 &#x2F; 闪退，降低响应时间，解决首页滚动卡顿、动态列表加载缓慢问题，App 闪退率从 0.7% 降至 0.09%，页面交互响应时间 &lt; 200ms</li>
-<li>优化用户使用体验，提升用户满意度，增加用户粘性</li>
+<li>主导技术选型，敲定「React-Native + React Navigation + TS」方案，一套代码同时编译 Android&#x2F; iOS&#x2F; 鸿蒙三端</li>
+<li>设计并落地 RN ↔  原生双向通信框架，封装 5 大核心能力（视频播放、极光推送、友盟统计等）供 RN 统一调用</li>
+<li>搭建 CI&#x2F;CD 工程链：ESLint &amp; Prettier 自动检查 → Jenkins一键打包 → 通知内部APK群，平均耗时 &lt; 10 min</li>
+<li>敏捷迭代管理：1～2 周 Sprint，需求拆分到人&#x2F;天，周例会评审风险，版本准时交付率 100%</li>
+<li>性能优化：长列表虚拟化、图片懒加载、卡顿、闪退率由 0.7% 降至 0.09%，优化用户使用体验</li>
 </ul>
-<p><strong>亮点：</strong> </p>
-<ul>
-<li>跨端代码复用率 90%、闪退率降低 87%、打包效率提升 80%， 开发效率提高50%</li>
-<li>APP代码混淆和加固提高了应用的安全性，防止反编译和代码泄漏</li>
-</ul>
-<h2 id="基于-Nexus-的npm私有库"><a href="#基于-Nexus-的npm私有库" class="headerlink" title="基于 Nexus 的npm私有库"></a>基于 Nexus 的npm私有库</h2><p><strong>项目周期：</strong> 2024.6 – 至今<br><strong>角色：</strong> 前端负责人<br><strong>背景：</strong> </p>
+<!-- **亮点：** 
+- 跨端代码复用率 90%、闪退率降低 87%、打包效率提升 80%， 开发效率提高50%
+- APP代码混淆和加固提高了应用的安全性，防止反编译和代码泄漏 -->
+
+<h2 id="基于-Nexus-的npm私有库"><a href="#基于-Nexus-的npm私有库" class="headerlink" title="基于 Nexus 的npm私有库"></a>基于 Nexus 的npm私有库</h2><p><strong>项目周期：</strong> 2024.05 – 至今<br><strong>技术栈：</strong> Vue + TypeScript + Vite<br><strong>角色：</strong> 前端负责人<br><strong>背景：</strong> </p>
 <ul>
 <li>20+ 前端项目面临三大核心痛点，内部组件 &#x2F; 工具函数重复开发，跨团队复用率不足 20%</li>
 <li>第三方依赖版本混乱，不同项目依赖冲突频发，线上问题占比 15%</li>
-<li>缺乏统一的依赖管控流程，需基于 Nexus 搭建高可用、强安全、可管控的 npm 私有库，提高开发效率，减少重复开发成本。</li>
 </ul>
 <p><strong>核心职责与成果：</strong></p>
 <ul>
 <li>Nexus 架构设计与部署落地，协同运维团队完成 Nexus部署</li>
 <li>Monorepo管理npm包的私库初始化，集成 ESLint 代码规范检测</li>
 <li>CI&#x2F;CD 无缝集成, 将 Nexus 私有库接入公司现有 Jenkins CI&#x2F;CD 流程</li>
-<li>推动各业务线沉淀可复用的组件 &#x2F; 工具函数</li>
+<li>推动各业务线沉淀可复用的组件 &#x2F; 工具函数，减少重复开发成本，提高开发效率</li>
 </ul>
 <p><strong>亮点：</strong> 内部包收录 30+、重复开发减少 55%、依赖下载速度提升 60%、私有库可用性 99.9%、全项目接入率 60%。</p>
-<h2 id="准题宝微信小程序"><a href="#准题宝微信小程序" class="headerlink" title="准题宝微信小程序"></a>准题宝微信小程序</h2><p><strong>项目周期：</strong> 2023.05 – 至今（2年+）<br><strong>技术栈：</strong> uni-app + Vue3 + TypeScript + Vite + uview<br><strong>角色：</strong> 前端负责人<br><strong>背景：</strong> 针对职业资格考试（如教师资格证、会计职称、建造师）考生需求，需开发一款集 “题库练习、模拟考试、错题复盘、考点精讲、成绩分析” 于一体的微信小程序，解决考生 “碎片化学习难、缺乏针对性练习、考试场景模拟不足” 等痛点，支撑 10 万 + 考生的日常备考与模拟考试需求。<br><strong>核心职责与成果：</strong></p>
+<h2 id="准题宝微信小程序"><a href="#准题宝微信小程序" class="headerlink" title="准题宝微信小程序"></a>准题宝微信小程序</h2><p><strong>项目周期：</strong> 2023.05 – 至今<br><strong>技术栈：</strong> Uni-App + Vue3 + TypeScript + Vite + UView<br><strong>角色：</strong> 前端负责人<br><strong>背景：</strong> 准题宝微信小程序为参加职业资格考试的用户，提供课程购买和学习的功能，帮助用户随时随地学习，提升学习效率<br><strong>核心职责与成果：</strong></p>
 <ul>
-<li>日常维护，修复 bug，优化性能</li>
-<li>参与项目架构设计，任务评审，代码规范等</li>
-<li>与后端合作，解决接口问题，优化数据交互</li>
+<li>建立小程序开发规范（代码规范、命名规范、提交规范等），通过 Code Review 提升团队代码质量</li>
+<li>参与项目架构设计，任务评审等，保障项目按期交付</li>
+<li>封装小程序通用组件库（UI 组件 + 业务组件），制定组件设计规范，提升代码复用率</li>
+<li>主导小程序技术难点攻坚，组织团队讨论解决方案，解决线上故障与性能瓶颈</li>
+<li>负责团队技术培训，培养核心开发人员，提升团队整体效率</li>
+<li>优化小程序包体积（删除冗余代码、图片压缩、资源懒加载、分包加载、第三方库按需引入）</li>
 </ul>
-<p><strong>亮点：</strong> 按期转测，项目周期 2 年+，项目交付率 100%</p>
-<h2 id="SaaS-教育管理系统"><a href="#SaaS-教育管理系统" class="headerlink" title="SaaS 教育管理系统"></a>SaaS 教育管理系统</h2><p><strong>项目周期：</strong> 2023.05 – 至今<br><strong>技术栈：</strong> Vue3 + Vben + TypeScript + Vite<br><strong>角色：</strong> 前端负责人<br><strong>背景：</strong> 包括但不限于中大管理端，中大机构端（SASS） 等项目<br><strong>核心职责与成果：</strong></p>
+<p><strong>亮点：</strong> </p>
 <ul>
-<li>负责系统日常 bug 修复与功能迭代，累计处理线上 bug 10+，bug 修复响应时间平均＜4 小时，系统线上可用率保持 99.9%；</li>
-<li>对接运营团队需求，完成 15+ 迭代功能开发，所有需求均按时交付，业务满意度达 95%</li>
-<li>标准化代码规范，采用 ESLint + Prettier 代码规范检测，确保代码质量和可维护性</li>
-<li>参与项目架构设计，任务评审，代码规范等</li>
-<li>与后端合作，解决接口问题，优化数据交互</li>
+<li>设计分包加载策略，将小程序主包体积从 3.2MB 优化至 1.8MB（低于 2MB 阈值），启动速度提升30%</li>
+<li>封装 50 + 通用业务组件库，覆盖 80% 业务场景，减少重复开发工作量，维护成本降低 40%</li>
+<li>搭建小程序 CI&#x2F;CD 自动化部署流程，实现代码提交→自动构建，部署效率提升 75%，人工操作减少90%</li>
+<li>解决小程序审核驳回问题 10 + 次，优化合规性设计，审核通过率从 70% 提升至 98%，版本上线周期缩短30%<!-- **项目描述：** 针对职业资格考试（如教师资格证、会计职称、建造师）考生需求，需开发一款集 “题库练习、模拟考试、错题复盘、考点精讲、成绩分析” 于一体的微信小程序，解决考生 “碎片化学习难、缺乏针对性练习、考试场景模拟不足” 等痛点，支撑 10 万 + 考生的日常备考与模拟考试需求。 --></li>
 </ul>
-<p><strong>亮点：</strong> 线上可用率 99.9%、bug 修复响应＜4 小时、页面加载时间优化 74%、操作耗时缩短 30%、代码复用率提升 40%、部署时间缩短 67%。</p>
-<h2 id="店铺装修平台"><a href="#店铺装修平台" class="headerlink" title="店铺装修平台"></a>店铺装修平台</h2><p><strong>项目周期：</strong> 2023.05 – 至今（2年+）<br><strong>技术栈：</strong> Vue3 + TypeScript + Vite<br><strong>角色：</strong> 前端负责人<br><strong>背景：</strong> 该项目支持 PC 和 H5 端基础模板修改、 可视化拖拽、 多端自适应、 组件化配置的店铺装修平台，覆盖 PC 、H5 与 APP等客户端，支撑机构用户零代码自主装修。<br><strong>核心职责与成果：</strong></p>
+<h2 id="SaaS-教育管理系统"><a href="#SaaS-教育管理系统" class="headerlink" title="SaaS 教育管理系统"></a>SaaS 教育管理系统</h2><p><strong>项目周期：</strong> 2023.05 – 至今<br><strong>技术栈：</strong> Vue3 + Vben + TypeScript + Vite<br><strong>角色：</strong> 前端负责人<br><strong>背景：</strong> 针对职业教育考试领域 “报名信息审核效率低、题库更新不及时、学习平台单一、成绩查询与证书管理分散” 的行业痛点，系统覆盖考生报名审核、智能题库管理、证书信息归档等核心模块，提升机构管理效率 50%+，考生满意度突破 96%。<br><strong>核心职责与成果：</strong></p>
+<ul>
+<li>参与项目架构设计，任务评审，代码规范等，制定迭代计划与交付标准，保障项目按期上线</li>
+<li>业务落地：负责用户权限，购买课程课程等核心业务模块开发，实现多机构隔离</li>
+<li>建立 SaaS 教育系统前端开发规范（代码规范、命名规范、接口规范），通过 Code Review、提升团队代码质量</li>
+<li>封装通用组件库（优惠券组件，商品组件等），制定组件设计规范与，提升代码复用与维护性</li>
+<li>负责团队技术培训与带教，聚焦 SaaS 多机构、定制化开发等核心技能，提升团队解决复杂业务问题的能力</li>
+<li>搭建 CI&#x2F;CD 自动化部署流程，实现代码提交→自动构建部署，部署效率提升 80%，人工操作减少 95%，线上发布零故障</li>
+</ul>
+<p><strong>亮点：</strong> </p>
+<ul>
+<li>带领 8 人前端团队，完成 30+ 版本迭代，交付 100+ 核心功能</li>
+<li>线上可用率 99.9%、bug 修复响应＜4 小时、页面加载时间减少30%、代码复用率提升 40%、部署时间缩短 67%</li>
+</ul>
+<h2 id="店铺装修平台"><a href="#店铺装修平台" class="headerlink" title="店铺装修平台"></a>店铺装修平台</h2><p><strong>项目周期：</strong> 2023.05 – 至今<br><strong>技术栈：</strong> Vue3 + TypeScript + Vite<br><strong>角色：</strong> 前端负责人<br><strong>背景：</strong> 该项目支持 APP、PC 和 H5 端基础模板修改、 可视化拖拽、 多端自适应、 组件化配置的店铺装修平台，覆盖 PC 、H5 与 APP等客户端，支撑机构用户零代码自主装修。<br><strong>核心职责与成果：</strong></p>
 <ul>
 <li>封装30+ 多端组件和工具库（如商品组件，学习引导组件），并发布到npm私库</li>
 <li>参与项目架构设计，新组件数据结构设计和评审，任务评审等</li>
 </ul>
-<p><strong>亮点：</strong> 多端一致性 99.8%、装修效率提升 95%、开发成本降低 60%、首屏加载优化 68%</p>
-<h2 id="SaaS-站点（PC-x2F-H5）"><a href="#SaaS-站点（PC-x2F-H5）" class="headerlink" title="SaaS 站点（PC &#x2F; H5）"></a>SaaS 站点（PC &#x2F; H5）</h2><p><strong>项目周期：</strong> 2023.05 – 至今（2年+）<br><strong>技术栈：</strong> Vue3 + uni-app + TypeScript + Vite<br><strong>角色：</strong> 前端负责人<br><strong>背景：</strong> PC和H5支持机构用户自主装修的组件<br><strong>核心职责与成果：</strong></p>
+<p><strong>亮点：</strong> 多端一致性 99.8%、装修效率提升 95%、开发成本降低 60%</p>
+<h2 id="SaaS-站点（PC-x2F-H5）"><a href="#SaaS-站点（PC-x2F-H5）" class="headerlink" title="SaaS 站点（PC &#x2F; H5）"></a>SaaS 站点（PC &#x2F; H5）</h2><p><strong>项目周期：</strong> 2023.05 – 至今（2年+）<br><strong>技术栈：</strong> Vue3 + uni-app + TypeScript + Vite<br><strong>角色：</strong> 前端负责人<br><strong>背景：</strong> 该项目(两个站点)用于渲染SaaS店铺装修平台的店铺装修页面<br><strong>核心职责与成果：</strong></p>
 <ul>
-<li>迭代日常开发，架构设计，任务评审等</li>
-<li>与后端合作，解决接口问题，优化数据交互</li>
+<li>参与产品需求评审，把控项目进度与质量，（JIRA）跟踪任务状态</li>
+<li>PC和H5迭代日常开发，架构设计等</li>
+<li>解决项目中的阻塞问题，确保项目按时上线<!-- **亮点：**  --></li>
 </ul>
-<p><strong>亮点：</strong> 按期转测，项目周期 2 年+，项目交付率 100%</p>
-<h2 id="星威养车"><a href="#星威养车" class="headerlink" title="星威养车"></a>星威养车</h2><p><strong>项目周期：</strong> 2022.05 – 2023.04<br><strong>技术栈：</strong> Vue3 + TypeScript + uni-app + NestJS + Prisma + MySQL<br><strong>角色：</strong> 前端负责人 &amp; 全栈<br><strong>背景：</strong> 该项目是通过记录卡车的行驶里程，对货运卡车数字化管理，以养代修，目标是做卡车的私人医生。 包括PC和微信小程序，PC端提供给总部人员管理车辆维保单，车辆，服务站等功能，微信小程序给服务站提供录单，报价，车辆维保单查询等功能。</p>
+<h2 id="星威养车"><a href="#星威养车" class="headerlink" title="星威养车"></a>星威养车</h2><p><strong>项目周期：</strong> 2022.05 – 2023.04<br><strong>技术栈：</strong> Vue3 + TypeScript + uni-app + NestJS + Prisma + MySQL<br><strong>角色：</strong> 前端负责人 &amp; 全栈<br><strong>背景：</strong> 在星威养车项目中，负责领导前端开发团队，成功实现货运卡车数字化管理。项目旨在通过记录卡车的行驶里程，实现以养代修的目标，提高车辆的使用寿命和经济性。负责PC端车辆管理和车辆维保单的管理，确保数据的准确性和完整性。开发小程序端，为服务站提供录单和录单报价的功能，提升服务站的运营效率。项目的最终目标是打造卡车的私人医生，通过数据分析和智能维护策略，优化车辆的保养和维护流程。</p>
 <p><strong>核心职责与成果：</strong></p>
 <ul>
 <li>PC端维护车辆管理，车辆维保单管理等核心功能开发，</li>
@@ -176,39 +187,41 @@
 <li>根据里程生成维保计划，到期前提醒车队预约保养，提高车辆使用寿命。</li>
 <li>完善服务站录单，报价，审核等一系列系统流程</li>
 </ul>
-<h2 id="打车活动页"><a href="#打车活动页" class="headerlink" title="打车活动页"></a>打车活动页</h2><p><strong>项目周期：</strong> 2019&#x2F;02 ~ 2021&#x2F;03<br><strong>技术栈：</strong> Vue3 + TypeScript + Vite<br><strong>角色：</strong> 前端负责人<br><strong>背景：</strong> 该项目为H5活动页，在内嵌在 App 内或者在浏览器打开，通过打车送优惠券的活动，吸引用户注册打车，为 App 端导流。在App 内通过 JsBridge 交互，提供了购买优惠券，行程分享等功能。</p>
+<h2 id="打车活动页"><a href="#打车活动页" class="headerlink" title="打车活动页"></a>打车活动页</h2><p><strong>项目周期：</strong> 2019.02 ~ 2021.03<br><strong>技术栈：</strong> Vue3 + TypeScript + Vite<br><strong>角色：</strong> 前端负责人<br><strong>背景：</strong> 该项目为H5活动页，在内嵌在 App 内或者在浏览器打开，通过打车送优惠券的活动，吸引用户注册打车，为 App 端导流。在App 内通过 JsBridge 交互，提供了购买优惠券，行程分享等功能。</p>
 <p><strong>核心职责与成果：</strong></p>
 <ul>
 <li>活动引流新注册用户平均1w+人&#x2F;次（活动时间：一周）</li>
 <li>支持 App 内和浏览器购买优惠券等多渠道购买功能</li>
 </ul>
-<h2 id="企业打车"><a href="#企业打车" class="headerlink" title="企业打车"></a>企业打车</h2><p><strong>项目周期：</strong> 2020&#x2F;07 ~ 2022&#x2F;03<br><strong>技术栈：</strong> React + Typescript<br><strong>角色：</strong> 前端负责人<br><strong>背景：</strong> 该项目属于ToB项目，跟飞凡等企业合作，为企业员工上下班或者出差，接机等提供打车服务。为企业用户提供了立即打车，预约打车，订单查询等功能。</p>
+<h2 id="企业打车"><a href="#企业打车" class="headerlink" title="企业打车"></a>企业打车</h2><p><strong>项目周期：</strong> 2020.07 ~ 2022.03<br><strong>技术栈：</strong> React + Typescript<br><strong>角色：</strong> 前端负责人<br><strong>背景：</strong> 该项目属于ToB项目，跟飞凡等企业合作，为企业员工上下班或者出差，接机等提供打车服务。为企业用户提供了立即打车，预约打车，订单查询等功能。</p>
 <p><strong>核心职责与成果：</strong></p>
 <ul>
 <li>通过和飞凡等公司合作，2020年日均15w单</li>
 <li>为用户提供了立即打车，预约车辆，预约接机等服务，</li>
 <li>提供企业&#x2F;个人订单查询，生成月对账单等功能</li>
 </ul>
-<h2 id="中台管理系统"><a href="#中台管理系统" class="headerlink" title="中台管理系统"></a>中台管理系统</h2><p><strong>项目周期：</strong> 2019&#x2F;01 ~ 2022&#x2F;03<br><strong>技术栈：</strong> Vue + Vuex + ElementUI<br><strong>角色：</strong> 前端负责人<br><strong>背景：</strong> 该项目为中台系统，是公司最大管理系统，包括角色，权限，订单，支付，活动配置等功能</p>
+<h2 id="中台管理系统"><a href="#中台管理系统" class="headerlink" title="中台管理系统"></a>中台管理系统</h2><p><strong>项目周期：</strong> 2019.01 ~ 2022.03<br><strong>技术栈：</strong> Vue + Vuex + ElementUI<br><strong>角色：</strong> 前端负责人<br><strong>背景：</strong> 该项目为中台系统，是公司最大管理系统，包括角色，权限，订单，支付，活动配置等功能模块</p>
 <p><strong>核心职责与成果：</strong></p>
 <ul>
-<li>主导开发内部通用组件库（45+ 组件）和工具库（30+ 工具函数，含请求拦截、权限校验），团队重复开发工作量减少 40%</li>
-<li>制定全局开发规范（代码规范 ESLint + Prettier、目录结构、组件命名、接口请求规范）</li>
-<li>搭建 Git Flow 分支管理策略（master&#x2F;develop&#x2F;feature&#x2F;hotfix）</li>
-<li>完成日常迭代开发，修复 bug，优化性能</li>
+<li>制定开发规范（代码规范 ESLint + Prettier、目录结构、组件命名、接口请求规范）</li>
+<li>需求评审，架构设计，任务评审等</li>
+<li>主导开发内部通用组件库（45+ 组件）和工具库（30+ 工具函数，含请求拦截、权限校验），团队开发效率提升 40%</li>
+<li>搭建 Git Flow 分支管理策略（master&#x2F;develop&#x2F;feature&#x2F;hotfix）<!-- - 完成日常迭代开发，修复 bug，优化性能 --></li>
 </ul>
-<h2 id="易直投（广告投放入口）"><a href="#易直投（广告投放入口）" class="headerlink" title="易直投（广告投放入口）"></a>易直投（广告投放入口）</h2><p><strong>项目周期：</strong> 2017.02 – 2018.06<br><strong>技术栈：</strong> Vue + Vuex + ElementUI<br><strong>角色：</strong> 资深前端开发工程师<br><strong>背景：</strong> 专为公司客户打造的大流量投放平台，如腾讯广点通、今日头条</p>
+<h2 id="易直投"><a href="#易直投" class="headerlink" title="易直投"></a>易直投</h2><p><strong>项目周期：</strong> 2017.02 – 2018.06<br><strong>技术栈：</strong> Vue + Vuex + ElementUI<br><strong>角色：</strong> 资深前端开发工程师<br><strong>背景：</strong> 该项目主要对接第三方（如腾讯广点通、今日头条）广告投放平台，专为公司客户打造的大流量投放平台</p>
 <p><strong>核心职责与成果：</strong></p>
 <ul>
-<li>基于php服务端渲染重构成前后端分离</li>
+<li>重构项目：php服务端渲染重构为前后端分离</li>
 <li>对接今日头条 API，实现批量创建广告计划，运营人效提升 3 倍</li>
-<li>完成易直投日常迭代开发，修复 bug，优化性能</li>
+<li>易直投日常迭代开发，修复 bug，优化性能</li>
+<li>修复广告位投放h5浏览器兼容问题</li>
 </ul>
-<h2 id="赢卖通（苏宁内部广告平台）"><a href="#赢卖通（苏宁内部广告平台）" class="headerlink" title="赢卖通（苏宁内部广告平台）"></a>赢卖通（苏宁内部广告平台）</h2><p><strong>项目周期：</strong> 2016.06 – 2017.12<br><strong>技术栈：</strong> Vue + Vuex + ElementUI<br><strong>角色：</strong> 资深前端开发工程师<br><strong>背景：</strong> 该项目主要对接第三方广告投放平台，如爱奇艺、百度、今日头条等交易市场</p>
+<h2 id="赢卖通"><a href="#赢卖通" class="headerlink" title="赢卖通"></a>赢卖通</h2><p><strong>项目周期：</strong> 2016.06 – 2017.12<br><strong>技术栈：</strong> Vue + Vuex + ElementUI<br><strong>角色：</strong> 资深前端开发工程师<br><strong>背景：</strong> 该项目属于苏宁内部广告投放管理平台，主要对接苏宁旗下内部广告位</p>
 <p><strong>核心职责与成果：</strong></p>
 <ul>
-<li>完成广告投放创意管理与开发</li>
-<li>完成赢卖通日常迭代开发，修复 bug，优化性能</li>
+<li>赢卖通业务需求日常迭代开发</li>
+<li>修复广告位投放h5不同浏览器兼容问题</li>
+<li>负责投放计划，创意管理，人群灯塔等模块开发</li>
 </ul>
 <!-- 
 ## 企业出行平台（ToB 打车）
@@ -240,6 +253,7 @@
 
 - 打造设备全生命周期平台，覆盖 1.2w+ 资产，盘点时间从 2 周缩短至 2 天
 - 引入流程引擎 Camunda，审批平均耗时由 3 天降至 4 小时，员工满意度提升 40% -->
+
   
 </div>
 
